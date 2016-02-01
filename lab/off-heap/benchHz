@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
-hzCmd load -id Hz.* -class hz.HzMapGetBench -task get
-hzCmd load -id Hz.* -class hz.HzMapPutBench -task put
+
+benchJar=$(find ~/.m2 -name hzCmd-bench-1.0.0.jar)
+hzCmd uploadlib -id Hz.* -src ${benchJar}
+
+hzCmd load -id Hz.* -class hz.imap.GetBench -task get
+hzCmd load -id Hz.* -class hz.imap.PutBench -task put
 
 ./benchRun get
 ./benchRun put

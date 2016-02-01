@@ -1,12 +1,12 @@
-package hz;
+package gg.cache;
 
-import com.hazelcast.core.IMap;
+import gg.GgBench;
+import org.apache.ignite.IgniteCache;
 
-public class HzMapGetBench extends HzBench {
+public class PutBench extends GgBench {
 
-    private IMap map;
+    protected IgniteCache<Object, Object> cache;
     public String name = "a";
-
     public int keyDomain = 10000;
     public int valueSize = 10;
 
@@ -14,16 +14,12 @@ public class HzMapGetBench extends HzBench {
 
     public void setup(){
         value = new byte[valueSize];
-        map = hzInstance.getMap(name);
-
-        for(int i =0 ;i<keyDomain; i++){
-            map.put(i, value);
-        }
+        cache = ignite.getOrCreateCache(name);
     }
 
     @Override
     public void timeStep() {
         int k = random.nextInt(keyDomain);
-        map.get(k);
+        cache.put(k, value);
     }
 }

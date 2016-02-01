@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-hzCmd load -id Gg.* -class gg.GgMapGetBench -task get
-hzCmd load -id Gg.* -class gg.GgMapPutBench -task put
+benchJar=$(find ~/.m2 -name hzCmd-bench-1.0.0.jar)
+hzCmd uploadlib -id Gg.* -src ${benchJar}
+
+hzCmd load -id Gg.* -class gg.cache.GetBench -task get
+hzCmd load -id Gg.* -class gg.cache.PutBench -task put
 
 ./benchRun get
 ./benchRun put

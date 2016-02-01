@@ -1,8 +1,9 @@
-package gg;
+package gg.cache;
 
+import gg.GgBench;
 import org.apache.ignite.IgniteCache;
 
-public class GgMapPutBench extends GgBench {
+public class GetBench extends GgBench {
 
     protected IgniteCache<Object, Object> cache;
     public String name = "a";
@@ -14,6 +15,10 @@ public class GgMapPutBench extends GgBench {
     public void setup(){
         value = new byte[valueSize];
         cache = ignite.getOrCreateCache(name);
+
+        for(int i =0 ;i<keyDomain; i++){
+            cache.put(i, value);
+        }
     }
 
     @Override

@@ -1,8 +1,9 @@
-package hz;
+package hz.imap;
 
 import com.hazelcast.core.IMap;
+import hz.HzBench;
 
-public class HzMapPutBench extends HzBench {
+public class PutBench extends HzBench {
 
     private IMap map;
     public String name = "a";

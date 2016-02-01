@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+hzCmd load -id Hz.* -class hz.HzMapGetBench -task get
+hzCmd load -id Hz.* -class hz.HzMapPutBench -task put
+
+./benchRun get
+./benchRun put
+./benchRun "get|put"

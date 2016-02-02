@@ -9,19 +9,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static hz.utils.Utils.getCacheManager;
+import static utils.Utils.dymanicValues;
 
 public class PutBench extends HzBench {
 
     private ICache cache;
     public String name = "a";
+    public int keyDomain = Integer.MAX_VALUE;
 
-    public int keyDomain = 10000;
-    public int valueSize = 10;
+    public int valueSetSize=1000;
+    public int valueMinSize=250;
+    public int valueMaxSize=6000;
 
-    public byte[] value;
+    public List<byte[]> value;
 
     public void setup(){
-        value = new byte[valueSize];
+        value = dymanicValues(valueSetSize, valueMinSize, valueMaxSize);
 
         CacheManager cacheManager = getCacheManager(hzInstance);
         cache = (ICache) cacheManager.getCache(name);
@@ -30,6 +33,8 @@ public class PutBench extends HzBench {
     @Override
     public void timeStep() {
         int k = random.nextInt(keyDomain);
-        cache.put(k, value);
+        int idx = random.nextInt(valueSetSize);
+        byte[] v = value.get(idx);
+        cache.put(k, v);
     }
 }

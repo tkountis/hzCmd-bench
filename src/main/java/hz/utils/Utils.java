@@ -27,9 +27,19 @@ public abstract class Utils {
 
     public static void sleepSeconds(int sec){
         try {
-            Thread.sleep(sec);
+            Thread.sleep(sec * 1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static String getUniqueKeyPrefix(HazelcastInstance hazelcastInstance){
+        if (isMember(hazelcastInstance)){
+            IAtomicLong count =  hazelcastInstance.getAtomicLong("m-");
+            return "m"+count.getAndIncrement()+"-";
+        }else{
+            IAtomicLong count = hazelcastInstance.getAtomicLong("c-");
+            return "c"+count.getAndIncrement()+"-";
         }
     }
 
@@ -59,28 +69,6 @@ public abstract class Utils {
         }
     }
 
-    public static List<byte[]> dymanicValues(int setSize, int middleSize){
-        Random random = new Random();
-        List valueSet = new ArrayList(setSize);
-
-        if(setSize==1){
-            byte[] value = new byte[middleSize];
-            random.nextBytes(value);
-            valueSet.add(value);
-            return valueSet;
-        }
-
-        int min = middleSize / 2;
-        int max = middleSize + min;
-
-        for(int i=0; i<setSize; i++){
-            int sz = randInt(random, min, max);
-            byte[] value = new byte[sz];
-            random.nextBytes(value);
-            valueSet.add(value);
-        }
-        return valueSet;
-    }
 
     public static void warmupCache(ICache cache, Collection keys){
         int count=0;
@@ -113,36 +101,4 @@ public abstract class Utils {
         return provider.getCacheManager(provider.getDefaultURI(),provider.getDefaultClassLoader(), null);
     }
 
-
-    public static List<Integer> listKeyDomain(int keyDomainMin, int keyDomainMax){
-        ArrayList<Integer> keys = new ArrayList( keyDomainMax - keyDomainMin );
-        for (int k=keyDomainMin; k<keyDomainMax; k++) {
-            keys.add(k);
-        }
-        return keys;
-    }
-
-    public static int[] keyDomain(int keyDomainMin, int keyDomainMax){
-        int[] keys = new int[keyDomainMax - keyDomainMin ];
-        int idx=0;
-        for (int k=keyDomainMin; k<keyDomainMax; k++) {
-            keys[idx++] = k;
-        }
-        return keys;
-    }
-
-    /**
-     * Returns a pseudo-random number between min and max, inclusive.
-     * The difference between min and max can be at most
-     * <code>Integer.MAX_VALUE - 1</code>.
-     *
-     * @param min Minimum value
-     * @param max Maximum value.  Must be greater than min.
-     * @return Integer between min inclusive and max, ex-inclusive.
-     * @see Random#nextInt(int)
-     */
-    public static int randInt(Random random, int min, int max) {
-        int randomNum = random.nextInt( max-min ) + min;
-        return randomNum;
-    }
 }

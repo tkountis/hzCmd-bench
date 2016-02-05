@@ -14,7 +14,7 @@ import static utils.Utils.dymanicValues;
 public class PutBench extends HzBench {
 
     private ICache cache;
-    public String name = "a";
+    public String name;
     public int keyDomain = Integer.MAX_VALUE;
 
     public int valueSetSize=1000;

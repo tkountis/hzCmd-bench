@@ -10,7 +10,7 @@ import static hz.utils.Utils.getCacheManager;
 public class GetBench extends HzBench {
 
     private ICache cache;
-    public String name = "a";
+    public String name;
 
     public int keyDomain = 10000;
     public int valueSize = 10;

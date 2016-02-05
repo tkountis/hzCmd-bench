@@ -1,13 +1,12 @@
-package hz.imap;
+package gem.cache;
 
-import com.hazelcast.core.IMap;
-import hz.HzBench;
+import com.gemstone.gemfire.cache.Region;
+import gem.GemBench;
 
-public class GetBench extends HzBench {
+public class GetBench extends GemBench {
 
-    private IMap map;
+    Region region;
     public String name;
-
     public int keyDomain = 10000;
     public int valueSize = 10;
 
@@ -15,16 +14,16 @@ public class GetBench extends HzBench {
 
     public void setup(){
         value = new byte[valueSize];
-        map = hzInstance.getMap(name);
+        region = gemFireCache.getRegion(name);
 
         for(int i =0 ;i<keyDomain; i++){
-            map.put(i, value);
+            region.put(i, value);
         }
     }
 
     @Override
     public void timeStep() {
         int k = random.nextInt(keyDomain);
-        map.get(k);
+        region.get(k);
     }
 }

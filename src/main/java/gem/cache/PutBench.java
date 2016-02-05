@@ -1,15 +1,13 @@
-package hz.imap;
+package gem.cache;
 
-import com.hazelcast.core.IMap;
-import hz.HzBench;
-
+import com.gemstone.gemfire.cache.Region;
+import gem.GemBench;
 import java.util.List;
-
 import static utils.Utils.dymanicValues;
 
-public class PutBench extends HzBench {
+public class PutBench extends GemBench {
 
-    private IMap map;
+    Region region;
     public String name;
     public int keyDomain = Integer.MAX_VALUE;
 
@@ -21,7 +19,8 @@ public class PutBench extends HzBench {
 
     public void setup(){
         value = dymanicValues(valueSetSize, valueMinSize, valueMaxSize);
-        map = hzInstance.getMap(name);
+
+        region = gemFireCache.getRegion(name);
     }
 
     @Override
@@ -29,6 +28,6 @@ public class PutBench extends HzBench {
         int k = random.nextInt(keyDomain);
         int idx = random.nextInt(valueSetSize);
         byte[] v = value.get(idx);
-        map.put(k, v);
+        region.put(k, v);
     }
 }

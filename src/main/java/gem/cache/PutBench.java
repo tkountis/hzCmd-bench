@@ -1,7 +1,7 @@
 package gem.cache;
 
 import com.gemstone.gemfire.cache.Region;
-import gem.GemBench;
+import vendor.gem.GemBench;
 import java.util.List;
 import static utils.Utils.dymanicValues;
 

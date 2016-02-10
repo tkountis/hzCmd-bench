@@ -1,7 +1,7 @@
 package hz.imap;
 
 import com.hazelcast.core.IMap;
-import hz.HzBench;
+import vendor.hz.HzBench;
 
 public class GetBench extends HzBench {
 

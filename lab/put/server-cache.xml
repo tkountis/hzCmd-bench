@@ -1,0 +1,20 @@
+<!DOCTYPE cache PUBLIC
+        "-//GemStone Systems, Inc.//GemFire Declarative Caching 8.0//EN"
+        "http://www.gemstone.com/dtd/cache8_0.dtd">
+<cache>
+
+    <pool name="d" >
+        <server  host="s" port="" />
+    </pool>
+    <cache-server bind-address=" " port="40404" />
+
+    <pool name="serverPool" subscription-enabled="true">
+        <server host="10.0.0.192" port="40404" />
+        <server host="10.0.0.193" port="40404" />
+    </pool>
+
+    <region name="root">
+        <region-attributes refid="REPLICATE"/>
+    </region>
+
+</cache>

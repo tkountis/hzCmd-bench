@@ -1,7 +1,7 @@
 package hz.jcache;
 
 import com.hazelcast.cache.ICache;
-import hz.HzBench;
+import vendor.hz.HzBench;
 
 import javax.cache.CacheManager;
 

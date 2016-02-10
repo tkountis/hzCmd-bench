@@ -1,6 +1,6 @@
 package gg.cache;
 
-import gg.GgBench;
+import vendor.gg.GgBench;
 import org.apache.ignite.IgniteCache;
 
 public class GetBench extends GgBench {

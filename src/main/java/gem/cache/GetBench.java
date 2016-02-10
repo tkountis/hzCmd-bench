@@ -1,7 +1,7 @@
 package gem.cache;
 
 import com.gemstone.gemfire.cache.Region;
-import gem.GemBench;
+import vendor.gem.GemBench;
 
 public class GetBench extends GemBench {
 

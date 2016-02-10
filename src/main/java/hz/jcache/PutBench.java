@@ -2,7 +2,7 @@ package hz.jcache;
 
 import com.hazelcast.cache.ICache;
 import com.hazelcast.core.IMap;
-import hz.HzBench;
+import vendor.hz.HzBench;
 
 import javax.cache.CacheManager;
 import java.util.ArrayList;

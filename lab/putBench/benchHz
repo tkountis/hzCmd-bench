@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+clients=$1
+members=$2
+membersBox=$3
+outputDir=$4
+
+clusterId=H
+version=3.6
+./initHzCulster ${clients} ${members} ${membersBox} ${clusterId} ${version}
+
+benchid=putMap
+clusterName=Hz
+
+hzCmd load -id ${clusterId} -class hz.imap.PutBench -task ${benchid}
+
+./benchRun ${benchid} ${clusterName}
+
+hzCmd download -dir ${outputDir}/${clusterName}-${version}
+
+hzCmd wipe

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+clients=$1
+members=$2
+membersBox=$3
+clusterId=$4
+version=$5
+
+clusterType=GEM
+./initCluster ${clusterId} ${clusterType} ${version} ${clients} ${members} ${membersBox} ${jvmOps}
+

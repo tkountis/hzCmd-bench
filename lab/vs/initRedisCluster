@@ -1,0 +1,9 @@
+clients=0
+members=2
+membersBox=2
+clusterId=R
+version=1
+
+clusterType=RED
+./initCluster ${clusterId} ${clusterType} ${version} ${clients} ${members} ${membersBox} ${jvmOps}
+

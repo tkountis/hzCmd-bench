@@ -1,0 +1,22 @@
+clusterid=$1
+clusterType=$2
+version=$3
+clients=$4
+members=$5
+membersBox=$6
+jvmOps=$7
+
+hzCmd add boxes -u danny -f agents.txt
+hzCmd add cluster -cluster ${clusterid} -type ${clusterType} -boxes agents.txt
+
+hzCmd memberBox -cluster ${clusterid} -count ${membersBox}
+hzCmd install   -cluster ${clusterid} ${version}
+
+benchJar=$(find ~/.m2 -name hzCmd-bench-1.0.0.jar)
+hzCmd uploadlib -cluster ${clusterid} -src ${benchJar}
+
+hzCmd add member -n ${members} -cluster ${clusterid} -v ${version} "-Xms500m -Xmx1g ${jvmOps}"
+hzCmd add client -n ${clients} -cluster ${clusterid} -v ${version} "-Xms100m -Xmx500m ${jvmOps}"
+
+hzCmd info
+

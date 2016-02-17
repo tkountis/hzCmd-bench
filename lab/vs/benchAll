@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+clients=20
+members=4
+membersBox=0
+outputDir=output/atomic-hzAsyncOnheap_backPressure
+
+hzCmd listen > detail.out &
+listener_pid=$!
+echo ${listener_pid}
+
+./benchHz  ${clients} ${members} ${membersBox} ${outputDir}
+
+#./benchGem ${clients} ${members} ${membersBox} ${outputDir}
+
+./benchGg  ${clients} ${members} ${membersBox} ${outputDir}
+
+hzCmd chart metrics -dir ${outputDir}
+
+hzCmd chart compairMetrics -dir ${outputDir} -red HzClient -blue GgClient
+
+kill ${listener_pid}

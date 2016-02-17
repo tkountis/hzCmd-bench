@@ -1,0 +1,29 @@
+benchId=$1
+clusterName=$2
+structName=$3
+
+warmupSec=30
+durationSec=60
+
+for driver in Client ; do
+  hzCmd set  -id ${driver} -task ${benchId} -var warmupSec -val ${warmupSec}
+  hzCmd set  -id ${driver} -task ${benchId} -var durationSec -val ${durationSec}
+
+  hzCmd set  -id ${driver} -task ${benchId} -var keyDomain    -val 10000
+  hzCmd set  -id ${driver} -task ${benchId} -var valueSetSize -val 1
+
+  hzCmd set  -id ${driver} -task ${benchId} -var name -val ${structName}
+
+    for valSize in 1001 ; do
+      hzCmd set  -id ${driver} -task ${benchId} -var valueMinSize -val ${valSize}
+      hzCmd set  -id ${driver} -task ${benchId} -var valueMaxSize -val ${valSize}   
+
+      for threads in 64 ; do
+        hzCmd set -id ${driver} -task ${benchId} -var title -val ${clusterName}${driver}-${structName}-${benchId}-${threads}threads-values_min${valSize}-max${valSize}
+        hzCmd bench -id ${driver} -task ${benchId} -threads ${threads}
+
+      done
+
+    done
+
+done

@@ -1,0 +1,18 @@
+
+hzCmd bench type Metrics
+hzCmd bench driver Client
+hzCmd bench threads 64
+hzCmd bench warmup 30
+hzCmd bench duration 300
+          
+benchJar=$(find ~/.m2 -name hzCmd-bench-1.0.0.jar)
+
+hzCmd init cluster -id Hz -v 3.6 -type HZ -uplib ${benchJar}
+hzCmd bench run -cluster Hz -b hzBench
+
+hzCmd wipe
+
+hzCmd init cluster -id Red -v 3.0.7 -type RED -uplib ${benchJar}
+hzCmd bench run -cluster Red -b redBench
+
+hzCmd wipe

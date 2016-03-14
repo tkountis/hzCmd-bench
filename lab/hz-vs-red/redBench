@@ -1,0 +1,11 @@
+setStrBench@class=jedis.SetStrBench
+setStrBench@keyDomain=10000
+setStrBench@valueSetSize=1
+setStrBench@valueMinSize=1000
+setStrBench@valueMaxSize=1000
+setStrBench@name=JedisCluster
+
+getStrBench@class=jedis.GetStrBench
+getStrBench@keyDomain=10000
+getStrBench@valueSize=1000
+getStrBench@name=JedisCluster

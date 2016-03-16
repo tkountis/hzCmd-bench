@@ -12,7 +12,7 @@
         <cluster-members>
         </cluster-members>
 
-        <ssl enabled="true">
+        <ssl enabled="false">
             <factory-class-name>
                 com.hazelcast.nio.ssl.BasicSSLContextFactory
             </factory-class-name>
@@ -28,5 +28,10 @@
         </ssl>
 
     </network>
+
+    <near-cache name="hz-0bakUp*">
+        <max-size>1000</max-size>
+        <invalidate-on-change>true</invalidate-on-change>
+    </near-cache>
 
 </hazelcast-client>

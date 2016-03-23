@@ -18,13 +18,20 @@ public class PutAllBench extends HzBench {
     private Map putAllMap = new HashMap();
 
     public int valueSetSize=1000;
+    public int valueSize=0;
+
     public int valueMinSize=250;
     public int valueMaxSize=6000;
 
     public List<byte[]> valueSet;
 
     public void setup(){
-        valueSet = dymanicValues(valueSetSize, valueMinSize, valueMaxSize);
+
+        if(valueSize!=0){
+            valueSet = dymanicValues(valueSetSize, valueSize, valueSize);
+        }else{
+            valueSet = dymanicValues(valueSetSize, valueMinSize, valueMaxSize);
+        }
         map = hzInstance.getMap(name);
     }
 

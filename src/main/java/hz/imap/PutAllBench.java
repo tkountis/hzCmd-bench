@@ -15,7 +15,6 @@ public class PutAllBench extends HzBench {
     public int keyDomain=10000;
 
     public int batchSize=10;
-    private Map putAllMap = new HashMap();
 
     public int valueSetSize=1000;
     public int valueSize=0;
@@ -37,7 +36,9 @@ public class PutAllBench extends HzBench {
 
     @Override
     public void timeStep() {
-        putAllMap.clear();
+
+        Map putAllMap = new HashMap();
+        //putAllMap.clear();
 
         for(int i=0; i<batchSize; i++) {
             int k = random.nextInt(keyDomain);

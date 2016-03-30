@@ -1,0 +1,6 @@
+put@class=hz.imap.PutBench
+put@keyDomain=100000000
+put@valueSetSize=1
+put@valueMinSize=1000
+put@valueMaxSize=1000
+put@name=bakSync-1_onHeapEvict

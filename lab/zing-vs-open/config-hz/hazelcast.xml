@@ -26,7 +26,7 @@
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>1</backup-count>
         <eviction-policy>LFU</eviction-policy>
-        <max-size policy="free-heap-percentage">10</max-size>
+        <max-size policy="FREE_HEAP_PERCENTAGE">10</max-size>
         <eviction-percentage>20</eviction-percentage>
         <min-eviction-check-millis>0</min-eviction-check-millis>
     </map>

@@ -1,8 +1,10 @@
 
 hzCmd set jhic
-hzCmd set jhicArgs -d 1080 -i 1000
+hzCmd set jhicArgs -d 1200 -i 1000
 
-hzCmd bench type Hdr
+hzCmd bench type HdrInterval
+hzCmd bench interval 1
+
 hzCmd bench driver Client
 hzCmd bench threads 1
 hzCmd bench warmup 900
@@ -11,20 +13,27 @@ hzCmd bench duration 3600
 gcArgs="$gcArgs -verbose:gc -Xloggc:verbosegc.log"
 gcArgs="$gcArgs -XX:+PrintGCTimeStamps -XX:+PrintGCDetails -XX:+PrintTenuringDistribution -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCApplicationConcurrentTime"
 
-hzCmd set memberOps "${gcArgs} -XX:+PrintFlagsFinal -Xms10G -Xmx10G"
+hzCmd set memberOps "${gcArgs} -XX:+PrintFlagsFinal -Xms20G -Xmx20G"
 hzCmd set clientOps "${gcArgs} -XX:+PrintFlagsFinal -Xms3G -Xmx3G"
           
 benchJar=$(find ~/.m2 -name hzCmd-bench-1.0.0.jar)
 
-hzCmd init cluster -size XS -id zing -v 3.6.1 -type HZ -uplib ${benchJar} -boxes jdkZing.txt
-hzCmd bench run -cluster zing -b putBench
-hzCmd wipe
+hzCmd init cluster -size XS -id zing -v 3.6.2 -type HZ -uplib ${benchJar} -boxes jdkZing.txt
+hzCmd init cluster -size XS -id open -v 3.6.2 -type HZ -uplib ${benchJar} -boxes jdkOpen.txt
 
-hzCmd init cluster -size XS -id open -v 3.6.1 -type HZ -uplib ${benchJar} -boxes jdkOpen.txt
-hzCmd bench run -cluster open -b putBench
+nohup hzCmd bench run -cluster zing -b putBench > outZing.txt &
+nohup hzCmd bench run -cluster open -b putBench > outOpen.txt &
+wait
 hzCmd wipe
 
 hzCmd chart compairHdr -dir output -red zing -blue open
+#hzCmd chart compairMetrics -dir output -red zing -blue open
+
 hzCmd processJhic -dir output
 hzCmd chart compairHdr -dir output -red Member-zing -blue Member-open
 hzCmd chart compairHdr -dir output -red Client-zing -blue Client-open
+
+mv go output/
+mv outOpen.txt output/
+mv outZing.txt output/
+mv nohup.out output/

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 hzCmd set jhic
 hzCmd set jhicArgs -d 1200 -i 1000

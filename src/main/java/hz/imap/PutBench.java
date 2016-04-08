@@ -14,13 +14,18 @@ public class PutBench extends HzBench {
     public int keyDomain = Integer.MAX_VALUE;
 
     public int valueSetSize=1000;
+    public int valueSize=0;
     public int valueMinSize=250;
     public int valueMaxSize=6000;
 
-    public List<byte[]> value;
+    public List<byte[]> valueSet;
 
     public void setup(){
-        value = dymanicValues(valueSetSize, valueMinSize, valueMaxSize);
+        if(valueSize!=0){
+            valueSet = dymanicValues(valueSetSize, valueSize, valueSize);
+        }else{
+            valueSet = dymanicValues(valueSetSize, valueMinSize, valueMaxSize);
+        }
         map = hzInstance.getMap(name);
     }
 
@@ -28,7 +33,7 @@ public class PutBench extends HzBench {
     public void timeStep() {
         int k = random.nextInt(keyDomain);
         int idx = random.nextInt(valueSetSize);
-        byte[] v = value.get(idx);
+        byte[] v = valueSet.get(idx);
         map.put(k, v);
     }
 }

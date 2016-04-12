@@ -34,7 +34,7 @@ hzCmd processJhic -dir output
 hzCmd chart compairHdr -dir output -red Member-zing -blue Member-open
 hzCmd chart compairHdr -dir output -red Client-zing -blue Client-open
 
-mv go output/
+cp go output/
 mv outOpen.txt output/
 mv outZing.txt output/
 mv nohup.out output/

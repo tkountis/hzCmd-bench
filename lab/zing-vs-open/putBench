@@ -1,4 +1,4 @@
-put@class=hz.imap.PutBench
+put@class=hz.map.Put
 put@keyDomain=100000000
 put@valueSetSize=1
 put@valueMinSize=1000

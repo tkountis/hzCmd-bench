@@ -12,7 +12,7 @@ version=8.2.0
 benchid=putRegion
 clusterName=Gem
 
-hzCmd load -id ${clusterId} -class gem.cache.PutBench -task ${benchid}
+hzCmd load -id ${clusterId} -class gem.cache.Put -task ${benchid}
 
 ./benchRun ${benchid} ${clusterName}
 

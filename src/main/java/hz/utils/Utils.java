@@ -59,31 +59,7 @@ public abstract class Utils {
         return !localKey(key, instance);
     }
 
-    public static void putLocalKeyVals(HazelcastInstance instance, ICache cache, int keyDomainMin, int keyDomainMax, List valueSet){
-        Random random = new Random();
-        for (int k = keyDomainMin; k < keyDomainMax; k++) {
-            if (localKey(k, instance)) {
-                int valueIdx = random.nextInt(valueSet.size());
-                if (k % streamInAsyncCount == 0) {
-                    cache.put(k, valueSet.get(valueIdx));
-                } else {
-                    cache.putAsync(k, valueSet.get(valueIdx));
-                }
-            }
-        }
-    }
 
-
-    public static void warmupCache(ICache cache, Collection keys){
-        int count=0;
-        for (Object k : keys){
-            if( count++ % streamInAsyncCount==0){
-                cache.get(k);
-            }else{
-                cache.getAsync(k);
-            }
-        }
-    }
 
     public static NearCache getNearCache(CacheManager cacheManager, ICache cache){
         CacheConfig cacheConfig = (CacheConfig) cache.getConfiguration(CacheConfig.class);

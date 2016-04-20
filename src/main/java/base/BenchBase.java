@@ -18,8 +18,8 @@ public abstract class BenchBase implements Bench{
     public int valueMaxSize=10000;
 
     public void init() {
-        if(valueSize!=0){
-            valueSet = dymanicValues(valueSetSize, valueSize, valueSize);
+        if(valueSize==0){
+            valueSet = dymanicValues(1, valueSize, valueSize);
         }else{
             valueSet = dymanicValues(valueSetSize, valueMinSize, valueMaxSize);
         }

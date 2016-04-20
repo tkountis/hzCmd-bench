@@ -55,6 +55,10 @@ public abstract class Utils {
         }
     }
 
+    public static boolean remoteKey(int key, HazelcastInstance instance) {
+        return !localKey(key, instance);
+    }
+
     public static void putLocalKeyVals(HazelcastInstance instance, ICache cache, int keyDomainMin, int keyDomainMax, List valueSet){
         Random random = new Random();
         for (int k = keyDomainMin; k < keyDomainMax; k++) {

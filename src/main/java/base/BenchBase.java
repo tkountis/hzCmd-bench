@@ -25,4 +25,12 @@ public abstract class BenchBase implements Bench{
         }
     }
 
+
+    public boolean isSelfDetermined() {
+        return false;//will be run with a time limit
+    }
+
+    public boolean isRunning() {
+        return false;//if isSelfDetermined true,  then should timeStep be called again ?
+    }
 }

@@ -7,7 +7,7 @@ public class SetStr extends MapBench {
     public void timeStep() {
         int k = random.nextInt(keyDomain);
         int idx = random.nextInt(valueSetSize);
-        byte[] v = valueSet.get(idx);
+        Object v = valueSet.get(idx);
         map.set(""+k, ""+v);
     }
 }

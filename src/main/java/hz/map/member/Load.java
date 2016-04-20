@@ -29,9 +29,12 @@ public class Load extends MapBench {
             map.putAsync(key, val);
         }
         putCount++;
+
+        System.out.println("put key="+key+" count="+putCount);
     }
 
     public boolean isRunning() {
+        System.out.println("isRunning()="+(key<keyDomain) );
         return key<keyDomain;
     }
 

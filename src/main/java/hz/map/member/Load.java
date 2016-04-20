@@ -9,6 +9,11 @@ public class Load extends MapBench {
     private int putCount=0;
     private int key=0;
 
+    public void init(){
+        super.init();
+        Utils.warmupPartitions(hzInstance);
+    }
+
     public void timeStep() {
 
         while(Utils.remoteKey(key, hzInstance)){

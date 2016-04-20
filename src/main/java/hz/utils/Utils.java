@@ -12,25 +12,13 @@ import com.hazelcast.instance.HazelcastInstanceProxy;
 
 import javax.cache.CacheManager;
 import javax.cache.spi.CachingProvider;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Random;
+
+import static utils.Utils.sleep;
 
 public abstract class Utils {
 
-    public static int streamInAsyncCount=500;
-
     private static boolean isMember(HazelcastInstance instance) {
         return instance instanceof HazelcastInstanceProxy;
-    }
-
-    public static void sleepSeconds(int sec){
-        try {
-            Thread.sleep(sec * 1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
     public static String getUniqueKeyPrefix(HazelcastInstance hazelcastInstance){
@@ -51,7 +39,7 @@ public abstract class Utils {
             if (owner != null) {
                 return owner.equals(instance.getLocalEndpoint());
             }
-            sleepSeconds(1);
+            sleep(20);
         }
     }
 
@@ -59,6 +47,16 @@ public abstract class Utils {
         return !localKey(key, instance);
     }
 
+
+    public static void warmupPartitions(HazelcastInstance hz) {
+        PartitionService partitionService = hz.getPartitionService();
+        for (Partition partition : partitionService.getPartitions()) {
+
+            while (partition.getOwner() == null) {
+                sleep(20);
+            }
+        }
+    }
 
 
     public static NearCache getNearCache(CacheManager cacheManager, ICache cache){

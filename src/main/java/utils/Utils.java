@@ -51,4 +51,12 @@ public abstract class Utils {
         int randomNum = random.nextInt( max-min ) + min;
         return randomNum;
     }
+
+    public static void sleep(int millis){
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }

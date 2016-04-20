@@ -33,4 +33,7 @@ public class Load extends MapBench {
     public boolean isSelfDetermined() {
         return true;
     }
+
+    public void cleanup() {
+    }
 }

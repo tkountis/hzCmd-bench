@@ -31,7 +31,7 @@ public abstract class Utils {
         }
     }
 
-    public static boolean localKey(int key, HazelcastInstance instance) {
+    public static boolean localKey(Object key, HazelcastInstance instance) {
         PartitionService partitionService = instance.getPartitionService();
         Partition partition = partitionService.getPartition(key);
         while (true) {
@@ -43,7 +43,7 @@ public abstract class Utils {
         }
     }
 
-    public static boolean remoteKey(int key, HazelcastInstance instance) {
+    public static boolean remoteKey(Object key, HazelcastInstance instance) {
         return !localKey(key, instance);
     }
 

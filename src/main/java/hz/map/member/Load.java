@@ -15,7 +15,6 @@ public class Load extends MapBench {
     }
 
     public void timeStep() {
-
         while(Utils.remoteKey(key, hzInstance)){
             key++;
         }
@@ -31,6 +30,7 @@ public class Load extends MapBench {
         putCount++;
 
         System.out.println("put key="+key+" count="+putCount);
+        key++;
     }
 
     public boolean isRunning() {

@@ -40,5 +40,6 @@ public class Load extends MapBench {
     }
 
     public void cleanup() {
+        System.out.println("map "+map.getName()+" size="+map.size());
     }
 }

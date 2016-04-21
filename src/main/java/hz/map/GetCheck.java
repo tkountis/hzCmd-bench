@@ -13,4 +13,9 @@ public class GetCheck extends MapBench {
             throw new IllegalStateException("DATA LOSS! for key "+k);
         }
     }
+
+    public void cleanup() {
+        System.out.println("map "+map.getName()+" size="+map.size());
+        super.cleanup();
+    }
 }

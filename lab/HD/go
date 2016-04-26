@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+gcArgs="$gcArgs -verbose:gc -Xloggc:verbosegc.log"
+gcArgs="$gcArgs -XX:+PrintGCTimeStamps -XX:+PrintGCDetails -XX:+PrintTenuringDistribution -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCApplicationConcurrentTime"
+hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
+jvmProps="-XX:+PrintFlagsFinal -XX:+UseLargePages"
+
+hzCmd set jhic
+hzCmd set jhicArgs -d 960 -i 1000
+
+
+benchJar=$(find ~/.m2 -name hzCmd-bench-1.0.0.jar)
+
+hzCmd set memberOps "${gcArgs} ${jvmProps} -Xms10G -Xmx10G ${hzProps}"
+hzCmd set clientOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G ${hzProps}"
+hzCmd init cluster -size XS -id ONHEAP  -v 3.6.2           -type HZ -uplib ${benchJar} -boxes boxes-a
+
+hzCmd set memberOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G ${hzProps}"
+hzCmd set clientOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G ${hzProps}"
+hzCmd init cluster -size XS -id OFFHEAP -v 3.6.2 -ee true  -type HZ -uplib ${benchJar} -boxes boxes-b
+
+hzCmd bench type Hdr
+hzCmd bench driver Client
+hzCmd bench threads 8
+hzCmd bench interval 1
+hzCmd bench warmup 900
+hzCmd bench duration 10800
+nohup hzCmd bench run -cluster ONHEAP  -b setOnHeap  >> outOn.txt &
+nohup hzCmd bench run -cluster OFFHEAP -b setOffHeap >> outOff.txt &
+wait
+hzCmd wipe
+
+hzCmd chart compare -dir output -red ONHEAP -blue OFFHEAP
+
+hzCmd processJhic -dir output
+hzCmd chart compairHdr -dir output -red Member-ONHEAP -blue Member-OFFHEAP
+hzCmd chart compairHdr -dir output -red Client-ONHEAP -blue Client-OFFHEAP
+
+cp go output/
+mv *.txt output/
+mv nohup.out output/
+

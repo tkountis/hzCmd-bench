@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><hazelcast-client xmlns="http://www.hazelcast.com/schema/client-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hazelcast.com/schema/client-config             http://www.hazelcast.com/schema/config/hazelcast-client-config-3.6.xsd">
+
+    <group>
+        <name>HZ</name>
+    <password>HZ</password></group>
+
+    <network>
+        <cluster-members>
+        <address>10.0.0.85</address><address>10.0.0.87</address><address>10.0.0.88</address><address>10.0.0.84</address></cluster-members>
+    </network>
+
+</hazelcast-client>

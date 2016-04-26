@@ -1,0 +1,4 @@
+put@class=gg.cache.Put
+put@valueMinSize=1
+put@valueMaxSize=5000
+put@name=offheap

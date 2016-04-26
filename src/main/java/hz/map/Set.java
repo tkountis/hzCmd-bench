@@ -10,4 +10,11 @@ public class Set extends MapBench {
         byte[] v = valueSet.get(idx);
         map.set(k, v);
     }
+
+
+    public void cleanup() {
+        System.out.println("map "+map.getName()+" size="+map.size());
+        super.cleanup();
+    }
+
 }

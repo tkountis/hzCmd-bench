@@ -1,8 +1,0 @@
-hzCmd add boxes -u ec2-user -f c4large
-hzCmd add cluster -cluster G -type GG -boxes c4large
-
-hzCmd memberBox -cluster G -count 4
-hzCmd install -cluster G 1.5.0.final
-
-hzCmd add member -n 4 -cluster G -v 1.5.0.final "-Xms100m -Xmx200m"
-hzCmd add client -n 8 -cluster G -v 1.5.0.final "-Xms50m -Xmx150m"

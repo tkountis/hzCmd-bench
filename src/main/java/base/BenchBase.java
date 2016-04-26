@@ -19,9 +19,9 @@ public abstract class BenchBase implements Bench{
 
     public void init() {
         if(valueSize==0){
-            valueSet = dymanicValues(1, valueSize, valueSize);
-        }else{
             valueSet = dymanicValues(valueSetSize, valueMinSize, valueMaxSize);
+        }else{
+            valueSet = dymanicValues(1, valueSize, valueSize);
         }
     }
 

@@ -17,23 +17,10 @@
    
     </network>
 
-    <map name="bak-0_onHeap*">
-        <in-memory-format>BINARY</in-memory-format>
-        <backup-count>0</backup-count>
-        <async-backup-count>0</async-backup-count>
-    </map>
-
     <map name="bakSync-1_onHeap*">
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>1</backup-count>
     </map>
-
-    <map name="bakAsync-1_onHeap*">
-        <in-memory-format>BINARY</in-memory-format>
-        <backup-count>0</backup-count>
-        <async-backup-count>1</async-backup-count>
-    </map>
-
 
     <map name="bakSync-1_onHeapEvict*">
         <in-memory-format>BINARY</in-memory-format>
@@ -44,5 +31,16 @@
         <min-eviction-check-millis>0</min-eviction-check-millis>
     </map>
 
+    <map name="bakAsync-1_onHeap*">
+        <in-memory-format>BINARY</in-memory-format>
+	<backup-count>0</backup-count>
+        <async-backup-count>1</async-backup-count>
+    </map>
+
+    <map name="bak-0_onHeap*">
+        <in-memory-format>BINARY</in-memory-format>
+        <backup-count>0</backup-count>
+        <async-backup-count>0</async-backup-count>
+    </map>
 
 </hazelcast>

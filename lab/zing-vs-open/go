@@ -1,40 +1,73 @@
 #!/usr/bin/env bash
 
+#the Ip adress of this box, which run the MQ msg broker,  all com's between this controling box and the remote jvm do through the jms MQ broker.
+#the remote jvm's need to know the public Ip adress of this box, as it will be running the MQ server.
+hzCmd broker -ip -THE-PUBLIC-IP-OF-THIS-BOX-
+
+#enable jhic monitor on remote member/client jvms
 hzCmd set jhic
-hzCmd set jhicArgs -d 1200 -i 1000
-
-hzCmd bench type HdrInterval
-hzCmd bench interval 1
-
-hzCmd bench driver Client
-hzCmd bench threads 1
-hzCmd bench warmup 900
-hzCmd bench duration 3600
+hzCmd set jhicArgs -d 30 -i 1000
 
 gcArgs="$gcArgs -verbose:gc -Xloggc:verbosegc.log"
 gcArgs="$gcArgs -XX:+PrintGCTimeStamps -XX:+PrintGCDetails -XX:+PrintTenuringDistribution -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCApplicationConcurrentTime"
 
-hzCmd set memberOps "${gcArgs} -XX:+PrintFlagsFinal -Xms20G -Xmx20G"
-hzCmd set clientOps "${gcArgs} -XX:+PrintFlagsFinal -Xms3G -Xmx3G"
-          
-benchJar=$(find ~/.m2 -name hzCmd-bench-1.0.0.jar)
+#init the cluster on the remote boxes, listed in the -boxes filename,  the format of the -boxes file should be.
+#publicIp,privateIp
+#1 line entery for each box.
 
-hzCmd init cluster -size XS -id zing -v 3.6.2 -type HZ -uplib ${benchJar} -boxes jdkZing.txt
-hzCmd init cluster -size XS -id open -v 3.6.2 -type HZ -uplib ${benchJar} -boxes jdkOpen.txt
+#init the cluster, with the following args, on the boxes listed in the jdkZing.txt
+hzCmd set memberOps "${gcArgs} -XX:+PrintFlagsFinal -XX:+UseLargePages -Xms20G -Xmx20G"
+hzCmd set clientOps "${gcArgs} -XX:+PrintFlagsFinal -XX:+UseLargePages -Xms3G -Xmx3G"
+#-size XS, a cluster size pre set,  4 member nodes 4 clients, split over the number of boxes you listed in the -boxes file
+#-id  a uniqu string you give to your cluster
+#-v the version of HZ the cluster should run.  the hazelcast jars must be avalaible in your local ~/.m2 repo  directory
+#-type the type of the cluster to run HZ is a hazelcast cluster
+#-boxes a file containing a list of public,private address pairs, 1 per line for each box
+#-user name should have password less ssh access to all ips, listed in -boxes file
+hzCmd init cluster -size XS -id zing -v 3.6.2 -type HZ -boxes jdkZing.txt -user ec2-user
 
+#init the cluster, with the following args you can used difrent settings hear
+hzCmd set memberOps "${gcArgs} -XX:+PrintFlagsFinal -XX:+UseLargePages -Xms20G -Xmx20G"
+hzCmd set clientOps "${gcArgs} -XX:+PrintFlagsFinal -XX:+UseLargePages -Xms3G -Xmx3G"
+hzCmd init cluster -size XS -id open -v 3.6.2 -type HZ -boxes jdkOpen.txt -user ec2-user
+
+
+#controls which tool is use to measure the benchmark  [Hdr | Metrics]
+hzCmd bench type Hdr
+
+#controls the expected interval in milli sec,  at which the timeStep() method to be measured is called at for each thread
+#a value of 1 means we expect to call the bench mark once every milli sec,  a value of 0 is a flat out full tilt throughput style benchmark 
+hzCmd bench interval 1
+
+#which jvm should run the bench mark,  Client or Members
+hzCmd bench driver Client
+
+#numbr of threads to run the bench mark in each driver
+hzCmd bench threads 8
+
+#bench mark duration settings
+hzCmd bench warmup 30
+hzCmd bench duration 120
+
+#run the bench marks on the 2 cluster in parellel results are downloaded to this box into ./output
+#-b is the bench mark properites file to run 
 nohup hzCmd bench run -cluster zing -b putBench > outZing.txt &
 nohup hzCmd bench run -cluster open -b putBench > outOpen.txt &
 wait
+
+#removes all trace of hzCmd and the benchmark from the remote boxes
 hzCmd wipe
 
-hzCmd chart compairHdr -dir output -red zing -blue open
-#hzCmd chart compairMetrics -dir output -red zing -blue open
+#plots the results downloaed localy into the output dir,  you will need gnuplot installed localy 
+hzCmd chart compare -dir output -red zing -blue open
 
+#process the jhic data localy and graph it.
 hzCmd processJhic -dir output
 hzCmd chart compairHdr -dir output -red Member-zing -blue Member-open
 hzCmd chart compairHdr -dir output -red Client-zing -blue Client-open
 
+#copy setting to resutls dir for convenience
 cp go output/
-mv outOpen.txt output/
-mv outZing.txt output/
+mv out*.txt output/
 mv nohup.out output/
+

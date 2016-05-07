@@ -18,4 +18,9 @@ public class PutAll extends MapBench {
         }
         map.putAll(putAllMap);
     }
+
+    public void cleanup() {
+        super.cleanup();
+        putAllMap.clear();
+    }
 }

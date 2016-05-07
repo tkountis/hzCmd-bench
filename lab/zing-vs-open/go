@@ -39,10 +39,10 @@ hzCmd bench type Hdr
 #a value of 1 means we expect to call the bench mark once every milli sec,  a value of 0 is a flat out full tilt throughput style benchmark 
 hzCmd bench interval 1
 
-#which jvm should run the bench mark,  Client or Members
+#which jvm should run the bench mark,  Client or Member
 hzCmd bench driver Client
 
-#numbr of threads to run the bench mark in each driver
+#number of threads to run the bench mark in each driver
 hzCmd bench threads 8
 
 #bench mark duration settings

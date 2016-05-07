@@ -22,6 +22,7 @@ public abstract class BenchBase implements Bench{
             valueSet = dymanicValues(valueSetSize, valueMinSize, valueMaxSize);
         }else{
             valueSet = dymanicValues(1, valueSize, valueSize);
+            valueSetSize=1;
         }
     }
 

@@ -1,0 +1,5 @@
+load@class=hz.map.member.Load
+load@keyDomain=1000000
+load@valueSize=1000
+load@asyncBatch=1000
+load@name=bakSync-1_onHeap

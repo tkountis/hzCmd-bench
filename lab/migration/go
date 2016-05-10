@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+./awsBox
+
+gcArgs="$gcArgs -verbose:gc -Xloggc:verbosegc.log"
+gcArgs="$gcArgs -XX:+PrintGCTimeStamps -XX:+PrintGCDetails -XX:+PrintTenuringDistribution -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCApplicationConcurrentTime"
+hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true -Dhazelcast.connection.monitor.max.faults=1"
+
+hzCmd set memberOps "${gcArgs} -XX:+PrintFlagsFinal -XX:+UseLargePages -Xms5G -Xmx5G ${hzProps}"
+hzCmd set clientOps "${gcArgs} -XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx1G ${hzProps}"
+
+benchJar=$(find ~/.m2 -name hzCmd-bench-1.0.0.jar)
+
+hzCmd init cluster -size XS -id NEW -v 3.7-SNAPSHOT -type HZ -uplib ${benchJar} -boxes box-a.txt
+hzCmd init cluster -size XS -id OLD -v 3.6.2        -type HZ -uplib ${benchJar} -boxes box-b.txt
+
+hzCmd bench type Metrics
+
+hzCmd bench driver Member
+hzCmd bench threads 1
+hzCmd bench allowException false
+nohup hzCmd bench run -cluster NEW -b loadData -warmup false >> outNew.txt &
+nohup hzCmd bench run -cluster OLD -b loadData -warmup false >> outOld.txt &
+wait
+
+hzCmd bench driver Client
+hzCmd bench threads 4
+hzCmd bench duration 600
+hzCmd bench allowException true
+nohup hzCmd bench run -cluster NEW -b getBench -warmup false >> outNew.txt &
+nohup hzCmd bench run -cluster OLD -b getBench -warmup false >> outOld.txt &
+
+hzCmd bounce -id Member3 -duration 480 -initalDelay 30 -restartDelay 5 -iterationDelay 5
+wait
+hzCmd wipe
+
+hzCmd chart compare -dir output -red NEW -blue OLD

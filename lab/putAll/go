@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+hzCmd bench type Metrics
+hzCmd bench interval 1
+
+hzCmd bench driver Client,Member
+hzCmd bench threads 8
+hzCmd bench warmup 60
+hzCmd bench duration 300
+
+gcOps="$gcArgs -verbose:gc -Xloggc:verbosegc.log"
+gcOps="$gcArgs -XX:+PrintGCTimeStamps -XX:+PrintGCDetails -XX:+PrintTenuringDistribution -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCApplicationConcurrentTime"
+hzOps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
+
+hzCmd set memberOps "${gcOps} -XX:+PrintFlagsFinal -XX:+UseLargePages -Xms3G -Xmx3G ${hzOps}"
+hzCmd set clientOps "${gcOps} -XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx2G ${hzOps}"
+
+hzCmd init cluster -size XS -id NEW -v 3.7-SNAPSHOT -ee -type HZ -boxes box-new
+hzCmd init cluster -size XS -id OLD -v 3.6.2        -ee -type HZ -boxes box-old
+
+nohup hzCmd bench run -cluster NEW -b putAll > new.out &
+nohup hzCmd bench run -cluster OLD -b putAll > old.out &
+wait
+hzCmd wipe
+
+chart-ComparisonMetrics output NEW OLD
+#driver-wideMetrics output NEW OLD
+
+cp go output/
+mv *.out output/

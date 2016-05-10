@@ -1,0 +1,5 @@
+putAll@class=hz.map.PutAll
+putAll@keyDomain=100000
+putAll@batchSize=100,1001
+putAll@valueSize=1,1001
+putAll@name=mapBak0,mapBak1,mapAsync1

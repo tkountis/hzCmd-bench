@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
 testDir=${1}
-cp -r ${HZ_CMD_BENCH_SRC}/lab/${testDir} .
+
+mkdir -p ${testDir}
+cd ${testDir}
+
+cp -r ${HZ_CMD_BENCH_SRC}/lab/${testDir}/* .
+
 
 

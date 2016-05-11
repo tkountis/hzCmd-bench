@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+gcArgs="$gcArgs -verbose:gc -Xloggc:verbosegc.log"
+gcArgs="$gcArgs -XX:+PrintGCTimeStamps -XX:+PrintGCDetails -XX:+PrintTenuringDistribution -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCApplicationConcurrentTime"
+hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
+jvmProps="-XX:+PrintFlagsFinal -XX:+UseLargePages"
+
+
+hzCmd set memberOps "${gcArgs} ${jvmProps} -Xms2G -Xmx2G ${hzProps}"
+hzCmd set clientOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G ${hzProps}"
+hzCmd init cluster -size XS -id HZ -v 3.7-SNAPSHOT   -type HZ -boxes boxes-a
+
+hzCmd set memberOps "${gcArgs} ${jvmProps} -Xms2G -Xmx2G"
+hzCmd set clientOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G"
+hzCmd init cluster -size XS -id GG -v 1.6.0-SNAPSHOT -type GG -boxes boxes-b
+
+
+hzCmd bench type Metrics
+hzCmd bench driver Client,Member
+hzCmd bench interval 1
+hzCmd bench threads 8
+hzCmd bench warmup 60
+hzCmd bench duration 300
+
+nohup hzCmd bench run -cluster HZ -b setHZ >> outHZ.txt &
+nohup hzCmd bench run -cluster GG -b putGG >> outIG.txt &
+wait
+hzCmd wipe
+
+hzCmd chart compare -dir output -red HZ -blue GG

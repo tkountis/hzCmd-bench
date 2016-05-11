@@ -9,15 +9,13 @@ hzCmd set jhic
 hzCmd set jhicArgs -d 960 -i 1000
 
 
-benchJar=$(find ~/.m2 -name hzCmd-bench-1.0.0.jar)
-
 hzCmd set memberOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G ${hzProps}"
 hzCmd set clientOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G ${hzProps}"
-hzCmd init cluster -size XS -id HZ  -v 3.6.2 -ee true  -type HZ -uplib ${benchJar} -boxes boxes-a
+hzCmd init cluster -size XS -id HZ  -v 3.6.2 -ee true  -type HZ -boxes boxes-a
 
 hzCmd set memberOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G"
 hzCmd set clientOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G"
-hzCmd init cluster -size XS -id GG  -v 1.5.0.final     -type GG -uplib ${benchJar} -boxes boxes-b
+hzCmd init cluster -size XS -id GG  -v 1.5.0.final     -type GG -boxes boxes-b
 
 hzCmd bench type Hdr
 hzCmd bench driver Client

@@ -14,10 +14,10 @@ gcArgs="$gcArgs -XX:+PrintGCTimeStamps -XX:+PrintGCDetails -XX:+PrintTenuringDis
 #init the cluster on the remote boxes, listed in the -boxes filename,  the format of the -boxes file should be.
 #publicIp,privateIp
 #1 line entery for each box.
-
 #init the cluster, with the following args, on the boxes listed in the jdkZing.txt
 hzCmd set memberOps "${gcArgs} -XX:+PrintFlagsFinal -XX:+UseLargePages -Xms20G -Xmx20G"
 hzCmd set clientOps "${gcArgs} -XX:+PrintFlagsFinal -XX:+UseLargePages -Xms3G -Xmx3G"
+
 #-size XS, a cluster size pre set,  4 member nodes 4 clients, split over the number of boxes you listed in the -boxes file
 #-id  a uniqu string you give to your cluster
 #-v the version of HZ the cluster should run.  the hazelcast jars must be avalaible in your local ~/.m2 repo  directory

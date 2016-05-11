@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-./awsBox
+awsBox
 
 hzCmd bench type Metrics
 hzCmd bench interval 1

@@ -7,5 +7,5 @@ clusterId=$4
 version=$5
 
 clusterType=GEM
-./initCluster ${clusterId} ${clusterType} ${version} ${clients} ${members} ${membersBox} ${jvmOps}
+initCluster ${clusterId} ${clusterType} ${version} ${clients} ${members} ${membersBox} ${jvmOps}
 

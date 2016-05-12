@@ -7,7 +7,7 @@ import hz.atomic.base.AtomicBench;
  */
 public class CreateDestroy extends AtomicBench{
     public void timeStep() {
-        atomicLong = hzInstance.getAtomicLong(""+random.nextInt());
-        atomicLong.destroy();
+        atomic = hzInstance.getAtomicLong(""+random.nextInt());
+        atomic.destroy();
     }
 }

@@ -3,9 +3,9 @@ package hz.atomic;
 import hz.atomic.base.AtomicBench;
 
 
-public class IncGet extends AtomicBench{
+public class Get extends AtomicBench{
 
     public void timeStep() {
-        atomic.incrementAndGet();
+        atomic.get();
     }
 }

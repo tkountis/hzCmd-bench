@@ -20,7 +20,7 @@ public abstract class IdGenBench implements Bench {
     }
 
     public void cleanup() {
-        System.out.println("atomicLong "+id.getName()+" "+id);
+        System.out.println("atomic "+id.getName()+" "+id);
         id.destroy();
     }
 

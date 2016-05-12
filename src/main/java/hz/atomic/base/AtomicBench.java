@@ -12,16 +12,16 @@ public abstract class AtomicBench implements Bench {
 
     public String name;
     protected HazelcastInstance hzInstance;
-    protected IAtomicLong atomicLong;
+    protected IAtomicLong atomic;
     protected Random random = new Random();
 
     public void init() {
-        atomicLong = hzInstance.getAtomicLong(name);
+        atomic = hzInstance.getAtomicLong(name);
     }
 
     public void cleanup() {
-        System.out.println("atomicLong "+atomicLong.getName()+" val="+atomicLong.get());
-        atomicLong.destroy();
+        System.out.println("atomic " + atomic.getName() + " val=" + atomic.get());
+        atomic.destroy();
     }
 
     public void setVendorObject(Object o) {

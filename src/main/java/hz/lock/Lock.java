@@ -7,5 +7,6 @@ public class Lock extends LockBench {
 
     public void timeStep() {
         lock.lock();
+        lock.unlock();
     }
 }

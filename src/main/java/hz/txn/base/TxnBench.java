@@ -13,14 +13,16 @@ public abstract class TxnBench extends BenchBase {
     protected HazelcastInstance hzInstance;
     protected TransactionOptions txnOps;
     public int phase=1;
+    public int batchSize=1;
+
 
     public void init() {
         super.init();
 
         if(phase==1) {
-            txnOps =new TransactionOptions().setTransactionType(ONE_PHASE);
+            txnOps = new TransactionOptions().setTransactionType(ONE_PHASE);
         }else{
-            txnOps =new TransactionOptions().setTransactionType(TWO_PHASE);
+            txnOps = new TransactionOptions().setTransactionType(TWO_PHASE);
         }
     }
 

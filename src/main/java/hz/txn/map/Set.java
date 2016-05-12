@@ -12,22 +12,13 @@
  limitations under the License.
  */
 
-package hz.txn;
+package hz.txn.map;
 
-import base.BenchBase;
 import com.hazelcast.core.TransactionalMap;
 import com.hazelcast.transaction.TransactionContext;
-import com.hazelcast.transaction.TransactionOptions;
 import hz.txn.base.TxnBench;
 
-import java.util.Map;
-
-import static com.hazelcast.transaction.TransactionOptions.TransactionType.TWO_PHASE;
-
-/**
- * Hazelcast benchmark that performs transactional put operations.
- */
-public class Put extends TxnBench {
+public class Set extends TxnBench {
 
     public void timeStep() throws Exception {
 
@@ -37,10 +28,12 @@ public class Put extends TxnBench {
 
         TransactionalMap map = context.getMap(name);
         try {
-            int k = random.nextInt(keyDomain);
-            int idx = random.nextInt(valueSetSize);
-            byte[] v = valueSet.get(idx);
-            map.put(k, v);
+            for(int i=0; i<batchSize; i++){
+                int k = random.nextInt(keyDomain);
+                int idx = random.nextInt(valueSetSize);
+                byte[] v = valueSet.get(idx);
+                map.set(k, v);
+            }
 
             context.commitTransaction();
         }

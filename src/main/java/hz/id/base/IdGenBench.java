@@ -1,8 +1,6 @@
 package hz.id.base;
 
-import base.BenchBase;
 import com.hazelcast.core.HazelcastInstance;
-import com.hazelcast.core.IAtomicLong;
 import com.hazelcast.core.IdGenerator;
 import remote.bench.Bench;
 

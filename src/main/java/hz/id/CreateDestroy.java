@@ -1,7 +1,6 @@
 package hz.id;
 
 import hz.id.base.IdGenBench;
-import hz.lock.base.LockBench;
 
 /**
  * Created by danny on 12/05/2016.

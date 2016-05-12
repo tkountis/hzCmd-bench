@@ -12,11 +12,12 @@ import static utils.Utils.dymanicValues;
 public abstract class CacheBench extends BenchBase {
 
     protected HazelcastInstance hzInstance;
+    protected CacheManager cacheManager;
     protected ICache cache;
 
     public void init() {
         super.init();
-        CacheManager cacheManager = getCacheManager(hzInstance);
+        cacheManager = getCacheManager(hzInstance);
         cache = (ICache) cacheManager.getCache(name);
     }
 

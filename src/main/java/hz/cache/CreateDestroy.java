@@ -9,7 +9,7 @@ import hz.lock.base.LockBench;
  */
 public class CreateDestroy extends CacheBench {
     public void timeStep() {
-        cache = (ICache) cacheManager.getCache("c"+random.nextInt());
+        cache = (ICache) cacheManager.getCache(""+random.nextInt());
         cache.destroy();
     }
 }

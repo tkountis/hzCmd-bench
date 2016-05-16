@@ -11,4 +11,6 @@ public class CreateDestroy extends MapBench {
         map = hzInstance.getMap("" + random.nextInt());
         map.destroy();
     }
+
+    public void cleanup() { }
 }

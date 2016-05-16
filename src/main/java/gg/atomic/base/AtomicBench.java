@@ -22,7 +22,7 @@ public abstract class AtomicBench implements Bench {
     }
 
     public void cleanup() {
-        System.out.println("cache "+atomic.name()+" value="+atomic.get());
+        System.out.println("atomic "+atomic.name()+" val="+atomic.get());
         atomic.close();
     }
 

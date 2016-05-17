@@ -1,18 +1,16 @@
 #!/usr/bin/env bash
 
-gcArgs="$gcArgs -verbose:gc -Xloggc:verbosegc.log"
-gcArgs="$gcArgs -XX:+PrintGCTimeStamps -XX:+PrintGCDetails -XX:+PrintTenuringDistribution -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCApplicationConcurrentTime"
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 jvmProps="-XX:+PrintFlagsFinal -XX:+UseLargePages"
 
 
-hzCmd set memberOps "${gcArgs} ${jvmProps} -Xms2G -Xmx2G ${hzProps}"
-hzCmd set clientOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G ${hzProps}"
-hzCmd init cluster -size XS -id HZ -v 3.7-SNAPSHOT   -type HZ -boxes boxes-a
+hzCmd set memberOps "${jvmProps} -Xms2G -Xmx2G ${hzProps}"
+hzCmd set clientOps "${jvmProps} -Xms1G -Xmx1G ${hzProps}"
+hzCmd init cluster -size XS -id HZ -v 3.7-SNAPSHOT   -type HZ -boxes a.box
 
-hzCmd set memberOps "${gcArgs} ${jvmProps} -Xms2G -Xmx2G"
-hzCmd set clientOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G"
-hzCmd init cluster -size XS -id GG -v 1.6.0-SNAPSHOT -type GG -boxes boxes-b
+hzCmd set memberOps "${jvmProps} -Xms2G -Xmx2G"
+hzCmd set clientOps "${jvmProps} -Xms1G -Xmx1G"
+hzCmd init cluster -size XS -id GG -v 1.6.0-SNAPSHOT -type GG -boxes b.box
 
 
 hzCmd bench type Metrics

@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-gcArgs="$gcArgs -verbose:gc -Xloggc:verbosegc.log"
-gcArgs="$gcArgs -XX:+PrintGCTimeStamps -XX:+PrintGCDetails -XX:+PrintTenuringDistribution -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCApplicationConcurrentTime"
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 jvmProps="-XX:+PrintFlagsFinal -XX:+UseLargePages"
 
@@ -11,11 +9,11 @@ hzCmd set jhicArgs -d 960 -i 1000
 
 hzCmd set memberOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G ${hzProps}"
 hzCmd set clientOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G ${hzProps}"
-hzCmd init cluster -size XS -id HZ  -v 3.6.2 -ee true  -type HZ -boxes boxes-a
+hzCmd init cluster -size XS -id HZ  -v 3.6.2 -ee true  -type HZ -boxes a.box
 
 hzCmd set memberOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G"
 hzCmd set clientOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G"
-hzCmd init cluster -size XS -id GG  -v 1.5.0.final     -type GG -boxes boxes-b
+hzCmd init cluster -size XS -id GG  -v 1.5.0.final     -type GG -boxes b.box
 
 hzCmd bench type Hdr
 hzCmd bench driver Client
@@ -23,8 +21,8 @@ hzCmd bench threads 8
 hzCmd bench interval 1
 hzCmd bench warmup 900
 hzCmd bench duration 10800
-nohup hzCmd bench run -cluster HZ -b setHZ >> outHZ.txt &
-nohup hzCmd bench run -cluster GG -b putGG >> outIG.txt &
+nohup hzCmd bench run -cluster HZ -b setHZ >> hz.out &
+nohup hzCmd bench run -cluster GG -b putGG >> gg.out &
 wait
 hzCmd wipe
 
@@ -35,5 +33,4 @@ hzCmd chart compairHdr -dir output -red Member-HZ -blue Member-GG
 hzCmd chart compairHdr -dir output -red Client-HZ -blue Client-GG
 
 cp go output/
-mv *.txt output/
-mv nohup.out output/
+mv *.out output/

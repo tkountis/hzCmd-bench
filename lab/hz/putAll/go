@@ -14,8 +14,8 @@ hzOps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpr
 hzCmd set memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms3G -Xmx3G ${hzOps}"
 hzCmd set clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx2G ${hzOps}"
 
-hzCmd init cluster -size XS -id NEW -v 3.7-SNAPSHOT -ee -type HZ -boxes box-new
-hzCmd init cluster -size XS -id OLD -v 3.6.2        -ee -type HZ -boxes box-old
+hzCmd init cluster -size XS -id NEW -v 3.7-SNAPSHOT -ee -type HZ -boxes a.box
+hzCmd init cluster -size XS -id OLD -v 3.6.2        -ee -type HZ -boxes b.box
 
 nohup hzCmd bench run -cluster NEW -b putAll > new.out &
 nohup hzCmd bench run -cluster OLD -b putAll > old.out &

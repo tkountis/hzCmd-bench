@@ -22,8 +22,8 @@ hzCmd bench driver Client
 hzCmd bench threads 32
 hzCmd bench warmup 30
 hzCmd bench duration 60
-nohup hzCmd bench run -cluster HZ -b getBench -warmup false >> hz.out &
-nohup hzCmd bench run -cluster GG -b getBench -warmup false >> gg.out &
+nohup hzCmd bench run -cluster HZ -b getHz -warmup false >> hz.out &
+nohup hzCmd bench run -cluster GG -b getGg -warmup false >> gg.out &
 wait
 
 hzCmd wipe

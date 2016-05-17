@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
+jvmProps="-XX:+PrintFlagsFinal -XX:+UseLargePages"
+
+hzCmd set memberOps "${jvmProps} -Xms2G -Xmx2G ${hzProps}"
+hzCmd set clientOps "${jvmProps} -Xms1G -Xmx1G ${hzProps}"
+hzCmd init cluster -size XS -id HZ -v 3.7-SNAPSHOT   -type HZ -boxes a.box
+
+hzCmd set memberOps "${jvmProps} -Xms2G -Xmx2G"
+hzCmd set clientOps "${jvmProps} -Xms1G -Xmx1G"
+hzCmd init cluster -size XS -id GG -v 1.6.0-SNAPSHOT -type GG -boxes b.box
+
+hzCmd bench type Metrics
+hzCmd bench driver Member
+hzCmd bench threads 1
+nohup hzCmd bench run -cluster HZ -b loadDataHz -warmup false >> hz.out &
+nohup hzCmd bench run -cluster GG -b loadDataGg -warmup false >> gg.out &
+wait
+
+hzCmd bench driver Client
+hzCmd bench threads 32
+hzCmd bench warmup 30
+hzCmd bench duration 60
+nohup hzCmd bench run -cluster HZ -b getBench -warmup false >> hz.out &
+nohup hzCmd bench run -cluster GG -b getBench -warmup false >> gg.out &
+wait
+
+hzCmd wipe
+hzCmd chart compare -dir output -red HZ -blue GG

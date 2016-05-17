@@ -1,0 +1,4 @@
+load@class=gg.cache.Load
+load@keyDomain=1000000
+load@valueSize=1000
+load@name=cacheBak1

@@ -1,4 +1,4 @@
 load@class=hz.map.member.Load
-load@keyDomain=1000000
+load@keyDomain=10000
 load@valueSize=1000
 load@name=mapBak1

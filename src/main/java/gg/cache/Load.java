@@ -11,8 +11,13 @@ public class Load extends CacheBench {
     }
 
     public void timeStep() {
+
         while(! ignite.affinity(cache.getName()).isPrimary(ignite.cluster().localNode(), key)){
             key++;
+        }
+
+        if(key >= keyDomain){
+            return;
         }
 
         int idx = random.nextInt(valueSet.size());

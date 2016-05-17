@@ -19,6 +19,10 @@ public class Load extends MapBench {
             key++;
         }
 
+        if(key >= keyDomain){
+            return;
+        }
+
         int idx = random.nextInt(valueSet.size());
         Object val = valueSet.get(idx);
 

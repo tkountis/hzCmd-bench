@@ -1,12 +1,7 @@
 package hz.ops;
 
-
 import com.hazelcast.core.HazelcastInstance;
-import com.hazelcast.core.IAtomicLong;
 import remote.bench.Bench;
-
-import java.util.Random;
-
 
 public class ShutDown implements Bench {
 

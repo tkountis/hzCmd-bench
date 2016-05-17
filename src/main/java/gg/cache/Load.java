@@ -11,7 +11,7 @@ public class Load extends CacheBench {
     }
 
     public void timeStep() {
-        while(! ignite.affinity(null).isPrimary(ignite.cluster().localNode(), key)){
+        while(! ignite.affinity(cache.getName()).isPrimary(ignite.cluster().localNode(), key)){
             key++;
         }
 

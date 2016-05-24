@@ -14,8 +14,4 @@ public class GetCheck extends MapBench {
         }
     }
 
-    public void cleanup() {
-        System.out.println("map "+map.getName()+" size="+map.size());
-        super.cleanup();
-    }
 }

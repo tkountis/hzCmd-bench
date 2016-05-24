@@ -6,8 +6,7 @@ public class SetRemove extends MapBench {
 
     public void timeStep() {
         int k = random.nextInt();
-        int idx = random.nextInt(valueSetSize);
-        byte[] v = valueSet.get(idx);
+        Object v = mapKeyToValue(k);
         map.set(k, v);
         map.remove(k);
     }

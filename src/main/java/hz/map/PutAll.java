@@ -12,8 +12,7 @@ public class PutAll extends MapBench {
         putAllMap.clear();
         for(int i=0; i<batchSize; i++) {
             int k = random.nextInt(keyDomain);
-            int idx = random.nextInt(valueSetSize);
-            byte[] v = valueSet.get(idx);
+            Object v = mapKeyToValue(k);
             putAllMap.put(k, v);
         }
         map.putAll(putAllMap);

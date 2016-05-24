@@ -6,8 +6,7 @@ public class Put extends CacheBench {
 
     public void timeStep() {
         int k = random.nextInt(keyDomain);
-        int idx = random.nextInt(valueSetSize);
-        byte[] v = valueSet.get(idx);
+        Object v = mapKeyToValue(k);
         cache.put(k, v);
     }
 }

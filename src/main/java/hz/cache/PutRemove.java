@@ -6,8 +6,7 @@ public class PutRemove extends CacheBench {
 
     public void timeStep() {
         int k = random.nextInt();
-        int idx = random.nextInt(valueSetSize);
-        byte[] v = valueSet.get(idx);
+        Object v = mapKeyToValue(k);
         cache.put(k, v);
         cache.remove(k);
     }

@@ -26,6 +26,10 @@ public abstract class BenchBase implements Bench{
         }
     }
 
+    public Object mapKeyToValue(int key){
+        int idx = key % valueSetSize;
+        return valueSet.get(idx);
+    }
 
     public boolean isSelfDetermined() {
         return false;//will be run with a time limit

@@ -52,6 +52,13 @@ public abstract class Utils {
         return randomNum;
     }
 
+    public static double randDouble(Random random, double min, double max) {
+        double randomValue = min + (max - min) * random.nextDouble();
+        return randomValue;
+    }
+
+
+
     public static void sleep(int millis){
         try {
             Thread.sleep(millis);

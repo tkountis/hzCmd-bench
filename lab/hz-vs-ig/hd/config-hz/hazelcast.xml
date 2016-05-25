@@ -21,38 +21,35 @@
         <metadata-space-percentage>15</metadata-space-percentage>
     </native-memory>
 
-    <map name="bakSync-1_offHeap*">
+    <map name="mapBak0Hd*">
         <in-memory-format>NATIVE</in-memory-format>
-        <backup-count>1</backup-count>
+        <backup-count>0</backup-count>
+        <async-backup-count>0</async-backup-count>
+
         <eviction-policy>LRU</eviction-policy>
         <eviction-percentage>20</eviction-percentage>
         <max-size policy="FREE_NATIVE_MEMORY_PERCENTAGE">25</max-size>
         <min-eviction-check-millis>0</min-eviction-check-millis>
     </map>
 
-    <map name="bak-0_onHeap*">
-        <in-memory-format>BINARY</in-memory-format>
-        <backup-count>0</backup-count>
-        <async-backup-count>0</async-backup-count>
-    </map>
-
-    <map name="bakSync-1_onHeap*">
-        <in-memory-format>BINARY</in-memory-format>
+    <map name="mapBak1Hd*">
+        <in-memory-format>NATIVE</in-memory-format>
         <backup-count>1</backup-count>
+
+        <eviction-policy>LRU</eviction-policy>
+        <eviction-percentage>20</eviction-percentage>
+        <max-size policy="FREE_NATIVE_MEMORY_PERCENTAGE">25</max-size>
+        <min-eviction-check-millis>0</min-eviction-check-millis>
     </map>
 
-    <map name="bakAsync-1_onHeap*">
-        <in-memory-format>BINARY</in-memory-format>
+    <map name="mapAsync1Hd*">
+        <in-memory-format>NATIVE</in-memory-format>
         <backup-count>0</backup-count>
         <async-backup-count>1</async-backup-count>
-    </map>
 
-    <map name="bakSync-1_onHeapEvict*">
-        <in-memory-format>BINARY</in-memory-format>
-        <backup-count>1</backup-count>
         <eviction-policy>LRU</eviction-policy>
-        <max-size policy="FREE_HEAP_PERCENTAGE">25</max-size>
         <eviction-percentage>20</eviction-percentage>
+        <max-size policy="FREE_NATIVE_MEMORY_PERCENTAGE">25</max-size>
         <min-eviction-check-millis>0</min-eviction-check-millis>
     </map>
 

@@ -29,40 +29,48 @@
             <list>
 
                 <bean class="org.apache.ignite.configuration.CacheConfiguration">
-                    <property name="name" value="offheap"/>
+                    <property name="name" value="cacheBak0Hd"/>
+                    <property name="cacheMode" value="PARTITIONED"/>
+                    <property name="atomicityMode" value="ATOMIC"/>
+                    <property name="swapEnabled" value="false"/>
+                    <property name="backups" value="0"/>
+                    <property name="readFromBackup" value="false"/>
 
                     <property name="memoryMode" value="OFFHEAP_TIERED"/>
-
-                    <!-- If off-heap storage size is exceeded (0 for unlimited), then LRU eviction policy is used to evict entries from off-heap store-->
                     <!-- Enable Off-Heap memory with max size  10 Gigabytes (0 for unlimited). -->
                     <property name="offHeapMaxMemory" value="#{10 * 1024L * 1024L * 1024L}"/>
-
-                    <property name="cacheMode" value="PARTITIONED"/>
-
-                    <property name="atomicityMode" value="ATOMIC"/>
-
-                    <property name="swapEnabled" value="false"/>
-
-                    <property name="backups" value="1"/>
-
-                    <property name="writeSynchronizationMode" value="FULL_SYNC"/>
-
                 </bean>
 
                 <bean class="org.apache.ignite.configuration.CacheConfiguration">
-                    <property name="name" value="onheap"/>
-
+                    <property name="name" value="cacheBak1Hd"/>
                     <property name="cacheMode" value="PARTITIONED"/>
-
                     <property name="atomicityMode" value="ATOMIC"/>
-
                     <property name="swapEnabled" value="false"/>
-
                     <property name="backups" value="1"/>
-                  
+                    <property name="readFromBackup" value="false"/>
                     <property name="writeSynchronizationMode" value="FULL_SYNC"/>
 
+                    <property name="memoryMode" value="OFFHEAP_TIERED"/>
+                    <!-- Enable Off-Heap memory with max size  10 Gigabytes (0 for unlimited). -->
+                    <property name="offHeapMaxMemory" value="#{10 * 1024L * 1024L * 1024L}"/>
                 </bean>
+
+
+                <bean class="org.apache.ignite.configuration.CacheConfiguration">
+                    <property name="name" value="cacheAsync1Hd"/>
+                    <property name="cacheMode" value="PARTITIONED"/>
+                    <property name="atomicityMode" value="ATOMIC"/>
+                    <property name="swapEnabled" value="false"/>
+                    <property name="backups" value="1"/>
+                    <property name="readFromBackup" value="false"/>
+                    <property name="writeSynchronizationMode" value="PRIMARY_SYNC"/>
+
+                    <property name="memoryMode" value="OFFHEAP_TIERED"/>
+                    <!-- Enable Off-Heap memory with max size  10 Gigabytes (0 for unlimited). -->
+                    <property name="offHeapMaxMemory" value="#{10 * 1024L * 1024L * 1024L}"/>
+                </bean>
+
+
 
             </list>
         </property>

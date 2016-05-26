@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+hzCmd bench type Metrics
+hzCmd bench interval 1
+
+hzCmd bench driver Client
+hzCmd bench threads 1
+hzCmd bench warmup 30
+hzCmd bench duration 60
+
+hzOps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
+hzCmd set memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms4G -Xmx4G ${hzOps}"
+hzCmd set clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx1G ${hzOps}"
+
+hzCmd init cluster -size XS -id NEW -v 3.7-SNAPSHOT -type HZ -boxes a.box
+
+nohup hzCmd bench run -cluster NEW -b put > new.out &
+wait
+hzCmd wipe
+
+#chart-ComparisonMetrics output NEW OLD
+
+cp go output/
+mv *.out output/

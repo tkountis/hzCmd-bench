@@ -16,6 +16,26 @@
         </join>   
     </network>
 
+    <native-memory allocator-type="POOLED" enabled="true">
+        <size unit="GIGABYTES" value="10" />
+        <metadata-space-percentage>50</metadata-space-percentage>
+    </native-memory>
+
+    <hot-restart-persistence enabled="true">
+        <data-load-timeout-seconds>2600</data-load-timeout-seconds>
+        <base-dir>/hot-junk</base-dir>
+    </hot-restart-persistence>
+
+    <map name="mapBak0HD*">
+        <in-memory-format>NATIVE</in-memory-format>
+        <eviction-policy>LRU</eviction-policy>
+        <eviction-percentage>5</eviction-percentage>
+        <max-size policy="FREE_NATIVE_MEMORY_PERCENTAGE">15</max-size>
+        <backup-count>1</backup-count>
+        <hot-restart enabled="true">
+            <fsync>false</fsync>
+        </hot-restart>
+    </map>
 
     <map name="mapBak0*">
         <in-memory-format>BINARY</in-memory-format>

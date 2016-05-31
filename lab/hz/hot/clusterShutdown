@@ -1,1 +1,1 @@
-shutdown@class=hz.map.Put
+shutdown@class=hz.ops.ClusterShutDown

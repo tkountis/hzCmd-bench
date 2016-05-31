@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+hzOps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
+hzCmd set memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms4G -Xmx4G ${hzOps}"
+hzCmd set clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx1G ${hzOps}"
+
+hzCmd init cluster -size XS -id HZ -v 3.7-SNAPSHOT -type HZ -boxes a.box -user ec2-user
+
+
+hzCmd bench type Metrics
+hzCmd bench interval 0
+hzCmd bench threads 32
+hzCmd bench duration 300
+hzCmd bench driver Member
+hzCmd bench run -cluster HZ -warmup false -b put
+
+hzCmd bench threads 1
+hzCmd bench driver Member1
+hzCmd bench run -cluster HZ -warmup false -b clusterShutdown
+
+
+hzCmd bench driver Member1
+hzCmd embeddedRestart -id Member
+
+hzCmd wipe
+
+cp go output/
+mv *.out output/

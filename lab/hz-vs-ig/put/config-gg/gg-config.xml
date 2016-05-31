@@ -35,6 +35,7 @@
                     <property name="swapEnabled" value="false"/>
                     <property name="backups" value="0"/>
                     <property name="readFromBackup" value="false"/>
+                    <property name="copyOnRead" value="true"/>
                 </bean>
 
                 <bean class="org.apache.ignite.configuration.CacheConfiguration">
@@ -44,6 +45,7 @@
                     <property name="swapEnabled" value="false"/>
                     <property name="backups" value="1"/>
                     <property name="readFromBackup" value="false"/>
+                    <property name="copyOnRead" value="true"/>
                     <property name="writeSynchronizationMode" value="FULL_SYNC"/>
                 </bean>
 
@@ -55,6 +57,7 @@
                     <property name="swapEnabled" value="false"/>
                     <property name="backups" value="1"/>
                     <property name="readFromBackup" value="false"/>
+                    <property name="copyOnRead" value="true"/>
                     <property name="writeSynchronizationMode" value="PRIMARY_SYNC"/>
                 </bean>
 

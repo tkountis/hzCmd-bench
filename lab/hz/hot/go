@@ -4,7 +4,7 @@ hzOps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpr
 hzCmd set memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms4G -Xmx4G ${hzOps}"
 hzCmd set clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx1G ${hzOps}"
 
-hzCmd init cluster -size XS -id HZ -v 3.7-SNAPSHOT -type HZ -boxes a.box -user ec2-user
+hzCmd init cluster -size XS -id HZ -v 3.7-SNAPSHOT -type HZ -ee true -boxes a.box -user ec2-user
 
 for i in {1..5} ; do
 

@@ -10,7 +10,7 @@ for i in {1..5} ; do
 
     hzCmd bench type Metrics
     hzCmd bench interval 0
-    hzCmd bench threads 32
+    hzCmd bench threads 64
     hzCmd bench duration 300
     hzCmd bench driver Member
     hzCmd bench run -cluster HZ -warmup false -b put

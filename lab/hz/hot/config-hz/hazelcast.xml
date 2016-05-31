@@ -29,7 +29,6 @@
     <map name="mapBak0HD*">
         <in-memory-format>NATIVE</in-memory-format>
         <eviction-policy>LRU</eviction-policy>
-        <eviction-percentage>5</eviction-percentage>
         <max-size policy="FREE_NATIVE_MEMORY_PERCENTAGE">15</max-size>
         <backup-count>1</backup-count>
         <hot-restart enabled="true">

@@ -1,26 +1,23 @@
 #!/usr/bin/env bash
 
-awsBox
-
-hzCmd bench type Metrics
-hzCmd bench interval 1
-
-hzCmd bench driver Client,Member
-hzCmd bench threads 8
-hzCmd bench warmup 60
-hzCmd bench duration 300
-
 hzOps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
-hzCmd set memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms3G -Xmx3G ${hzOps}"
-hzCmd set clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx2G ${hzOps}"
+hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms3G -Xmx3G ${hzOps}"
+hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx2G ${hzOps}"
 
-hzCmd init cluster -size XS -id NEW -v 3.7-SNAPSHOT -ee -type HZ -boxes a.box
-hzCmd init cluster -size XS -id OLD -v 3.6.2        -ee -type HZ -boxes b.box
+hz cluster -size M4C4 -id NEW -v 3.7-SNAPSHOT -ee -type HZ -boxes a.box
+hz cluster -size M4C4 -id OLD -v 3.6.3        -ee -type HZ -boxes b.box
 
-nohup hzCmd bench run -cluster NEW -b putAll > new.out &
-nohup hzCmd bench run -cluster OLD -b putAll > old.out &
+hz driver Client,Member
+hz type Metrics
+hz interval 1
+hz threads 8
+hz warmup 60
+hz bench 300
+
+nohup hz run -id NEW putAll > new.out &
+nohup hz run -id OLD putAll > old.out &
 wait
-hzCmd wipe
+hz wipe
 
 chart-ComparisonMetrics output NEW OLD
 

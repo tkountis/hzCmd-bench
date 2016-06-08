@@ -1,34 +1,34 @@
 #!/usr/bin/env bash
 
-hzCmd broker -ip 10.212.1.107
+hz broker -ip 10.212.1.107
 
 hzOps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
-hzCmd set memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms4G -Xmx4G ${hzOps}"
-hzCmd set clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx1G ${hzOps}"
+hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms4G -Xmx4G ${hzOps}"
+hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx1G ${hzOps}"
 
-hzCmd init cluster -size M8 -id HZ -v 3.7-SNAPSHOT -type HZ -ee true -boxes a.box -user danny
+hz cluster -size M8 -id HZ -v 3.7-SNAPSHOT -type HZ -ee true -boxes a.box -user danny
 
 for i in {1..32} ; do
 
-    hzCmd bench type Metrics
-    hzCmd bench interval 0
-    hzCmd bench threads 64
-    hzCmd bench duration 900
-    hzCmd bench driver Member
-    hzCmd bench run -cluster HZ -warmup false -b set
+    hz type Metrics
+    hz interval 0
+    hz threads 64
+    hz bench 900
+    hz driver Member
+    hz run -id HZ -warmup false set
 
-    hzCmd bench threads 1
-    hzCmd bench driver Member1
-    hzCmd bench run -cluster HZ -warmup false -b clusterShutdown
-    hzCmd embeddedRestart -id Member
-    hzCmd bench run -cluster HZ -warmup false -b active
+    hz threads 1
+    hz driver Member1
+    hz run -id HZ -warmup false clusterShutdown
+    hz embeddedRestart -id Member
+    hz run -id HZ -warmup false active
 
 done
 
-hzCmd download
+hz download
 
-hzCmd wipe
-hzCmd-ssh a.box 'rm -r hot-junk' danny
+hz wipe
+hz-ssh a.box 'rm -r hot-junk' danny
 
 cp go output/
 mv *.out output/

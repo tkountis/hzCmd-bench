@@ -3,32 +3,32 @@
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 jvmProps="-XX:+PrintFlagsFinal -XX:+UseLargePages"
 
-hzCmd set jhic
-hzCmd set jhicArgs -d 960 -i 1000
+hz set jhic
+hz set jhicArgs -d 960 -i 1000
 
 
-hzCmd set memberOps "${jvmProps} -Xms10G -Xmx10G ${hzProps}"
-hzCmd set clientOps "${jvmProps} -Xms1G -Xmx1G ${hzProps}"
-hzCmd init cluster -size XS -id ONHEAP  -v 3.6.2           -type HZ -boxes a.box
+hz memberOps "${jvmProps} -Xms10G -Xmx10G ${hzProps}"
+hz clientOps "${jvmProps} -Xms1G -Xmx1G ${hzProps}"
+hz cluster -size M4C4 -id ONHEAP  -v 3.6.2           -type HZ -boxes a.box
 
-hzCmd set memberOps "${jvmProps} -Xms1G -Xmx1G ${hzProps}"
-hzCmd set clientOps "${jvmProps} -Xms1G -Xmx1G ${hzProps}"
-hzCmd init cluster -size XS -id OFFHEAP -v 3.6.2 -ee true  -type HZ -boxes b.box
+hz memberOps "${jvmProps} -Xms1G -Xmx1G ${hzProps}"
+hz clientOps "${jvmProps} -Xms1G -Xmx1G ${hzProps}"
+hz cluster -size M4C4 -id OFFHEAP -v 3.6.2 -ee true  -type HZ -boxes b.box
 
-hzCmd bench type Hdr
-hzCmd bench driver Client
-hzCmd bench threads 8
-hzCmd bench interval 1
-hzCmd bench warmup 900
-hzCmd bench duration 10800
-nohup hzCmd bench run -cluster ONHEAP  -b setOnHeap  >> on.out &
-nohup hzCmd bench run -cluster OFFHEAP -b setOffHeap >> off.out &
+hz type Hdr
+hz driver Client
+hz threads 8
+hz interval 1
+hz warmup 900
+hz bench 10800
+nohup hz run -id ONHEAP  setOnHeap  >> on.out &
+nohup hz run -id OFFHEAP setOffHeap >> off.out &
 wait
-hzCmd wipe
+hz wipe
 
-hzCmd chart compare -dir output -red ONHEAP -blue OFFHEAP
+hz chart compare -dir output -red ONHEAP -blue OFFHEAP
 
-hzCmd processJhic -dir output
-hzCmd chart compairHdr -dir output -red Member-ONHEAP -blue Member-OFFHEAP
-hzCmd chart compairHdr -dir output -red Client-ONHEAP -blue Client-OFFHEAP
+hz processJhic -dir output
+hz chart compairHdr -dir output -red Member-ONHEAP -blue Member-OFFHEAP
+hz chart compairHdr -dir output -red Client-ONHEAP -blue Client-OFFHEAP
 

@@ -3,28 +3,28 @@
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 jvmProps="-XX:+PrintFlagsFinal -XX:+UseLargePages"
 
-hzCmd set memberOps "${jvmProps} -Xms2G -Xmx2G ${hzProps}"
-hzCmd set clientOps "${jvmProps} -Xms1G -Xmx1G ${hzProps}"
-hzCmd init cluster -size XS -id HZ -v 3.7-SNAPSHOT   -type HZ -boxes a.box
+hz memberOps "${jvmProps} -Xms2G -Xmx2G ${hzProps}"
+hz clientOps "${jvmProps} -Xms1G -Xmx1G ${hzProps}"
+hz cluster -size M4C4 -id HZ -v 3.7-SNAPSHOT   -type HZ -boxes a.box
 
-hzCmd set memberOps "${jvmProps} -Xms2G -Xmx2G"
-hzCmd set clientOps "${jvmProps} -Xms1G -Xmx1G"
-hzCmd init cluster -size XS -id GG -v 1.6.0-SNAPSHOT -type GG -boxes b.box
+hz memberOps "${jvmProps} -Xms2G -Xmx2G"
+hz clientOps "${jvmProps} -Xms1G -Xmx1G"
+hz cluster -size M4C4 -id GG -v 1.6.0-SNAPSHOT -type GG -boxes b.box
 
-hzCmd bench type Metrics
-hzCmd bench driver Member
-hzCmd bench threads 1
-nohup hzCmd bench run -cluster HZ -b loadDataHz -warmup false >> hz.out &
-nohup hzCmd bench run -cluster GG -b loadDataGg -warmup false >> gg.out &
+hz type Metrics
+hz driver Member
+hz threads 1
+nohup hz run -id HZ -warmup false loadDataHz >> hz.out &
+nohup hz run -id GG -warmup false loadDataGg >> gg.out &
 wait
 
-hzCmd bench driver Client
-hzCmd bench threads 32
-hzCmd bench warmup 30
-hzCmd bench duration 60
-nohup hzCmd bench run -cluster HZ -b getHz -warmup false >> hz.out &
-nohup hzCmd bench run -cluster GG -b getGg -warmup false >> gg.out &
+hz driver Client
+hz threads 32
+hz warmup 30
+hz bench 60
+nohup hz run -id HZ -warmup false getHz >> hz.out &
+nohup hz run -id GG -warmup false getGg >> gg.out &
 wait
 
-hzCmd wipe
-hzCmd chart compare -dir output -red HZ -blue GG
+hz wipe
+hz chart compare -dir output -red HZ -blue GG

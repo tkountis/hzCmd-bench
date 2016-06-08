@@ -1,5 +1,5 @@
 
-hzCmd aws create -count 4 -imageId ami-08111162 -key jenkins-ec2-key -placementGroup hzpc2 -region us-east-1 -subnetId subnet-378d2140 -type r3.2xlarge -output jdkOpen.txt
+hz aws create -count 4 -imageId ami-08111162 -key jenkins-ec2-key -placementGroup hzpc2 -region us-east-1 -subnetId subnet-378d2140 -type r3.2xlarge -output jdkOpen.txt
 
-hzCmd aws create -count 4 -imageId ami-81a19beb -key jenkins-ec2-key -placementGroup hzpc2 -region us-east-1 -subnetId subnet-378d2140 -type r3.2xlarge -output jdkZing.txt
+hz aws create -count 4 -imageId ami-81a19beb -key jenkins-ec2-key -placementGroup hzpc2 -region us-east-1 -subnetId subnet-378d2140 -type r3.2xlarge -output jdkZing.txt
 

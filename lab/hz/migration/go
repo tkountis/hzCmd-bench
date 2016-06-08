@@ -2,30 +2,30 @@
 
 
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true -Dhazelcast.connection.monitor.max.faults=1"
-hzCmd set memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms5G -Xmx5G ${hzProps}"
-hzCmd set clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx1G ${hzProps}"
+hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms5G -Xmx5G ${hzProps}"
+hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx1G ${hzProps}"
 
-hzCmd init cluster -size XS -id NEW -v 3.7-SNAPSHOT -type HZ -boxes a.box
-hzCmd init cluster -size XS -id OLD -v 3.6.2        -type HZ -boxes b.box
+hz cluster -size M4C4 -id NEW -v 3.7-SNAPSHOT -type HZ -boxes a.box
+hz cluster -size M4C4 -id OLD -v 3.6.2        -type HZ -boxes b.box
 
-hzCmd bench type Metrics
+hz type Metrics
 
-hzCmd bench driver Member
-hzCmd bench threads 1
-hzCmd bench allowException false
-nohup hzCmd bench run -cluster NEW -b loadData -warmup false >> new.out &
-nohup hzCmd bench run -cluster OLD -b loadData -warmup false >> old.out &
+hz driver Member
+hz threads 1
+hz allowException false
+nohup hz run -id NEW -warmup false loadData >> new.out &
+nohup hz run -id OLD -warmup false loadData >> old.out &
 wait
 
-hzCmd bench driver Client
-hzCmd bench threads 4
-hzCmd bench duration 600
-hzCmd bench allowException true
-nohup hzCmd bench run -cluster NEW -b getBench -warmup false >> new.out &
-nohup hzCmd bench run -cluster OLD -b getBench -warmup false >> old.out &
+hz driver Client
+hz threads 4
+hz bench 600
+hz allowException true
+nohup hz run -id NEW -warmup false getBench >> new.out &
+nohup hz run -id OLD -warmup false getBench >> old.out &
 
-hzCmd bounce -id Member3 -duration 480 -initalDelay 30 -restartDelay 5 -iterationDelay 5
+hz bounce -id Member3 -duration 480 -initalDelay 30 -restartDelay 5 -iterationDelay 5
 wait
-hzCmd wipe
+hz wipe
 
-hzCmd chart compare -dir output -red NEW -blue OLD
+hz chart compare -dir output -red NEW -blue OLD

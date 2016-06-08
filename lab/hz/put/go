@@ -14,10 +14,10 @@ hz warmup 30
 hz bench 60
 
 nohup hz run -id NEW put > new.out &
+nohup hz run -id OLD put > old.out &
 wait
 hz wipe
 
-#chart-ComparisonMetrics output NEW OLD
-
+chart-ComparisonMetrics output NEW OLD
 cp go output/
 mv *.out output/

@@ -8,19 +8,27 @@ import java.util.Random;
 
 public abstract class LatchBench implements Bench {
 
-    public String name;
+    public String name="latch";
+    public int count=1;
+
     protected HazelcastInstance hzInstance;
-    protected ICountDownLatch latch;
     protected Random random = new Random();
 
     public void init() {
-        latch = hzInstance.getCountDownLatch(name);
-        latch.trySetCount(Integer.MAX_VALUE);
+        for(int i=0; i<count; i++){
+            ICountDownLatch latch = hzInstance.getCountDownLatch(name+i);
+            latch.trySetCount(Integer.MAX_VALUE);
+        }
+    }
+
+    protected ICountDownLatch getLatch(){
+        return hzInstance.getCountDownLatch(name + random.nextInt(count));
     }
 
     public void cleanup() {
-        System.out.println("lock "+latch.getName()+" count="+latch.getCount());
-        latch.destroy();
+        for(int i=0; i<count; i++) {
+            hzInstance.getCountDownLatch(name+i).destroy();
+        }
     }
 
     public void setVendorObject(Object o) {

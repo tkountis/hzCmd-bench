@@ -1,0 +1,2 @@
+atomicIncGet@class=hz.atomic.IncGet
+atomicIncGet@count=1,10000

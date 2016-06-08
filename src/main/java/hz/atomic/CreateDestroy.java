@@ -1,5 +1,6 @@
 package hz.atomic;
 
+import com.hazelcast.core.IAtomicLong;
 import hz.atomic.base.AtomicBench;
 
 /**
@@ -7,7 +8,7 @@ import hz.atomic.base.AtomicBench;
  */
 public class CreateDestroy extends AtomicBench{
     public void timeStep() {
-        atomic = hzInstance.getAtomicLong(""+random.nextInt());
+        IAtomicLong atomic = hzInstance.getAtomicLong(name+random.nextInt());
         atomic.destroy();
     }
 }

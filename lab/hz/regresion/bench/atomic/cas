@@ -1,0 +1,2 @@
+atomicCas@class=hz.atomic.Cas
+atomicCas@count=1,10000

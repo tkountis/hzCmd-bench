@@ -1,6 +1,7 @@
 package hz.id.base;
 
 import com.hazelcast.core.HazelcastInstance;
+import com.hazelcast.core.IAtomicLong;
 import com.hazelcast.core.IdGenerator;
 import remote.bench.Bench;
 
@@ -8,18 +9,25 @@ import java.util.Random;
 
 public abstract class IdGenBench implements Bench {
 
-    public String name;
+    public String name="id";
+    public int count=1;
     protected HazelcastInstance hzInstance;
-    protected IdGenerator id;
     protected Random random = new Random();
 
     public void init() {
-        id = hzInstance.getIdGenerator(name);
+        for(int i=0; i<count; i++){
+            hzInstance.getIdGenerator(name+i);
+        }
+    }
+
+    protected IdGenerator getIdObj(){
+        return hzInstance.getIdGenerator(name + random.nextInt(count));
     }
 
     public void cleanup() {
-        System.out.println("atomic "+id.getName()+" "+id);
-        id.destroy();
+        for(int i=0; i<count; i++){
+            hzInstance.getIdGenerator(name + i).destroy();
+        }
     }
 
     public void setVendorObject(Object o) {

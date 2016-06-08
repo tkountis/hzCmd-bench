@@ -1,27 +1,33 @@
 package hz.lock.base;
 
-
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.core.ILock;
 import remote.bench.Bench;
 
 import java.util.Random;
 
-
 public abstract class LockBench implements Bench {
 
-    public String name;
+    public String name="lock";
+    public int count=1;
+
     protected HazelcastInstance hzInstance;
-    protected ILock lock;
     protected Random random = new Random();
 
     public void init() {
-        lock = hzInstance.getLock(name);
+        for(int i=0; i<count; i++) {
+            hzInstance.getLock(name+i);
+        }
+    }
+
+    protected ILock getLock(){
+        return hzInstance.getLock(name+random.nextInt(count));
     }
 
     public void cleanup() {
-        System.out.println("lock "+lock.getName()+" isLocked="+lock.isLocked() + " lockCount="+lock.getLockCount());
-        lock.destroy();
+        for(int i=0; i<count; i++) {
+            hzInstance.getLock(name+i).destroy();
+        }
     }
 
     public void setVendorObject(Object o) {

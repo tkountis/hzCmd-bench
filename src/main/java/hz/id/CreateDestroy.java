@@ -1,5 +1,6 @@
 package hz.id;
 
+import com.hazelcast.core.IdGenerator;
 import hz.id.base.IdGenBench;
 
 /**
@@ -7,7 +8,7 @@ import hz.id.base.IdGenBench;
  */
 public class CreateDestroy extends IdGenBench {
     public void timeStep() {
-        id = hzInstance.getIdGenerator("" + random.nextInt());
+        IdGenerator id = hzInstance.getIdGenerator("" + random.nextInt());
         id.destroy();
     }
 }

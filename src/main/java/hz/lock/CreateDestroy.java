@@ -1,5 +1,6 @@
 package hz.lock;
 
+import com.hazelcast.core.ILock;
 import hz.lock.base.LockBench;
 
 /**
@@ -7,7 +8,7 @@ import hz.lock.base.LockBench;
  */
 public class CreateDestroy extends LockBench {
     public void timeStep() {
-        lock = hzInstance.getLock(""+random.nextInt());
+        ILock lock = hzInstance.getLock(""+random.nextInt());
         lock.destroy();
     }
 }

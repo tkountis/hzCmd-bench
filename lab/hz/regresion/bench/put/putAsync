@@ -1,0 +1,4 @@
+putAsync@class=hz.map.PutAsync
+putAsync@keyDomain=100000
+putAsync@valueSize=1,1001
+putAsync@name=mapBak0,mapBak1,mapAsync1

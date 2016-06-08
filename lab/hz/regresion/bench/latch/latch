@@ -1,0 +1,2 @@
+latch@class=hz.latch.Latch
+latch@count=1,10000

@@ -6,7 +6,6 @@ jvmProps="-XX:+PrintFlagsFinal -XX:+UseLargePages"
 hz set jhic
 hz set jhicArgs -d 960 -i 1000
 
-
 hz memberOps "${jvmProps} -Xms10G -Xmx10G ${hzProps}"
 hz clientOps "${jvmProps} -Xms1G -Xmx1G ${hzProps}"
 hz cluster -size M4C4 -id ONHEAP  -v 3.6.2           -type HZ -boxes a.box

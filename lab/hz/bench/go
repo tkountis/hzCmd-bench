@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
+#hzCmd broker -ip 10.212.1.107
+
 hzOps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms4G -Xmx4G ${hzOps}"
 hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms100M -Xmx100M ${hzOps}"
-hz cluster -size M4C4 -id NEW -v 3.7-SNAPSHOT -type HZ -boxes a.box
-hz cluster -size M4C4 -id OLD -v 3.7-EA       -type HZ -boxes b.box
+hz cluster -size M4C4 -id NEW -v 3.7-SNAPSHOT -type HZ -boxes a.box -user ec2-user
+hz cluster -size M4C4 -id OLD -v 3.7-EA       -type HZ -boxes b.box -user ec2-user
 
 hz driver Client,Member
 hz type Metrics,HDR
@@ -16,6 +18,7 @@ hz bench 300
 nohup hz run -id NEW marks/*/* > new.out &
 nohup hz run -id OLD marks/*/* > old.out &
 wait
+hz download
 hz wipe
 
 chart-ComparisonMetrics output NEW OLD

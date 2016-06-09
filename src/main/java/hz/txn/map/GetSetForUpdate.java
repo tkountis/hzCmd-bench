@@ -18,7 +18,7 @@ import com.hazelcast.core.TransactionalMap;
 import com.hazelcast.transaction.TransactionContext;
 import hz.txn.base.TxnBench;
 
-public class GetForUpdateSet extends TxnBench {
+public class GetSetForUpdate extends TxnBench {
 
     public void timeStep() throws Exception {
 

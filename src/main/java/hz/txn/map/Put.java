@@ -28,10 +28,11 @@ public class Put extends TxnBench {
 
         TransactionalMap map = context.getMap(name);
         try {
-            for(int i=0; i<batchSize; i++) {
+            for(int i=0; i<batchSize; i++){
                 int k = random.nextInt(keyDomain);
                 int idx = random.nextInt(valueSetSize);
                 byte[] v = valueSet.get(idx);
+
                 map.put(k, v);
             }
 

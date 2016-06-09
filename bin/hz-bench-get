@@ -5,7 +5,7 @@ testDir=${1}
 mkdir -p ${testDir}
 cd ${testDir}
 
-cp -r ${HZ_CMD_BENCH_SRC}/lab/${testDir}/* .
+cp -r ${HZ_CMD_BENCH_SRC}/lab/${testDir} .
 
 
 

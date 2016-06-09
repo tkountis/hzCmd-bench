@@ -1,0 +1,3 @@
+cacheGet@class=hz.cache.Get
+cacheGet@keyDomain=100000
+cacheGet@name=cacheBak0,cacheBak1,cacheAsync1

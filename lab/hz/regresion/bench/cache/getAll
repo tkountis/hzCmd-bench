@@ -1,0 +1,4 @@
+cacheGetAll@class=hz.cache.GetAll
+cacheGetAll@keyDomain=100000
+cacheGetAll@batchSize=100,1001
+cacheGetAll@name=cacheBak0,cacheBak1,cacheAsync1

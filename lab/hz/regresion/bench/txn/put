@@ -1,0 +1,6 @@
+txnPut@class=hz.txn.map.Put
+txnPut@keyDomain=100000
+txnPut@valueSize=1,1001
+txnPut@phase=1,2
+txnPut@batchSize=1,100
+txnPut@name=mapBak0,mapBak1,mapAsync1

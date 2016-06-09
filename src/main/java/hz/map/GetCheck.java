@@ -1,6 +1,5 @@
 package hz.map;
 
-
 import hz.map.base.MapBench;
 
 public class GetCheck extends MapBench {

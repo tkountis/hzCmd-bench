@@ -1,0 +1,6 @@
+txnSet@class=hz.txn.map.Set
+txnSet@keyDomain=100000
+txnSet@valueSize=1,1001
+txnSet@phase=1,2
+txnSet@batchSize=1,100
+txnSet@name=mapBak0,mapBak1,mapAsync1

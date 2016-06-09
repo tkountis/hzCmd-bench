@@ -1,6 +1,6 @@
 package hz.cache;
 
-import gg.cache.base.CacheBench;
+import hz.cache.base.CacheBench;
 
 import java.util.HashSet;
 import java.util.Set;

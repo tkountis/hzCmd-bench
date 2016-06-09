@@ -1,7 +1,6 @@
 package hz.cache;
 
-import gg.cache.base.CacheBench;
-import hz.map.base.MapBench;
+import hz.cache.base.CacheBench;
 
 import java.util.HashMap;
 import java.util.Map;

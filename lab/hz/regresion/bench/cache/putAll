@@ -1,0 +1,4 @@
+cachePutAll@class=hz.cache.PutAll
+cachePutAll@keyDomain=100000
+cachePutAll@valueSize=1,1001
+cachePutAll@name=cacheBak0,cacheBak1,cacheAsync1

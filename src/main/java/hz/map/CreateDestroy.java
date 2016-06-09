@@ -1,6 +1,5 @@
 package hz.map;
 
-import hz.lock.base.LockBench;
 import hz.map.base.MapBench;
 
 /**

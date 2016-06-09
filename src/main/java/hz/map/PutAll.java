@@ -1,7 +1,9 @@
 package hz.map;
 
 import hz.map.base.MapBench;
-import java.util.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class PutAll extends MapBench {
 

@@ -7,7 +7,6 @@ import com.hazelcast.core.HazelcastInstance;
 import javax.cache.CacheManager;
 
 import static hz.utils.Utils.getCacheManager;
-import static utils.Utils.dymanicValues;
 
 public abstract class CacheBench extends BenchBase {
 

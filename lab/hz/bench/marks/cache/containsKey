@@ -1,0 +1,3 @@
+cacheContainsKey@class=hz.cache.ContainsKey
+cacheContainsKey@keyDomain=100000
+cacheContainsKey@name=cacheBak0,cacheBak1,cacheAsync1

@@ -13,8 +13,8 @@ hz threads 8,64
 hz warmup 60
 hz bench 300
 
-nohup hz run -id NEW bench/*/* > new.out &
-nohup hz run -id OLD bench/*/* > old.out &
+nohup hz run -id NEW marks/*/* > new.out &
+nohup hz run -id OLD marks/*/* > old.out &
 wait
 hz wipe
 

@@ -1,28 +1,31 @@
 #!/usr/bin/env bash
 
+#hz broker -ip 10.212.1.107
+
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 jvmProps="-XX:+PrintFlagsFinal -XX:+UseLargePages"
 
 hz set jhic
 hz set jhicArgs -d 960 -i 1000
 
-hz memberOps "${jvmProps} -Xms10G -Xmx10G ${hzProps}"
-hz clientOps "${jvmProps} -Xms1G -Xmx1G ${hzProps}"
-hz cluster -size M4C4 -id ONHEAP  -v 3.6.2           -type HZ -boxes a.box
+hz memberOps "${jvmProps} -Xms1G   -Xmx1G   ${hzProps}"
+hz clientOps "${jvmProps} -Xms100M -Xmx100M ${hzProps}"
+hz cluster -size M4C4 -id ONHEAP  -v 3.7-SNAPSHOT           -type HZ -boxes a.box -user danny
 
-hz memberOps "${jvmProps} -Xms1G -Xmx1G ${hzProps}"
-hz clientOps "${jvmProps} -Xms1G -Xmx1G ${hzProps}"
-hz cluster -size M4C4 -id OFFHEAP -v 3.6.2 -ee true  -type HZ -boxes b.box
+hz memberOps "${jvmProps} -Xms500M -Xmx500M ${hzProps}"
+hz clientOps "${jvmProps} -Xms100M -Xmx100M ${hzProps}"
+hz cluster -size M4C4 -id OFFHEAP -v 3.7-SNAPSHOT -ee true  -type HZ -boxes b.box -user danny
 
 hz type Hdr
 hz driver Client
-hz threads 8
+hz threads 16
 hz interval 1
-hz warmup 900
-hz bench 10800
+hz warmup 30
+hz bench 60
 nohup hz run -id ONHEAP  setOnHeap  >> on.out &
 nohup hz run -id OFFHEAP setOffHeap >> off.out &
 wait
+hz download
 hz wipe
 
 hz chart compare -dir output -red ONHEAP -blue OFFHEAP

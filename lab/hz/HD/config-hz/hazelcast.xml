@@ -17,43 +17,40 @@
     </network>
 
     <native-memory allocator-type="POOLED" enabled="true">
-        <size unit="GIGABYTES" value="10"/>
+        <size unit="GIGABYTES" value="1"/>
         <metadata-space-percentage>15</metadata-space-percentage>
     </native-memory>
 
-    <map name="bakSync-1_offHeap*">
-        <in-memory-format>NATIVE</in-memory-format>
-        <backup-count>1</backup-count>
-        <eviction-policy>LRU</eviction-policy>
-        <eviction-percentage>20</eviction-percentage>
-        <max-size policy="FREE_NATIVE_MEMORY_PERCENTAGE">25</max-size>
-        <min-eviction-check-millis>0</min-eviction-check-millis>
-    </map>
-
-    <map name="bak-0_onHeap*">
+    <map name="mapBak0*">
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>0</backup-count>
-        <async-backup-count>0</async-backup-count>
     </map>
 
-    <map name="bakSync-1_onHeap*">
+    <map name="mapBak1*">
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>1</backup-count>
     </map>
 
-    <map name="bakAsync-1_onHeap*">
-        <in-memory-format>BINARY</in-memory-format>
-        <backup-count>0</backup-count>
-        <async-backup-count>1</async-backup-count>
-    </map>
-
-    <map name="bakSync-1_onHeapEvict*">
+    <map name="mapBak1Evict*">
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>1</backup-count>
         <eviction-policy>LRU</eviction-policy>
         <max-size policy="FREE_HEAP_PERCENTAGE">25</max-size>
         <eviction-percentage>20</eviction-percentage>
         <min-eviction-check-millis>0</min-eviction-check-millis>
+    </map>
+
+    <map name="mapAsync1*">
+        <in-memory-format>BINARY</in-memory-format>
+        <backup-count>0</backup-count>
+        <async-backup-count>1</async-backup-count>
+    </map>
+
+    <map name="mapBak1HD*">
+        <in-memory-format>NATIVE</in-memory-format>
+        <backup-count>1</backup-count>
+        <eviction-policy>LRU</eviction-policy>
+        <eviction-percentage>10</eviction-percentage>
     </map>
 
 </hazelcast>

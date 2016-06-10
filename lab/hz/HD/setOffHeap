@@ -1,4 +1,5 @@
-put@class=hz.map.Set
-put@valueMinSize=1
-put@valueMaxSize=5000
-put@name=bakSync-1_offHeap
+set@class=hz.map.Set
+#set@valueMinSize=1
+#set@valueMaxSize=5000
+set@valueSize=1001
+set@name=mapBak1

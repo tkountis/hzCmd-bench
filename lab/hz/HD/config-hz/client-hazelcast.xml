@@ -11,6 +11,7 @@
     <network>
         <cluster-members>
         </cluster-members>
+        <smart-routing>true</smart-routing>
     </network>
 
 </hazelcast-client>

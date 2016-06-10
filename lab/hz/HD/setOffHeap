@@ -3,4 +3,4 @@ set@class=hz.map.Set
 #set@valueMaxSize=5000
 set@keyDomain=100000
 set@valueSize=1001
-set@name=mapBak1
+set@name=mapBak1HD

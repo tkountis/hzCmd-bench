@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#hz broker -ip 10.212.1.107
+hz broker -ip 10.212.1.107
 
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 jvmProps="-XX:+PrintFlagsFinal -XX:+UseLargePages"

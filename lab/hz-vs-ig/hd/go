@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
 
+#hz broker -ip 10.212.1.107
+
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 jvmProps="-XX:+PrintFlagsFinal -XX:+UseLargePages"
 
 hz memberOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G ${hzProps}"
 hz clientOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G ${hzProps}"
-hz cluster -size M4C4 -id HZ  -v 3.7-SANPSHOT   -ee true  -type HZ -boxes a.box
+hz cluster -size M4C4 -id HZ  -v 3.7-SANPSHOT   -ee true  -type HZ -boxes a.box -user ec2-user
 
 hz memberOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G"
 hz clientOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G"
-hz cluster -size M4C4 -id GG  -v 1.7.0-SNAPSHOT           -type GG -boxes b.box
+hz cluster -size M4C4 -id GG  -v 1.7.0-SNAPSHOT           -type GG -boxes b.box -user ec2-user
 
 hz type Hdr
 hz driver Client

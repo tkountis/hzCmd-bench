@@ -3,34 +3,26 @@
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 jvmProps="-XX:+PrintFlagsFinal -XX:+UseLargePages"
 
-hz set jhic
-hz set jhicArgs -d 960 -i 1000
-
-
 hz memberOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G ${hzProps}"
 hz clientOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G ${hzProps}"
-hz cluster -size M4C4 -id HZ  -v 3.6.2 -ee true  -type HZ -boxes a.box
+hz cluster -size M4C4 -id HZ  -v 3.7-SANPSHOT   -ee true  -type HZ -boxes a.box
 
 hz memberOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G"
 hz clientOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G"
-hz cluster -size M4C4 -id GG  -v 1.5.0.final     -type GG -boxes b.box
+hz cluster -size M4C4 -id GG  -v 1.7.0-SNAPSHOT           -type GG -boxes b.box
 
 hz type Hdr
 hz driver Client
-hz threads 8
+hz threads 32
 hz interval 1
-hz warmup 900
-hz bench 10800
-nohup hz run -id HZ setHZ >> hz.out &
-nohup hz run -id GG putGG >> gg.out &
+hz warmup 300
+hz bench 900
+nohup hz run -id HZ putCacheHZ >> hz.out &
+nohup hz run -id GG putCacheGG >> gg.out &
 wait
 hz wipe
 
 hz chart compare -dir output -red HZ -blue GG
-
-hz processJhic -dir output
-hz chart compairHdr -dir output -red Member-HZ -blue Member-GG
-hz chart compairHdr -dir output -red Client-HZ -blue Client-GG
 
 cp go output/
 mv *.out output/

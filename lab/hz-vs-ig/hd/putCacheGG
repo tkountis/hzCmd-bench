@@ -1,4 +1,5 @@
 put@class=gg.cache.Put
+put@valueSetSize=50
 put@valueMinSize=1
 put@valueMaxSize=5000
-put@name=cacheBak1Hd
+put@name=cacheBak1HD

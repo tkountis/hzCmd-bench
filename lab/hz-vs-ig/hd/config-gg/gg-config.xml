@@ -29,7 +29,7 @@
             <list>
 
                 <bean class="org.apache.ignite.configuration.CacheConfiguration">
-                    <property name="name" value="cacheBak0Hd"/>
+                    <property name="name" value="cacheBak0HD"/>
                     <property name="cacheMode" value="PARTITIONED"/>
                     <property name="atomicityMode" value="ATOMIC"/>
                     <property name="swapEnabled" value="false"/>
@@ -43,7 +43,7 @@
                 </bean>
 
                 <bean class="org.apache.ignite.configuration.CacheConfiguration">
-                    <property name="name" value="cacheBak1Hd"/>
+                    <property name="name" value="cacheBak1HD"/>
                     <property name="cacheMode" value="PARTITIONED"/>
                     <property name="atomicityMode" value="ATOMIC"/>
                     <property name="swapEnabled" value="false"/>
@@ -59,7 +59,7 @@
 
 
                 <bean class="org.apache.ignite.configuration.CacheConfiguration">
-                    <property name="name" value="cacheAsync1Hd"/>
+                    <property name="name" value="cacheAsync1HD"/>
                     <property name="cacheMode" value="PARTITIONED"/>
                     <property name="atomicityMode" value="ATOMIC"/>
                     <property name="swapEnabled" value="false"/>
@@ -72,8 +72,6 @@
                     <!-- Enable Off-Heap memory with max size  10 Gigabytes (0 for unlimited). -->
                     <property name="offHeapMaxMemory" value="#{10 * 1024L * 1024L * 1024L}"/>
                 </bean>
-
-
 
             </list>
         </property>

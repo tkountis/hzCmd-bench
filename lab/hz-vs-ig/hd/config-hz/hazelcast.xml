@@ -21,7 +21,7 @@
         <metadata-space-percentage>15</metadata-space-percentage>
     </native-memory>
 
-    <map name="mapBak0Hd*">
+    <map name="mapBak0HD*">
         <in-memory-format>NATIVE</in-memory-format>
         <backup-count>0</backup-count>
         <async-backup-count>0</async-backup-count>
@@ -32,7 +32,7 @@
         <min-eviction-check-millis>0</min-eviction-check-millis>
     </map>
 
-    <map name="mapBak1Hd*">
+    <map name="mapBak1HD*">
         <in-memory-format>NATIVE</in-memory-format>
         <backup-count>1</backup-count>
 
@@ -42,7 +42,7 @@
         <min-eviction-check-millis>0</min-eviction-check-millis>
     </map>
 
-    <map name="mapAsync1Hd*">
+    <map name="mapAsync1HD*">
         <in-memory-format>NATIVE</in-memory-format>
         <backup-count>0</backup-count>
         <async-backup-count>1</async-backup-count>
@@ -52,5 +52,27 @@
         <max-size policy="FREE_NATIVE_MEMORY_PERCENTAGE">25</max-size>
         <min-eviction-check-millis>0</min-eviction-check-millis>
     </map>
+
+    <cache name="cacheBak0HD*">
+        <in-memory-format>NATIVE</in-memory-format>
+        <backup-count>0</backup-count>
+        <statistics-enabled>false</statistics-enabled>
+        <eviction eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="99"/>
+    </cache>
+
+    <cache name="cacheBak1HD*">
+        <in-memory-format>NATIVE</in-memory-format>
+        <backup-count>1</backup-count>
+        <statistics-enabled>false</statistics-enabled>
+        <eviction eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="99"/>
+    </cache>
+
+    <cache name="cacheAsync1HD*">
+        <in-memory-format>NATIVE</in-memory-format>
+        <backup-count>0</backup-count>
+        <async-backup-count>1</async-backup-count>
+        <statistics-enabled>false</statistics-enabled>
+        <eviction eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="99"/>
+    </cache>
 
 </hazelcast>

@@ -7,7 +7,7 @@ jvmProps="-XX:+PrintFlagsFinal -XX:+UseLargePages"
 
 hz memberOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G ${hzProps}"
 hz clientOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G ${hzProps}"
-hz cluster -size M4C4 -id HZ  -v 3.7-SANPSHOT   -ee true  -type HZ -boxes a.box -user ec2-user
+hz cluster -size M4C4 -id HZ  -v 3.7-SNAPSHOT   -ee true  -type HZ -boxes a.box -user ec2-user
 
 hz memberOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G"
 hz clientOps "${gcArgs} ${jvmProps} -Xms1G -Xmx1G"

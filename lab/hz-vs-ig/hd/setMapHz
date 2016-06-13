@@ -1,0 +1,5 @@
+set@class=hz.map.Set
+set@valueSetSize=50
+set@valueMinSize=1
+set@valueMaxSize=5000
+set@name=mapBak1HD

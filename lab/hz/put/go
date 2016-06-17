@@ -16,4 +16,4 @@ hz bench 60
 hz run -id HZ put
 
 hz download
-hz wipe
+hz wipe -local

@@ -14,4 +14,6 @@ hz warmup 30
 hz bench 60
 
 hz run -id HZ put
+
+hz download
 hz wipe

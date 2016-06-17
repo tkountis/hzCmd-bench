@@ -1,23 +1,17 @@
 #!/usr/bin/env bash
 
-hzOps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
-hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms4G -Xmx4G ${hzOps}"
-hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx1G ${hzOps}"
-hz cluster -size M4C4 -id NEW -v 3.7-SNAPSHOT -type HZ -boxes a.box
-hz cluster -size M4C4 -id OLD -v 3.6.3        -type HZ -boxes b.box
+hz broker -ip 127.0.0.1
 
-hz driver Client,Member
+hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms500M -Xmx500M"
+hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms200M -Xmx200M"
+hz cluster -size M2C2 -id HZ -v 3.7-EA -boxes local.box -user $(whoami)
+
+hz driver Client
 hz type Metrics
 hz interval 1
 hz threads 1
 hz warmup 30
 hz bench 60
 
-nohup hz run -id NEW put > new.out &
-nohup hz run -id OLD put > old.out &
-wait
+hz run -id HZ put
 hz wipe
-
-chart-ComparisonMetrics output NEW OLD
-cp go output/
-mv *.out output/

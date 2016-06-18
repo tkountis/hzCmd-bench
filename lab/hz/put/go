@@ -2,8 +2,8 @@
 
 hz broker -ip 127.0.0.1
 
-hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms500M -Xmx500M"
-hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms200M -Xmx200M"
+hz memberOps "-Xms500M -Xmx500M"
+hz clientOps "-Xms200M -Xmx200M"
 hz cluster -size M2C2 -id HZ -v 3.7-EA -boxes local.box -user $(whoami)
 
 hz driver Client

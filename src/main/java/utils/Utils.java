@@ -6,19 +6,15 @@ import java.util.Random;
 
 public abstract class Utils {
 
-    public static List<byte[]> dymanicValues(int setSize, int middleSize){
-        Random random = new Random();
-        List valueSet = new ArrayList(setSize);
+    public static List<byte[]> dymanicValues(Random random, int setSize, int middleSize){
 
         int min = middleSize / 2;
         int max = middleSize + min;
 
-
-        return dymanicValues(setSize, min, max);
+        return dymanicValues(random, setSize, min, max);
     }
 
-    public static List<byte[]> dymanicValues(int setSize, int min, int max){
-        Random random = new Random();
+    public static List<byte[]> dymanicValues(Random random, int setSize, int min, int max){
         List valueSet = new ArrayList(setSize);
 
         if(setSize==1){

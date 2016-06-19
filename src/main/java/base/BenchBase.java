@@ -7,7 +7,9 @@ import static utils.Utils.dymanicValues;
 
 public abstract class BenchBase implements Bench{
 
-    protected Random random = new Random();
+
+    public int seed=0;
+    protected Random random;
     protected List<byte[]> valueSet;
 
     public String name;
@@ -18,10 +20,17 @@ public abstract class BenchBase implements Bench{
     public int valueMaxSize=10000;
 
     public void init() {
-        if(valueSize==0){
-            valueSet = dymanicValues(valueSetSize, valueMinSize, valueMaxSize);
+
+        if(seed==0){
+            random = new Random();
         }else{
-            valueSet = dymanicValues(1, valueSize, valueSize);
+            random = new Random(seed);
+        }
+
+        if(valueSize==0){
+            valueSet = dymanicValues(random, valueSetSize, valueMinSize, valueMaxSize);
+        }else{
+            valueSet = dymanicValues(random, 1, valueSize, valueSize);
             valueSetSize=1;
         }
     }
@@ -31,10 +40,10 @@ public abstract class BenchBase implements Bench{
     }
 
     public boolean isSelfDetermined() {
-        return false;//will be run with a time limit
+        return false;
     }
 
     public boolean isRunning() {
-        return false;//if isSelfDetermined true,  then should timeStep be called again ?
+        return false;
     }
 }

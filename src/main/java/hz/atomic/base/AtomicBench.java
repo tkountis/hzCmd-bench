@@ -10,7 +10,7 @@ import java.util.Random;
 
 public abstract class AtomicBench implements Bench {
 
-    public String name="atomic";
+    public String name="A";
     public int count=1;
 
     protected HazelcastInstance hzInstance;

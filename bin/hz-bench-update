@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+if [ -n "$1" ]; then
+  git -C "${HZ_CMD_BENCH_SRC}" checkout $1
+fi
+
+git -C "${HZ_CMD_BENCH_SRC}" branch
+
 
 git -C "${HZ_CMD_BENCH_SRC}" pull
 

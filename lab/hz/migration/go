@@ -12,19 +12,18 @@ hz type Metrics
 
 hz driver Member
 hz threads 1
-hz allowException false
-nohup hz run -id NEW -warmup false loadData >> new.out &
-nohup hz run -id OLD -warmup false loadData >> old.out &
+nohup hz run -id NEW -warmup false load >> new.out &
+nohup hz run -id OLD -warmup false load >> old.out &
 wait
 
 hz driver Client
 hz threads 4
 hz bench 600
 hz allowException true
-nohup hz run -id NEW -warmup false getBench >> new.out &
-nohup hz run -id OLD -warmup false getBench >> old.out &
+nohup hz run -id NEW -warmup false get >> new.out &
+nohup hz run -id OLD -warmup false get >> old.out &
 
-hz bounce -id Member3 -duration 480 -initalDelay 30 -restartDelay 5 -iterationDelay 5
+hz bounce -id Member3 -iterations 50 -initalDelay 30 -restartDelay 5 -iterationDelay 5
 wait
 hz wipe
 

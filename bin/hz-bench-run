@@ -1,12 +1,25 @@
 #!/usr/bin/env bash
 
+set -e
+
+cleanup() {
+    exitCode=$?
+    aws-terminate a.box
+    exit $exitCode
+}
+
+trap "cleanup" INT TERM EXIT
+
 testDir=${1}
+boxCount=${2}
 
 subDir=$(date '+%Y_%m_%d-%H_%M_%S')
 mkdir -p ${subDir}
 cd ${subDir}
 
 cp -r ${HZ_CMD_BENCH_SRC}/lab/${testDir}/* .
+
+hz-awsBox ${boxCount} a.box
 
 ./go
 

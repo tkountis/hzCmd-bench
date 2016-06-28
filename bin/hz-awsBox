@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-count=$1
-hz aws create -count ${count} -imageId ami-08111162 -key jenkins-ec2-key -placementGroup hzpc2 -region us-east-1 -subnetId subnet-378d2140 -type c4.xlarge -output a.box
+count=${1:0}
+outputFile=${2:-a.box}
+hz aws create -count ${count} -imageId ami-08111162 -key jenkins-ec2-key -placementGroup hzpc2 -region us-east-1 -subnetId subnet-378d2140 -type c4.xlarge -output ${outputFile}

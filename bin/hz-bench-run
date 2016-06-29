@@ -4,7 +4,11 @@ set -e
 
 cleanup() {
     exitCode=$?
-    aws-terminate a.box
+    #aws-terminate a.box
+    echo "exitCode=${exitCode}"
+
+    hz wipe -local
+
     exit $exitCode
 }
 
@@ -15,11 +19,13 @@ boxCount=${2}
 
 subDir=$(date '+%Y_%m_%d-%H_%M_%S')
 mkdir -p ${subDir}
+
+cp a.box ${subDir}
 cd ${subDir}
 
 cp -r ${HZ_CMD_BENCH_SRC}/lab/${testDir}/* .
 
-hz-awsBox ${boxCount} a.box
+#hz-awsBox ${boxCount} a.box
 
 ./go
 

@@ -1,26 +1,29 @@
 #!/usr/bin/env bash
+set -e
+
+hz broker -ip 127.0.0.1
 
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true -Dhazelcast.connection.monitor.max.faults=1"
 hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms5G -Xmx5G ${hzProps}"
 hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx1G ${hzProps}"
 
-hz cluster -size M4C4 -id NEW -v 3.7-SNAPSHOT -boxes a.box
+hz cluster -size M4C4 -id HZ -v 3.7-SNAPSHOT -boxes a.box -user danny
 
 hz type Metrics
 hz driver Member
 hz threads 1
-hz run -id NEW -warmup false load
+hz run -id HZ -warmup false load
 
 hz driver Client
 hz threads 4
-hz bench 600
+hz bench 10
 hz allowException true
-hz run -id NEW -warmup false get &
-hz bounce -id Member3 -iterations 50 -initalDelay 30 -restartDelay 5 -iterationDelay 5
+#hz run -id HZ -warmup false get &
+#hz bounce -id Member3 -iterations 50 -initalDelay 30 -restartDelay 5 -iterationDelay 5
 wait
 
 hz download
-hz wipe
+#hz wipe
 
-hz chart metrics -dir output -red NEW -blue OLD
+#hz chart metrics -dir output -red NEW -blue OLD
 

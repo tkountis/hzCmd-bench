@@ -8,13 +8,13 @@ cleanup() {
 trap "cleanup" INT TERM EXIT
 
 
-hz broker -ip 127.0.0.1
+#hz broker -ip 127.0.0.1
 
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true -Dhazelcast.connection.monitor.max.faults=1"
 hz memberOps "-Xms1G -Xmx1G ${hzProps}"
 hz clientOps "-Xms1G -Xmx1G ${hzProps}"
 
-hz cluster -size M4C4 -id HZ -v 3.6 -boxes a.box -user danny
+hz cluster -size M4C4 -id HZ -v 3.6 -boxes a.box -user ec2-user
 
 hz type Metrics
 hz driver Member

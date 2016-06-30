@@ -4,7 +4,7 @@ cleanup() {
     exitCode=$?
     hz download
     #hz chart metrics
-    exit $exitCode
+    exit ${exitCode}
 }
 trap "cleanup" INT TERM EXIT
 

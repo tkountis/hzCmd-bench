@@ -3,7 +3,7 @@ set -e
 cleanup() {
     exitCode=$?
     hz download
-    hz chart metrics
+    #hz chart metrics
     exit $exitCode
 }
 trap "cleanup" INT TERM EXIT

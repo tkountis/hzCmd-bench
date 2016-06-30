@@ -8,24 +8,21 @@ cleanup() {
 trap "cleanup" INT TERM EXIT
 
 
-#hz broker -ip 127.0.0.1
-
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true -Dhazelcast.connection.monitor.max.faults=1"
 hz memberOps "-Xms1G -Xmx1G ${hzProps}"
 hz clientOps "-Xms1G -Xmx1G ${hzProps}"
 
-hz cluster -size M4C4 -id HZ -v 3.6 -boxes a.box -user ec2-user
+hz cluster -size M4C4 -id HZ -v 3.6 -boxes a.box
 
 hz type Metrics
 hz driver Member
 hz threads 1
 hz run -id HZ -warmup false load
 
-
 hz allowException true
 hz driver Client
 hz threads 4
-hz bench 120
-hz bounce -id Member3 -iterations 2 -initalDelay 30 -restartDelay 5 -iterationDelay 5 &
+hz bench 900
+hz bounce -id Member3 -iterations 20 -initalDelay 60 -restartDelay 5 -iterationDelay 5 &
 hz run -id HZ -warmup false get
 wait

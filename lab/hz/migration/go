@@ -26,6 +26,6 @@ hz allowException true
 hz driver Client
 hz threads 4
 hz bench 120
-hz bounce -id Member3 -iterations 2 -initalDelay 5 -restartDelay 5 -iterationDelay 5 &
+hz bounce -id Member3 -iterations 2 -initalDelay 30 -restartDelay 5 -iterationDelay 5 &
 hz run -id HZ -warmup false get
 wait

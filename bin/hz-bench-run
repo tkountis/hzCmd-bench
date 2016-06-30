@@ -5,12 +5,12 @@ set -e
 cleanup() {
     exitCode=$?
     #aws-terminate a.box
-    echo "exitCode=${exitCode}"
 
     hz wipe
-
     #kill -- -$$
     #kill $(jobs -p)
+
+    echo "exitCode=${exitCode}"
     exit $exitCode
 }
 

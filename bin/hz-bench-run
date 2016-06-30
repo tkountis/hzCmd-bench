@@ -32,7 +32,7 @@ cp a.box ${subDir}
 cd ${subDir}
 cp -r ${HZ_CMD_BENCH_SRC}/lab/${testDir}/* .
 
-#hz-awsBox ${boxCount} a.box
+hz-awsBox ${boxCount} a.box
 
 ./go
 

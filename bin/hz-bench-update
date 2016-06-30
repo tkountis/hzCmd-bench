@@ -6,7 +6,7 @@ fi
 
 git -C "${HZ_CMD_BENCH_SRC}" branch
 
-pull=$(git -C "${HZ_CMD_BENCH_SRC}" pull)
+pull=$(git -C "${HZ_CMD_BENCH_SRC}" pull || true)
 echo ${pull}
 
 if [ "${pull}" == "Already up-to-date." ] ; then

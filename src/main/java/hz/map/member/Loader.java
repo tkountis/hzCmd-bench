@@ -5,7 +5,6 @@ import hz.utils.Utils;
 
 public abstract class Loader extends MapBench {
 
-    public int asyncBatch=1000;
     private int key=0;
 
     public void init(){

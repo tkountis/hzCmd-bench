@@ -3,7 +3,7 @@ set -e
 cleanup() {
     exitCode=$?
     hz download
-    #hz chart metrics
+    hz chart metrics
     exit ${exitCode}
 }
 trap "cleanup" INT TERM EXIT
@@ -25,4 +25,3 @@ hz threads 4
 hz bench 900
 hz bounce -id Member3 -iterations 20 -initalDelay 60 -restartDelay 5 -iterationDelay 5 &
 hz run -id HZ -warmup false get
-wait

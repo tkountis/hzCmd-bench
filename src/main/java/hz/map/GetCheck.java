@@ -1,15 +1,17 @@
 package hz.map;
 
+import global.AssertionException;
 import hz.map.base.MapBench;
+
 
 public class GetCheck extends MapBench {
 
-    public void timeStep() {
+    public void timeStep() throws AssertionException {
         int k = random.nextInt(keyDomain);
         Object obj = map.get(k);
 
         if(obj==null){
-            throw new IllegalStateException("DATA LOSS! for key "+k);
+            throw new AssertionException("DATA LOSS! for key "+k);
         }
     }
 

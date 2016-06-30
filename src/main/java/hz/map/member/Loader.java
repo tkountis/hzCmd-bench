@@ -6,7 +6,6 @@ import hz.utils.Utils;
 public abstract class Loader extends MapBench {
 
     public int asyncBatch=1000;
-    private int putCount=0;
     private int key=0;
 
     public void init(){
@@ -25,12 +24,8 @@ public abstract class Loader extends MapBench {
 
         Object val = getValue(key);
 
-        if(putCount%asyncBatch==0) {
-            map.set(key, val);
-        }else{
-            map.putAsync(key, val);
-        }
-        putCount++;
+        map.set(key, val);
+
         key++;
     }
 

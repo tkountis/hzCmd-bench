@@ -1,3 +1,3 @@
 get@class=hz.map.GetCheck
-get@keyDomain=1000000
+get@keyDomain=10000
 get@name=bakSync-1_onHeap

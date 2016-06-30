@@ -9,6 +9,8 @@ cleanup() {
 
     hz wipe -local
 
+    #kill -- -$$
+    #kill $(jobs -p)
     exit $exitCode
 }
 

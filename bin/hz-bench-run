@@ -8,8 +8,8 @@ cleanup() {
        slack-post simulator-fail FAIL $(pwd)
     fi
 
-    #aws-terminate a.box
     hz wipe
+    #aws-terminate a.box
 
     jvmPids=$(jps -q | xargs pwdx | grep $(pwd) | awk '{print $1}' | sed s'/://')
     if [ -n "${jvmPids}" ] ; then

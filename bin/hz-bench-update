@@ -6,11 +6,12 @@ fi
 
 git -C "${HZ_CMD_BENCH_SRC}" branch
 
+pull=$(git -C "${HZ_CMD_BENCH_SRC}" pull)
+echo ${pull}
 
-git -C "${HZ_CMD_BENCH_SRC}" pull
+if [ "${pull}" == "Already up-to-date." ] ; then
+  exit 0
+fi
 
 mvn -f "${HZ_CMD_BENCH_SRC}" clean install dependency:copy-dependencies -DskipTest
 
-#add to your profile
-#export HZ_CMD_BENCH_BIN=${HZ_CMD_BENCH_SRC}/bin
-#PATH="${PATH}:${HZ_CMD_BENCH_BIN}"

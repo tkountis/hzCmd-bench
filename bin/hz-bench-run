@@ -8,7 +8,7 @@ cleanup() {
 
     hz wipe
 
-    jps -q | xargs pwdx | grep $(pwd) | awk '{print $1}' | sed s'/://' | xargs kill -9
+    jps -q | xargs pwdx | grep $(pwd) | awk '{print $1}' | sed s'/://' | xargs -I% sh -c 'echo | kill -9 %'
 
     echo "exitCode=${exitCode}"
     exit $exitCode

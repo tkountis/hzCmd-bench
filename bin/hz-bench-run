@@ -8,7 +8,6 @@ cleanup() {
        slack-post simulator-fail FAIL $(pwd)
     fi
 
-
     #aws-terminate a.box
     hz wipe
 

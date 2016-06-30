@@ -8,7 +8,10 @@ cleanup() {
 
     hz wipe
     #kill -- -$$
-    kill $(jobs -p)
+
+    a=$(jobs -p)
+    echo ${a}
+    kill  ${a}
 
     echo "exitCode=${exitCode}"
     exit $exitCode

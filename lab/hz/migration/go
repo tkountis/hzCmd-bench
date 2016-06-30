@@ -3,18 +3,18 @@ set -e
 cleanup() {
     exitCode=$?
     hz download
+    hz chart metrics
     exit $exitCode
 }
 trap "cleanup" INT TERM EXIT
 
 
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true -Dhazelcast.connection.monitor.max.faults=1"
-hz memberOps "-Xms1G -Xmx1G ${hzProps}"
-hz clientOps "-Xms1G -Xmx1G ${hzProps}"
+hz memberOps "-Xms2G -Xmx2G ${hzProps}"
+hz clientOps "-Xms200M -Xmx400M ${hzProps}"
 
 hz cluster -size M4C4 -id HZ -v $(hazelcastVersion) -boxes a.box
 
-hz type Metrics
 hz driver Member
 hz threads 1
 hz run -id HZ -warmup false load
@@ -25,4 +25,3 @@ hz threads 4
 hz bench 900
 hz bounce -id Member3 -iterations 20 -initalDelay 60 -restartDelay 5 -iterationDelay 5 &
 hz run -id HZ -warmup false get
-wait

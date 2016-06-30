@@ -7,11 +7,8 @@ cleanup() {
     #aws-terminate a.box
 
     hz wipe
-    #kill -- -$$
 
-    a=$(jobs -p)
-    echo ${a}
-    kill  ${a}
+    jps -q | xargs pwdx | grep $(pwd) | awk '{print $1}' | sed s'/://' | xargs kill -9
 
     echo "exitCode=${exitCode}"
     exit $exitCode

@@ -7,7 +7,7 @@ cleanup() {
     #aws-terminate a.box
     echo "exitCode=${exitCode}"
 
-    hz wipe -local
+    hz wipe
 
     #kill -- -$$
     #kill $(jobs -p)

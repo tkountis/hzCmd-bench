@@ -13,7 +13,7 @@ hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.back
 hz memberOps "-Xms2G -Xmx2G ${hzProps}"
 hz clientOps "-Xms200M -Xmx400M ${hzProps}"
 
-hz cluster -size M4C4 -id HZ -v 3.6 -boxes a.box
+hz cluster -size M4C4 -id HZ -v $(hazelcastVersion) -boxes a.box
 
 hz driver Member
 hz threads 1
@@ -22,6 +22,6 @@ hz run -id HZ -warmup false load
 hz allowException true
 hz driver Client
 hz threads 4
-hz bench 900
-hz bounce -id Member3 -iterations 20 -initalDelay 60 -restartDelay 5 -iterationDelay 5 &
+hz bench 2700
+hz bounce -id Member3 -iterations 100 -initalDelay 60 -restartDelay 5 -iterationDelay 5 &
 hz run -id HZ -warmup false get

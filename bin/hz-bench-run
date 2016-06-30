@@ -4,6 +4,10 @@ set -e
 cleanup() {
     exitCode=$?
     echo "exitCode=${exitCode}"
+    if [[ ${exitCode} != 0 ]]; then
+       slack-post simulator-fail FAIL $(pwd)
+    fi
+
 
     #aws-terminate a.box
     hz wipe

@@ -7,7 +7,10 @@ cleanup() {
 
     hz wipe
 
-    jps -q | xargs pwdx | grep $(pwd) | awk '{print $1}' | sed s'/://' | xargs kill -9
+    jvmPids=$(jps -q | xargs pwdx | grep $(pwd) | awk '{print $1}' | sed s'/://')
+    if [ -n "${jvmPids}" ] ; then
+     echo ${jvmPids} | xargs kill -9
+    fi
 
     echo "exitCode=${exitCode}"
     exit $exitCode

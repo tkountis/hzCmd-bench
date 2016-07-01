@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+file=$1
+
+hz allowException true
+hz driver Client
+hz threads 8
+hz bench 1800
+hz run -id NEW -warmup false getBench
+echo $? > ${file}

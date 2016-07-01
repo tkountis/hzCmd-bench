@@ -13,7 +13,7 @@ trap "cleanup" INT TERM EXIT
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true -Dhazelcast.connection.monitor.max.faults=1"
 hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms3G -Xmx3G ${hzProps}"
 hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms200M -Xmx400M ${hzProps}"
-hz cluster -size M4C4 -id NEW -v $(hazelcastVersion) -boxes a.box
+hz cluster -size M4C4 -id NEW -v 3.6.2 -boxes a.box
 
 hz driver Member
 hz threads 1

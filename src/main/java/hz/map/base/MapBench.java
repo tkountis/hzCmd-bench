@@ -17,8 +17,8 @@ public abstract class MapBench extends BenchBase {
 
 
     public void cleanup() {
-        System.out.println("map "+map.getName()+" size="+map.size());
-        map.clear();
+        //System.out.println("map "+map.getName()+" size="+map.size());
+        //map.clear();
     }
 
     public void setVendorObject(Object o) {

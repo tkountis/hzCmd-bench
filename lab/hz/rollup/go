@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -e
+cleanup() {
+    exitCode=$?
+    hz download
+    hz chart metrics
+    exit ${exitCode}
+}
+trap "cleanup" INT TERM EXIT
+
+
+hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
+hz memberOps "-Xms2G -Xmx2G ${hzProps}"
+hz clientOps "-Xms200M -Xmx400M ${hzProps}"
+
+hz cluster -size M4C4 -v 3.7-EA,$(hazelcastVersion) -boxes a.box
+
+hz driver Member
+hz threads 1
+hz run load
+
+hz allowException true
+hz driver Client
+hz threads 4
+hz bench 2700
+hz bounce -id Member3 -iterations 100 -initalDelay 60 -restartDelay 5 -iterationDelay 5 &
+hz run get

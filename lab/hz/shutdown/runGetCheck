@@ -6,5 +6,5 @@ hz allowException true
 hz driver Client
 hz threads 8
 hz bench 1800
-hz run -id HZ -warmup false getBench
+hz run getBench
 echo $? > ${file}

@@ -15,12 +15,8 @@ hz threads 8,64
 hz warmup 60
 hz bench 300
 
-nohup hz run -id NEW marks/*/* > new.out &
-nohup hz run -id OLD marks/*/* > old.out &
-wait
+hz run marks/*/*
 hz download
 hz wipe
 
 chart-ComparisonMetrics output NEW OLD
-cp go output/
-mv *.out output/

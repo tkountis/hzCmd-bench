@@ -1,1 +1,2 @@
 shut@class=hz.ops.ShutDown
+shut@warmup=0

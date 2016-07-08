@@ -13,11 +13,11 @@ trap "cleanup" INT TERM EXIT
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true -Dhazelcast.connection.monitor.max.faults=1"
 hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms3G -Xmx3G ${hzProps}"
 hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms200M -Xmx400M ${hzProps}"
-hz cluster -size M4C4 -id HZ -v $(hazelcastVersion) -boxes a.box
+hz cluster -size M4C4 -v $(hazelcastVersion) -boxes a.box
 
 hz driver Member
 hz threads 1
-hz run -id HZ -warmup false loadData
+hz run loadData
 
 ./runGetCheck exitCode.txt &
 sleep 30
@@ -28,13 +28,13 @@ for j in {1..15}; do
   hz driver Member${i}
   hz threads 1
   hz allowException false
-  hz run -id HZ -warmup false shutDown
+  hz run shutDown
   ./checkExitCode exitCode.txt
   sleep 20
  done
 
  for i in {1..3}; do
-  hz embeddedRestart -id Member${i}
+  hz embeddedRestart Member${i}
  done
 
 done

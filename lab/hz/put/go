@@ -4,16 +4,15 @@ hz broker -ip 127.0.0.1
 
 hz memberOps "-Xms500M -Xmx500M"
 hz clientOps "-Xms200M -Xmx200M"
-hz cluster -size M2C2 -id HZ -v 3.7-EA -boxes local.box -user $(whoami)
+hz cluster -size M2C2 -v 3.7-EA -boxes local.box -user $(whoami)
 
 hz driver Client
 hz type Metrics
-hz interval 1
-hz threads 1
+hz threads 2
 hz warmup 30
 hz bench 60
 
-hz run -id HZ put
+hz run put
 
 hz download
 hz wipe -local

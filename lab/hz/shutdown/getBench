@@ -1,3 +1,4 @@
 get@class=hz.map.GetCheck
+get@warmup=0
 get@keyDomain=1000000
 get@name=bak-0_onHeap

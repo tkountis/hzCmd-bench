@@ -1,4 +1,0 @@
-get@class=hz.map.GetCheck
-get@warmup=0
-get@keyDomain=10000
-get@name=bakSync-1_onHeap

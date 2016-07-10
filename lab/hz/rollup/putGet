@@ -1,0 +1,16 @@
+get@class=hz.map.GetCheck
+get@keyDomain=1001
+get@name=mapBak1A
+get@threads=1
+get@warmup=0
+get@duration=1800
+get@driver=Client
+
+put@class=hz.map.Put
+put@keyDomain=1001
+put@valueSize=5
+put@name=mapBak1B
+put@threads=1
+put@warmup=0
+put@duration=1800
+put@driver=Client

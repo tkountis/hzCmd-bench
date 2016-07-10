@@ -1,0 +1,7 @@
+size@class=hz.map.SizeCheck
+size@name=mapBak1B
+size@size=1001
+size@warmup=0
+size@duration=0
+size@threads=1
+size@driver=Member1

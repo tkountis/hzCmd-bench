@@ -8,7 +8,7 @@ hz cluster -size M2C2 -v 3.6,3.6.1,3.6.2,3.6.3,3.6.4 -boxes local.box -user $(wh
 hz run load
 
 hz run putGet &
-sleep 20
+sleep 21
 
 for version in 3.6.1 3.6.2 3.6.3 3.6.4 ; do
 
@@ -16,16 +16,16 @@ for version in 3.6.1 3.6.2 3.6.3 3.6.4 ; do
     hz driver Member${i}
     hz run shutDown
     hz bounce -v ${version} Member${i}
-    sleep 20
+    sleep 21
   done
-  sleep 20
+  sleep 21
 
   hz bounce -v ${version} Client
   hz run putGet &
-  sleep 20
+  sleep 21
 done
 
-sleep 20
+sleep 21
 hz run sizeCheckA
 hz run sizeCheckB
 hz download

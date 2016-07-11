@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-hz broker -ip 127.0.0.1
+#hz broker -ip 127.0.0.1
 
 hz memberOps "-Xms300M -Xmx300M"
 hz clientOps "-Xms50M -Xmx50M"

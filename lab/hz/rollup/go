@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 
-#hz broker -ip 127.0.0.1
-
 hz memberOps "-Xms300M -Xmx300M"
 hz clientOps "-Xms50M -Xmx50M"
-hz cluster -size M2C2 -v 3.6,3.6.1,3.6.2,3.6.3,3.6.4 -boxes local.box -user $(whoami)
-hz run load
+hz cluster -size DM2C2 -v 3.6,3.6.1,3.6.2,3.6.3,3.6.4 -boxes a.box
 
+hz run load
 hz run putGet &
 sleep 21
 
@@ -26,9 +24,8 @@ for version in 3.6.1 3.6.2 3.6.3 3.6.4 ; do
 done
 
 sleep 21
-hz run sizeCheckA
-hz run sizeCheckB
+hz run sizeCheck
 hz download
-hz wipe -local
+hz wipe
 
 chartAll-JavaMetrics output

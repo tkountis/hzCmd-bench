@@ -9,7 +9,7 @@ hz cluster -size M4C4 -id NEW -v $(hazelcastVersion) -type HZ -boxes a.box -user
 hz cluster -size M4C4 -id OLD -v 3.7-EA              -type HZ -boxes b.box -user ec2-user
 
 hz driver Client,Member
-hz type Metrics,HDR
+hz type Metrics,Hdr
 hz interval 1,0
 hz threads 8,64
 hz warmup 60

@@ -1,0 +1,8 @@
+sql@class=hz.map.member.LoadPersons
+sql@threads=1
+sql@warmup=0
+sql@duration=0
+sql@driver=Member
+sql@keyDomain=100000
+sql@name=mapBak0,mapBak1,mapAsync1
+

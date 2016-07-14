@@ -1,5 +1,4 @@
 putTtl@class=hz.map.PutTtl
 putTtl@keyDomain=100000
-putTtl@batchSize=100,1001
 putTtl@valueSize=1,1001
 putTtl@name=mapBak0,mapBak1,mapAsync1

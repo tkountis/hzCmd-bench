@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-testDir=${1}
-boxCount=${2}
-compare=${3}
-type=${4:-c4.xlarge}
-
 set -e
 cleanup() {
     exitCode=$?
@@ -25,6 +20,10 @@ cleanup() {
 }
 trap "cleanup" INT TERM EXIT
 
+testDir=${1}
+boxCount=${2}
+compare=${3}
+type=${4:-c4.xlarge}
 
 
 hz-bench-update

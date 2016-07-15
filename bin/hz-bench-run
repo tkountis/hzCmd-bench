@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+testDir=${1}
+boxCount=${2}
+compare=${3}
+type=${4:-c4.xlarge}
+
 set -e
 cleanup() {
     exitCode=$?
@@ -10,6 +15,9 @@ cleanup() {
 
     hz wipe
     aws-terminate a.box
+    if [ -n "${compare}" ] ; then
+        aws-terminate b.box
+    fi
 
     hz-killSubJava
 
@@ -17,8 +25,7 @@ cleanup() {
 }
 trap "cleanup" INT TERM EXIT
 
-testDir=${1}
-boxCount=${2}
+
 
 hz-bench-update
 
@@ -26,10 +33,15 @@ subDir=$(date '+%Y_%m_%d-%H_%M_%S')
 mkdir -p ${subDir}
 
 cp a.box ${subDir} 2>/dev/null || true
+cp b.box ${subDir} 2>/dev/null || true
 cd ${subDir}
 cp -r ${HZ_CMD_BENCH_SRC}/lab/${testDir}/* .
 
-hz-awsBox ${boxCount} a.box
+hz-awsBox ${boxCount} ${type} a.box
+
+if [ -n "${compare}" ] ; then
+  hz-awsBox ${boxCount} ${type} b.box
+fi
 
 ./go
 

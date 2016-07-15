@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 count=${1:0}
-outputFile=${2:-a.box}
-type=${3:-c4.xlarge}
+type=${2:-c4.xlarge}
+outputFile=${3:-a.box}
 hz aws create -count ${count} -imageId ami-08111162 -key jenkins-ec2-key -placementGroup hzpc2 -region us-east-1 -subnetId subnet-378d2140 -type ${type} -output ${outputFile}

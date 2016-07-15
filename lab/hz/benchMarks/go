@@ -21,7 +21,7 @@ hz cluster -size M4C4 -id OLD -v 3.7-EA              -type HZ -boxes b.box -user
 hz driver Client,Member
 hz type Metrics,Hdr
 hz interval 1,0
-hz threads 8,32
+hz threads 32,64
 hz warmup 60
 hz bench 120
 

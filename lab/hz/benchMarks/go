@@ -14,7 +14,7 @@ trap "cleanup" INT TERM EXIT
 #hz jfr
 hzOps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms4G -Xmx4G ${hzOps}"
-hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms100M -Xmx100M ${hzOps}"
+hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms500M -Xmx500M ${hzOps}"
 hz cluster -size M4C4 -id NEW -v $(hazelcastVersion) -type HZ -boxes a.box -user ec2-user
 hz cluster -size M4C4 -id OLD -v 3.7-EA              -type HZ -boxes b.box -user ec2-user
 

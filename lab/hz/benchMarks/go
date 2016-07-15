@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #hz broker -ip 10.212.1.107
-
+hz jfr
 hzOps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms4G -Xmx4G ${hzOps}"
 hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms100M -Xmx100M ${hzOps}"
@@ -15,8 +15,9 @@ hz threads 8,64
 hz warmup 60
 hz bench 300
 
-hz run marks/*/*
+hz run marks/map/put/* marks/map/set/* marks/map/get/* marks/map/contains/* marks/map/txn/* marks/sql/* marks/cache/* marks/atomic/* marks/id/* marks/latch/* marks/lock/*
 hz download
 hz wipe
 
 chart-ComparisonMetrics output NEW OLD
+chart-allComparisonHdr  output NEW OLD

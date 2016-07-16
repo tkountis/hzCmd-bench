@@ -7,17 +7,16 @@ import static utils.Utils.dymanicValues;
 
 public abstract class BenchBase implements Bench{
 
-
     public int seed=0;
     protected Random random;
     protected List<byte[]> valueSet;
 
     public String name;
     public int keyDomain = Integer.MAX_VALUE;
-    public int valueSetSize=1000;
+    public int valueSetSize=1;
     public int valueSize=0;
     public int valueMinSize=1;
-    public int valueMaxSize=10000;
+    public int valueMaxSize=1;
 
     public void init() {
 
@@ -27,12 +26,11 @@ public abstract class BenchBase implements Bench{
             random = new Random(seed);
         }
 
-        if(valueSize==0){
-            valueSet = dymanicValues(random, valueSetSize, valueMinSize, valueMaxSize);
-        }else{
-            valueSet = dymanicValues(random, 1, valueSize, valueSize);
-            valueSetSize=1;
+        if(valueSize!=0) {
+            valueMinSize=valueSize;
+            valueMaxSize=valueSize;
         }
+        valueSet = dymanicValues(random, valueSetSize, valueMinSize, valueMaxSize);
     }
 
     public Object mapKeyToValue(int key){

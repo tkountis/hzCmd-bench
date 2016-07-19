@@ -1,5 +1,5 @@
 getLoad@class=hz.cache.member.Load
-getLoad@valueSize=1
+getLoad@valueSize=1001
 getLoad@threads=1
 getLoad@warmup=0
 getLoad@duration=0

@@ -1,0 +1,8 @@
+getLoad@class=hz.cache.member.Load
+getLoad@valueSize=1
+getLoad@threads=1
+getLoad@warmup=0
+getLoad@duration=0
+getLoad@driver=Member
+getLoad@keyDomain=100000
+getLoad@name=cacheBak0,cacheBak1,cacheAsync1

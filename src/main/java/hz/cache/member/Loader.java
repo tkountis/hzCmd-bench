@@ -1,9 +1,10 @@
-package hz.map.member;
+package hz.cache.member;
 
+import hz.cache.base.CacheBench;
 import hz.map.base.MapBench;
 import hz.utils.Utils;
 
-public abstract class Loader extends MapBench {
+public abstract class Loader extends CacheBench {
 
     private int key=0;
 
@@ -23,7 +24,7 @@ public abstract class Loader extends MapBench {
 
         Object val = getValue(key);
 
-        map.set(key, val);
+        cache.put(key, val);
 
         key++;
     }
@@ -39,6 +40,6 @@ public abstract class Loader extends MapBench {
     }
 
     public void cleanup() {
-        System.out.println("load map "+map.getName()+" size="+map.size());
+        System.out.println("load cache "+cache.getName()+" size="+cache.size());
     }
 }

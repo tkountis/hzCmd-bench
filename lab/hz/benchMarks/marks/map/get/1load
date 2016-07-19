@@ -5,5 +5,5 @@ getLoad@warmup=0
 getLoad@duration=0
 getLoad@driver=Member
 getLoad@keyDomain=100000
-getLoad@name=mapBak0,mapBak1,mapAsync1
+getLoad@name=mapBak0
 

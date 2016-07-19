@@ -1,4 +1,4 @@
 getAll@class=hz.map.GetAll
 getAll@keyDomain=100000
 getAll@batchSize=100,1001
-getAll@name=mapBak0,mapBak1,mapAsync1
+getAll@name=mapBak0

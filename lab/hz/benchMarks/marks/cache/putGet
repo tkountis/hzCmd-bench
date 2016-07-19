@@ -1,4 +1,0 @@
-cachePut@class=hz.cache.PutGet
-cachePut@keyDomain=100000
-cachePut@valueSize=1,1001
-cachePut@name=cacheBak0,cacheBak1,cacheAsync1

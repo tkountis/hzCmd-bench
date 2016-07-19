@@ -2,4 +2,4 @@ txnGet@class=hz.txn.map.GetForUpdate
 txnGet@keyDomain=100000
 txnGet@phase=1,2
 txnGet@batchSize=1,100
-txnGet@name=mapBak0,mapBak1,mapAsync1
+txnGet@name=mapBak0

@@ -53,6 +53,7 @@
         <min-eviction-check-millis>0</min-eviction-check-millis>
     </map>
 
+
     <cache name="cacheBak0HD*">
         <in-memory-format>NATIVE</in-memory-format>
         <backup-count>0</backup-count>

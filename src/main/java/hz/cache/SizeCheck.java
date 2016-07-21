@@ -1,18 +1,18 @@
-package hz.map;
+package hz.cache;
 
 import global.AssertionException;
-import hz.map.base.MapBench;
+import hz.cache.base.CacheBench;
 
 
-public class SizeCheck extends MapBench {
+public class SizeCheck extends CacheBench {
 
     private boolean running=true;
     public int size=0;
 
     public void timeStep() throws AssertionException {
 
-        if(map.size()!=size){
-            throw new AssertionException("map "+map.getName()+" size "+map.size()+" != expected "+size);
+        if(cache.size()!=size){
+            throw new AssertionException("map "+cache.getName()+" size "+cache.size()+" != expected "+size);
         }
         running=false;
     }

@@ -21,7 +21,7 @@ public abstract class CacheBench extends BenchBase {
     }
 
     public void cleanup() {
-        System.out.println("cache "+cache.getName()+" size="+cache.size());
-        cache.clear();
+        //System.out.println("cache "+cache.getName()+" size="+cache.size());
+        //cache.clear();
     }
 }

@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+hz broker -ip 10.212.1.107
+
+hzProps="${hzProps} -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true -Dhazelcast.socket.receive.buffer.size=2048 -Dhazelcast.socket.send.buffer.size=2048"
+hzProps="${hzProps} -Dhazelcast.partition.count=271"
+hz memberOps "-Xms1G -Xmx1G ${hzProps}"
+hz clientOps "-Xms1G -Xmx1G ${hzProps}"
+hz cluster -size M4C4 -id HZ -v 3.7-SNAPSHOT -ee -type HZ -boxes box.a -user danny
+
+hz memberOps "-Xms1G -Xmx1G"
+hz clientOps "-Xms1G -Xmx1G"
+hz cluster -size M4C4 -id GG -v 1.6.0            -type GG -boxes box.b -user danny
+
+nohup hz run -id HZ bench/loadHZ >> hz.out &
+nohup hz run -id GG bench/loadGG >> gg.out &
+wait
+nohup hz run -id HZ bench/sizeHZ >> hz.out &
+nohup hz run -id GG bench/sizeGG >> gg.out &
+wait
+
+hz warmup 60
+hz bench 600
+
+nohup hz run -id HZ bench/putGetHZ >> hz.out &
+nohup hz run -id GG bench/putGetGG >> gg.out &
+wait
+
+hz download
+hz wipe
+hz chart compare -dir output -red HZ -blue GG
+
+mv *.out output/
+zip -r output.zip output

@@ -1,0 +1,13 @@
+
+val=$1
+
+ssh danny@10.212.1.101 "sudo ip route change 10.212.40.0/24 dev ens2f0 proto kernel src 10.212.40.101 metric 100 rto_min ${val}ms"
+ssh danny@10.212.1.102 "sudo ip route change 10.212.40.0/24 dev ens2f0 proto kernel src 10.212.40.102 metric 100 rto_min ${val}ms"
+ssh danny@10.212.1.103 "sudo ip route change 10.212.40.0/24 dev ens2f0 proto kernel src 10.212.40.103 metric 100 rto_min ${val}ms"
+ssh danny@10.212.1.104 "sudo ip route change 10.212.40.0/24 dev ens2f0 proto kernel src 10.212.40.104 metric 100 rto_min ${val}ms"
+ssh danny@10.212.1.105 "sudo ip route change 10.212.40.0/24 dev ens2f0 proto kernel src 10.212.40.105 metric 100 rto_min ${val}ms"
+ssh danny@10.212.1.106 "sudo ip route change 10.212.40.0/24 dev ens2f0 proto kernel src 10.212.40.106 metric 100 rto_min ${val}ms"
+ssh danny@10.212.1.107 "sudo ip route change 10.212.40.0/24 dev ens2f0 proto kernel src 10.212.40.107 metric 100 rto_min ${val}ms"
+ssh danny@10.212.1.108 "sudo ip route change 10.212.40.0/24 dev ens2f0 proto kernel src 10.212.40.108 metric 100 rto_min ${val}ms"
+ssh danny@10.212.1.109 "sudo ip route change 10.212.40.0/24 dev ens2f0 proto kernel src 10.212.40.109 metric 100 rto_min ${val}ms"
+ssh danny@10.212.1.110 "sudo ip route change 10.212.40.0/24 dev ens2f0 proto kernel src 10.212.40.110 metric 100 rto_min ${val}ms"

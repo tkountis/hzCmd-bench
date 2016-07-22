@@ -1,0 +1,9 @@
+load@class=hz.cache.member.Load
+load@driver=Member
+load@threads=1
+load@warmup=0
+load@duration=900
+load@keyDomain=25000000
+load@valueSize=4000
+load@name=cacheBak1HD
+

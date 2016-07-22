@@ -1,0 +1,8 @@
+size@class=hz.cache.SizeCheck
+size@driver=Member1
+size@threads=1
+size@warmup=0
+size@duration=0
+size@size=0
+size@name=cacheBak1HD
+

@@ -1,4 +1,4 @@
-load@class=gg.cache.Load
+load@class=gg.cache.member.Load
 load@keyDomain=10000
 load@valueSize=1000
 load@name=cacheBak1

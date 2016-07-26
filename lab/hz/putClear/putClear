@@ -4,22 +4,35 @@ clear1@driver=Member1
 clear1@threads=1
 clear1@interval=1500
 
-clear1@class=hz.cache.Clear
-clear1@name=cacheBak1Async1HD
-clear1@driver=Member3
-clear1@threads=1
-clear1@interval=1500
+clear2@class=hz.cache.Clear
+clear2@name=cacheBak1Async1HD
+clear2@driver=Member3
+clear2@threads=1
+clear2@interval=1500
 
 put1@class=hz.cache.Put
 put1@name=cacheBak1HD
 put1@keyDomain=5000000
 put1@valueSize=1000
 put1@driver=Client
-put1@threads=8
+put1@threads=4
 
-put1@class=hz.cache.Put
-put1@name=cacheBak1Async1HD
-put1@keyDomain=5000000
-put1@valueSize=1000
-put1@driver=Client
-put1@threads=8
+put2@class=hz.cache.Put
+put2@name=cacheBak1Async1HD
+put2@keyDomain=5000000
+put2@valueSize=1000
+put2@driver=Client
+put2@threads=4
+
+
+get1@class=hz.cache.Get
+get1@name=cacheBak1HD
+get1@keyDomain=5000000
+get1@driver=Client
+get1@threads=4
+
+get2@class=hz.cache.Get
+get2@name=cacheBak1Async1HD
+get2@keyDomain=5000000
+get2@driver=Client
+get2@threads=4

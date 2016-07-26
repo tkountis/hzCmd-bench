@@ -24,7 +24,6 @@ put2@valueSize=1000
 put2@driver=Client
 put2@threads=4
 
-
 get1@class=hz.cache.Get
 get1@name=cacheBak1HD
 get1@keyDomain=5000000

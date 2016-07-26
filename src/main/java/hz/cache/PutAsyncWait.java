@@ -7,7 +7,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-public class PutAsync extends CacheBench {
+public class PutAsyncWait extends CacheBench {
 
     int timeout=0;
 
@@ -15,6 +15,6 @@ public class PutAsync extends CacheBench {
         int k = random.nextInt(keyDomain);
         Object v = mapKeyToValue(k);
         ICompletableFuture f = cache.putAsync(k, v);
-        f.get(timeout, TimeUnit.SECONDS);
+        f.get(timeout, TimeUnit.MILLISECONDS);
     }
 }

@@ -15,6 +15,6 @@ public class GetAsyncWait extends MapBench {
         int k = random.nextInt(keyDomain);
         ICompletableFuture f = map.getAsync(k);
 
-        f.get(timeout, TimeUnit.SECONDS);
+        f.get(timeout, TimeUnit.MILLISECONDS);
     }
 }

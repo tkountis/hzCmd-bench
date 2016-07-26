@@ -7,13 +7,13 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-public class GetAsync extends CacheBench {
+public class GetAsyncWait extends CacheBench {
 
     int timeout=0;
 
     public void timeStep() throws InterruptedException, ExecutionException, TimeoutException {
         int k = random.nextInt(keyDomain);
         ICompletableFuture f = cache.getAsync(k);
-        f.get(timeout, TimeUnit.SECONDS);
+        f.get(timeout, TimeUnit.MILLISECONDS);
     }
 }

@@ -9,7 +9,7 @@ import java.util.concurrent.TimeoutException;
 
 public class PutAsyncWait extends MapBench {
 
-    int timeout;
+    public int timeout=0;
 
     public void timeStep() throws InterruptedException, ExecutionException, TimeoutException {
         int k = random.nextInt(keyDomain);

@@ -14,4 +14,16 @@
         <smart-routing>true</smart-routing>
     </network>
 
+
+    <near-cache name="cacheBak*">
+        <local-update-policy>CACHE</local-update-policy>
+        <in-memory-format>OBJECT</in-memory-format>
+        <cache-local-entries>false</cache-local-entries>
+        <invalidate-on-change>true</invalidate-on-change>
+        <time-to-live-seconds>60</time-to-live-seconds>
+        <max-idle-seconds>3600</max-idle-seconds>
+        <max-size>100</max-size>
+        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="100" />
+    </near-cache>
+
 </hazelcast-client>

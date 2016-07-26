@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+hz broker -ip 10.212.1.107
+
+hz memberOps "-Xms1G -Xmx1G"
+hz clientOps "-Xms1G -Xmx1G"
+hz cluster -size M3C300 -v 3.6 -ee -boxes boxs -user danny
+
+hz type Metrics
+hz warmup 0
+hz bench 300
+hz run putClear
+
+hz download
+hz wipe -local

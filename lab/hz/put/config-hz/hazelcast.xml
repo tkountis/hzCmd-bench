@@ -34,4 +34,23 @@
         <async-backup-count>1</async-backup-count>
     </map>
 
+    <cache name="cacheBak0*">
+        <in-memory-format>BINARY</in-memory-format>
+        <backup-count>0</backup-count>
+        <statistics-enabled>false</statistics-enabled>
+    </cache>
+
+    <cache name="cacheBak1*">
+        <in-memory-format>BINARY</in-memory-format>
+        <backup-count>1</backup-count>
+        <statistics-enabled>false</statistics-enabled>
+    </cache>
+
+    <cache name="cacheAsync1*">
+        <in-memory-format>BINARY</in-memory-format>
+        <backup-count>0</backup-count>
+        <async-backup-count>1</async-backup-count>
+        <statistics-enabled>false</statistics-enabled>
+    </cache>
+
 </hazelcast>

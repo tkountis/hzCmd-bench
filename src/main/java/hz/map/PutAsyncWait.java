@@ -11,11 +11,13 @@ public class PutAsyncWait extends MapBench {
 
     public int timeout=0;
 
-    public void timeStep() throws InterruptedException, ExecutionException, TimeoutException {
+    public void timeStep() throws InterruptedException, ExecutionException {
         int k = random.nextInt(keyDomain);
         Object v = mapKeyToValue(k);
         ICompletableFuture f = map.putAsync(k, v);
-        f.get(timeout, TimeUnit.MILLISECONDS);
+        try {
+            f.get(timeout, TimeUnit.MILLISECONDS);
+        }catch (TimeoutException t){}
     }
 
 }

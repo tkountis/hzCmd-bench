@@ -11,9 +11,11 @@ public class GetAsyncWait extends CacheBench {
 
     public int timeout=0;
 
-    public void timeStep() throws InterruptedException, ExecutionException, TimeoutException {
+    public void timeStep() throws InterruptedException, ExecutionException {
         int k = random.nextInt(keyDomain);
         ICompletableFuture f = cache.getAsync(k);
-        f.get(timeout, TimeUnit.MILLISECONDS);
+        try {
+            f.get(timeout, TimeUnit.MILLISECONDS);
+        }catch (TimeoutException t){}
     }
 }

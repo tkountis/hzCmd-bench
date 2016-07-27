@@ -12,4 +12,4 @@ hz bench 300
 hz run putClear
 
 hz download
-hz wipe -local
+hz wipe

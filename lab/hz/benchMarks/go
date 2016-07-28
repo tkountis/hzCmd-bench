@@ -4,8 +4,10 @@ set -e
 cleanup() {
     exitCode=$?
     hz download
-    chart-ComparisonMetrics output NEW OLD
-    chart-allComparisonHdr  output NEW OLD
+    chart-ComparisonMetrics output NEW OLD || true
+    chart-allComparisonHdr  output NEW OLD || true
+    driver-wideMetrics output NEW OLD || true
+
     exit ${exitCode}
 }
 trap "cleanup" INT TERM EXIT
@@ -25,6 +27,4 @@ hz threads 64
 hz warmup 60
 hz bench 120
 
-#marks/map/txn/*
-
-hz run marks/map/put/* marks/map/set/* marks/map/get/* marks/map/contains/*  marks/sql/* marks/cache/* marks/atomic/* marks/id/* marks/latch/* marks/lock/*
+hz run marks/map/put/* marks/map/set/* marks/map/get/* marks/map/contains/* marks/sql/* marks/cache/* marks/atomic/* marks/latch/* marks/lock/*

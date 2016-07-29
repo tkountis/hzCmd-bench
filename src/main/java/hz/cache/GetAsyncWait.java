@@ -1,5 +1,6 @@
 package hz.cache;
 
+import com.hazelcast.core.HazelcastOverloadException;
 import com.hazelcast.core.ICompletableFuture;
 import hz.cache.base.CacheBench;
 
@@ -13,9 +14,12 @@ public class GetAsyncWait extends CacheBench {
 
     public void timeStep() throws InterruptedException, ExecutionException {
         int k = random.nextInt(keyDomain);
-        ICompletableFuture f = cache.getAsync(k);
         try {
-            f.get(timeout, TimeUnit.MILLISECONDS);
-        }catch (TimeoutException t){}
+            ICompletableFuture f = cache.getAsync(k);
+            try {
+                f.get(timeout, TimeUnit.MILLISECONDS);
+            } catch (TimeoutException t) {
+            }
+        }catch (HazelcastOverloadException e){}
     }
 }

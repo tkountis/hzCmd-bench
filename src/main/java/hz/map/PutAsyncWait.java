@@ -1,5 +1,6 @@
 package hz.map;
 
+import com.hazelcast.core.HazelcastOverloadException;
 import com.hazelcast.core.ICompletableFuture;
 import hz.map.base.MapBench;
 
@@ -14,10 +15,12 @@ public class PutAsyncWait extends MapBench {
     public void timeStep() throws InterruptedException, ExecutionException {
         int k = random.nextInt(keyDomain);
         Object v = mapKeyToValue(k);
-        ICompletableFuture f = map.putAsync(k, v);
-        try {
-            f.get(timeout, TimeUnit.MILLISECONDS);
-        }catch (TimeoutException t){}
-    }
 
+        try {
+            ICompletableFuture f = map.putAsync(k, v);
+            try {
+                f.get(timeout, TimeUnit.MILLISECONDS);
+            } catch (TimeoutException t) {}
+        }catch (HazelcastOverloadException e){}
+    }
 }

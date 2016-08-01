@@ -6,6 +6,10 @@ cleanup() {
     hz download
     chart-ComparisonMetrics output NEW OLD || true
     chart-allComparisonHdr  output NEW OLD || true
+
+    hz-view output Client > client.html
+    hz-view output Member > member.html
+
     driver-wideMetrics output NEW OLD || true
 
     exit ${exitCode}

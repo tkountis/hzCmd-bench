@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class PutAllStatic extends MapBench {
 
-    public int mapCount =2;
+    public int mapCount =1;
     public int batchSize=100;
     private List<Map> putAllMaps = new ArrayList<Map>();
 

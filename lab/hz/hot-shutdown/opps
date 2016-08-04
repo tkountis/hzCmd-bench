@@ -54,7 +54,7 @@ cacheBak1HDSet@threads=8
 cacheBak1HDSet@warmup=0
 cacheBak1HDSet@valueSetSize=100
 cacheBak1HDSet@valueMinSize=1
-cacheBak1HDet@valueMaxSize=1001
+cacheBak1HDSet@valueMaxSize=1001
 cacheBak1HDSet@name=cacheBak1HD
 
 cacheBak1HDTtl@class=hz.cache.PutTtl
@@ -72,7 +72,7 @@ cacheBak1HDRem@name=cacheBak1HD
 
 
 #heap Cache 1 backup, set putTtl remove
-cacheBak1Set@class=hz.map.Set
+cacheBak1Set@class=hz.cache.Set
 cacheBak1Set@keyDomain=10001
 cacheBak1Set@threads=8
 cacheBak1Set@warmup=0
@@ -81,7 +81,7 @@ cacheBak1Set@valueMinSize=1
 cacheBak1Set@valueMaxSize=1001
 cacheBak1Set@name=cacheBak1
 
-cacheBak1Ttl@class=hz.map.PutTtl
+cacheBak1Ttl@class=hz.cache.PutTtl
 cacheBak1Ttl@keyDomain=10001
 cacheBak1Ttl@threads=3
 cacheBak1Ttl@warmup=0
@@ -90,7 +90,7 @@ cacheBak1Ttl@valueMinSize=1
 cacheBak1Ttl@valueMaxSize=1001
 cacheBak1Ttl@name=cacheBak1
 
-cacheBak1Rem@class=hz.map.Remove
+cacheBak1Rem@class=hz.cache.Remove
 cacheBak1Rem@keyDomain=10001
 cacheBak1Rem@threads=1
 cacheBak1Rem@warmup=0

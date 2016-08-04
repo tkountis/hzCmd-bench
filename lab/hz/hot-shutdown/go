@@ -14,22 +14,17 @@ mOps="$mOps -Dhazelcast.operation.thread.count=4"
 hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms4G -Xmx4G ${ops} ${mOps}"
 hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx1G ${ops}"
 
-hz cluster -size M8 -id HZ -v 3.7 -ee -boxes a.box -user danny
+hz cluster -size M4C4 -id HZ -v 3.7 -ee -boxes a.box -user danny
 
 for i in {1..32} ; do
-
-    hz type Metrics
-    hz threads 64
     hz bench 900
-    hz driver Member
-    hz run opps
-
-    hz threads 1
-    hz driver Member1
+    hz driver Client
+    hz run opps &
+    sleep 300
     hz run clusterShutdown
     hz embeddedRestart -id Member
     hz run active
-
+    wait
 done
 
 hz download

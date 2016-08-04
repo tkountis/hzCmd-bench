@@ -5,7 +5,7 @@ import jedis.base.JedisBench;
 
 public class GetStr extends JedisBench {
 
-    public void init() {
+    public void init() throws Exception{
         super.init();
 
         for(int i =0 ;i<keyDomain; i++){

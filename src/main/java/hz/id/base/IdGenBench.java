@@ -1,10 +1,10 @@
 package hz.id.base;
 
 import com.hazelcast.core.HazelcastInstance;
-import com.hazelcast.core.IAtomicLong;
 import com.hazelcast.core.IdGenerator;
 import remote.bench.Bench;
 
+import java.util.List;
 import java.util.Random;
 
 public abstract class IdGenBench implements Bench {
@@ -40,5 +40,10 @@ public abstract class IdGenBench implements Bench {
 
     public boolean isRunning() {
         return false;
+    }
+
+
+    public List<Class> ignore(){
+        return null;
     }
 }

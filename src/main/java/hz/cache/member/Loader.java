@@ -1,14 +1,13 @@
 package hz.cache.member;
 
 import hz.cache.base.CacheBench;
-import hz.map.base.MapBench;
 import hz.utils.Utils;
 
 public abstract class Loader extends CacheBench {
 
     private int key=0;
 
-    public void init(){
+    public void init() throws Exception{
         super.init();
         Utils.warmupPartitions(hzInstance);
     }

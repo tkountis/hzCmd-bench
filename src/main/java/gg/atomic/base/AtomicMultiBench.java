@@ -1,9 +1,9 @@
 package gg.atomic.base;
 
 import org.apache.ignite.Ignite;
-import org.apache.ignite.IgniteAtomicLong;
 import remote.bench.Bench;
 
+import java.util.List;
 import java.util.Random;
 
 
@@ -34,5 +34,10 @@ public abstract class AtomicMultiBench implements Bench {
 
     public boolean isRunning() {
         return false;
+    }
+
+
+    public List<Class> ignore(){
+        return null;
     }
 }

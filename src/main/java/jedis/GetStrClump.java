@@ -7,7 +7,7 @@ public class GetStrClump extends JedisBench {
     public int repeatGet=3;
     private int getCount=1;
 
-    public void init() {
+    public void init() throws Exception {
         super.init();
 
         for(int i =0 ;i<keyDomain; i++){

@@ -4,7 +4,7 @@ import gem.cache.base.RegionBench;
 
 public class Get extends RegionBench {
 
-    public void init() {
+    public void init() throws Exception{
         super.init();
 
         for(int i =0 ;i<keyDomain; i++){

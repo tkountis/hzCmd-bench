@@ -7,7 +7,7 @@ public abstract class Loader extends MapBench {
 
     private int key=0;
 
-    public void init(){
+    public void init() throws Exception{
         super.init();
         Utils.warmupPartitions(hzInstance);
     }

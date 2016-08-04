@@ -11,7 +11,7 @@ public abstract class PredicateBase extends MapBench {
     public boolean index=true;
     public boolean ordered=true;
 
-    public void init() {
+    public void init() throws Exception{
         super.init();
         if(index){
             map.addIndex("salary", ordered);

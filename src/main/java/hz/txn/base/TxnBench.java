@@ -16,7 +16,7 @@ public abstract class TxnBench extends BenchBase {
     public int batchSize=1;
 
 
-    public void init() {
+    public void init() throws Exception{
         super.init();
 
         if(phase==1) {

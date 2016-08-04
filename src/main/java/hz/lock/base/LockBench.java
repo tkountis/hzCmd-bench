@@ -4,6 +4,7 @@ import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.core.ILock;
 import remote.bench.Bench;
 
+import java.util.List;
 import java.util.Random;
 
 public abstract class LockBench implements Bench {
@@ -40,5 +41,10 @@ public abstract class LockBench implements Bench {
 
     public boolean isRunning() {
         return false;
+    }
+
+
+    public List<Class> ignore(){
+        return null;
     }
 }

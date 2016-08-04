@@ -12,7 +12,7 @@ public abstract class CacheBench extends BenchBase {
 
     public void setVendorObject(Object vendorObject) { ignite = (Ignite) vendorObject; }
 
-    public void init() {
+    public void init() throws Exception{
         super.init();
         cache = ignite.getOrCreateCache(name);
 

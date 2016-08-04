@@ -10,7 +10,7 @@ public abstract class MapBench extends BenchBase {
     protected HazelcastInstance hzInstance;
     protected IMap map;
 
-    public void init() {
+    public void init() throws Exception{
         super.init();
         map = hzInstance.getMap(name);
     }

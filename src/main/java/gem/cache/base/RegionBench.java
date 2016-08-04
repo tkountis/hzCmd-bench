@@ -3,8 +3,6 @@ package gem.cache.base;
 import base.BenchBase;
 import com.gemstone.gemfire.cache.GemFireCache;
 import com.gemstone.gemfire.cache.Region;
-import com.hazelcast.core.HazelcastInstance;
-import com.hazelcast.core.IMap;
 
 
 public abstract class RegionBench extends BenchBase {
@@ -16,7 +14,7 @@ public abstract class RegionBench extends BenchBase {
         gemFireCache = (GemFireCache) vendorObject;
     }
 
-    public void init() {
+    public void init() throws Exception{
         super.init();
         region = gemFireCache.getRegion(name);
     }

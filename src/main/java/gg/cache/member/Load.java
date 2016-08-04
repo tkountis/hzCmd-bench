@@ -6,7 +6,7 @@ public class Load extends CacheBench {
 
     private int key=0;
 
-    public void init(){
+    public void init() throws Exception{
         super.init();
     }
 

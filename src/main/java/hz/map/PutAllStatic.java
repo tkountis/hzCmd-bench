@@ -13,7 +13,7 @@ public class PutAllStatic extends MapBench {
     public int batchSize=100;
     private List<Map> putAllMaps = new ArrayList<Map>();
 
-    public void init() {
+    public void init() throws Exception{
         super.init();
 
         for (int i = 0; i< mapCount; i++){

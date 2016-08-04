@@ -14,7 +14,7 @@ public abstract class CacheBench extends BenchBase {
     protected CacheManager cacheManager;
     protected ICache cache;
 
-    public void init() {
+    public void init() throws Exception {
         super.init();
         cacheManager = getCacheManager(hzInstance);
         cache = (ICache) cacheManager.getCache(name);

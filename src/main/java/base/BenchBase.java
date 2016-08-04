@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import static remote.main.Utils.instantiate;
 import static utils.Utils.dymanicValues;
 
 public abstract class BenchBase implements Bench{
@@ -41,8 +40,8 @@ public abstract class BenchBase implements Bench{
 
         if( ignore!=null){
             ignoreClasses = new ArrayList<Class>();
-            for (String s : ignore.split(":")) {
-                Class c = instantiate(s, Class.class);
+            for (String className : ignore.split(":")) {
+                Class c = Class.forName(className);
                 ignoreClasses.add(c);
             }
         }

@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+hz broker -ip 10.212.1.107
+
+ops="$ops -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
+ops="$ops -Dhazelcast.backpressure.enabled=true"
+ops="$ops -ea"
+
+mOps="$mOps -Dcom.hazelcast.spi.hotrestart.gc.stuckDetectThreshold=10000"
+mOps="$mOps -Dhazelcast.hotrestart.free.native.memory.percentage=15"
+mOps="$mOps -Dhazelcast.hidensity.check.freememory=false"
+mOps="$mOps -Dhazelcast.operation.thread.count=4"
+
+hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms4G -Xmx4G ${ops} ${mOps}"
+hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx1G ${ops}"
+
+hz cluster -size M8 -id HZ -v 3.7 -ee -boxes a.box -user danny
+
+for i in {1..32} ; do
+
+    hz type Metrics
+    hz threads 64
+    hz bench 900
+    hz driver Member
+    hz run opps
+
+    hz threads 1
+    hz driver Member1
+    hz run clusterShutdown
+    hz embeddedRestart -id Member
+    hz run active
+
+done
+
+hz download
+
+hz wipe
+hz-ssh a.box 'rm -r hot-junk' danny
+
+cp go output/
+mv *.out output/

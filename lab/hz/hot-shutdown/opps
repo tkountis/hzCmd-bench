@@ -72,14 +72,14 @@ cacheBak1HDRem@name=cacheBak1HD
 
 
 #heap Cache 1 backup, set putTtl remove
-cacheBak1Set@class=hz.cache.Set
-cacheBak1Set@keyDomain=10001
-cacheBak1Set@threads=8
-cacheBak1Set@warmup=0
-cacheBak1Set@valueSetSize=100
-cacheBak1Set@valueMinSize=1
-cacheBak1Set@valueMaxSize=1001
-cacheBak1Set@name=cacheBak1
+cacheBak1Put@class=hz.cache.Put
+cacheBak1Put@keyDomain=10001
+cacheBak1Put@threads=8
+cacheBak1Put@warmup=0
+cacheBak1Put@valueSetSize=100
+cacheBak1Put@valueMinSize=1
+cacheBak1Put@valueMaxSize=1001
+cacheBak1Put@name=cacheBak1
 
 cacheBak1Ttl@class=hz.cache.PutTtl
 cacheBak1Ttl@keyDomain=10001

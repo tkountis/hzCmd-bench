@@ -1,8 +1,12 @@
 package base;
 
 import remote.bench.Bench;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import static remote.main.Utils.instantiate;
 import static utils.Utils.dymanicValues;
 
 public abstract class BenchBase implements Bench{
@@ -18,7 +22,10 @@ public abstract class BenchBase implements Bench{
     public int valueMinSize=1;
     public int valueMaxSize=1;
 
-    public void init() {
+    public String ignore=null;
+    private List<Class> ignoreClasses = null;
+
+    public void init() throws Exception{
 
         if(seed==0){
             random = new Random();
@@ -31,6 +38,14 @@ public abstract class BenchBase implements Bench{
             valueMaxSize=valueSize;
         }
         valueSet = dymanicValues(random, valueSetSize, valueMinSize, valueMaxSize);
+
+        if( ignore!=null){
+            ignoreClasses = new ArrayList<Class>();
+            for (String s : ignore.split(":")) {
+                Class c = instantiate(s, Class.class);
+                ignoreClasses.add(c);
+            }
+        }
     }
 
     public Object mapKeyToValue(int key){
@@ -43,5 +58,10 @@ public abstract class BenchBase implements Bench{
 
     public boolean isRunning() {
         return false;
+    }
+
+
+    public List<Class> ignore(){
+        return ignoreClasses;
     }
 }

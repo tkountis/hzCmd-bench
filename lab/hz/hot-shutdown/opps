@@ -1,5 +1,5 @@
 
-#HD map 1 backup, set putTtl remove
+#HD map 1 backup, operations:  set, putTtl, remove,
 mapBak1HDSet@class=hz.map.Set
 mapBak1HDSet@threads=8
 mapBak1HDSet@warmup=0
@@ -22,7 +22,7 @@ mapBak1HDRem@warmup=0
 mapBak1HDRem@name=mapBak1HD
 
 
-#heap map 1 backup, set putTtl remove
+#heap map 1 backup, operations:  set, putTtl, remove
 mapBak1Set@class=hz.map.Set
 mapBak1Set@keyDomain=10001
 mapBak1Set@threads=8
@@ -48,7 +48,7 @@ mapBak1Rem@warmup=0
 mapBak1Rem@name=mapBak1
 
 
-#HD Cache 1 backup, set putTtl remove
+#HD Cache 1 backup, operations:  set, putTtl, remove
 cacheBak1HDSet@class=hz.cache.Put
 cacheBak1HDSet@threads=8
 cacheBak1HDSet@warmup=0
@@ -71,7 +71,7 @@ cacheBak1HDRem@warmup=0
 cacheBak1HDRem@name=cacheBak1HD
 
 
-#heap Cache 1 backup, set putTtl remove
+#heap Cache 1 backup, operations:  set, putTtl, remove
 cacheBak1Put@class=hz.cache.Put
 cacheBak1Put@keyDomain=10001
 cacheBak1Put@threads=8

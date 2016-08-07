@@ -12,6 +12,8 @@
         <cluster-members>
         </cluster-members>
         <smart-routing>true</smart-routing>
+        <connection-attempt-period>3000</connection-attempt-period>
+        <connection-attempt-limit>400</connection-attempt-limit>
     </network>
 
 </hazelcast-client>

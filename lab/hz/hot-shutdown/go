@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 set -e
+cleanup() {
+    exitCode=$?
+    hz download
+    hz chart metrics
+    hz-ssh a.box 'rm -r hot-junk' danny
+    exit ${exitCode}
+}
+trap "cleanup" INT TERM EXIT
 
-hz broker -ip 10.212.1.107
 
 ops="$ops -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
 ops="$ops -Dhazelcast.backpressure.enabled=true"
@@ -15,23 +22,16 @@ mOps="$mOps -Dhazelcast.operation.thread.count=4"
 hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms4G -Xmx4G ${ops} ${mOps}"
 hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx1G ${ops}"
 
-hz cluster -size M4C4 -id HZ -v 3.7 -ee -boxes a.box -user danny
+hz cluster -size M4C100 -id HZ -v 3.7 -ee -boxes a.box -user danny
 
-for i in {1..32} ; do
-    hz bench 900
+for i in {1..288} ; do
+    hz bench 600
     hz driver Client
-    hz run opps &
+    hz run methods &
     sleep 300
     hz run clusterShutdown
-    hz embeddedRestart -id Member
+    hz embeddedRestart Member
     hz run active
+    hz check
     wait
 done
-
-hz download
-
-hz wipe
-hz-ssh a.box 'rm -r hot-junk' danny
-
-cp go output/
-mv *.out output/

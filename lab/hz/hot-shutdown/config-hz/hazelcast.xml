@@ -17,7 +17,7 @@
             <multicast enabled="false"/>
             <tcp-ip enabled="true">
             </tcp-ip>
-        </join>   
+        </join>
     </network>
 
     <hot-restart-persistence enabled="true">
@@ -153,6 +153,5 @@
             <fsync>false</fsync>
         </hot-restart>
     </map>
-
 
 </hazelcast>

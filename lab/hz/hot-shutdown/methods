@@ -1,4 +1,3 @@
-
 #HD map 1 backup, operations:  set, putTtl, remove,
 mapBak1HDSet@class=hz.map.Set
 mapBak1HDSet@threads=8
@@ -7,20 +6,22 @@ mapBak1HDSet@valueSetSize=100
 mapBak1HDSet@valueMinSize=1
 mapBak1HDSet@valueMaxSize=1001
 mapBak1HDSet@name=mapBak1HD
+mapBak1HDSet@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 mapBak1HDTtl@class=hz.map.PutTtl
-mapBak1HDTtl@threads=3
+mapBak1HDTtl@threads=4
 mapBak1HDTtl@warmup=0
 mapBak1HDTtl@valueSetSize=100
 mapBak1HDTtl@valueMinSize=1
 mapBak1HDTtl@valueMaxSize=1001
 mapBak1HDTtl@name=mapBak1HD
+mapBak1HDTtl@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 mapBak1HDRem@class=hz.map.Remove
 mapBak1HDRem@threads=1
 mapBak1HDRem@warmup=0
 mapBak1HDRem@name=mapBak1HD
-
+mapBak1HDRem@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 #heap map 1 backup, operations:  set, putTtl, remove
 mapBak1Set@class=hz.map.Set
@@ -31,21 +32,26 @@ mapBak1Set@valueSetSize=100
 mapBak1Set@valueMinSize=1
 mapBak1Set@valueMaxSize=1001
 mapBak1Set@name=mapBak1
+mapBak1Set@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 mapBak1Ttl@class=hz.map.PutTtl
 mapBak1Ttl@keyDomain=10001
-mapBak1Ttl@threads=3
+mapBak1Ttl@threads=4
 mapBak1Ttl@warmup=0
 mapBak1Ttl@valueSetSize=100
 mapBak1Ttl@valueMinSize=1
 mapBak1Ttl@valueMaxSize=1001
 mapBak1Ttl@name=mapBak1
+mapBak1Ttl@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 mapBak1Rem@class=hz.map.Remove
 mapBak1Rem@keyDomain=10001
 mapBak1Rem@threads=1
 mapBak1Rem@warmup=0
 mapBak1Rem@name=mapBak1
+mapBak1Rem@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+
+
 
 
 #HD Cache 1 backup, operations:  set, putTtl, remove
@@ -56,19 +62,23 @@ cacheBak1HDSet@valueSetSize=100
 cacheBak1HDSet@valueMinSize=1
 cacheBak1HDSet@valueMaxSize=1001
 cacheBak1HDSet@name=cacheBak1HD
+cacheBak1HDSet@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException
 
 cacheBak1HDTtl@class=hz.cache.PutTtl
-cacheBak1HDTtl@threads=3
+cacheBak1HDTtl@threads=4
 cacheBak1HDTtl@warmup=0
 cacheBak1HDTtl@valueSetSize=100
 cacheBak1HDTtl@valueMinSize=1
 cacheBak1HDTtl@valueMaxSize=1001
 cacheBak1HDTtl@name=cacheBak1HD
+cacheBak1HDTtl@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException
 
 cacheBak1HDRem@class=hz.cache.Remove
 cacheBak1HDRem@threads=1
 cacheBak1HDRem@warmup=0
 cacheBak1HDRem@name=cacheBak1HD
+cacheBak1HDRem@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException
+
 
 
 #heap Cache 1 backup, operations:  set, putTtl, remove
@@ -80,18 +90,21 @@ cacheBak1Put@valueSetSize=100
 cacheBak1Put@valueMinSize=1
 cacheBak1Put@valueMaxSize=1001
 cacheBak1Put@name=cacheBak1
+cacheBak1Put@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException
 
 cacheBak1Ttl@class=hz.cache.PutTtl
 cacheBak1Ttl@keyDomain=10001
-cacheBak1Ttl@threads=3
+cacheBak1Ttl@threads=4
 cacheBak1Ttl@warmup=0
 cacheBak1Ttl@valueSetSize=100
 cacheBak1Ttl@valueMinSize=1
 cacheBak1Ttl@valueMaxSize=1001
 cacheBak1Ttl@name=cacheBak1
+cacheBak1Ttl@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException
 
 cacheBak1Rem@class=hz.cache.Remove
 cacheBak1Rem@keyDomain=10001
 cacheBak1Rem@threads=1
 cacheBak1Rem@warmup=0
 cacheBak1Rem@name=cacheBak1
+cacheBak1Rem@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException

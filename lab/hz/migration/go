@@ -19,7 +19,6 @@ hz driver Member
 hz threads 1
 hz run load
 
-hz allowException true
 hz driver Client
 hz threads 4
 hz bench 2700

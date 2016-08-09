@@ -20,7 +20,7 @@ hz threads 1
 hz run load
 
 hz driver Client
-hz threads 4
+hz threads 16
 hz bench 2700
 hz bounce -iterations 100 -initalDelay 60 -restartDelay 5 -iterationDelay 5 Member3 &
 hz run get

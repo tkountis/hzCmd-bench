@@ -22,9 +22,8 @@ trap "cleanup" INT TERM EXIT
 
 testDir=${1}
 boxCount=${2}
-compare=${3}
-type=${4:-c4.xlarge}
-
+type=${3:-c4.xlarge}
+compare=${4}
 
 hz-bench-update
 

@@ -8,28 +8,26 @@ cleanup() {
 }
 trap "cleanup" INT TERM EXIT
 
+
 ops="$ops -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
 ops="$ops -Dhazelcast.backpressure.enabled=true"
 ops="$ops -ea"
+ops="$ops -XX:+PrintFlagsFinal -XX:+UseLargePages"
 
 mOps="$mOps -Dcom.hazelcast.spi.hotrestart.gc.stuckDetectThreshold=10000"
 mOps="$mOps -Dhazelcast.hotrestart.free.native.memory.percentage=15"
 mOps="$mOps -Dhazelcast.hidensity.check.freememory=false"
 mOps="$mOps -Dhazelcast.operation.thread.count=4"
 
-hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms2G -Xmx2G ${ops} ${mOps}"
-hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms1G -Xmx1G ${ops}"
+mOps="$mOps -Dhazelcast.connection.monitor.interval=1000 -Dhazelcast.connection.monitor.max.faults=30"
+
+hz memberOps "-Xms4G -Xmx4G ${ops} ${mOps}"
+hz clientOps "-Xms1G -Xmx1G ${ops}"
 hz cluster -size M4C50 -id HZ -v 3.7 -ee -boxes a.box -user danny
+
+hz bounce -iterations 75 -initalDelay 60 -iterationDelay 60 Member &
 
 hz bench 5400
 hz driver Client
-hz run methods &
-
-for i in {1..75} ; do
-    sleep 60
-    hz run clusterShutdown
-    hz embeddedRestart Member
-    hz run active
-    hz check
-done
+hz run methods
 wait

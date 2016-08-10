@@ -11,6 +11,8 @@
     <network>
         <cluster-members>
         </cluster-members>
+        <connection-attempt-period>5000</connection-attempt-period>
+        <connection-attempt-limit>10</connection-attempt-limit>
     </network>
 
 </hazelcast-client>

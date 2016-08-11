@@ -1,0 +1,4 @@
+shutdown@class=hz.ops.ClusterShutDown
+shutdown@warmup=0
+shutdown@threads=1
+shutdown@driver=Member1

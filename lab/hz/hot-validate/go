@@ -14,18 +14,14 @@ ops="$ops -ea"
 
 mOps="$mOps -Dhazelcast.hotrestart.gc.stuck.detect.threshold=10000"
 mOps="$mOps -Dhazelcast.hotrestart.free.native.memory.percentage=15"
-mOps="$mOps -Dhazelcast.hidensity.check.freememory=false"
 
 hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms2G -Xmx2G ${ops} ${mOps}"
-hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms500M -Xmx500M ${ops}"
-hz cluster -size M4C50 -id HZ -v 3.7 -ee -boxes a.box -user ec2-user
+hz cluster -size M4 -id HZ -v 3.7 -ee -boxes a.box -user ec2-user
 
-hz bench 5400
-hz driver Client
-hz run methods &
+hz run load
+hz run validateLoad
 
-for i in {1..75} ; do
-    sleep 60
+for i in {1..10} ; do
     hz run clusterShutdown
     hz embeddedRestart Member
     hz run active

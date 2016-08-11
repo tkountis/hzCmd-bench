@@ -14,10 +14,9 @@ ops="$ops -Dhazelcast.backpressure.enabled=true"
 ops="$ops -ea"
 ops="$ops -XX:+PrintFlagsFinal -XX:+UseLargePages"
 
-mOps="$mOps -Dcom.hazelcast.spi.hotrestart.gc.stuckDetectThreshold=10000"
+mOps="$mOps -Dhazelcast.hotrestart.gc.stuck.detect.threshold=10000"
 mOps="$mOps -Dhazelcast.hotrestart.free.native.memory.percentage=15"
 mOps="$mOps -Dhazelcast.hidensity.check.freememory=false"
-mOps="$mOps -Dhazelcast.operation.thread.count=4"
 
 mOps="$mOps -Dhazelcast.connection.monitor.interval=1000 -Dhazelcast.connection.monitor.max.faults=30"
 

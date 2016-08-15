@@ -1,4 +1,5 @@
 load@class=hz.map.member.Load
+load@driver=Member
 load@seed=133333
 load@warmup=0
 load@duration=900

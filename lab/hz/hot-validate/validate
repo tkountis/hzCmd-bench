@@ -1,4 +1,5 @@
 validate@class=hz.map.member.Validate
+validate@driver=Member
 validate@seed=13
 validate@warmup=0
 validate@duration=900

@@ -1,6 +1,6 @@
 validate@class=hz.map.member.Validate
 validate@seed=13
 validate@warmup=0
-load@duration=900
+validate@duration=900
 validate@keyDomain=10000
 validate@name=mapBak1HD

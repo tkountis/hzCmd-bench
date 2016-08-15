@@ -6,4 +6,6 @@ validate@duration=900
 validate@threads=1
 validate@keyDomain=100001
 validate@valueSetSize=100
+validate@valueMinSize=101
+validate@valueMaxSize=1001
 validate@name=mapBak1HD

@@ -5,4 +5,5 @@ validate@warmup=0
 validate@duration=900
 validate@threads=1
 validate@keyDomain=100001
+validate@valueSetSize=100
 validate@name=mapBak1HD

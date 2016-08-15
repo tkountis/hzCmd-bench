@@ -9,7 +9,7 @@ public class Validate extends Validator {
 
         Object expectedValue = mapKeyToValue(key);
 
-        if( ! expectedValue.equals(value)){
+        if( ! expectedValue.equals(value) ){
             throw new AssertionException("key "+key+" value "+value+" != "+expectedValue);
         }
     }

@@ -1,5 +1,8 @@
 load@class=hz.map.member.Load
+load@seed=133333
 load@warmup=0
 load@keyDomain=10000
-load@valueSize=5
-load@name=bakSync-1_onHeap
+load@valueSetSize=100
+load@valueMinSize=101;
+load@valueMaxSize=1001;
+load@name=mapBak1HD

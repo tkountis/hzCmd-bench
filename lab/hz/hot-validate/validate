@@ -1,0 +1,5 @@
+validate@class=hz.map.member.Validate
+validate@seed=13
+validate@warmup=0
+validate@keyDomain=10000
+validate@name=mapBak1HD

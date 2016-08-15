@@ -19,7 +19,7 @@ hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms2G -Xmx2G ${ops} ${mOp
 hz cluster -size M4 -id HZ -v 3.7 -ee -boxes a.box -user ec2-user
 
 hz run load
-hz run validateLoad
+hz run validate
 
 for i in {1..10} ; do
     hz run clusterShutdown
@@ -27,4 +27,5 @@ for i in {1..10} ; do
     hz run active
     hz check
 done
-wait
+
+hz run validate

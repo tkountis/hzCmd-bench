@@ -2,6 +2,7 @@ load@class=hz.map.member.Load
 load@seed=133333
 load@warmup=0
 load@duration=900
+load@threads=1
 load@keyDomain=100001
 load@valueSetSize=100
 load@valueMinSize=101;

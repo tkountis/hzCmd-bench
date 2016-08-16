@@ -114,17 +114,17 @@ validate_cacheAsync1HD@valueMaxSize=1001
 validate_cacheAsync1HD@name=cacheAsync1HD
 
 
-validate_cacheBak1@class=hz.cache.member.ValidateByteArray
-validate_cacheBak1@driver=Member
-validate_cacheBak1@seed=13
-validate_cacheBak1@warmup=0
-validate_cacheBak1@duration=900
-validate_cacheBak1@threads=1
-validate_cacheBak1@keyDomain=100001
-validate_cacheBak1@valueSetSize=100
-validate_cacheBak1@valueMinSize=101
-validate_cacheBak1@valueMaxSize=1001
-validate_cacheBak1@name=cacheBak1
+#validate_cacheBak1@class=hz.cache.member.ValidateByteArray
+#validate_cacheBak1@driver=Member
+#validate_cacheBak1@seed=13
+#validate_cacheBak1@warmup=0
+#validate_cacheBak1@duration=900
+#validate_cacheBak1@threads=1
+#validate_cacheBak1@keyDomain=100001
+#validate_cacheBak1@valueSetSize=100
+#validate_cacheBak1@valueMinSize=101
+#validate_cacheBak1@valueMaxSize=1001
+#validate_cacheBak1@name=cacheBak1
 
 validate_cacheBak0@class=hz.cache.member.ValidateByteArray
 validate_cacheBak0@driver=Member

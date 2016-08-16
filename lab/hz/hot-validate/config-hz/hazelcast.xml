@@ -66,6 +66,7 @@
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>0</backup-count>
         <statistics-enabled>false</statistics-enabled>
+        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT" size="200001"/>
         <hot-restart enabled="true">
             <fsync>false</fsync>
         </hot-restart>
@@ -75,6 +76,7 @@
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>1</backup-count>
         <statistics-enabled>false</statistics-enabled>
+        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT" size="200001"/>
         <hot-restart enabled="true">
             <fsync>false</fsync>
         </hot-restart>
@@ -85,10 +87,13 @@
         <backup-count>0</backup-count>
         <async-backup-count>1</async-backup-count>
         <statistics-enabled>false</statistics-enabled>
+        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT" size="200001"/>
         <hot-restart enabled="true">
             <fsync>false</fsync>
         </hot-restart>
     </cache>
+
+
 
 
     <map name="mapBak0HD*">

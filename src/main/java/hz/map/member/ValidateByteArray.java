@@ -11,14 +11,9 @@ public class ValidateByteArray extends Validator {
 
         Object expectedValue = mapKeyToValue(key);
 
-        if (Arrays.equals( (byte[]) expectedValue, (byte[]) value)) {
-            throw new AssertionException("key "+key+" value "+value+" != "+expectedValue);
-        }
+        if ( ! Arrays.equals( (byte[]) expectedValue, (byte[]) value ) ){
 
-        /*
-        if( ! expectedValue.equals(value) ){
             throw new AssertionException("key "+key+" value "+value+" != "+expectedValue);
         }
-        */
     }
 }

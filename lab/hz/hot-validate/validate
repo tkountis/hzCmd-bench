@@ -1,4 +1,4 @@
-validate@class=hz.map.member.Validate
+validate@class=hz.map.member.ValidateByteArray
 validate@driver=Member
 validate@seed=13
 validate@warmup=0

@@ -1,4 +1,4 @@
-#load_mapBak1HD@class=hz.map.member.load
+#load_mapBak1HD@class=hz.map.member.Load
 #load_mapBak1HD@driver=Member
 #load_mapBak1HD@seed=13
 #load_mapBak1HD@warmup=0
@@ -10,7 +10,7 @@
 #load_mapBak1HD@valueMaxSize=1001
 #load_mapBak1HD@name=mapBak1HD
 
-#load_mapBak0HD@class=hz.map.member.load
+#load_mapBak0HD@class=hz.map.member.Load
 #load_mapBak0HD@driver=Member
 #load_mapBak0HD@seed=13
 #load_mapBak0HD@warmup=0
@@ -22,7 +22,7 @@
 #load_mapBak0HD@valueMaxSize=1001
 #load_mapBak0HD@name=mapBak0HD
 
-#load_mapAsync1HD@class=hz.map.member.load
+#load_mapAsync1HD@class=hz.map.member.Load
 #load_mapAsync1HD@driver=Member
 #load_mapAsync1HD@seed=13
 #load_mapAsync1HD@warmup=0
@@ -35,7 +35,7 @@
 #load_mapAsync1HD@name=mapAsync1HD
 
 
-#load_mapBak1@class=hz.map.member.load
+#load_mapBak1@class=hz.map.member.Load
 #load_mapBak1@driver=Member
 #load_mapBak1@seed=13
 #load_mapBak1@warmup=0
@@ -47,7 +47,7 @@
 #load_mapBak1@valueMaxSize=1001
 #load_mapBak1@name=mapBak1
 
-#load_mapBak0@class=hz.map.member.load
+#load_mapBak0@class=hz.map.member.Load
 #load_mapBak0@driver=Member
 #load_mapBak0@seed=13
 #load_mapBak0@warmup=0
@@ -59,7 +59,7 @@
 #load_mapBak0@valueMaxSize=1001
 #load_mapBak0@name=mapBak0
 
-#load_mapAsync1@class=hz.map.member.load
+#load_mapAsync1@class=hz.map.member.Load
 #load_mapAsync1@driver=Member
 #load_mapAsync1@seed=13
 #load_mapAsync1@warmup=0
@@ -79,7 +79,7 @@
 
 
 
-#load_cacheBak1HD@class=hz.cache.member.load
+#load_cacheBak1HD@class=hz.cache.member.Load
 #load_cacheBak1HD@driver=Member
 #load_cacheBak1HD@seed=13
 #load_cacheBak1HD@warmup=0
@@ -91,7 +91,7 @@
 #load_cacheBak1HD@valueMaxSize=1001
 #load_cacheBak1HD@name=cacheBak1HD
 
-#load_cacheBak0HD@class=hz.cache.member.load
+#load_cacheBak0HD@class=hz.cache.member.Load
 #load_cacheBak0HD@driver=Member
 #load_cacheBak0HD@seed=13
 #load_cacheBak0HD@warmup=0
@@ -103,7 +103,7 @@
 #load_cacheBak0HD@valueMaxSize=1001
 #load_cacheBak0HD@name=cacheBak0HD
 
-#load_cacheAsync1HD@class=hz.cache.member.load
+#load_cacheAsync1HD@class=hz.cache.member.Load
 #load_cacheAsync1HD@driver=Member
 #load_cacheAsync1HD@seed=13
 #load_cacheAsync1HD@warmup=0
@@ -116,7 +116,7 @@
 #load_cacheAsync1HD@name=cacheAsync1HD
 
 
-load_cacheBak1@class=hz.cache.member.load
+load_cacheBak1@class=hz.cache.member.Load
 load_cacheBak1@driver=Member
 load_cacheBak1@seed=13
 load_cacheBak1@warmup=0
@@ -128,7 +128,7 @@ load_cacheBak1@valueMinSize=101
 load_cacheBak1@valueMaxSize=1001
 load_cacheBak1@name=cacheBak1
 
-load_cacheBak0@class=hz.cache.member.load
+load_cacheBak0@class=hz.cache.member.Load
 load_cacheBak0@driver=Member
 load_cacheBak0@seed=13
 load_cacheBak0@warmup=0
@@ -140,7 +140,7 @@ load_cacheBak0@valueMinSize=101
 load_cacheBak0@valueMaxSize=1001
 load_cacheBak0@name=cacheBak0
 
-load_cacheAsync1@class=hz.cache.member.load
+load_cacheAsync1@class=hz.cache.member.Load
 load_cacheAsync1@driver=Member
 load_cacheAsync1@seed=13
 load_cacheAsync1@warmup=0

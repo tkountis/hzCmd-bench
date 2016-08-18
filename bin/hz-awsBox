@@ -2,4 +2,5 @@
 count=${1:0}
 type=${2:-c4.xlarge}
 outputFile=${3:-a.box}
+touch ${outputFile}
 hz aws create -count ${count} -imageId ami-08111162 -key jenkins-ec2-key -placementGroup hzpc2 -region us-east-1 -subnetId subnet-378d2140 -type ${type} -output ${outputFile}

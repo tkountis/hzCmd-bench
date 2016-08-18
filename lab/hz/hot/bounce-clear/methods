@@ -16,7 +16,7 @@ mapBak1HDClear@ignore=java.lang.IllegalStateException:com.hazelcast.core.Hazelca
 
 
 mapBak1Set@class=hz.map.Set
-mapBak1Set@keyDomain=5000
+mapBak1Set@keyDomain=1000
 mapBak1Set@threads=12
 mapBak1Set@warmup=0
 mapBak1Set@valueSetSize=1
@@ -51,7 +51,7 @@ cacheBak1HDClear@ignore=java.lang.IllegalStateException:com.hazelcast.core.Hazel
 
 
 cacheBak1Put@class=hz.cache.Put
-cacheBak1Put@keyDomain=5000
+cacheBak1Put@keyDomain=1000
 cacheBak1Put@threads=12
 cacheBak1Put@warmup=0
 cacheBak1Put@valueSetSize=1

@@ -20,9 +20,9 @@ mOps="$mOps -Dhazelcast.hidensity.check.freememory=false"
 
 mOps="$mOps -Dhazelcast.connection.monitor.interval=1000 -Dhazelcast.connection.monitor.max.faults=30"
 
-hz memberOps "-Xms2G -Xmx2G ${ops} ${mOps}"
+hz memberOps "-Xms12G -Xmx12G ${ops} ${mOps}"
 hz clientOps "-Xms500M -Xmx500M ${ops}"
-hz cluster -size M4C50 -id HZ -v $(hazelcastVersion) -ee -boxes a.box -user ec2-user
+hz cluster -size M4C40 -id HZ -v $(hazelcastVersion) -ee -boxes a.box -user ec2-user
 
 hz bounce -iterations 75 -initalDelay 60 -iterationDelay 60 Member &
 

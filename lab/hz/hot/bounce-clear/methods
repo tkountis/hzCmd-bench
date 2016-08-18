@@ -2,9 +2,9 @@
 mapBak1HDSet@class=hz.map.Set
 mapBak1HDSet@threads=12
 mapBak1HDSet@warmup=0
-mapBak1HDSet@valueSetSize=100
-mapBak1HDSet@valueMinSize=1
-mapBak1HDSet@valueMaxSize=1001
+mapBak1HDSet@valueSetSize=10
+mapBak1HDSet@valueMinSize=1000000
+mapBak1HDSet@valueMaxSize=2000000
 mapBak1HDSet@name=mapBak1HD
 mapBak1HDSet@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException
 
@@ -19,9 +19,9 @@ mapBak1Set@class=hz.map.Set
 mapBak1Set@keyDomain=10001
 mapBak1Set@threads=12
 mapBak1Set@warmup=0
-mapBak1Set@valueSetSize=100
-mapBak1Set@valueMinSize=1
-mapBak1Set@valueMaxSize=1001
+mapBak1Set@valueSetSize=10
+mapBak1Set@valueMinSize=1000000
+mapBak1Set@valueMaxSize=2000000
 mapBak1Set@name=mapBak1
 mapBak1Set@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException
 
@@ -38,9 +38,9 @@ mapBak1Clear@ignore=java.lang.IllegalStateException:com.hazelcast.core.Hazelcast
 cacheBak1HDPut@class=hz.cache.Put
 cacheBak1HDPut@threads=12
 cacheBak1HDPut@warmup=0
-cacheBak1HDPut@valueSetSize=100
-cacheBak1HDPut@valueMinSize=1
-cacheBak1HDPut@valueMaxSize=1001
+cacheBak1HDPut@valueSetSize=10
+cacheBak1HDPut@valueMinSize=1000000
+cacheBak1HDPut@valueMaxSize=2000000
 cacheBak1HDPut@name=cacheBak1HD
 cacheBak1HDPut@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException
 
@@ -56,9 +56,9 @@ cacheBak1Put@class=hz.cache.Put
 cacheBak1Put@keyDomain=10001
 cacheBak1Put@threads=12
 cacheBak1Put@warmup=0
-cacheBak1Put@valueSetSize=100
-cacheBak1Put@valueMinSize=1
-cacheBak1Put@valueMaxSize=1001
+cacheBak1Put@valueSetSize=10
+cacheBak1Put@valueMinSize=1000000
+cacheBak1Put@valueMaxSize=2000000
 cacheBak1Put@name=cacheBak1
 cacheBak1Put@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException
 

@@ -33,6 +33,7 @@ mkdir -p ${subDir}
 cp a.box ${subDir} 2>/dev/null || true
 cp b.box ${subDir} 2>/dev/null || true
 cd ${subDir}
+pwd
 cp -r ${HZ_CMD_BENCH_SRC}/lab/${testDir}/* .
 
 hz-awsBox ${boxCount} ${type} a.box

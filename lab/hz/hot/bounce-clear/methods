@@ -1,8 +1,8 @@
-
-mapBak1HDSet@class=hz.map.Set
-mapBak1HDSet@threads=12
-mapBak1HDSet@warmup=0
-mapBak1HDSet@valueSetSize=1
-mapBak1HDSet@valueSize=1000000
-mapBak1HDSet@name=mapBak1HD
-mapBak1HDSet@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException
+mapBak1Set@class=hz.map.Set
+mapBak1Set@keyDomain=1000
+mapBak1Set@threads=12
+mapBak1Set@warmup=0
+mapBak1Set@valueSetSize=1
+mapBak1Set@valueSize=1000000
+mapBak1Set@name=mapBak1
+mapBak1Set@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException

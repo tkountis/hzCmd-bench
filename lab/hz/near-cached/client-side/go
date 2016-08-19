@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -e
+cleanup() {
+    exitCode=$?
+    hz download || true
+    hz chart metrics
+    exit ${exitCode}
+}
+trap "cleanup" INT TERM EXIT
+
+
+ops="$ops -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
+ops="$ops -Dhazelcast.backpressure.enabled=true"
+ops="$ops -ea"
+
+mOps="$mOps -Dhazelcast.hotrestart.gc.stuck.detect.threshold=10000"
+mOps="$mOps -Dhazelcast.hotrestart.free.native.memory.percentage=15"
+mOps="$mOps -Dhazelcast.hidensity.check.freememory=false"
+mOps="$mOps -Dhazelcast.connection.monitor.interval=1000 -Dhazelcast.connection.monitor.max.faults=30"
+mOps="$mOps -Dhazelcast.cache.invalidation.batch.size=1000 -Dhazelcast.cache.invalidation.batchfrequency.seconds=5"
+
+hz memberOps "-Xms2G -Xmx2G ${ops} ${mOps}"
+hz clientOps "-Xms500M -Xmx500M ${ops}"
+hz cluster -size M4C40 -id HZ -v $(hazelcastVersion) -ee -boxes a.box -user ec2-user
+
+#hz bounce -iterations 24 -initalDelay 300 -iterationDelay 300 Member &
+
+hz run load
+hz bench 1800
+hz driver Client
+hz run methods
+wait

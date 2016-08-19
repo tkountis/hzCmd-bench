@@ -1,0 +1,15 @@
+put@class=hz.cache.Put
+put@threads=2
+put@warmup=0
+put@keyDomain=1000001
+put@valueSetSize=1
+put@valueSize=1001
+put@name=cacheBak0HD-ncHD
+put@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException
+
+get@class=hz.cache.GetClump
+get@threads=8
+get@warmup=0
+get@keyDomain=1000001
+get@name=cacheBak0HD-ncHD
+get@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException

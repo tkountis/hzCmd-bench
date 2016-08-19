@@ -6,10 +6,3 @@ mapBak1HDSet@valueSetSize=1
 mapBak1HDSet@valueSize=1000000
 mapBak1HDSet@name=mapBak1HD
 mapBak1HDSet@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException
-
-mapBak1HDClear@class=hz.map.Clear
-mapBak1HDClear@interval=182000
-mapBak1HDClear@threads=1
-mapBak1HDClear@warmup=0
-mapBak1HDClear@name=mapBak1HD
-mapBak1HDClear@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException

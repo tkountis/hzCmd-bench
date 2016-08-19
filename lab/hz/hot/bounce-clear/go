@@ -24,7 +24,7 @@ hz memberOps "-Xms12G -Xmx12G ${ops} ${mOps}"
 hz clientOps "-Xms500M -Xmx500M ${ops}"
 hz cluster -size M4C40 -id HZ -v $(hazelcastVersion) -ee -boxes a.box -user ec2-user
 
-hz bounce -iterations 24 -initalDelay 300 -iterationDelay 300 Member &
+#hz bounce -iterations 24 -initalDelay 300 -iterationDelay 300 Member &
 
 hz bench 7200
 hz driver Client

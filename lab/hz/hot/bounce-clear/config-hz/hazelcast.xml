@@ -109,7 +109,7 @@
         <eviction-policy>LRU</eviction-policy>
         <eviction-percentage>5</eviction-percentage>
         <min-eviction-check-millis>0</min-eviction-check-millis>
-        <max-size policy="FREE_NATIVE_MEMORY_PERCENTAGE">15</max-size>
+        <max-size policy="FREE_NATIVE_MEMORY_PERCENTAGE">50</max-size>
         <hot-restart enabled="true">
             <fsync>false</fsync>
         </hot-restart>

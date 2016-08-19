@@ -26,7 +26,7 @@ hz cluster -size M4C40 -id HZ -v $(hazelcastVersion) -ee -boxes a.box -user ec2-
 #hz bounce -iterations 24 -initalDelay 300 -iterationDelay 300 Member &
 
 hz run load
-hz bench 1800
+hz bench 3600
 hz driver Client
 hz run methods
 wait

@@ -140,7 +140,7 @@
     <map name="mapBak1*">
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>1</backup-count>
-        <hot-restart enabled="true">
+        <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
     </map>

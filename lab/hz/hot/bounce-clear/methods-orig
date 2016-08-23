@@ -1,6 +1,6 @@
 
 mapBak1HDSet@class=hz.map.Set
-mapBak1HDSet@threads=12
+mapBak1HDSet@threads=8
 mapBak1HDSet@warmup=0
 mapBak1HDSet@valueSetSize=1
 mapBak1HDSet@valueSize=1000000
@@ -17,7 +17,7 @@ mapBak1HDClear@ignore=java.lang.IllegalStateException:com.hazelcast.core.Hazelca
 
 mapBak1Set@class=hz.map.Set
 mapBak1Set@keyDomain=1000
-mapBak1Set@threads=12
+mapBak1Set@threads=8
 mapBak1Set@warmup=0
 mapBak1Set@valueSetSize=1
 mapBak1Set@valueSize=1000000
@@ -35,7 +35,7 @@ mapBak1Clear@ignore=java.lang.IllegalStateException:com.hazelcast.core.Hazelcast
 
 
 cacheBak1HDPut@class=hz.cache.Put
-cacheBak1HDPut@threads=12
+cacheBak1HDPut@threads=8
 cacheBak1HDPut@warmup=0
 cacheBak1HDPut@valueSetSize=1
 cacheBak1HDPut@valueSize=1000000
@@ -52,7 +52,7 @@ cacheBak1HDClear@ignore=java.lang.IllegalStateException:com.hazelcast.core.Hazel
 
 cacheBak1Put@class=hz.cache.Put
 cacheBak1Put@keyDomain=1000
-cacheBak1Put@threads=12
+cacheBak1Put@threads=8
 cacheBak1Put@warmup=0
 cacheBak1Put@valueSetSize=1
 cacheBak1Put@valueSize=1000000

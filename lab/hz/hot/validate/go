@@ -21,7 +21,7 @@ hz cluster -size M4 -id HZ -v $(hazelcastVersion) -ee -boxes a.box -user ec2-use
 hz run load
 hz run validate
 
-for i in {1..25} ; do
+for i in {1..40} ; do
     hz run clusterShutdown
     hz embeddedRestart Member
     hz run active
@@ -29,5 +29,5 @@ for i in {1..25} ; do
 done
 hz run validate
 
-hz bounce -iterations 25 -iterationDelay 1 Member
+hz bounce -iterations 40 -iterationDelay 1 Member
 hz run validate

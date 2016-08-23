@@ -3,7 +3,7 @@ mapBak1HDSet@class=hz.map.Set
 mapBak1HDSet@threads=8
 mapBak1HDSet@warmup=0
 mapBak1HDSet@valueSetSize=1
-mapBak1HDSet@valueSize=1000000
+mapBak1HDSet@valueSize=1000
 mapBak1HDSet@name=mapBak1HD
 mapBak1HDSet@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException
 
@@ -20,7 +20,7 @@ mapBak1Set@keyDomain=1000
 mapBak1Set@threads=8
 mapBak1Set@warmup=0
 mapBak1Set@valueSetSize=1
-mapBak1Set@valueSize=1000000
+mapBak1Set@valueSize=1000
 mapBak1Set@name=mapBak1
 mapBak1Set@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException
 
@@ -38,7 +38,7 @@ cacheBak1HDPut@class=hz.cache.Put
 cacheBak1HDPut@threads=8
 cacheBak1HDPut@warmup=0
 cacheBak1HDPut@valueSetSize=1
-cacheBak1HDPut@valueSize=1000000
+cacheBak1HDPut@valueSize=1000
 cacheBak1HDPut@name=cacheBak1HD
 cacheBak1HDPut@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException
 
@@ -55,7 +55,7 @@ cacheBak1Put@keyDomain=1000
 cacheBak1Put@threads=8
 cacheBak1Put@warmup=0
 cacheBak1Put@valueSetSize=1
-cacheBak1Put@valueSize=1000000
+cacheBak1Put@valueSize=1000
 cacheBak1Put@name=cacheBak1
 cacheBak1Put@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException
 

@@ -38,7 +38,7 @@ cd ${subDir}
 pwd
 cp -r ${HZ_CMD_BENCH_SRC}/lab/${testDir}/* .
 
-hz-awsBox ${boxCount} ${type} a.box
+aws-create ${boxCount} ${type} a.box
 if [ -n "${compare}" ] ; then
   hz-awsBox ${boxCount} ${type} b.box
 fi

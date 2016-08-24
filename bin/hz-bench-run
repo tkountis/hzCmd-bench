@@ -5,7 +5,9 @@ cleanup() {
     exitCode=$?
     echo "exitCode=${exitCode}"
     if [[ ${exitCode} != 0 ]]; then
-       slack-post simulator-fail FAIL $(pwd)
+       linkPath=$(pwd)
+       linkPath=${linkPath#'/disk1/'}
+       slack-post simulator-fail FAIL \<http://54.87.52.100/~${linkPath}\>
     fi
     hz wipe
 

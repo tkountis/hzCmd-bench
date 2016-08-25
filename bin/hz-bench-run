@@ -11,6 +11,7 @@ cleanup() {
     fi
     hz wipe
     aws-terminate a.box
+    cp a.box .. 2>/dev/null || true
     hz-killSubJava
 
     exit $exitCode

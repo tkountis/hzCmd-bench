@@ -10,7 +10,7 @@ cleanup() {
        slack-post simulator-fail FAIL \<http://54.87.52.100/~${linkPath}\>
     fi
     hz wipe
-    aws-terminate a.box
+    #aws-terminate a.box
     cp a.box .. 2>/dev/null || true
     hz-killSubJava
 

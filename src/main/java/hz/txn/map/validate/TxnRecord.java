@@ -12,7 +12,7 @@
  limitations under the License.
  */
 
-package hz.txn.map;
+package hz.txn.map.validate;
 
 import com.hazelcast.core.IAtomicLong;
 import com.hazelcast.core.IMap;

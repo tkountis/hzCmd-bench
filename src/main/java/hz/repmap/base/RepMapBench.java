@@ -18,7 +18,6 @@ public abstract class RepMapBench extends BenchBase {
 
     public void cleanup() {
         System.out.println("map "+map.getName()+" size="+map.size());
-        map.clear();
     }
 
     public void setVendorObject(Object o) {

@@ -1,4 +1,4 @@
-package hz.latch;
+package hz.latch.validate;
 
 import hz.latch.base.LatchCheckBench;
 

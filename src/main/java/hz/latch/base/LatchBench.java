@@ -1,13 +1,12 @@
 package hz.latch.base;
 
+import base.BasicBenchBase;
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.core.ICountDownLatch;
-import remote.bench.Bench;
 
-import java.util.List;
 import java.util.Random;
 
-public abstract class LatchBench implements Bench {
+public abstract class LatchBench extends BasicBenchBase {
 
     public String name="latch";
     public int count=1;
@@ -16,6 +15,7 @@ public abstract class LatchBench implements Bench {
     protected Random random = new Random();
 
     public void init() throws Exception{
+        super.init();
         for(int i=0; i<count; i++){
             ICountDownLatch latch = hzInstance.getCountDownLatch(name+i);
             latch.trySetCount(Integer.MAX_VALUE);
@@ -34,18 +34,5 @@ public abstract class LatchBench implements Bench {
 
     public void setVendorObject(Object o) {
         hzInstance = (HazelcastInstance)o;
-    }
-
-    public boolean isSelfDetermined() {
-        return false;
-    }
-
-    public boolean isRunning() {
-        return false;
-    }
-
-
-    public List<Class> ignore(){
-        return null;
     }
 }

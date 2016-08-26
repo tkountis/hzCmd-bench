@@ -1,4 +1,4 @@
-package hz.lock;
+package hz.lock.validate;
 
 import global.AssertionException;
 import hz.lock.base.LockCheckBench;

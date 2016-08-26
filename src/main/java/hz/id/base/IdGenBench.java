@@ -1,20 +1,20 @@
 package hz.id.base;
 
+import base.BasicBenchBase;
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.core.IdGenerator;
-import remote.bench.Bench;
 
-import java.util.List;
 import java.util.Random;
 
-public abstract class IdGenBench implements Bench {
+public abstract class IdGenBench extends BasicBenchBase {
 
     public String name="id";
     public int count=1;
     protected HazelcastInstance hzInstance;
     protected Random random = new Random();
 
-    public void init() {
+    public void init() throws Exception{
+        super.init();
         for(int i=0; i<count; i++){
             hzInstance.getIdGenerator(name+i);
         }
@@ -32,18 +32,5 @@ public abstract class IdGenBench implements Bench {
 
     public void setVendorObject(Object o) {
         hzInstance = (HazelcastInstance)o;
-    }
-
-    public boolean isSelfDetermined() {
-        return false;
-    }
-
-    public boolean isRunning() {
-        return false;
-    }
-
-
-    public List<Class> ignore(){
-        return null;
     }
 }

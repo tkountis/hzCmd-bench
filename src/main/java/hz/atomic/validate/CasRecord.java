@@ -1,8 +1,8 @@
-package hz.atomic;
+package hz.atomic.validate;
 
-import hz.atomic.base.AtomicCheckBench;
+import hz.atomic.base.AtomicTest;
 
-public class CasRecord extends AtomicCheckBench {
+public class CasRecord extends AtomicTest {
 
     private int incCount=0;
 

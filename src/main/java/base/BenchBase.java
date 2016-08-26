@@ -1,14 +1,12 @@
 package base;
 
-import remote.bench.Bench;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 import static utils.Utils.dymanicValues;
 
-public abstract class BenchBase implements Bench{
+public abstract class BenchBase extends BasicBenchBase {
 
     public int seed=0;
     protected Random random;
@@ -25,6 +23,7 @@ public abstract class BenchBase implements Bench{
     private List<Class> ignoreClasses = null;
 
     public void init() throws Exception{
+        super.init();
 
         if(seed==0){
             random = new Random();
@@ -49,18 +48,5 @@ public abstract class BenchBase implements Bench{
 
     public Object mapKeyToValue(int key){
         return valueSet.get( key % valueSetSize );
-    }
-
-    public boolean isSelfDetermined() {
-        return false;
-    }
-
-    public boolean isRunning() {
-        return false;
-    }
-
-
-    public List<Class> ignore(){
-        return ignoreClasses;
     }
 }

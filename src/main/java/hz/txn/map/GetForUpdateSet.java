@@ -18,12 +18,11 @@ import com.hazelcast.core.TransactionalMap;
 import com.hazelcast.transaction.TransactionContext;
 import hz.txn.base.TxnBench;
 
-public class GetSetForUpdate extends TxnBench {
+public class GetForUpdateSet extends TxnBench {
 
     public void timeStep() throws Exception {
 
         TransactionContext context = hzInstance.newTransactionContext(txnOps);
-
         context.beginTransaction();
 
         TransactionalMap map = context.getMap(name);

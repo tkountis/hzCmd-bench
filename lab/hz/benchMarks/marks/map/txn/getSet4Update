@@ -1,4 +1,4 @@
-txnGet@class=hz.txn.map.GetSetForUpdate
+txnGet@class=hz.txn.map.GetForUpdateSet
 txnGet@keyDomain=100000
 txnGet@phase=1,2
 txnGet@batchSize=1,100

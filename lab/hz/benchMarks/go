@@ -22,8 +22,8 @@ split -l 4 a.box
 hzOps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 hz memberOps "-XX:+PrintFlagsFinal -Xms4G -Xmx4G ${hzOps}"
 hz clientOps "-XX:+PrintFlagsFinal -Xms500M -Xmx500M ${hzOps}"
-hz cluster -size M4C4 -id NEW -v $(hazelcastVersion)  -type HZ -boxes a.boxaa -user ec2-user
-hz cluster -size M4C4 -id OLD -v 3.7                  -type HZ -boxes b.boxab -user ec2-user
+hz cluster -size M4C4 -id NEW -v $(hazelcastVersion)  -type HZ -boxes xaa -user ec2-user
+hz cluster -size M4C4 -id OLD -v 3.7                  -type HZ -boxes xab -user ec2-user
 
 hz driver Client,Member
 hz type Metrics

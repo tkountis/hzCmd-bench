@@ -23,7 +23,6 @@ public class GetSet extends TxnBench {
     public void timeStep() throws Exception {
 
         TransactionContext context = hzInstance.newTransactionContext(txnOps);
-
         context.beginTransaction();
 
         TransactionalMap map = context.getMap(name);

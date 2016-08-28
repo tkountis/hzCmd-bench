@@ -1,4 +1,6 @@
 load@class=hz.map.member.Load
+load@driver=Member
+load@threads=1
 load@warmup=0
 load@keyDomain=1000000
 load@valueSize=10

@@ -1,2 +1,3 @@
-shut@class=hz.ops.ShutDown
-shut@warmup=0
+shutdown@class=hz.ops.ShutDown
+shutdown@warmup=0
+shutdown@threads=1

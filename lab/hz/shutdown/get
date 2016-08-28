@@ -1,4 +1,7 @@
 get@class=hz.map.GetCheck
+get@driver=Client
+get@threads=8
 get@warmup=0
+get@druation=3000
 get@keyDomain=1000000
 get@name=bak-0_onHeap

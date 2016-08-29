@@ -29,7 +29,7 @@ hz cluster -size M4C40 -id HZ -v 3.7.1 -ee -boxes a.box -user ec2-user
 
 hz bounce -iterations 24 -initalDelay 300 -iterationDelay 300 Member &
 
-hz bench 7200
+hz bench 8300
 hz driver Client
 hz run methods
 

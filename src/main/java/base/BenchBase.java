@@ -1,6 +1,5 @@
 package base;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -19,8 +18,8 @@ public abstract class BenchBase extends BasicBenchBase {
     public int valueMinSize=1;
     public int valueMaxSize=1;
 
-    public String ignore=null;
-    private List<Class> ignoreClasses = null;
+//    public String ignore=null;
+//    private List<Class> ignoreClasses = null;
 
     public void init() throws Exception{
         super.init();
@@ -37,13 +36,13 @@ public abstract class BenchBase extends BasicBenchBase {
         }
         valueSet = dymanicValues(random, valueSetSize, valueMinSize, valueMaxSize);
 
-        if( ignore!=null){
-            ignoreClasses = new ArrayList<Class>();
-            for (String className : ignore.split(":")) {
-                Class c = Class.forName(className);
-                ignoreClasses.add(c);
-            }
-        }
+//        if( ignore!=null){
+//            ignoreClasses = new ArrayList<Class>();
+//            for (String className : ignore.split(":")) {
+//                Class c = Class.forName(className);
+//                ignoreClasses.add(c);
+//            }
+//        }
     }
 
     public Object mapKeyToValue(int key){

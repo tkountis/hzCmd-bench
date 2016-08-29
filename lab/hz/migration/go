@@ -13,7 +13,7 @@ hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.back
 hz memberOps "-Xms2G -Xmx2G ${hzProps}"
 hz clientOps "-Xms200M -Xmx400M ${hzProps}"
 
-hz cluster -size M4C4 -v $(hazelcastVersion) -boxes a.box
+hz cluster -size M4C4 -v 3.7 -boxes a.box
 
 hz driver Member
 hz threads 1

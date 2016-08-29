@@ -18,7 +18,7 @@ mOps="$mOps -Dhazelcast.hidensity.check.freememory=false"
 
 hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms2G -Xmx2G ${ops} ${mOps}"
 hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms500M -Xmx500M ${ops}"
-hz cluster -size M4C50 -id HZ -v $(hazelcastVersion) -ee -boxes a.box -user ec2-user
+hz cluster -size M4C50 -id HZ -v 3.7 -ee -boxes a.box -user ec2-user
 
 hz bench 5400
 hz driver Client

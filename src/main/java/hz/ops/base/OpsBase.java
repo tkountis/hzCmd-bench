@@ -15,4 +15,12 @@ public abstract class OpsBase extends BasicBenchBase {
     public void setVendorObject(Object o) {
         hzInstance = (HazelcastInstance)o;
     }
+
+    public boolean isRunning() {
+        return running;
+    }
+
+    public boolean isSelfDetermined() {
+        return true;
+    }
 }

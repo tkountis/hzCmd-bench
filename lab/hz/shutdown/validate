@@ -1,0 +1,10 @@
+validate@class=hz.map.member.ValidateByteArray
+validate@driver=Member
+validate@threads=1
+validate@seed=33
+validate@warmup=0
+validate@duration=1800
+validate@keyDomain=1000000
+validate@valueSize=10
+validate@name=bak-0_onHeap
+

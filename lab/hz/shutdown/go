@@ -15,6 +15,7 @@ hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms200M -Xmx400M ${hzProp
 hz cluster -size M4C4 -v 3.7 -boxes a.box
 
 hz run load
+hz run validate
 hz run get &
 
 for j in {1..15}; do
@@ -29,3 +30,5 @@ for j in {1..15}; do
   hz embeddedRestart Member${i}
  done
 done
+
+hz run validate

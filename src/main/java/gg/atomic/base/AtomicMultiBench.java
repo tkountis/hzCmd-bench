@@ -1,13 +1,13 @@
 package gg.atomic.base;
 
+import base.BasicBenchBase;
 import org.apache.ignite.Ignite;
-import remote.bench.Bench;
 
 import java.util.List;
 import java.util.Random;
 
 
-public abstract class AtomicMultiBench implements Bench {
+public abstract class AtomicMultiBench extends BasicBenchBase {
 
     public String name;
     public int    atomicCount=100000;
@@ -22,12 +22,6 @@ public abstract class AtomicMultiBench implements Bench {
         }
     }
 
-    public void cleanup() {
-        for(int i=0; i<atomicCount; i++){
-            ignite.atomicLong(i+name, 0, true).close();
-        }
-    }
-
     public boolean isSelfDetermined() {
         return false;
     }
@@ -35,7 +29,6 @@ public abstract class AtomicMultiBench implements Bench {
     public boolean isRunning() {
         return false;
     }
-
 
     public List<Class> ignore(){
         return null;

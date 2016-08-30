@@ -37,4 +37,5 @@ public abstract class BenchBase extends BasicBenchBase {
     public Object mapKeyToValue(int key){
         return valueSet.get( key % valueSetSize );
     }
+
 }

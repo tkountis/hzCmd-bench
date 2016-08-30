@@ -19,9 +19,4 @@ public abstract class CacheBench extends BenchBase {
         CacheConfiguration config = cache.getConfiguration(CacheConfiguration.class);
         System.out.println("config "+cache.getName()+" isReadFromBackup="+config.isReadFromBackup());
     }
-
-    public void cleanup() {
-        //System.out.println("cache "+cache.getName()+" size="+cache.size());
-        //cache.clear();
-    }
 }

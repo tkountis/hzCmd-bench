@@ -21,8 +21,4 @@ public class PutAll extends CacheBench {
         cache.putAll(putAllMap);
     }
 
-    public void cleanup() {
-        super.cleanup();
-        putAllMap.clear();
-    }
 }

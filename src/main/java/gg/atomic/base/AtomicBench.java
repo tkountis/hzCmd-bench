@@ -1,14 +1,14 @@
 package gg.atomic.base;
 
+import base.BasicBenchBase;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteAtomicLong;
-import remote.bench.Bench;
 
 import java.util.List;
 import java.util.Random;
 
 
-public abstract class AtomicBench implements Bench {
+public abstract class AtomicBench extends BasicBenchBase {
 
     protected Ignite ignite;
     protected IgniteAtomicLong atomic;
@@ -20,11 +20,6 @@ public abstract class AtomicBench implements Bench {
 
     public void init() {
         atomic = ignite.atomicLong(name, 0, true);
-    }
-
-    public void cleanup() {
-        System.out.println("atomic "+atomic.name()+" val="+atomic.get());
-        atomic.close();
     }
 
     public boolean isSelfDetermined() {

@@ -48,12 +48,12 @@ public class TxnRecord extends TxnBench {
         try {
             for(int i=0; i<batchSize; i++){
                 int k = random.nextInt(keyDomain);
-                keyBatch[i]=k;
                 int val = map.getForUpdate(k);
                 map.set(k, ++val);
+                keyBatch[i]=k;
             }
             context.commitTransaction();
-            for (int i = 0; i < keyBatch.length; i++) {
+            for(int i=0; i<batchSize; i++){
                 incCounts[keyBatch[i]]++;
             }
         }

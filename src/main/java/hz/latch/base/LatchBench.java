@@ -26,12 +26,6 @@ public abstract class LatchBench extends BasicBenchBase {
         return hzInstance.getCountDownLatch(name + random.nextInt(count));
     }
 
-    public void cleanup() {
-        for(int i=0; i<count; i++) {
-            hzInstance.getCountDownLatch(name+i).destroy();
-        }
-    }
-
     public void setVendorObject(Object o) {
         hzInstance = (HazelcastInstance)o;
     }

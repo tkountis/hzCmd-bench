@@ -15,11 +15,6 @@ public abstract class RepMapBench extends BenchBase {
         map = hzInstance.getReplicatedMap(name);
     }
 
-
-    public void cleanup() {
-        System.out.println("map "+map.getName()+" size="+map.size());
-    }
-
     public void setVendorObject(Object o) {
         hzInstance = (HazelcastInstance)o;
     }

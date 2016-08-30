@@ -18,7 +18,7 @@ public class LockRecord extends LockCheckBench {
         }
     }
 
-    public void cleanup() {
+    public void postPhase() {
         totalInc.addAndGet(incCount);
     }
 }

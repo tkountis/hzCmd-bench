@@ -27,14 +27,7 @@ public abstract class AtomicBench extends BasicBenchBase {
         return hzInstance.getAtomicLong(name+random.nextInt(count));
     }
 
-    public void cleanup() {
-        for(int i=0; i< count; i++){
-            hzInstance.getAtomicLong(name+i).destroy();
-        }
-    }
-
     public void setVendorObject(Object o) {
         hzInstance = (HazelcastInstance)o;
     }
-
 }

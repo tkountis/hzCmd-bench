@@ -34,8 +34,4 @@ public class Load extends CacheBench {
     public boolean isSelfDetermined() {
         return true;
     }
-
-    public void cleanup() {
-        System.out.println("cache "+cache.getName()+" size="+cache.size());
-    }
 }

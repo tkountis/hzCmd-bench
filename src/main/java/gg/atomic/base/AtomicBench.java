@@ -4,7 +4,6 @@ import base.BasicBenchBase;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteAtomicLong;
 
-import java.util.List;
 import java.util.Random;
 
 
@@ -20,18 +19,5 @@ public abstract class AtomicBench extends BasicBenchBase {
 
     public void init() {
         atomic = ignite.atomicLong(name, 0, true);
-    }
-
-    public boolean isSelfDetermined() {
-        return false;
-    }
-
-    public boolean isRunning() {
-        return false;
-    }
-
-
-    public List<Class> ignore(){
-        return null;
     }
 }

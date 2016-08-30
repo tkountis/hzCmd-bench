@@ -33,7 +33,5 @@ public abstract class BasicBenchBase implements Bench{
         return ignoreClasses;
     }
 
-    public void postPhase() {
-
-    }
+    public void postPhase() { }
 }

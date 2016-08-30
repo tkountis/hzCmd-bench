@@ -20,8 +20,4 @@ public class GetStr extends JedisBench {
         int k = random.nextInt(keyDomain);
         jedisCluster.get("" + k);
     }
-
-    public void cleanup() {
-
-    }
 }

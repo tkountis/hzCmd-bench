@@ -19,7 +19,4 @@ public abstract class RegionBench extends BenchBase {
         region = gemFireCache.getRegion(name);
     }
 
-    public void cleanup() {
-        region.clear();
-    }
 }

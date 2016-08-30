@@ -20,10 +20,6 @@ public abstract class CacheBench extends BenchBase {
         cache = (ICache) cacheManager.getCache(name);
     }
 
-    public void cleanup() {
-        System.out.println("cache "+cache.getName()+" size="+cache.size());
-    }
-
     public void setVendorObject(Object o) {
         hzInstance = (HazelcastInstance)o;
     }

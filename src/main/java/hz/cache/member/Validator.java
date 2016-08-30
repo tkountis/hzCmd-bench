@@ -37,8 +37,4 @@ public abstract class Validator extends CacheBench {
     public boolean isSelfDetermined() {
         return true;
     }
-
-    public void cleanup() {
-        System.out.println("load map "+cache.getName()+" size="+cache.size());
-    }
 }

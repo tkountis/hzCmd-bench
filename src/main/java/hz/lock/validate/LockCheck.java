@@ -17,12 +17,6 @@ public class LockCheck extends LockCheckBench {
         running=false;
     }
 
-    public void cleanup() {
-        lock.destroy();
-        lockedMap.destroy();
-        totalInc.destroy();
-    }
-
     public boolean isRunning() { return running; }
 
     public boolean isSelfDetermined() {

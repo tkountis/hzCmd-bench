@@ -48,10 +48,6 @@ public class TxnCheck extends TxnBench {
         running=false;
     }
 
-    public void cleanup() {
-
-    }
-
     public boolean isRunning() { return running; }
 
     public boolean isSelfDetermined() {

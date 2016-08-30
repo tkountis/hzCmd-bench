@@ -37,8 +37,4 @@ public abstract class Validator extends MapBench {
     public boolean isSelfDetermined() {
         return true;
     }
-
-    public void cleanup() {
-        System.out.println("load map "+map.getName()+" size="+map.size());
-    }
 }

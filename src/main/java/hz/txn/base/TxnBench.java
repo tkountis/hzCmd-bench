@@ -26,8 +26,6 @@ public abstract class TxnBench extends BenchBase {
         }
     }
 
-    public void cleanup() { }
-
     public void setVendorObject(Object o) {
         hzInstance = (HazelcastInstance)o;
     }

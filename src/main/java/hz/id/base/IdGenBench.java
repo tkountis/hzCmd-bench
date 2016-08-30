@@ -24,12 +24,6 @@ public abstract class IdGenBench extends BasicBenchBase {
         return hzInstance.getIdGenerator(name + random.nextInt(count));
     }
 
-    public void cleanup() {
-        for(int i=0; i<count; i++){
-            hzInstance.getIdGenerator(name + i).destroy();
-        }
-    }
-
     public void setVendorObject(Object o) {
         hzInstance = (HazelcastInstance)o;
     }

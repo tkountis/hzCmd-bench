@@ -12,7 +12,7 @@ public class CasRecord extends AtomicTest {
         incCount++;
     }
 
-    public void cleanup() {
+    public void postPhase() {
         totalInc.addAndGet(incCount);
     }
 }

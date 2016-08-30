@@ -24,7 +24,7 @@ public class TryLockRecord extends LockCheckBench {
         } catch (InterruptedException e) { }
     }
 
-    public void cleanup() {
+    public void postPhase() {
         totalInc.addAndGet(incCount);
     }
 }

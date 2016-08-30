@@ -67,7 +67,7 @@ public class TxnRecord extends TxnBench {
         }
     }
 
-    public void cleanup() {
+    public void postPhase() {
         for (int i=0; i<incCounts.length; i++) {
             IAtomicLong keyInc = hzInstance.getAtomicLong(name+i);
             keyInc.addAndGet(incCounts[i]);

@@ -15,7 +15,7 @@ public class LatchCheck extends LatchCheckBench {
         latchedCount++;
     }
 
-    public void cleanup() {
+    public void postPhase() {
         System.out.println(latch.getName()+" latchedCount="+latchedCount);
     }
 }

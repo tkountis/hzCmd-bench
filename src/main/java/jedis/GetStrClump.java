@@ -30,8 +30,4 @@ public class GetStrClump extends JedisBench {
             jedisCluster.get("" + k);
         }
     }
-
-    public void cleanup() {
-
-    }
 }

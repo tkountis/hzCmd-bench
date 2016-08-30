@@ -14,11 +14,6 @@ public class CasCheck extends AtomicTest {
         running=false;
     }
 
-    public void cleanup() {
-        atomic.destroy();
-        totalInc.destroy();
-    }
-
     public boolean isRunning() { return running; }
 
     public boolean isSelfDetermined() {

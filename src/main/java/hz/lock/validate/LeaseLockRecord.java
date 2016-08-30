@@ -17,7 +17,7 @@ public class LeaseLockRecord extends LockCheckBench {
         incCount++;
     }
 
-    public void cleanup() {
+    public void postPhase() {
         totalInc.addAndGet(incCount);
     }
 }

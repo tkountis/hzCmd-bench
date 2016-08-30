@@ -15,11 +15,6 @@ public abstract class MapBench extends BenchBase {
         map = hzInstance.getMap(name);
     }
 
-
-    public void cleanup() {
-        System.out.println("map "+map.getName()+" size="+map.size());
-    }
-
     public void setVendorObject(Object o) {
         hzInstance = (HazelcastInstance)o;
     }

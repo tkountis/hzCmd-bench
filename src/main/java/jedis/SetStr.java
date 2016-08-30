@@ -10,7 +10,4 @@ public class SetStr extends JedisBench {
         byte[] v = valueSet.get(idx);
         jedisCluster.set(""+k, ""+v);
     }
-
-    public void cleanup() {
-    }
 }

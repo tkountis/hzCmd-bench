@@ -40,8 +40,4 @@ public class PutAllStatic extends MapBench {
     private Map getMap(){
         return putAllMaps.get(random.nextInt(mapCount));
     }
-
-    public void cleanup() {
-        super.cleanup();
-    }
 }

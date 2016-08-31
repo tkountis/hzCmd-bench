@@ -1,10 +1,10 @@
 package hz.latch.validate;
 
-import hz.latch.base.LatchCheckBench;
+import hz.latch.base.LatchValidate;
 
 import java.util.concurrent.TimeUnit;
 
-public class LatchCheck extends LatchCheckBench {
+public class Latch extends LatchValidate {
 
     private int latchedCount=0;
 
@@ -16,6 +16,7 @@ public class LatchCheck extends LatchCheckBench {
     }
 
     public void postPhase() {
+        latchCounts.add(latchedCount);
         System.out.println(latch.getName()+" latchedCount="+latchedCount);
     }
 }

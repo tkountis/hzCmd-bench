@@ -1,9 +1,9 @@
 package hz.atomic.validate;
 
 import global.AssertionException;
-import hz.atomic.base.AtomicTest;
+import hz.atomic.base.AtomicValidate;
 
-public class CasCheck extends AtomicTest {
+public class CasAssert extends AtomicValidate {
 
     private boolean running=true;
 

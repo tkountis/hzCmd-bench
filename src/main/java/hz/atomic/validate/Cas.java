@@ -1,8 +1,8 @@
 package hz.atomic.validate;
 
-import hz.atomic.base.AtomicTest;
+import hz.atomic.base.AtomicValidate;
 
-public class CasRecord extends AtomicTest {
+public class Cas extends AtomicValidate {
 
     private int incCount=0;
 

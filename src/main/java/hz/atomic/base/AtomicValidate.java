@@ -8,7 +8,7 @@ import com.hazelcast.core.IAtomicLong;
 import java.util.Random;
 
 
-public abstract class AtomicTest extends BasicBenchBase {
+public abstract class AtomicValidate extends BasicBenchBase {
 
     public String name="AtomicCheck";
     protected IAtomicLong atomic;

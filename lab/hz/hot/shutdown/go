@@ -16,8 +16,10 @@ mOps="$mOps -Dhazelcast.hotrestart.gc.stuck.detect.threshold=10000"
 mOps="$mOps -Dhazelcast.hotrestart.free.native.memory.percentage=15"
 mOps="$mOps -Dhazelcast.hidensity.check.freememory=false"
 
+cOps="$cOps -Dhazelcast.client.invocation.timeout.seconds=300"
+
 hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms2G -Xmx2G ${ops} ${mOps}"
-hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms500M -Xmx500M ${ops}"
+hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms500M -Xmx500M ${ops} ${cOps}"
 hz cluster -size M4C50 -id HZ -v 3.7.1 -ee -boxes a.box -user ec2-user
 
 hz bench 5400

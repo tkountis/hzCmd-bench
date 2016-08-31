@@ -11,7 +11,7 @@ public class GetCheck extends MapBench {
         Object obj = map.get(k);
 
         if(obj==null){
-            throw new AssertionException("DATA LOSS! for key "+k);
+            throw new AssertionException("DATA LOSS! for map "+map.getName()+" key "+k);
         }
     }
 

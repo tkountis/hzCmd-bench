@@ -11,7 +11,7 @@ public class GetCheck extends CacheBench {
         Object obj = cache.get(k);
 
         if(obj==null){
-            throw new AssertionException("DATA LOSS! for key "+k);
+            throw new AssertionException("DATA LOSS! for cache "+cache.getName()+" key "+k);
         }
     }
 

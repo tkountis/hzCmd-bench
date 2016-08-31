@@ -15,7 +15,7 @@ hz cluster -size M4C4 -v 3.7.1 -ee -boxes a.box
 
 hz run load
 hz run validate
-hz bounce -iterations 100  -iterationDelay 5 -restartDelay 5 RandomMember &
-hz bench 2700
+#hz bounce -iterations 100  -iterationDelay 5 -restartDelay 5 RandomMember &
+hz bench 300
 hz run get
 hz run validate

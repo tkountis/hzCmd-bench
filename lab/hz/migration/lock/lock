@@ -1,0 +1,5 @@
+lock@class=hz.lock.validate.Lock
+lock@driver=Client
+lock@threads=12
+lock@warmup=0
+lock@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

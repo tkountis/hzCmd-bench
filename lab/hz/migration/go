@@ -8,18 +8,14 @@ cleanup() {
 }
 trap "cleanup" INT TERM EXIT
 
-
-hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
-hz memberOps "-Xms2G -Xmx2G ${hzProps}"
-hz clientOps "-Xms200M -Xmx400M ${hzProps}"
-
+ops="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
+hz memberOps "-Xms2G -Xmx2G ${ops}"
+hz clientOps "-Xms400M -Xmx400M ${ops}"
 hz cluster -size M4C4 -v 3.7.1 -ee -boxes a.box
 
 hz run load
 hz run validate
-
 hz bounce -iterations 100  -iterationDelay 5 -restartDelay 5 RandomMember &
 hz bench 2700
 hz run get
-
 hz run validate

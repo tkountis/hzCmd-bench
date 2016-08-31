@@ -15,7 +15,6 @@
         <connection-attempt-period>9000</connection-attempt-period>
         <connection-attempt-limit>200</connection-attempt-limit>
         <redo-operation>true</redo-operation>
-        <connection-timeout> </connection-timeout>
     </network>
 
 </hazelcast-client>

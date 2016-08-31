@@ -8,7 +8,7 @@ import com.hazelcast.core.IMap;
 
 import java.util.Random;
 
-public abstract class LockCheckBench extends BasicBenchBase {
+public abstract class LockValidate extends BasicBenchBase {
 
     public String name="lockCheck";
     protected ILock lock;

@@ -1,8 +1,8 @@
 package hz.lock.validate;
 
-import hz.lock.base.LockCheckBench;
+import hz.lock.base.LockValidate;
 
-public class LockRecord extends LockCheckBench {
+public class Lock extends LockValidate {
 
     private int incCount=0;
 

@@ -1,9 +1,9 @@
 package hz.lock.validate;
 
 import global.AssertionException;
-import hz.lock.base.LockCheckBench;
+import hz.lock.base.LockValidate;
 
-public class LockCheck extends LockCheckBench {
+public class LockAssert extends LockValidate {
 
     private boolean running=true;
 

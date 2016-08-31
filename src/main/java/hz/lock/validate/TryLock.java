@@ -1,10 +1,10 @@
 package hz.lock.validate;
 
-import hz.lock.base.LockCheckBench;
+import hz.lock.base.LockValidate;
 
 import java.util.concurrent.TimeUnit;
 
-public class TryLockRecord extends LockCheckBench {
+public class TryLock extends LockValidate {
 
     public long milliseconds=50;
     private int incCount=0;

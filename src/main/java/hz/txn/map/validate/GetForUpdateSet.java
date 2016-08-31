@@ -22,7 +22,7 @@ import com.hazelcast.transaction.TransactionException;
 import hz.txn.base.TxnBench;
 
 
-public class TxnRecord extends TxnBench {
+public class GetForUpdateSet extends TxnBench {
 
     private int[] incCounts;
     private int[] keyBatch;

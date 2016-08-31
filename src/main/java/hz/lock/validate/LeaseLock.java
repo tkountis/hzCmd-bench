@@ -1,10 +1,10 @@
 package hz.lock.validate;
 
-import hz.lock.base.LockCheckBench;
+import hz.lock.base.LockValidate;
 
 import java.util.concurrent.TimeUnit;
 
-public class LeaseLockRecord extends LockCheckBench {
+public class LeaseLock extends LockValidate {
 
     public long seconds=30;
     private int incCount=0;

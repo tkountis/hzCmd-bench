@@ -20,7 +20,7 @@ import global.AssertionException;
 import hz.txn.base.TxnBench;
 
 
-public class TxnCheck extends TxnBench {
+public class TxnAssert extends TxnBench {
 
     private boolean running=true;
     private IMap<Integer, Integer> map;

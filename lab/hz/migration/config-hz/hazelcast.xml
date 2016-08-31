@@ -17,48 +17,146 @@
             <multicast enabled="false"/>
             <tcp-ip enabled="true">
             </tcp-ip>
-        </join>   
+        </join>
     </network>
 
+    <hot-restart-persistence enabled="false">
+        <data-load-timeout-seconds>1700</data-load-timeout-seconds>
+        <base-dir>/home/ec2-user/hot-junk</base-dir>
+    </hot-restart-persistence>
+
     <native-memory allocator-type="POOLED" enabled="true">
-        <size unit="GIGABYTES" value="1"/>
-        <metadata-space-percentage>15</metadata-space-percentage>
+        <size unit="GIGABYTES" value="2" />
+        <metadata-space-percentage>20</metadata-space-percentage>
     </native-memory>
 
-    <map name="bak-0_offHeap*">
+    <cache name="cacheBak0HD*">
         <in-memory-format>NATIVE</in-memory-format>
         <backup-count>0</backup-count>
-        <async-backup-count>0</async-backup-count>
-        <eviction-policy>LRU</eviction-policy>
-        <eviction-percentage>5</eviction-percentage>
-        <max-size policy="FREE_NATIVE_MEMORY_PERCENTAGE">5</max-size>
-        <min-eviction-check-millis>0</min-eviction-check-millis>
-    </map>
+        <statistics-enabled>false</statistics-enabled>
+        <eviction eviction-policy="LRU" max-size-policy="FREE_NATIVE_MEMORY_PERCENTAGE" size="15"/>
+        <hot-restart enabled="false">
+            <fsync>false</fsync>
+        </hot-restart>
+    </cache>
 
-    <map name="bak-0_onHeap*">
+    <cache name="cacheBak1HD*">
+        <in-memory-format>NATIVE</in-memory-format>
+        <backup-count>1</backup-count>
+        <statistics-enabled>false</statistics-enabled>
+        <eviction eviction-policy="LRU" max-size-policy="FREE_NATIVE_MEMORY_PERCENTAGE" size="15"/>
+        <hot-restart enabled="false">
+            <fsync>false</fsync>
+        </hot-restart>
+    </cache>
+
+    <cache name="cacheAsync1HD*">
+        <in-memory-format>NATIVE</in-memory-format>
+        <backup-count>0</backup-count>
+        <async-backup-count>1</async-backup-count>
+        <statistics-enabled>false</statistics-enabled>
+        <eviction eviction-policy="LRU" max-size-policy="FREE_NATIVE_MEMORY_PERCENTAGE" size="15"/>
+        <hot-restart enabled="false">
+            <fsync>false</fsync>
+        </hot-restart>
+    </cache>
+
+
+    <cache name="cacheBak0*">
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>0</backup-count>
-        <async-backup-count>0</async-backup-count>
-    </map>
+        <statistics-enabled>false</statistics-enabled>
+        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT" size="200001"/>
+        <hot-restart enabled="false">
+            <fsync>false</fsync>
+        </hot-restart>
+    </cache>
 
-    <map name="bakSync-1_onHeap*">
+    <cache name="cacheBak1*">
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>1</backup-count>
-    </map>
+        <statistics-enabled>false</statistics-enabled>
+        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT" size="200001"/>
+        <hot-restart enabled="false">
+            <fsync>false</fsync>
+        </hot-restart>
+    </cache>
 
-    <map name="bakAsync-1_onHeap*">
+    <cache name="cacheAsync1*">
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>0</backup-count>
         <async-backup-count>1</async-backup-count>
+        <statistics-enabled>false</statistics-enabled>
+        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT" size="200001"/>
+        <hot-restart enabled="false">
+            <fsync>false</fsync>
+        </hot-restart>
+    </cache>
+
+
+
+
+    <map name="mapBak0HD*">
+        <backup-count>0</backup-count>
+        <in-memory-format>NATIVE</in-memory-format>
+        <eviction-policy>LRU</eviction-policy>
+        <eviction-percentage>5</eviction-percentage>
+        <min-eviction-check-millis>0</min-eviction-check-millis>
+        <max-size policy="FREE_NATIVE_MEMORY_PERCENTAGE">15</max-size>
+        <hot-restart enabled="false">
+            <fsync>false</fsync>
+        </hot-restart>
     </map>
 
-    <map name="bakSync-1_onHeapEvict*">
+    <map name="mapBak1HD*">
+        <backup-count>1</backup-count>
+        <in-memory-format>NATIVE</in-memory-format>
+        <eviction-policy>LRU</eviction-policy>
+        <eviction-percentage>5</eviction-percentage>
+        <min-eviction-check-millis>0</min-eviction-check-millis>
+        <max-size policy="FREE_NATIVE_MEMORY_PERCENTAGE">15</max-size>
+        <hot-restart enabled="false">
+            <fsync>false</fsync>
+        </hot-restart>
+    </map>
+
+    <map name="mapAsync1HD*">
+        <backup-count>0</backup-count>
+        <async-backup-count>1</async-backup-count>
+        <in-memory-format>NATIVE</in-memory-format>
+        <eviction-policy>LRU</eviction-policy>
+        <eviction-percentage>5</eviction-percentage>
+        <min-eviction-check-millis>0</min-eviction-check-millis>
+        <max-size policy="FREE_NATIVE_MEMORY_PERCENTAGE">15</max-size>
+        <hot-restart enabled="false">
+            <fsync>false</fsync>
+        </hot-restart>
+    </map>
+
+
+    <map name="mapBak0*">
+        <in-memory-format>BINARY</in-memory-format>
+        <backup-count>0</backup-count>
+        <hot-restart enabled="false">
+            <fsync>false</fsync>
+        </hot-restart>
+    </map>
+
+    <map name="mapBak1*">
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>1</backup-count>
-        <eviction-policy>LFU</eviction-policy>
-        <max-size policy="FREE_HEAP_PERCENTAGE">25</max-size>
-        <eviction-percentage>20</eviction-percentage>
-        <min-eviction-check-millis>0</min-eviction-check-millis>
+        <hot-restart enabled="false">
+            <fsync>false</fsync>
+        </hot-restart>
+    </map>
+
+    <map name="mapAsync1*">
+        <in-memory-format>BINARY</in-memory-format>
+        <backup-count>0</backup-count>
+        <async-backup-count>1</async-backup-count>
+        <hot-restart enabled="false">
+            <fsync>false</fsync>
+        </hot-restart>
     </map>
 
 </hazelcast>

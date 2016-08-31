@@ -13,14 +13,13 @@ hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.back
 hz memberOps "-Xms2G -Xmx2G ${hzProps}"
 hz clientOps "-Xms200M -Xmx400M ${hzProps}"
 
-hz cluster -size M4C4 -v 3.7.1 -boxes a.box
+hz cluster -size M4C4 -v 3.7.1 -ee -boxes a.box
 
-hz driver Member
-hz threads 1
 hz run load
+hz run validate
 
-hz driver Client
-hz threads 16
-hz bench 2700
 hz bounce -iterations 100  -iterationDelay 5 -restartDelay 5 RandomMember &
+hz bench 2700
 hz run get
+
+hz run validate

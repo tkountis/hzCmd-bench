@@ -14,7 +14,7 @@ hz clientOps "-Xms400M -Xmx400M ${ops}"
 hz cluster -size M4C4 -v 3.7 -ee -boxes a.box
 
 hz bounce -iterations 100  -iterationDelay 5 RandomMember &
-hz bench 900
+hz bench 2700
 hz run lock
 wait
 hz run validate

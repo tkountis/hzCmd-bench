@@ -13,8 +13,7 @@ hz memberOps "-Xms2G -Xmx2G ${ops}"
 hz clientOps "-Xms400M -Xmx400M ${ops}"
 hz cluster -size M4C4 -v 3.7 -ee -boxes a.box
 
-
-hz bounce -iterations 10  -iterationDelay 5 -restartDelay 5 RandomMember &
-hz bench 120
+#hz bounce -iterations 10  -iterationDelay 5 -restartDelay 5 RandomMember &
+hz bench 30
 hz run lock
 hz run validate

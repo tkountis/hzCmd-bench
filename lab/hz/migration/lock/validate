@@ -1,5 +1,5 @@
 validate@class=hz.lock.validate.LockAssert
-validate@driver=Member
+validate@driver=Member1
 validate@threads=1
 validate@warmup=0
 validate@duration=900

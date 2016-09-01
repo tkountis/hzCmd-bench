@@ -20,7 +20,7 @@ cOps="$cOps -Dhazelcast.client.invocation.timeout.seconds=300"
 
 hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms2G -Xmx2G ${ops} ${mOps}"
 hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms500M -Xmx500M ${ops} ${cOps}"
-hz cluster -size M4C50 -id HZ -v 3.7 -ee -boxes a.box -user ec2-user
+hz cluster -size M4C50 -id HZ -v 3.7.1 -ee -boxes a.box -user ec2-user
 
 hz bench 9000
 hz driver Client

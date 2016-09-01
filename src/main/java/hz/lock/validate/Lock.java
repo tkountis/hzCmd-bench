@@ -10,8 +10,11 @@ public class Lock extends LockValidate {
 
     public void init() throws Exception{
         super.init();
-        lockedMap.put(name, 0);
         increments = new int[count];
+
+        for (int i=0; i<count; i++) {
+            lockedMap.put(name+i, 0);
+        }
     }
 
     public void timeStep() {
@@ -29,7 +32,7 @@ public class Lock extends LockValidate {
     }
 
     public void postPhase() {
-        for (int i=0; i<increments.length; i++) {
+        for (int i=0; i<count; i++) {
             System.out.println("increments["+i+"]="+increments[i]);
             addIncrementFor(i, increments[i]);
         }

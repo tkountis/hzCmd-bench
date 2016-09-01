@@ -6,6 +6,11 @@ public class Lock extends LockValidate {
 
     private int incCount=0;
 
+    public void init() throws Exception{
+        super.init();
+        lockedMap.put(name, 0);
+    }
+
     public void timeStep() {
         lock.lock();
         try {

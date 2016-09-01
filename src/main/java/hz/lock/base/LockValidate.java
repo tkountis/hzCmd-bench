@@ -22,7 +22,6 @@ public abstract class LockValidate extends BasicBenchBase {
         super.init();
         lock = hzInstance.getLock(name);
         lockedMap = hzInstance.getMap(name);
-        lockedMap.put(name, 0);
         totalInc = hzInstance.getAtomicLong(name+"-totalInc");
     }
 

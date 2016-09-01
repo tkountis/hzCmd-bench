@@ -25,6 +25,10 @@ public abstract class LockBench extends BasicBenchBase {
         return hzInstance.getLock(name+random.nextInt(count));
     }
 
+    protected ILock getLock(int i){
+        return hzInstance.getLock(name+i);
+    }
+
     public void setVendorObject(Object o) {
         hzInstance = (HazelcastInstance)o;
     }

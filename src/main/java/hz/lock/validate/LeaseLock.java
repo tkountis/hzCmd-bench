@@ -1,8 +1,6 @@
 package hz.lock.validate;
 
-import hz.lock.base.LockValidate;
-
-import java.util.concurrent.TimeUnit;
+import hz.lock.validate.base.LockValidate;
 
 public class LeaseLock extends LockValidate {
 
@@ -10,14 +8,16 @@ public class LeaseLock extends LockValidate {
     private int incCount=0;
 
     public void timeStep() {
+        /*
         lock.lock(seconds, TimeUnit.SECONDS);
         int val = lockedMap.get(name);
         utils.Utils.sleep(5);
         lockedMap.put(name, ++val);
         incCount++;
+        */
     }
 
     public void postPhase() {
-        totalInc.addAndGet(incCount);
+        //totalInc.addAndGet(incCount);
     }
 }

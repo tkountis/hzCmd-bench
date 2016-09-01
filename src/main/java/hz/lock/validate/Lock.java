@@ -1,32 +1,37 @@
 package hz.lock.validate;
 
-import hz.lock.base.LockValidate;
+import com.hazelcast.core.ILock;
+import hz.lock.validate.base.LockValidate;
 
 public class Lock extends LockValidate {
 
-    private int incCount=0;
+    public int sleepMs=5;
+    private int[] increments;
 
     public void init() throws Exception{
         super.init();
         lockedMap.put(name, 0);
+        increments = new int[count];
     }
 
     public void timeStep() {
+        int i = random.nextInt(count);
+        ILock lock = getLock(i);
         lock.lock();
         try {
-            int val = lockedMap.get(name);
-            utils.Utils.sleep(5);
-            val++;
-            lockedMap.put(name, val);
-            incCount++;
+            int val = lockedMap.get(name+i);
+            utils.Utils.sleep(sleepMs);
+            lockedMap.put(name+i, ++val);
+            increments[i]++;
         }finally {
             lock.unlock();
         }
     }
 
     public void postPhase() {
-        System.out.println("incCount="+incCount);
-        System.out.println("map "+lockedMap.getName()+" lockedMap.get("+name+")="+lockedMap.get(name));
-        totalInc.addAndGet(incCount);
+        for (int i=0; i<increments.length; i++) {
+            System.out.println("increments["+i+"]="+increments[i]);
+            addIncrementFor(i, increments[i]);
+        }
     }
 }

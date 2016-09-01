@@ -1,8 +1,6 @@
 package hz.lock.validate;
 
-import hz.lock.base.LockValidate;
-
-import java.util.concurrent.TimeUnit;
+import hz.lock.validate.base.LockValidate;
 
 public class TryLock extends LockValidate {
 
@@ -10,6 +8,8 @@ public class TryLock extends LockValidate {
     private int incCount=0;
 
     public void timeStep() {
+
+        /*
         try {
             if( lock.tryLock(milliseconds, TimeUnit.MILLISECONDS) ){
                 try {
@@ -22,9 +22,10 @@ public class TryLock extends LockValidate {
                 }
             }
         } catch (InterruptedException e) { }
+        */
     }
 
     public void postPhase() {
-        totalInc.addAndGet(incCount);
+        //totalInc.addAndGet(incCount);
     }
 }

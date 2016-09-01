@@ -11,7 +11,8 @@ public class Lock extends LockValidate {
         try {
             int val = lockedMap.get(name);
             utils.Utils.sleep(5);
-            lockedMap.put(name, ++val);
+            val++;
+            lockedMap.put(name, val);
             incCount++;
         }finally {
             lock.unlock();
@@ -19,6 +20,7 @@ public class Lock extends LockValidate {
     }
 
     public void postPhase() {
+        System.out.println("incCount="+incCount);
         totalInc.addAndGet(incCount);
     }
 }

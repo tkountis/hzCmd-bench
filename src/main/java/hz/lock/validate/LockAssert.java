@@ -9,7 +9,7 @@ public class LockAssert extends LockValidate {
 
     public void timeStep() throws AssertionException {
         if(totalInc.get() != lockedMap.get(name)){
-            throw new AssertionException(totalInc.getName()+" "+totalInc.get()+" != "+lockedMap.getName()+" "+lockedMap.get(name));
+            throw new AssertionException(totalInc.getName()+" "+totalInc.get()+" != "+lockedMap.getName()+" lockedMap.get("+name+") "+lockedMap.get(name));
         }
         if(lock.isLocked()){
             throw new AssertionException(lock.getName()+" isLocked()==true");

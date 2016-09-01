@@ -21,6 +21,7 @@ public class Lock extends LockValidate {
 
     public void postPhase() {
         System.out.println("incCount="+incCount);
+        System.out.println("lockedMap.get("+name+")="+lockedMap.get(name));
         totalInc.addAndGet(incCount);
     }
 }

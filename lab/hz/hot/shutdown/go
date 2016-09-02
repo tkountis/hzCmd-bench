@@ -24,7 +24,7 @@ hz cluster -size M4C50 -id HZ -v 3.7.1 -ee -boxes a.box -user ec2-user
 
 hz bench 9000
 hz driver Client
-hz run methods &
+hz run methodz &
 
 for i in {1..75} ; do
     sleep 60

@@ -29,5 +29,5 @@ for i in {1..40} ; do
 done
 hz run validate
 
-hz bounce -iterations 40 -iterationDelay 1 Member
+hz bounce -iterations 100 -iterationDelay 1 Member
 hz run validate

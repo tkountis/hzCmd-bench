@@ -11,6 +11,7 @@ public class LockAssert extends LockValidate {
     public void timeStep() throws AssertionException {
 
         for (int i=0; i<count; i++) {
+            System.out.print(getInfoFor(i));
             if( getIncrementFor(i) != getMapIdx(i) ){
                 throw new AssertionException(getInfoFor(i));
             }

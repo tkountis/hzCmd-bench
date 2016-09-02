@@ -38,4 +38,16 @@ public abstract class BenchBase extends BasicBenchBase {
         return valueSet.get( key % valueSetSize );
     }
 
+    @Override
+    public String toString() {
+        return "BenchBase{" +
+                "seed=" + seed +
+                ", name='" + name + '\'' +
+                ", keyDomain=" + keyDomain +
+                ", valueSetSize=" + valueSetSize +
+                ", valueSize=" + valueSize +
+                ", valueMinSize=" + valueMinSize +
+                ", valueMaxSize=" + valueMaxSize +
+                '}';
+    }
 }

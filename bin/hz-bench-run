@@ -34,6 +34,7 @@ echo -e "\033[32m${subDir}\033[0m"
 pwd
 cp -r ${HZ_CMD_BENCH_SRC}/lab/${testDir}/* .
 
+echo 'aws-create --count' ${boxCount} '--instanceType' ${type} '--imageId' ${ami}
 aws-create --count ${boxCount} --instanceType ${type} --imageId ${ami}
 
 ./go

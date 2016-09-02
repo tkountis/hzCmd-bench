@@ -18,4 +18,9 @@ public abstract class MapBench extends BenchBase {
     public void setVendorObject(Object o) {
         hzInstance = (HazelcastInstance)o;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " MapBench{" + "hzInstance=" + hzInstance + ", map=" + map + '}';
+    }
 }

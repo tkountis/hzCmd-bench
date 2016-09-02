@@ -42,8 +42,8 @@ public abstract class LockValidate extends LockBench {
 
     public String getInfoFor(int i){
         IAtomicLong atomic = getAtomicFor(i);
-        return  "atomic "+atomic.getName()+"="+atomic.get()+
+        return  "atomic["+atomic.getName()+"="+atomic.get()+"]"+
                 " "+
-                "map "+lockedMap.getName()+" at "+name+i+" = "+getMapIdx(i);
+                "map["+lockedMap.getName()+".get("+name+i+")="+getMapIdx(i)+"]";
     }
 }

@@ -13,8 +13,11 @@ public class LockAssert extends LockValidate {
 
         for (int i=0; i<count; i++) {
             IAtomicLong increment = getIncrementFor(i);
+
+            String info = increment.getName()+".get()="+increment.get()+" "+lockedMap.getName()+".get("+name+i+")="+lockedMap.get(name);
+            System.out.println(info);
             if(increment.get() != lockedMap.get(name+i)){
-                throw new AssertionException(increment.getName()+".get()="+increment.get()+" "+lockedMap.getName()+".get("+name+i+")="+lockedMap.get(name));
+                throw new AssertionException(info);
             }
         }
 

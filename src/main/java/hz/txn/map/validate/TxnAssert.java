@@ -32,17 +32,12 @@ public class TxnAssert extends TxnBench {
 
     public void timeStep() throws AssertionException {
 
-        String errorStr = new String();
         for(int i=0; i<keyDomain; i++) {
             IAtomicLong expectedIncs = hzInstance.getAtomicLong(name+i);
-            int val = map.get(i);
 
-            if(val != expectedIncs.get()){
-                errorStr += expectedIncs.getName()+" "+expectedIncs.get()+" != "+map.getName()+"["+i+"] "+val+"\n";
+            if( expectedIncs.get() != map.get(i) ){
+                throw new AssertionException(expectedIncs.getName()+" "+expectedIncs.get()+" != "+map.getName()+".get("+i+") "+map.get(i)+"\n");
             }
-        }
-        if(errorStr.length()!=0){
-            throw new AssertionException(errorStr);
         }
 
         running=false;

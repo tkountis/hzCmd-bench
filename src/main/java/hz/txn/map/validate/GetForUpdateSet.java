@@ -56,8 +56,7 @@ public class GetForUpdateSet extends TxnBench {
             for(int i=0; i<batchSize; i++){
                 incCounts[keyBatch[i]]++;
             }
-        }
-        catch (TransactionException commitException) {
+        } catch (TransactionException commitException) {
             commitException.printStackTrace();
             try {
                 context.rollbackTransaction();

@@ -1,15 +1,17 @@
 package hz.atomic.validate;
 
 import global.AssertionException;
-import hz.atomic.base.AtomicValidate;
+import hz.atomic.validate.base.AtomicValidate;
 
 public class CasAssert extends AtomicValidate {
 
     private boolean running=true;
 
     public void timeStep() throws AssertionException {
-        if(totalInc.get() != atomic.get()){
-            throw new AssertionException(totalInc.getName()+" "+totalInc.get()+" != "+atomic.getName()+" "+" "+atomic.get());
+        for(int i=0; i<count; i++){
+            if( getAtomic(i).get() != getExpectedIncrement(i) ) {
+                throw new AssertionException(infoStr(i));
+            }
         }
         running=false;
     }

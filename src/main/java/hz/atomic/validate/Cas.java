@@ -16,8 +16,9 @@ public class Cas extends AtomicValidate {
         int i = random.nextInt(count);
         IAtomicLong atomic = getAtomic(i);
         long val = atomic.get();
-        atomic.compareAndSet(val, ++val);
-        increments[i]++;
+        if ( atomic.compareAndSet(val, ++val) ){
+            increments[i]++;
+        }
     }
 
     public void postPhase() {

@@ -8,6 +8,11 @@ public class CasAssert extends AtomicValidate {
     private boolean running=true;
 
     public void timeStep() throws AssertionException {
+
+        for(int i=0; i<count; i++){
+            System.out.println( infoStr(i) );
+        }
+
         for(int i=0; i<count; i++){
             if( getAtomic(i).get() != getExpectedIncrement(i) ) {
                 throw new AssertionException(infoStr(i));

@@ -29,7 +29,7 @@ public abstract class AtomicValidate extends BasicBenchBase {
     }
 
     private IAtomicLong getExpectedAtomic(int i){
-        return hzInstance.getAtomicLong(name+"-validate"+i);
+        return hzInstance.getAtomicLong(name+"-expected"+i);
     }
     public long getExpectedIncrement(int i){
         return getExpectedAtomic(i).get();

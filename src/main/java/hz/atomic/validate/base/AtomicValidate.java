@@ -49,6 +49,13 @@ public abstract class AtomicValidate extends BasicBenchBase {
                 "atomic["+expected.getName()+"="+expected.get()+"]";
     }
 
+    public void destroy(){
+        for(int i=0; i<count; i++){
+            getAtomic(i).destroy();
+            getExpectedAtomic(i).destroy();
+        }
+    }
+
     public void setVendorObject(Object o) {
         hzInstance = (HazelcastInstance)o;
     }

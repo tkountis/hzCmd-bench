@@ -21,6 +21,10 @@ public class CasAssert extends AtomicValidate {
         running=false;
     }
 
+    public void postPhase() {
+        destroy();
+    }
+
     public boolean isRunning() { return running; }
 
     public boolean isSelfDetermined() {

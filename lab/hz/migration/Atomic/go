@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -e
+cleanup() {
+    exitCode=$?
+    hz download
+    hz chart metrics
+    exit ${exitCode}
+}
+trap "cleanup" INT TERM EXIT
+
+ops="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
+hz memberOps "-Xms2G -Xmx2G ${ops}"
+hz clientOps "-Xms400M -Xmx400M ${ops}"
+hz cluster -size M4C4 -v 3.7 -ee -boxes a.box
+
+hz bounce -iterations 100  -iterationDelay 5 RandomMember &
+hz bench 2700
+hz run lock
+wait
+hz run validate

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-$1=${1:-9999}
+mod=${1:-9999}
 
-$(( $(od -An -tu -N2 /dev/urandom) % $1 ))
+$(( $(od -An -tu -N2 /dev/urandom) % ${mod} ))

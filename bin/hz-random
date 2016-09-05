@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+$1=${1:-99999999}
+
+(( $(od -An -tu -N2 /dev/urandom) % $1 ))

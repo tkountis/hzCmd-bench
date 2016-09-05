@@ -1,7 +1,0 @@
-atomic@class=hz.atomic.validate.Cas
-atomic@driver=Client
-atomic@threads=12
-atomic@warmup=0
-atomic@count=5
-atomic@name=atomic
-atomic@ignore=com.hazelcast.spi.exception.TargetDisconnectedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

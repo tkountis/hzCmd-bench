@@ -5,8 +5,6 @@ import hz.atomic.validate.base.AtomicValidate;
 
 public class CasAssert extends AtomicValidate {
 
-    private boolean running=true;
-
     public void timeStep() throws AssertionException {
 
         for(int i=0; i<count; i++){
@@ -18,16 +16,10 @@ public class CasAssert extends AtomicValidate {
                 throw new AssertionException(infoStr(i));
             }
         }
-        running=false;
+        setRunning(false);
     }
 
     public void postPhase() {
         destroy();
-    }
-
-    public boolean isRunning() { return running; }
-
-    public boolean isSelfDetermined() {
-        return true;
     }
 }

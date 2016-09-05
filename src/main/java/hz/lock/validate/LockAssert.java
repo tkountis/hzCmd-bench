@@ -6,8 +6,6 @@ import hz.lock.validate.base.LockValidate;
 
 public class LockAssert extends LockValidate {
 
-    private boolean running=true;
-
     public void timeStep() throws AssertionException {
 
         for (int i=0; i<count; i++) {
@@ -26,12 +24,6 @@ public class LockAssert extends LockValidate {
                 throw new AssertionException(lock.getName()+" isLocked()==true");
             }
         }
-        running=false;
-    }
-
-    public boolean isRunning() { return running; }
-
-    public boolean isSelfDetermined() {
-        return true;
+        setRunning(false);
     }
 }

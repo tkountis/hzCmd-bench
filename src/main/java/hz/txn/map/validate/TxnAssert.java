@@ -39,13 +39,6 @@ public class TxnAssert extends TxnBench {
                 throw new AssertionException(expectedIncs.getName()+" "+expectedIncs.get()+" != "+map.getName()+".get("+i+") "+map.get(i)+"\n");
             }
         }
-
-        running=false;
-    }
-
-    public boolean isRunning() { return running; }
-
-    public boolean isSelfDetermined() {
-        return true;
+        setRunning(false);
     }
 }

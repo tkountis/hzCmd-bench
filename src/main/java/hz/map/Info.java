@@ -8,7 +8,6 @@ public class Info extends MapBench {
     private boolean running=true;
 
     public void timeStep() throws AssertionException {
-
         System.out.println(this);
 
         String mapName = map.getName();
@@ -19,13 +18,6 @@ public class Info extends MapBench {
             System.out.println(mapName+".get("+i+")="+map.get(i));
             System.out.println(mapName+".isLocked("+i+")="+map.isLocked(i));
         }
-
-        running=false;
-    }
-
-    public boolean isRunning() { return running; }
-
-    public boolean isSelfDetermined() {
-        return true;
+        setRunning(false);
     }
 }

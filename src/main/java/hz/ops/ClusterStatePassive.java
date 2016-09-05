@@ -7,7 +7,7 @@ public class ClusterStatePassive extends OpsBase {
 
     public void timeStep() throws Exception {
         hzInstance.getCluster().changeClusterState(ClusterState.PASSIVE);
-        running=false;
+        setRunning(false);
     }
 
 }

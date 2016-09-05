@@ -6,7 +6,7 @@ public class ClusterShutDown extends OpsBase {
 
     public void timeStep() throws Exception {
         hzInstance.getCluster().shutdown();
-        running=false;
+        setRunning(false);
     }
 
 }

@@ -1,11 +1,10 @@
 package hz.latch.validate;
 
 import global.AssertionException;
-import hz.latch.base.LatchValidate;
+import hz.latch.validate.base.LatchValidate;
 
 public class LatchAssert extends LatchValidate {
 
-    private boolean running=true;
 
     public void timeStep() throws AssertionException {
 
@@ -15,12 +14,7 @@ public class LatchAssert extends LatchValidate {
                 throw new AssertionException("firstCount != latchCount "+firstCount+" != "+latchCount);
             }
         }
-        running=false;
+        setRunning(false);
     }
 
-    public boolean isRunning() { return running; }
-
-    public boolean isSelfDetermined() {
-        return true;
-    }
 }

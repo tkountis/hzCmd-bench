@@ -7,6 +7,7 @@ import java.util.List;
 
 public abstract class BasicBenchBase implements Bench{
 
+    private boolean running=true;
     public String ignore=null;
     private List<Class> ignoreClasses = null;
 
@@ -21,12 +22,12 @@ public abstract class BasicBenchBase implements Bench{
         }
     }
 
-    public boolean isSelfDetermined() {
-        return false;
+    public boolean isRunning() {
+        return running;
     }
 
-    public boolean isRunning() {
-        return false;
+    public void setRunning(boolean running){
+        this.running=running;
     }
 
     public List<Class> ignore(){

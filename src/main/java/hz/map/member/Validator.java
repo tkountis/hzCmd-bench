@@ -33,8 +33,4 @@ public abstract class Validator extends MapBench {
     public boolean isRunning() {
         return key<keyDomain;
     }
-
-    public boolean isSelfDetermined() {
-        return true;
-    }
 }

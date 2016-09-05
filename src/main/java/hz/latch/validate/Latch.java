@@ -1,6 +1,6 @@
 package hz.latch.validate;
 
-import hz.latch.base.LatchValidate;
+import hz.latch.validate.base.LatchValidate;
 
 import java.util.concurrent.TimeUnit;
 

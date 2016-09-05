@@ -6,7 +6,6 @@ import hz.cache.base.CacheBench;
 
 public class SizeCheck extends CacheBench {
 
-    private boolean running=true;
     public int size=0;
 
     public void timeStep() throws AssertionException {
@@ -14,12 +13,6 @@ public class SizeCheck extends CacheBench {
         if(cache.size()!=size){
             throw new AssertionException("map "+cache.getName()+" size "+cache.size()+" != expected "+size);
         }
-        running=false;
-    }
-
-    public boolean isRunning() { return running; }
-
-    public boolean isSelfDetermined() {
-        return true;
+        setRunning(false);
     }
 }

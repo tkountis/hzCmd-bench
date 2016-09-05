@@ -33,8 +33,4 @@ public abstract class Loader extends CacheBench {
     public boolean isRunning() {
         return key<keyDomain;
     }
-
-    public boolean isSelfDetermined() {
-        return true;
-    }
 }

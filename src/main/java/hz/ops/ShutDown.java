@@ -7,7 +7,7 @@ public class ShutDown extends OpsBase {
 
     public void timeStep() throws Exception {
         hzInstance.shutdown();
-        running=false;
+        setRunning(false);
     }
 
 }

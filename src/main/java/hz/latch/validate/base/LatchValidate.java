@@ -1,4 +1,4 @@
-package hz.latch.base;
+package hz.latch.validate.base;
 
 import base.BasicBenchBase;
 import com.hazelcast.core.HazelcastInstance;

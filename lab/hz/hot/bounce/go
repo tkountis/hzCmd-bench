@@ -22,7 +22,7 @@ mOps="$mOps -Dhazelcast.connection.monitor.interval=1000 -Dhazelcast.connection.
 
 hz memberOps "-Xms2G -Xmx2G ${ops} ${mOps}"
 hz clientOps "-Xms500M -Xmx500M ${ops}"
-hz cluster -size M4C50 -id HZ -v 3.7.1 -ee -boxes a.box -user ec2-user
+hz cluster -size M4C50 -id HZ -v $(hazelcastVersion) -ee -boxes a.box -user ec2-user
 
 hz bounce -iterations 75 -iterationDelay 60 Member &
 

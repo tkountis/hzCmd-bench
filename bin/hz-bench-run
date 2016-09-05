@@ -24,7 +24,7 @@ ami=${4:-ami-08111162}
 
 hz-bench-update
 
-subDir="3.7.1/$(date '+%Y_%m_%d-%H_%M_%S')"
+subDir="$(hazelcastVersion)/$(date '+%Y_%m_%d-%H_%M_%S')"
 mkdir -p ${subDir}
 cp a.box ${subDir} 2>/dev/null || true
 cd ${subDir}
@@ -37,6 +37,6 @@ cp -r ${HZ_CMD_BENCH_SRC}/lab/${testDir}/* .
 echo 'aws-create --count' ${boxCount} '--instanceType' ${type} '--imageId' ${ami}
 aws-create --count ${boxCount} --instanceType ${type} --imageId ${ami}
 
-./go
+./go $(hazelcastVersion)
 
 

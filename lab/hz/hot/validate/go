@@ -16,7 +16,7 @@ mOps="$mOps -Dhazelcast.hotrestart.gc.stuck.detect.threshold=10000"
 mOps="$mOps -Dhazelcast.hotrestart.free.native.memory.percentage=15"
 
 hz memberOps "-Xms4G -Xmx4G ${ops} ${mOps}"
-hz cluster -size M4 -id HZ -v 3.7 -ee -boxes a.box -user ec2-user
+hz cluster -size M4 -id HZ -v $(hazelcastVersion) -ee -boxes a.box -user ec2-user
 
 hz run load
 hz run validate

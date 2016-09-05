@@ -21,7 +21,7 @@ hz run atomic &
 sleep 10
 for i in {1..6}; do
   sleep 5
-  n=$(( $(hz-random 4)+1 ))
+  n=$(( $(od -An -tu -N2 /dev/urandom) % 4 + 1))
   hz driver Member${n}
   hz run shutDown
   hz embeddedRestart Member${n}

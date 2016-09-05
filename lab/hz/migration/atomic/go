@@ -19,7 +19,7 @@ hz bench 300
 
 hz run atomic &
 sleep 10
-for i in {1..5}; do
+for i in {1..6}; do
   sleep 5
   n=$(( $(hz-random 4)+1 ))
   hz driver Member${n}
@@ -29,7 +29,7 @@ done
 wait
 hz run validate
 
-hz bounce -iterations 5  -iterationDelay 5 RandomMember &
+hz bounce -iterations 6  -iterationDelay 5 RandomMember &
 hz run atomic
 wait
 hz run validate

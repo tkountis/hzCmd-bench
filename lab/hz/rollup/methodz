@@ -5,37 +5,40 @@ atomic@count=5
 atomic@name=atomic
 
 
-mapGet@class=hz.map.GetCheck
-mapGet@name=mapBak1A
-mapGet@warmup=0
-mapGet@duration=1800
-mapGet@driver=Client
-mapGet@threads=1
-mapGet@keyDomain=10000
+mapCheck@class=hz.map.GetCheck
+mapCheck@driver=Client
+mapCheck@threads=1
+mapCheck@keyDomain=10000
+mapCheck@name=mapBak1HD
 
-mapPut@class=hz.map.Put
-mapPut@name=mapBak1B
-mapPut@warmup=0
-mapPut@duration=1800
-mapPut@driver=Client
-mapPut@threads=1
-mapPut@keyDomain=10000
-mapPut@valueSize=5
+mapCheck@class=hz.map.GetCheck
+mapCheck@driver=Client
+mapCheck@threads=1
+mapCheck@keyDomain=10000
+mapCheck@name=mapBak1
 
+cacheCheck@class=hz.cache.GetCheck
+cacheCheck@driver=Client
+cacheCheck@threads=1
+cacheCheck@keyDomain=10000
+cacheCheck@name=cacheBak1HD
 
-cacheGet@class=hz.cache.GetCheck
-cacheGet@name=mapBak1A
-cacheGet@warmup=0
-cacheGet@duration=1800
-cacheGet@driver=Client
-cacheGet@threads=1
-cacheGet@keyDomain=10000
+cacheCheck@class=hz.cache.GetCheck
+cacheCheck@driver=Client
+cacheCheck@threads=1
+cacheCheck@keyDomain=10000
+cacheCheck@name=cacheBak1
 
-cachePut@class=hz.cache.Put
-cachePut@name=mapBak1B
-cachePut@warmup=0
-cachePut@duration=1800
-cachePut@driver=Client
-cachePut@threads=1
-cachePut@keyDomain=10000
-cachePut@valueSize=5
+#mapPut@class=hz.map.Put
+#mapPut@driver=Client
+#mapPut@threads=1
+#mapPut@keyDomain=10000
+#mapPut@valueSize=5
+#mapPut@name=mapBak1B
+        
+#cachePut@class=hz.cache.Put
+#cachePut@driver=Client
+#cachePut@threads=1
+#cachePut@keyDomain=10000
+#cachePut@valueSize=5
+#cachePut@name=mapBak1B

@@ -1,4 +1,2 @@
 shut@class=hz.ops.ShutDown
-shut@warmup=0
-shut@duration=0
 shut@threads=1

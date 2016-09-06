@@ -20,7 +20,7 @@ import java.io.ObjectInput;
 import java.io.ObjectOutput;
 
 /**
- * Person record used for query validate.
+ * Person record used for query validate-load.
  */
 public class Person implements Externalizable {
     /** Person ID. */

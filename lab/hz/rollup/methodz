@@ -1,3 +1,10 @@
+atomic@class=hz.atomic.validate.Cas
+atomic@driver=Client
+atomic@threads=4
+atomic@count=5
+atomic@name=atomic
+
+
 mapGet@class=hz.map.GetCheck
 mapGet@name=mapBak1A
 mapGet@warmup=0

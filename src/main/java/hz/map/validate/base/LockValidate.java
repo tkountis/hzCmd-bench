@@ -7,12 +7,12 @@ public abstract class LockValidate extends MapBench {
 
     public int sleepMs=5;
 
+
     public void incMapIdx(int i){
         int val = (Integer) map.get(i);
         utils.Utils.sleep(sleepMs);
         map.put(i, ++val);
     }
-
 
     private IAtomicLong getAtomicFor(int i){
         return hzInstance.getAtomicLong(name+i);

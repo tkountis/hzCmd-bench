@@ -1,4 +1,4 @@
-maplock@class=hz.map.validate.Lock
+maplock@class=hz.map.validate.MapLock
 maplock@driver=Client
 maplock@threads=12
 maplock@keyDomain=400

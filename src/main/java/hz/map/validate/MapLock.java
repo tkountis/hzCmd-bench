@@ -2,7 +2,7 @@ package hz.map.validate;
 
 import hz.map.validate.base.LockValidate;
 
-public class Lock extends LockValidate {
+public class MapLock extends LockValidate {
 
     private int[] increments;
 
@@ -19,6 +19,7 @@ public class Lock extends LockValidate {
         int k = random.nextInt(keyDomain);
         map.lock(k);
         incMapIdx(k);
+        increments[k]++;
         map.unlock(k);
     }
 

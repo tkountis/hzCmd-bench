@@ -1,4 +1,4 @@
-validate@class=hz.map.validate.LockAssert
+validate@class=hz.map.validate.MapLockAssert
 validate@driver=Member1
 validate@keyDomain=400
 validate@name=mapLockKey

@@ -3,7 +3,7 @@ package hz.map.validate;
 import global.AssertionException;
 import hz.map.validate.base.LockValidate;
 
-public class LockAssert extends LockValidate {
+public class MapLockAssert extends LockValidate {
 
     public void timeStep() throws AssertionException {
 

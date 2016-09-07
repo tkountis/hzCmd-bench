@@ -5,4 +5,4 @@ txn1@keyDomain=400
 txn1@phase=1
 txn1@batchSize=5
 txn1@name=txnMap1phase
-txn1@ignore=com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException
+txn1@ignore=com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException:java.lang.IllegalStateException

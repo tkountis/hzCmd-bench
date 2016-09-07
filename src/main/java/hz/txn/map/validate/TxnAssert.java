@@ -36,7 +36,7 @@ public class TxnAssert extends TxnBench {
             IAtomicLong expectedIncs = hzInstance.getAtomicLong(name+i);
 
             if( expectedIncs.get() != map.get(i) ){
-                throw new AssertionException(expectedIncs.getName()+" "+expectedIncs.get()+" != "+map.getName()+".get("+i+") "+map.get(i)+"\n");
+                throw new AssertionException("atomic["+expectedIncs.getName()+" "+expectedIncs.get()+"]"+" != "+"map["+map.getName()+".get("+i+") "+map.get(i)+"]");
             }
         }
         setRunning(false);

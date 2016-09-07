@@ -1,8 +1,4 @@
 validate@class=hz.atomic.validate.CasAssert
 validate@driver=Member1
-validate@threads=1
-validate@warmup=0
 validate@count=5
 validate@name=atomic
-validate@duration=900
-

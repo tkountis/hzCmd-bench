@@ -8,6 +8,8 @@ cleanup() {
 }
 trap "cleanup" INT TERM EXIT
 
+hzVersion=${1:-$(hazelcastVersion)}
+
 ops="$ops -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
 ops="$ops -Dhazelcast.backpressure.enabled=true"
 ops="$ops -ea"
@@ -16,7 +18,7 @@ mOps="$mOps -Dhazelcast.hotrestart.gc.stuck.detect.threshold=10000"
 mOps="$mOps -Dhazelcast.hotrestart.free.native.memory.percentage=15"
 
 hz memberOps "-Xms4G -Xmx4G ${ops} ${mOps}"
-hz cluster -size M4 -id HZ -v $(hazelcastVersion) -ee -boxes a.box -user ec2-user
+hz cluster -size M4 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
 
 hz run load
 hz run validate

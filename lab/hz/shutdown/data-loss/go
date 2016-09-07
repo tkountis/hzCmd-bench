@@ -9,10 +9,12 @@ cleanup() {
 }
 trap "cleanup" INT TERM EXIT
 
+hzVersion=${1:-$(hazelcastVersion)}
+
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true -Dhazelcast.connection.monitor.max.faults=1"
 hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms3G -Xmx3G ${hzProps}"
 hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms200M -Xmx400M ${hzProps}"
-hz cluster -size M4C4 -v $(hazelcastVersion) -boxes a.box
+hz cluster -size M4C4 -v ${hzVersion} -ee -boxes a.box
 
 hz run load
 hz run validate
@@ -31,4 +33,6 @@ for j in {1..15}; do
  done
 done
 
+hz stop
+wait
 hz run validate

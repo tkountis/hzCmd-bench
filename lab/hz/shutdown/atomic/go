@@ -15,8 +15,6 @@ hz memberOps "-Xms2G -Xmx2G ${ops}"
 hz clientOps "-Xms400M -Xmx400M ${ops}"
 hz cluster -size M4C4 -v ${hzVersion}  -ee -boxes a.box
 
-hz bench 1800
-
 hz run atomic &
 sleep 10
 for i in {1..50}; do
@@ -26,5 +24,7 @@ for i in {1..50}; do
   hz run shutDown
   hz embeddedRestart Member${n}
 done
+
+hz stop
 wait
 hz run validate

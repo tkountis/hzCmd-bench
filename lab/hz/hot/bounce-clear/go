@@ -8,6 +8,7 @@ cleanup() {
 }
 trap "cleanup" INT TERM EXIT
 
+hzVersion=${1:-$(hazelcastVersion)}
 
 ops="$ops -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
 ops="$ops -Dhazelcast.backpressure.enabled=true"
@@ -24,7 +25,7 @@ mOps="$mOps -Dhazelcast.connection.monitor.interval=1000 -Dhazelcast.connection.
 
 hz memberOps "-Xms8G -Xmx8G ${ops} ${mOps}"
 hz clientOps "-Xms500M -Xmx500M ${ops}"
-hz cluster -size M4C40 -id HZ -v $(hazelcastVersion) -ee -boxes a.box -user ec2-user
+hz cluster -size M4C40 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
 
 
 hz bounce -iterations 24 -iterationDelay 300 Member &

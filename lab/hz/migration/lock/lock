@@ -1,7 +1,6 @@
 lock@class=hz.lock.validate.Lock
 lock@driver=Client
 lock@threads=12
-lock@warmup=0
 lock@count=5
 lock@name=lock
 lock@ignore=com.hazelcast.spi.exception.TargetDisconnectedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

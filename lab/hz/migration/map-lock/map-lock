@@ -1,0 +1,6 @@
+maplock@class=hz.map.validate.Lock
+maplock@driver=Client
+maplock@threads=12
+maplock@keyDomain=400
+maplock@name=mapLockKey
+maplock@ignore=com.hazelcast.spi.exception.TargetDisconnectedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

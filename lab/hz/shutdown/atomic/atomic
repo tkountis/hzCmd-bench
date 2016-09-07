@@ -3,4 +3,3 @@ atomic@driver=Client
 atomic@threads=12
 atomic@count=5
 atomic@name=atomic
-atomic@ignore=com.hazelcast.spi.exception.TargetDisconnectedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

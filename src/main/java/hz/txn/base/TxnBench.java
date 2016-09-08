@@ -24,6 +24,7 @@ public abstract class TxnBench extends BenchBase {
         }else{
             txnOps = new TransactionOptions().setTransactionType(TWO_PHASE);
         }
+        System.out.println(txnOps);
     }
 
     public void setVendorObject(Object o) {

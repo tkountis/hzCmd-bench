@@ -1,0 +1,8 @@
+txn1@class=hz.txn.map.validate.GetForUpdateSet
+txn1@driver=Client
+txn1@threads=12
+txn1@keyDomain=400
+txn1@phase=2
+txn1@batchSize=1
+txn1@name=txnMap1phase
+txn1@ignore=com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException:java.lang.IllegalStateException

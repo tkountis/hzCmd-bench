@@ -1,5 +1,5 @@
-sql@class=hz.map.member.LoadPersons
-sql@driver=Member
-sql@keyDomain=100000
-sql@name=mapBak1
+sqlLoad@class=hz.map.member.LoadPersons
+sqlLoad@driver=Member
+sqlLoad@keyDomain=100000
+sqlLoad@name=mapBak1
 

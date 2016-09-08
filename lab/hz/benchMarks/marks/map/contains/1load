@@ -1,5 +1,5 @@
-getLoad@class=hz.map.member.Load
-getLoad@valueSize=1
-getLoad@driver=Member
-getLoad@keyDomain=100000
-getLoad@name=mapBak0
+containLoad@class=hz.map.member.Load
+containLoad@valueSize=1
+containLoad@driver=Member
+containLoad@keyDomain=100000
+containLoad@name=mapBak0

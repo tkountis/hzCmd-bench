@@ -1,6 +1,6 @@
-getLoad@class=hz.map.member.Load
-getLoad@valueSize=1001
-getLoad@driver=Member
-getLoad@keyDomain=100000
-getLoad@name=mapBak0
+txnLoad@class=hz.map.member.Load
+txnLoad@valueSize=1001
+txnLoad@driver=Member
+txnLoad@keyDomain=100000
+txnLoad@name=mapBak0
 

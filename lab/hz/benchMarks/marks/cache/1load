@@ -1,6 +1,6 @@
-getLoad@class=hz.cache.member.Load
-getLoad@valueSize=1001
-getLoad@threads=1
-getLoad@driver=Member
-getLoad@keyDomain=100000
-getLoad@name=cacheBak0,cacheBak1,cacheAsync1
+cacheLoad@class=hz.cache.member.Load
+cacheLoad@valueSize=1001
+cacheLoad@threads=1
+cacheLoad@driver=Member
+cacheLoad@keyDomain=100000
+cacheLoad@name=cacheBak0,cacheBak1,cacheAsync1

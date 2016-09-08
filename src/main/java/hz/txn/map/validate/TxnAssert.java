@@ -33,7 +33,7 @@ public class TxnAssert extends TxnBench {
     public void timeStep() throws AssertionException {
 
         for(int i=0; i<keyDomain; i++) {
-            infoFor(i);
+            System.out.println(infoFor(i));
         }
 
         for(int i=0; i<keyDomain; i++) {

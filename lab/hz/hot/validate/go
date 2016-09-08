@@ -2,6 +2,9 @@
 set -e
 cleanup() {
     exitCode=$?
+
+    hz-ssh a.box 'df -h' ec2-user
+
     hz download || true
     hz chart metrics
     exit ${exitCode}
@@ -23,6 +26,8 @@ hz cluster -size M4 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
 hz run load
 hz run validate
 
+hz-ssh a.box 'df -h' ec2-user
+
 for i in {1..40} ; do
     hz run clusterShutdown
     hz embeddedRestart Member
@@ -30,6 +35,8 @@ for i in {1..40} ; do
     hz check
 done
 hz run validate
+
+hz-ssh a.box 'df -h' ec2-user
 
 hz bounce -iterations 100 -iterationDelay 1 Member
 hz run validate

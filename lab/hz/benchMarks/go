@@ -36,6 +36,6 @@ hz threads 64
 hz warmup 60
 hz bench 120
 
-#hz run marks/map/put/* marks/map/set/* marks/map/get/* marks/map/contains/* marks/sql/* marks/cache/* marks/atomic/* marks/latch/* marks/lock/*
+hz run marks/map/put/* marks/map/set/* marks/map/get/* marks/map/contains/* marks/sql/* marks/cache/* marks/atomic/* marks/latch/* marks/lock/*
 
-hz run marks/map/put/* marks/map/set/* marks/map/get/* marks/map/contains/* marks/sql/*
+#hz run marks/map/put/* marks/map/set/* marks/map/get/* marks/map/contains/* marks/sql/*

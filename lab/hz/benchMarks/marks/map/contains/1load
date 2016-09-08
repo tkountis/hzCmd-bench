@@ -1,4 +1,6 @@
 containLoad@class=hz.map.member.Load
+containLoad@warmup=0
+containLoad@threads=1
 containLoad@valueSize=1
 containLoad@driver=Member
 containLoad@keyDomain=100000

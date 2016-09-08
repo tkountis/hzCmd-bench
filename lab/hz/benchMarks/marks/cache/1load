@@ -1,5 +1,6 @@
 cacheLoad@class=hz.cache.member.Load
 cacheLoad@valueSize=1001
+cacheLoad@warmup=0
 cacheLoad@threads=1
 cacheLoad@driver=Member
 cacheLoad@keyDomain=100000

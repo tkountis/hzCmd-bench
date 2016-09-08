@@ -1,4 +1,6 @@
 txnLoad@class=hz.map.member.Load
+txnLoad@warmup=0
+txnLoad@threads=1
 txnLoad@valueSize=1001
 txnLoad@driver=Member
 txnLoad@keyDomain=100000

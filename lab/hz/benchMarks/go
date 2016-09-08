@@ -12,6 +12,8 @@ cleanup() {
 
     driver-wideMetrics output NEW OLD || true
 
+    hz wipe
+
     exit ${exitCode}
 }
 trap "cleanup" INT TERM EXIT

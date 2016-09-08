@@ -1,4 +1,6 @@
 sqlLoad@class=hz.map.member.LoadPersons
+sqlLoad@threads=1
+sqlLoad@warmup=0
 sqlLoad@driver=Member
 sqlLoad@keyDomain=100000
 sqlLoad@name=mapBak1

@@ -1,3 +1,5 @@
 sql@class=hz.map.ClearOnce
+sql@threads=1
+sql@warmup=0
 sql@driver=Member1
 sql@name=mapBak1

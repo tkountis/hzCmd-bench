@@ -33,12 +33,24 @@ public class TxnAssert extends TxnBench {
     public void timeStep() throws AssertionException {
 
         for(int i=0; i<keyDomain; i++) {
-            IAtomicLong expectedIncs = hzInstance.getAtomicLong(name+i);
+            infoFor(i);
+        }
 
+        for(int i=0; i<keyDomain; i++) {
+            IAtomicLong expectedIncs = getAtomic(i);
             if( expectedIncs.get() != map.get(i) ){
-                throw new AssertionException("atomic["+expectedIncs.getName()+" "+expectedIncs.get()+"]"+" != "+"map["+map.getName()+".get("+i+") "+map.get(i)+"]");
+                throw new AssertionException(infoFor(i));
             }
         }
         setRunning(false);
+    }
+
+    public IAtomicLong getAtomic(int i){
+        return hzInstance.getAtomicLong(name+i);
+    }
+
+    public String infoFor(int i){
+        IAtomicLong expectedIncs = getAtomic(i);
+        return "atomic["+expectedIncs.getName()+"="+expectedIncs.get()+"]"+" != "+"map["+map.getName()+".get("+i+")="+map.get(i)+"]";
     }
 }

@@ -1,4 +1,4 @@
 validate@class=hz.txn.map.validate.TxnAssert
 validate@driver=Member1
 validate@keyDomain=400
-validate@name=txnMap1phase
+validate@name=txnMap2phase

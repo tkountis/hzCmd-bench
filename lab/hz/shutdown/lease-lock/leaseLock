@@ -1,0 +1,5 @@
+leaselock@class=hz.lock.validate.LeaseLock
+leaselock@driver=Client
+leaselock@threads=12
+leaselock@count=5
+leaselock@name=lease-lock

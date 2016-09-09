@@ -1,0 +1,5 @@
+validate@class=hz.lock.validate.LeaseLockAssert
+validate@driver=Member1
+validate@count=5
+validate@name=lease-lock
+

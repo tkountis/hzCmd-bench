@@ -1,0 +1,4 @@
+get@class=hz.map.GetStrCheck
+get@keyDomain=1000
+get@valueSize=1001
+get@name=mapAsync1

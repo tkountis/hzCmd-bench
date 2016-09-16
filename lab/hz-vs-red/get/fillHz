@@ -1,0 +1,7 @@
+fill@class=hz.map.member.Load
+fill@driver=Member
+fill@warmup=0
+fill@duration=0
+fill@keyDomain=1000
+fill@valueSize=1001
+fill@name=mapAsync1

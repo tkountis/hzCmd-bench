@@ -1,0 +1,3 @@
+get@class=jedis.GetStrCheck
+get@keyDomain=1000
+get@valueSize=1001

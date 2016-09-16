@@ -8,6 +8,8 @@ public class FillStr extends JedisBench {
         for(int k=0; k<keyDomain; k++){
             Object v = mapKeyToValue(k);
             jedisCluster.set(""+k, ""+v);
+
+            System.out.println("fill "+k+" "+v);
         }
         setRunning(false);
     }

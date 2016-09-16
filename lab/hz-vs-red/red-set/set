@@ -1,0 +1,2 @@
+check@class=jedis.SetStr
+check@keyDomain=1000

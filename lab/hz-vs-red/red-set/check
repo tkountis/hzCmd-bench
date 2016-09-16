@@ -1,0 +1,3 @@
+check@class=jedis.GetStrCheck
+check@driver=Client1
+check@keyDomain=1000

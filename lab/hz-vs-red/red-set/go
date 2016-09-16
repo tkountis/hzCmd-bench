@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+
+hz clientOps "-Xms500M -Xmx500M"
+hz cluster -size M6C6 -id RED -v 3.2.3 -type RED -boxes a.box -user ec2-user
+
+hz driver Client
+hz type Metrics
+hz threads 2
+hz warmup 30
+hz bench 30
+
+hz run set
+hz run check
+
+hz download
+hz wipe
+hz-ssh a.box 'killall -9 redis-server' ec2-user

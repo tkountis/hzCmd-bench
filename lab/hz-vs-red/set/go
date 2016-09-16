@@ -6,7 +6,6 @@ hz threads 64
 hz warmup 30
 hz bench 30
 
-
 hz clientOps "-Xms1G -Xmx1G"
 hz cluster -size M6C6 -id RED -v 3.2.3 -type RED -boxes a.box -user ec2-user
 
@@ -17,6 +16,11 @@ hz wipe
 hz-ssh a.box 'killall -9 redis-server' ec2-user
 
 
+hz driver Client
+hz type Metrics
+hz threads 64
+hz warmup 30
+hz bench 30
 
 hz clientOps "-Xms1G -Xmx1G"
 hz memberOps "-Xms3G -Xmx3G -Dhazelcast.backpressure.enabled=true"

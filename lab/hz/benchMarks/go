@@ -27,7 +27,7 @@ hzOps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpr
 hz memberOps "-XX:+PrintFlagsFinal -Xms4G -Xmx4G ${hzOps}"
 hz clientOps "-XX:+PrintFlagsFinal -Xms500M -Xmx500M ${hzOps}"
 hz cluster -size M4C4 -id NEW -v 3.7 -type HZ -boxes xaa -user danny
-hz cluster -size M4C4 -id OLD -v 3.6          -type HZ -boxes xab -user ec2-user
+hz cluster -size M4C4 -id OLD -v 3.6 -type HZ -boxes xab -user
 
 hz driver Client,Member
 hz type Metrics

@@ -1,5 +1,6 @@
 fill@class=hz.map.member.Load
 fill@driver=Member
+fill@thread=1
 fill@warmup=0
 fill@duration=0
 fill@keyDomain=1000

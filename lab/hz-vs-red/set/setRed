@@ -1,0 +1,3 @@
+set@class=jedis.SetStr
+set@keyDomain=1000
+set@valueSize=1001

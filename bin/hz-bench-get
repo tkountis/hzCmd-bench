@@ -2,7 +2,9 @@
 
 testDir=${1}
 
-cp -r ${HZ_CMD_BENCH_SRC}/lab/${testDir} .
+mkdir -p ${testDir}
+
+cp -r ${HZ_CMD_BENCH_SRC}/lab/${testDir}/* ${testDir}
 
 
 

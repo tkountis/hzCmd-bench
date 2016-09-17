@@ -1,2 +1,2 @@
 get@class=jedis.GetStrCheck
-get@keyDomain=1000
+get@keyDomain=100000

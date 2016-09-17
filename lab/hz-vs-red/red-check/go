@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+hz-ssh a.box 'sudo bash -c "echo never > /sys/kernel/mm/transparent_hugepage/enabled"' ec2-user
 
 hz clientOps "-Xms500M -Xmx500M"
 hz cluster -size M6C6 -id RED -v 3.2.3 -type RED -boxes a.box -user ec2-user

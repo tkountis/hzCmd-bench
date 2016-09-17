@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+hz-ssh a.box 'sudo bash -c "echo never > /sys/kernel/mm/transparent_hugepage/enabled"' ec2-user
+
 hz driver Client
 hz type Metrics
 hz threads 64

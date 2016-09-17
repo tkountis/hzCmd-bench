@@ -4,11 +4,15 @@ import hz.map.base.MapBench;
 
 public class FillStr extends MapBench {
 
+    private int key=0;
+
     public void timeStep() {
-        for(int k=0; k<keyDomain; k++){
-            Object v = mapKeyToValue(k);
-            map.set(""+k, ""+v);
-        }
-        setRunning(false);
+        Object v = mapKeyToValue(key);
+        map.set(""+key, ""+v);
+        key++;
+    }
+
+    public boolean isRunning() {
+        return key<keyDomain;
     }
 }

@@ -4,11 +4,15 @@ import jedis.base.JedisBench;
 
 public class FillStr extends JedisBench {
 
+    private int key=0;
+
     public void timeStep() {
-        for(int k=0; k<keyDomain; k++){
-            Object v = mapKeyToValue(k);
-            jedisCluster.set(""+k, ""+v);
-        }
-        setRunning(false);
+        Object v = mapKeyToValue(key);
+        jedisCluster.set(""+key, ""+v);
+        key++;
+    }
+
+    public boolean isRunning() {
+        return key<keyDomain;
     }
 }

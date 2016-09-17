@@ -1,4 +1,4 @@
 set@class=hz.map.SetStr
-set@keyDomain=1000
+set@keyDomain=100000
 set@valueSize=1001
 set@name=mapAsync1

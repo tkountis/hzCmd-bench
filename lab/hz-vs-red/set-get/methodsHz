@@ -1,0 +1,12 @@
+get@class=hz.map.GetStrCheck
+get@keyDomain=100000
+get@name=mapAsync1
+get@driver=Client
+get@threads=32
+
+set@class=hz.map.SetStr
+set@keyDomain=100000
+set@valueSize=1001
+set@name=mapAsync1
+set@driver=Client
+set@threads=32

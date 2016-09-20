@@ -53,7 +53,7 @@ public abstract class ZeroAllocation extends BasicBenchBase {
     }
 
     public Object randomKey(){
-        return keys[ random.nextInt() % keyDomain ];
+        return keys[ random.nextInt( keyDomain ) ];
     }
 
     public Object mapKeyToValue(int key){

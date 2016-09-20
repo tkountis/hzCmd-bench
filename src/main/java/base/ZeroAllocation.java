@@ -8,8 +8,8 @@ public abstract class ZeroAllocation extends BasicBenchBase {
 
     public int seed=0;
     protected Random random;
-    protected static Integer[] keys;
-    protected static byte[][] valueSet;
+    protected Integer[] keys;
+    protected byte[][] valueSet;
 
     public String name;
     public int keyDomain = 1000000;
@@ -27,24 +27,22 @@ public abstract class ZeroAllocation extends BasicBenchBase {
             random = new Random(seed);
         }
 
-        if(valueSet==null) {
-            valueSet = new byte[valueSetSize][];
-            for (int i = 0; i < valueSetSize; i++) {
+        valueSet = new byte[valueSetSize][];
+        for (int i = 0; i < valueSetSize; i++) {
 
-                if(valueMinSize==0 || valueMaxSize==0){
-                    valueSet[i] = new byte[valueSize];
-                }else {
-                    valueSet[i] = new byte[randInt(random, valueMinSize, valueMaxSize)];
-                }
+            if(valueMinSize==0 || valueMaxSize==0){
+                valueSet[i] = new byte[valueSize];
+            }else {
+                valueSet[i] = new byte[randInt(random, valueMinSize, valueMaxSize)];
             }
         }
 
-        if(keys==null){
-            keys = new Integer[keyDomain];
-            for(int i=0; i<keyDomain; i++){
-                keys[i]=new Integer(i);
-            }
+
+        keys = new Integer[keyDomain];
+        for(int i=0; i<keyDomain; i++){
+            keys[i]=new Integer(i);
         }
+
 
     }
 

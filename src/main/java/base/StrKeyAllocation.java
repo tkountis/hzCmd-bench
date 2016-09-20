@@ -27,11 +27,6 @@ public abstract class StrKeyAllocation extends BasicBenchBase {
             random = new Random(seed);
         }
 
-        if(valueSize!=0) {
-            valueMinSize=valueSize;
-            valueMaxSize=valueSize;
-        }
-
         valueSet = new String[valueSetSize];
         for (int i = 0; i < valueSetSize; i++) {
 

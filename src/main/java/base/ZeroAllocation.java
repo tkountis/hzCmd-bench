@@ -3,7 +3,6 @@ package base;
 
 public abstract class ZeroAllocation extends KeyAllocation {
 
-    public int seed=0;
     protected Integer[] keys;
 
     public void init() throws Exception{

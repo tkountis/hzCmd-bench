@@ -39,7 +39,7 @@ public abstract class StrKeyAllocation extends BasicBenchBase {
     }
 
     public Object getKey(int i){
-        return i;
+        return i+"";
     }
 
     public Object randomKey(){

@@ -43,7 +43,7 @@ public abstract class StrKeyAllocation extends BasicBenchBase {
     }
 
     public Object randomKey(){
-        return random.nextInt( keyDomain );
+        return random.nextInt( keyDomain )+"";
     }
 
     public Object mapKeyToValue(int key){

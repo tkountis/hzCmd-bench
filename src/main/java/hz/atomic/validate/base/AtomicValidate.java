@@ -1,6 +1,5 @@
 package hz.atomic.validate.base;
 
-
 import base.BasicBenchBase;
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.core.IAtomicLong;
@@ -13,19 +12,23 @@ public abstract class AtomicValidate extends BasicBenchBase {
     public int count=1;
     public String name;
 
+    private IAtomicLong[] atomicLongs;
+
+
     protected HazelcastInstance hzInstance;
     protected Random random = new Random();
 
     public void init() throws Exception{
         super.init();
 
+        atomicLongs = new IAtomicLong[count];
         for(int i=0; i<count; i++){
-            getAtomic(i);
+            atomicLongs[i] = hzInstance.getAtomicLong(name+i);
         }
     }
 
     public IAtomicLong getAtomic(int i){
-        return hzInstance.getAtomicLong(name+i);
+        return atomicLongs[i];
     }
 
     private IAtomicLong getExpectedAtomic(int i){
@@ -58,5 +61,17 @@ public abstract class AtomicValidate extends BasicBenchBase {
 
     public void setVendorObject(Object o) {
         hzInstance = (HazelcastInstance)o;
+    }
+
+    public Object getKey(int i){
+        return null;
+    }
+
+    public Object randomKey(){
+        return null;
+    }
+
+    public Object mapKeyToValue(int key){
+        return null;
     }
 }

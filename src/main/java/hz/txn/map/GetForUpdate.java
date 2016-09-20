@@ -28,8 +28,7 @@ public class GetForUpdate extends TxnBench {
         TransactionalMap map = context.getMap(name);
         try {
             for(int i=0; i<batchSize; i++){
-                int k = random.nextInt(keyDomain);
-                map.getForUpdate(k);
+                map.getForUpdate(randomKey());
             }
 
             context.commitTransaction();

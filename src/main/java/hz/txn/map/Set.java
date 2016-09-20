@@ -29,9 +29,10 @@ public class Set extends TxnBench {
         try {
             for(int i=0; i<batchSize; i++){
                 int k = random.nextInt(keyDomain);
-                int idx = random.nextInt(valueSetSize);
-                byte[] v = valueSet.get(idx);
-                map.set(k, v);
+                Object key = getKey(k);
+                Object val = mapKeyToValue(k);
+
+                map.set(key, val);
             }
 
             context.commitTransaction();

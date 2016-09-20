@@ -21,9 +21,10 @@ public abstract class Loader extends CacheBench {
             return;
         }
 
+        Object keyObj = getKey(key);
         Object val = getValue(key);
 
-        cache.put(key, val);
+        cache.put(keyObj, val);
 
         key++;
     }

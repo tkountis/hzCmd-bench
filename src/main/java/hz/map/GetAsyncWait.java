@@ -13,10 +13,8 @@ public class GetAsyncWait extends MapBench {
     public int timeout=0;
 
     public void timeStep() throws InterruptedException, ExecutionException {
-        int k = random.nextInt(keyDomain);
-
         try {
-            ICompletableFuture f = map.getAsync(k);
+            ICompletableFuture f = map.getAsync( randomKey() );
             try {
                 f.get(timeout, TimeUnit.MILLISECONDS);
             } catch (TimeoutException t) {}

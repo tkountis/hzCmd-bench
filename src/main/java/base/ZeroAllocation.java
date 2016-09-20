@@ -1,16 +1,18 @@
 package base;
 
-public abstract class BenchBase extends ZeroAllocation {
+import java.util.Random;
 
+import static utils.Utils.randInt;
 
+public abstract class ZeroAllocation extends BasicBenchBase {
 
-    /*
     public int seed=0;
     protected Random random;
-    protected List<byte[]> valueSet;
+    protected static Integer[] keys;
+    protected static byte[][] valueSet;
 
     public String name;
-    public int keyDomain = Integer.MAX_VALUE;
+    public int keyDomain = 1000000;
     public int valueSetSize=1;
     public int valueSize=0;
     public int valueMinSize=1;
@@ -29,11 +31,33 @@ public abstract class BenchBase extends ZeroAllocation {
             valueMinSize=valueSize;
             valueMaxSize=valueSize;
         }
-        valueSet = dymanicValues(random, valueSetSize, valueMinSize, valueMaxSize);
+
+        if(valueSet==null) {
+            valueSet = new byte[valueSetSize][];
+            for (int i = 0; i < valueSetSize; i++) {
+                valueSet[i] = new byte[ randInt(random, valueMinSize, valueMaxSize) ];
+            }
+        }
+
+        if(keys==null){
+            keys = new Integer[keyDomain];
+            for(int i=0; i<keyDomain; i++){
+                keys[i]=new Integer(i);
+            }
+        }
+
+    }
+
+    public Object getKey(int i){
+        return keys[ i ];
+    }
+
+    public Object randomKey(){
+        return keys[ random.nextInt() % keyDomain ];
     }
 
     public Object mapKeyToValue(int key){
-        return valueSet.get( key % valueSetSize );
+        return valueSet[key%valueSetSize];
     }
 
     @Override
@@ -48,5 +72,4 @@ public abstract class BenchBase extends ZeroAllocation {
                 ", valueMaxSize=" + valueMaxSize +
                 '}';
     }
-    */
 }

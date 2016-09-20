@@ -1,4 +1,4 @@
-fill@class=hz.map.FillStr
+fill@class=hz.map.str.FillStr
 fill@driver=Client1
 fill@threads=1
 fill@warmup=0

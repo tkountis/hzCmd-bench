@@ -22,7 +22,6 @@ import hz.txn.base.TxnBench;
 
 public class TxnAssert extends TxnBench {
 
-    private boolean running=true;
     private IMap<Integer, Integer> map;
 
     public void init() throws Exception{
@@ -38,7 +37,7 @@ public class TxnAssert extends TxnBench {
 
         for(int i=0; i<keyDomain; i++) {
             IAtomicLong expectedIncs = getAtomic(i);
-            if( expectedIncs.get() != map.get(i) ){
+            if( expectedIncs.get() != map.get(getKey(i)) ){
                 throw new AssertionException(infoFor(i));
             }
         }
@@ -51,6 +50,6 @@ public class TxnAssert extends TxnBench {
 
     public String infoFor(int i){
         IAtomicLong expectedIncs = getAtomic(i);
-        return "atomic["+expectedIncs.getName()+"="+expectedIncs.get()+"]"+" != "+"map["+map.getName()+".get("+i+")="+map.get(i)+"]";
+        return "atomic["+expectedIncs.getName()+"="+expectedIncs.get()+"]"+" != "+"map["+map.getName()+".get("+i+")="+map.get(getKey(i))+"]";
     }
 }

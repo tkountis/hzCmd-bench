@@ -5,7 +5,7 @@ import hz.cache.base.CacheBench;
 public class Cas extends CacheBench {
 
     public void timeStep() {
-        int k = random.nextInt(keyDomain);
+        Object k = randomKey();
         int value;
         do {
             value = (Integer) cache.get(k);

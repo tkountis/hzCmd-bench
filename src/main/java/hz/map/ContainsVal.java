@@ -6,7 +6,7 @@ public class ContainsVal extends MapBench {
 
     public void timeStep() {
         int idx = random.nextInt(valueSetSize);
-        byte[] v = valueSet.get(idx);
+        byte[] v = valueSet[idx];
         map.containsValue(v);
     }
 }

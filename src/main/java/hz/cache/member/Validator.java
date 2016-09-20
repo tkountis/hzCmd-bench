@@ -21,7 +21,8 @@ public abstract class Validator extends CacheBench {
             return;
         }
 
-        Object val = cache.get(key);
+        Object keyObj = getKey(key);
+        Object val = cache.get(keyObj);
 
         validate(key, val);
 
@@ -32,9 +33,5 @@ public abstract class Validator extends CacheBench {
 
     public boolean isRunning() {
         return key<keyDomain;
-    }
-
-    public boolean isSelfDetermined() {
-        return true;
     }
 }

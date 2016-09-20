@@ -5,7 +5,6 @@ import hz.repmap.base.RepMapBench;
 public class Get extends RepMapBench {
 
     public void timeStep() {
-        int k = random.nextInt(keyDomain);
-        map.get(k);
+        map.get(randomKey());
     }
 }

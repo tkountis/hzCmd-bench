@@ -6,14 +6,14 @@ public class GetClump extends CacheBench {
 
     public double repeatProb=0.35;
 
-    private int previousKey=0;
+    private Object previousKey;
 
     public void timeStep() {
 
         if(random.nextDouble() < repeatProb){
             cache.get(previousKey);
         }else{
-            int k = random.nextInt(keyDomain);
+            Object k = randomKey();
             cache.get(k);
             previousKey=k;
         }

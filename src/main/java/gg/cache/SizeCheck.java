@@ -6,20 +6,14 @@ import global.AssertionException;
 
 public class SizeCheck extends CacheBench {
 
-    private boolean running=true;
     public int size=0;
 
     public void timeStep() throws AssertionException {
 
         if(cache.size()!=size){
-            throw new AssertionException("map "+cache.getName()+" size "+cache.size()+" != expected "+size);
+            throw new AssertionException("cache "+cache.getName()+" size "+cache.size()+" != expected "+size);
         }
-        running=false;
+        setRunning(false);
     }
 
-    public boolean isRunning() { return running; }
-
-    public boolean isSelfDetermined() {
-        return true;
-    }
 }

@@ -35,4 +35,10 @@ public abstract class BasicBenchBase implements Bench{
     }
 
     public void postPhase() { }
+
+    abstract public Object getKey(int i);
+
+    abstract public Object randomKey();
+
+    abstract public Object mapKeyToValue(int key);
 }

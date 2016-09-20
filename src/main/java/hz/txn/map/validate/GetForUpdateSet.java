@@ -33,9 +33,9 @@ public class GetForUpdateSet extends TxnBench {
         incCounts = new int[keyDomain];
         keyBatch = new int[batchSize];
 
-        IMap<Integer, Integer> map = hzInstance.getMap(name);
+        IMap map = hzInstance.getMap(name);
         for(int i=0; i<keyDomain; i++) {
-            map.put(i, 0);
+            map.put(getKey(i), 0);
         }
     }
 
@@ -44,12 +44,13 @@ public class GetForUpdateSet extends TxnBench {
         TransactionContext context = hzInstance.newTransactionContext(txnOps);
         context.beginTransaction();
 
-        TransactionalMap<Integer, Integer> map = context.getMap(name);
+        TransactionalMap<Object, Integer> map = context.getMap(name);
         try {
             for(int i=0; i<batchSize; i++){
                 int k = random.nextInt(keyDomain);
+                Object key = getKey(i);
                 int val = map.getForUpdate(k);
-                map.set(k, ++val);
+                map.set(key, ++val);
                 keyBatch[i]=k;
             }
             context.commitTransaction();

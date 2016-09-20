@@ -21,9 +21,10 @@ public abstract class Loader extends MapBench {
             return;
         }
 
+        Object keyObj = getKey(key);
         Object val = getValue(key);
 
-        map.set(key, val);
+        map.set(keyObj, val);
 
         key++;
     }

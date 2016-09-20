@@ -7,7 +7,7 @@ import hz.map.base.MapBench;
 public class GetCheck extends MapBench {
 
     public void timeStep() throws AssertionException {
-        int k = random.nextInt(keyDomain);
+        Object k = randomKey();
         Object obj = map.get(k);
 
         if(obj==null){

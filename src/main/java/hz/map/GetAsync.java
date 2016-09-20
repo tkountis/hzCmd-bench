@@ -6,9 +6,8 @@ import hz.map.base.MapBench;
 public class GetAsync extends MapBench {
 
     public void timeStep() {
-        int k = random.nextInt(keyDomain);
         try{
-            map.getAsync(k);
+            map.getAsync(randomKey());
         }catch (HazelcastOverloadException e){}
     }
 }

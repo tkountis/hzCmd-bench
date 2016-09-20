@@ -11,16 +11,17 @@ public class MapLock extends LockValidate {
         increments = new int[keyDomain];
 
         for(int i=0; i<keyDomain; i++){
-            map.put(i, 0);
+            map.put(getKey(i), 0);
         }
     }
 
     public void timeStep() {
         int k = random.nextInt(keyDomain);
-        map.lock(k);
+        Object key = getKey(k);
+        map.lock(key);
         incMapIdx(k);
         increments[k]++;
-        map.unlock(k);
+        map.unlock(key);
     }
 
     public void postPhase() {

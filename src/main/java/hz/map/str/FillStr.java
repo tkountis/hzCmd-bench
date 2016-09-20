@@ -1,17 +1,15 @@
-package jedis;
+package hz.map.str;
 
-import jedis.base.JedisBench;
+import hz.map.base.MapBench;
 
-public class FillStr extends JedisBench {
+public class FillStr extends MapBench {
 
     private int k=0;
 
     public void timeStep() {
-
         Object key = getKey(k);
         Object val = mapKeyToValue(k);
-
-        jedisCluster.set(""+key, ""+val);
+        map.set(""+key, ""+val);
         k++;
     }
 

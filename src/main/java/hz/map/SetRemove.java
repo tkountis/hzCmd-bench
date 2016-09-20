@@ -6,8 +6,10 @@ public class SetRemove extends MapBench {
 
     public void timeStep() {
         int k = random.nextInt(keyDomain);
-        Object v = mapKeyToValue(k);
-        map.set(k, v);
-        map.remove(k);
+
+        Object key = getKey(k);
+        Object val = mapKeyToValue(k);
+        map.set(key, val);
+        map.remove(key);
     }
 }

@@ -20,13 +20,15 @@ public class PutAllStatic extends MapBench {
             Map m = new HashMap();
             for(int batch=0; batch<batchSize; batch++) {
 
-                int key = random.nextInt(keyDomain);
+                int k = random.nextInt(keyDomain);
+                Object key = getKey(k);
                 while(m.containsKey(key)){
-                    key = random.nextInt(keyDomain);
+                    k = random.nextInt(keyDomain);
+                    key = getKey(k);
                 }
 
-                Object v = mapKeyToValue(key);
-                m.put(key, v);
+                Object val = mapKeyToValue(k);
+                m.put(key, val);
             }
             putAllMaps.add(m);
         }

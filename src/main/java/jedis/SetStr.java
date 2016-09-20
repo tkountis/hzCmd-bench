@@ -6,8 +6,10 @@ public class SetStr extends JedisBench {
 
     public void timeStep() {
         int k = random.nextInt(keyDomain);
-        int idx = random.nextInt(valueSetSize);
-        byte[] v = valueSet.get(idx);
-        jedisCluster.set(""+k, ""+v);
+
+        Object key = getKey(k);
+        Object val = mapKeyToValue(k);
+
+        jedisCluster.set(""+key, ""+val);
     }
 }

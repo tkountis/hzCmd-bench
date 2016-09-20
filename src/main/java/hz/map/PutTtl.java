@@ -10,8 +10,10 @@ public class PutTtl extends MapBench {
 
     public void timeStep() {
         int k = random.nextInt(keyDomain);
-        Object v = mapKeyToValue(k);
-        map.put(k, v, ttl, TimeUnit.SECONDS);
+
+        Object key = getKey(k);
+        Object val = mapKeyToValue(k);
+        map.put(key, val, ttl, TimeUnit.SECONDS);
     }
 
 }

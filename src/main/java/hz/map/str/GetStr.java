@@ -1,11 +1,10 @@
-package hz.map;
+package hz.map.str;
 
 import hz.map.base.MapBench;
 
 public class GetStr extends MapBench {
 
     public void timeStep() {
-        int k = random.nextInt(keyDomain);
-        map.get(""+k);
+        map.get(""+randomKey());
     }
 }

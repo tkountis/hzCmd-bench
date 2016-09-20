@@ -28,8 +28,7 @@ public class Get extends TxnBench {
         TransactionalMap map = context.getMap(name);
         try {
             for(int i=0; i<batchSize; i++){
-                int k = random.nextInt(keyDomain);
-                map.get(k);
+                map.get(randomKey());
             }
 
             context.commitTransaction();

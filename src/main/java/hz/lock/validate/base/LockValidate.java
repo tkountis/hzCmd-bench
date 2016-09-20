@@ -7,7 +7,7 @@ import hz.lock.base.LockBench;
 public abstract class LockValidate extends LockBench {
 
     public int sleepMs=5;
-    private IMap<String, Integer> lockedMap;
+    private IMap<Object, Integer> lockedMap;
 
     public void init() throws Exception{
         super.init();
@@ -15,17 +15,17 @@ public abstract class LockValidate extends LockBench {
     }
 
     public void zeroMapIdx(int i){
-        lockedMap.put(name+i, 0);
+        lockedMap.put(i, 0);
     }
 
     public void incMapIdx(int i){
-        int val = lockedMap.get(name+i);
+        int val = lockedMap.get(i);
         utils.Utils.sleep(sleepMs);
-        lockedMap.put(name+i, ++val);
+        lockedMap.put(i, ++val);
     }
 
     public int getMapIdx(int i){
-        return lockedMap.get(name+i);
+        return lockedMap.get(i);
     }
 
     private IAtomicLong getAtomicFor(int i){
@@ -44,6 +44,6 @@ public abstract class LockValidate extends LockBench {
         IAtomicLong atomic = getAtomicFor(i);
         return  "atomic["+atomic.getName()+"="+atomic.get()+"]"+
                 " "+
-                "map["+lockedMap.getName()+".get("+name+i+")="+getMapIdx(i)+"]";
+                "map["+lockedMap.getName()+".get("+i+")="+getMapIdx(i)+"]";
     }
 }

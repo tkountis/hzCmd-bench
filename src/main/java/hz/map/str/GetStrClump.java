@@ -1,4 +1,4 @@
-package hz.map;
+package hz.map.str;
 
 import hz.map.base.MapBench;
 

@@ -21,7 +21,8 @@ public abstract class Validator extends MapBench {
             return;
         }
 
-        Object val = map.get(key);
+        Object keyObj = getKey(key);
+        Object val = map.get(keyObj);
 
         validate(key, val);
 

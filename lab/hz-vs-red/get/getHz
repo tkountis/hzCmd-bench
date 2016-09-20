@@ -1,3 +1,3 @@
-get@class=hz.map.GetStrCheck
+get@class=hz.map.str.GetStrCheck
 get@keyDomain=100000
 get@name=mapAsync1

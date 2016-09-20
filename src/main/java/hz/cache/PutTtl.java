@@ -15,7 +15,8 @@ public class PutTtl extends CacheBench {
 
     public void timeStep() {
         int k = random.nextInt(keyDomain);
-        Object v = mapKeyToValue(k);
-        cache.put(k, v, p);
+        Object key = getKey(k);
+        Object val = mapKeyToValue(k);
+        cache.put(key, val, p);
     }
 }

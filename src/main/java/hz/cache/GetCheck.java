@@ -7,7 +7,7 @@ import hz.cache.base.CacheBench;
 public class GetCheck extends CacheBench {
 
     public void timeStep() throws AssertionException {
-        int k = random.nextInt(keyDomain);
+        Object k = randomKey();
         Object obj = cache.get(k);
 
         if(obj==null){

@@ -14,8 +14,7 @@ public class GetAll extends MapBench {
     public void timeStep() {
         batchKeySet.clear();
         for(int i=0; i<batchSize; i++) {
-            int k = random.nextInt(keyDomain);
-            batchKeySet.add(k);
+            batchKeySet.add(randomKey());
         }
         map.getAll(batchKeySet);
     }

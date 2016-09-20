@@ -6,8 +6,10 @@ public class SetGet extends MapBench {
 
     public void timeStep() {
         int k = random.nextInt(keyDomain);
-        Object v = mapKeyToValue(k);
-        map.set(k, v);
-        map.get(k);
+
+        Object key = getKey(k);
+        Object val = mapKeyToValue(k);
+        map.set(key, val);
+        map.get(key);
     }
 }

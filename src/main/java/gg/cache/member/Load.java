@@ -20,18 +20,14 @@ public class Load extends CacheBench {
             return;
         }
 
-        int idx = random.nextInt(valueSet.size());
-        Object val = valueSet.get(idx);
+        Object keyObj = getKey(key);
+        Object valObj = mapKeyToValue(key);
 
-        cache.put(key, val);
+        cache.put(keyObj, valObj);
         key++;
     }
 
     public boolean isRunning() {
         return key<keyDomain;
-    }
-
-    public boolean isSelfDetermined() {
-        return true;
     }
 }

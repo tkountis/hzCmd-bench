@@ -7,9 +7,10 @@ public class PutAsync extends MapBench {
 
     public void timeStep() {
         int k = random.nextInt(keyDomain);
-        Object v = mapKeyToValue(k);
+        Object key = getKey(k);
+        Object val = mapKeyToValue(k);
         try{
-            map.putAsync(k, v);
+            map.putAsync(key, val);
         }catch (HazelcastOverloadException e){}
     }
 }

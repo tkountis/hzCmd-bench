@@ -12,13 +12,13 @@ public class MapLockAssert extends LockValidate {
         }
 
         for (int i=0; i<keyDomain; i++) {
-            if( getIncrementFor(i) != (Integer) map.get(i) ){
+            if( getIncrementFor(i) != (Integer) map.get(getKey(i)) ){
                 throw new AssertionException(getInfoFor(i));
             }
         }
 
         for (int i=0; i<keyDomain; i++) {
-            if( map.isLocked(i) ){
+            if( map.isLocked(getKey(i)) ){
                 throw new AssertionException(map.getName()+".isLocked("+i+")==true");
             }
         }

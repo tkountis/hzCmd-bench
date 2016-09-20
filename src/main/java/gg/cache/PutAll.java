@@ -14,9 +14,9 @@ public class PutAll extends CacheBench {
         putAllMap.clear();
         for(int i=0; i<batchSize; i++) {
             int k = random.nextInt(keyDomain);
-            int idx = random.nextInt(valueSetSize);
-            byte[] v = valueSet.get(idx);
-            putAllMap.put(k, v);
+            Object key = getKey(k);
+            Object val = mapKeyToValue(k);
+            putAllMap.put(key, val);
         }
         cache.putAll(putAllMap);
     }

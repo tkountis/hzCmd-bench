@@ -13,10 +13,12 @@ public class PutAsyncWait extends CacheBench {
     public int timeout=0;
 
     public void timeStep() throws InterruptedException, ExecutionException {
+
         int k = random.nextInt(keyDomain);
-        Object v = mapKeyToValue(k);
+        Object key = getKey(k);
+        Object val = mapKeyToValue(k);
         try {
-            ICompletableFuture f = cache.putAsync(k, v);
+            ICompletableFuture f = cache.putAsync(key, val);
             try {
                 f.get(timeout, TimeUnit.MILLISECONDS);
             } catch (TimeoutException t) {

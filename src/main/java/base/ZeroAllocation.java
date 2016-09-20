@@ -14,9 +14,9 @@ public abstract class ZeroAllocation extends BasicBenchBase {
     public String name;
     public int keyDomain = 1000000;
     public int valueSetSize=1;
-    public int valueSize=0;
-    public int valueMinSize=1;
-    public int valueMaxSize=1;
+    public int valueSize=1;
+    public int valueMinSize=0;
+    public int valueMaxSize=0;
 
     public void init() throws Exception{
         super.init();
@@ -27,15 +27,15 @@ public abstract class ZeroAllocation extends BasicBenchBase {
             random = new Random(seed);
         }
 
-        if(valueSize!=0) {
-            valueMinSize=valueSize;
-            valueMaxSize=valueSize;
-        }
-
         if(valueSet==null) {
             valueSet = new byte[valueSetSize][];
             for (int i = 0; i < valueSetSize; i++) {
-                valueSet[i] = new byte[ randInt(random, valueMinSize, valueMaxSize) ];
+
+                if(valueMinSize==0 || valueMaxSize==0){
+                    valueSet[i] = new byte[valueSize];
+                }else {
+                    valueSet[i] = new byte[randInt(random, valueMinSize, valueMaxSize)];
+                }
             }
         }
 

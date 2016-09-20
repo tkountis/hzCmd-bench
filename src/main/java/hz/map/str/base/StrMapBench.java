@@ -4,7 +4,6 @@ import base.StrKeyAllocation;
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.core.IMap;
 
-
 public abstract class StrMapBench extends StrKeyAllocation {
 
     protected HazelcastInstance hzInstance;

@@ -37,12 +37,10 @@ public abstract class ZeroAllocation extends BasicBenchBase {
             }
         }
 
-
         keys = new Integer[keyDomain];
         for(int i=0; i<keyDomain; i++){
             keys[i]=new Integer(i);
         }
-
 
     }
 

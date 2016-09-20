@@ -14,9 +14,9 @@ public abstract class StrKeyAllocation extends BasicBenchBase {
     public String name;
     public int keyDomain = Integer.MAX_VALUE;
     public int valueSetSize=1;
-    public int valueSize=0;
-    public int valueMinSize=1;
-    public int valueMaxSize=1;
+    public int valueSize=1;
+    public int valueMinSize=0;
+    public int valueMaxSize=0;
 
     public void init() throws Exception{
         super.init();

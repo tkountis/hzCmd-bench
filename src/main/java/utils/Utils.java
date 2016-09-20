@@ -33,6 +33,16 @@ public abstract class Utils {
         return valueSet;
     }
 
+    public static String generateString(Random rng, int length)
+    {
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        char[] text = new char[length];
+        for (int i = 0; i < length; i++) {
+            text[i] = characters.charAt(rng.nextInt(characters.length()));
+        }
+        return new String(text);
+    }
+
     /**
      * Returns a pseudo-random number between min and max, inclusive.
      * The difference between min and max can be at most

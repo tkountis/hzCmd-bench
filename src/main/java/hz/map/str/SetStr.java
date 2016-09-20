@@ -1,14 +1,14 @@
 package hz.map.str;
 
-import hz.map.base.MapBench;
+import hz.map.str.base.StrMapBench;
 
-public class SetStr extends MapBench {
+public class SetStr extends StrMapBench {
 
     public void timeStep() {
         int k = random.nextInt(keyDomain);
 
-        Object key = getKey(k);
-        Object val = mapKeyToValue(k);
-        map.set(""+key, ""+val);
+        String key = (String)getKey(k);
+        String val = (String)mapKeyToValue(k);
+        map.set(key, val);
     }
 }

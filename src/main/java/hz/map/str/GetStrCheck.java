@@ -1,13 +1,13 @@
 package hz.map.str;
 
 import global.AssertionException;
-import hz.map.base.MapBench;
+import hz.map.str.base.StrMapBench;
 
-public class GetStrCheck extends MapBench {
+public class GetStrCheck extends StrMapBench {
 
     public void timeStep() throws AssertionException{
-        Object key = randomKey();
-        Object obj = map.get(""+randomKey());
+        String key = (String) randomKey();
+        String obj = (String) map.get(key);
 
         if(obj==null){
             throw new AssertionException("DATA LOSS! for map "+map.getName()+" key "+key);

@@ -1,10 +1,10 @@
 package hz.map.str;
 
-import hz.map.base.MapBench;
+import hz.map.str.base.StrMapBench;
 
-public class GetStr extends MapBench {
+public class GetStr extends StrMapBench {
 
     public void timeStep() {
-        map.get(""+randomKey());
+        map.get(randomKey());
     }
 }

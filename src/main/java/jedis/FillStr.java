@@ -8,10 +8,10 @@ public class FillStr extends JedisBench {
 
     public void timeStep() {
 
-        Object key = getKey(k);
-        Object val = mapKeyToValue(k);
+        String key = (String)getKey(k);
+        String val = (String)mapKeyToValue(k);
 
-        jedisCluster.set(""+key, ""+val);
+        jedisCluster.set(key, val);
         k++;
     }
 

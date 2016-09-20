@@ -1,9 +1,9 @@
 package jedis.base;
 
-import base.BenchBase;
+import base.StrZeroAllocation;
 import redis.clients.jedis.JedisCluster;
 
-public abstract class JedisBench extends BenchBase {
+public abstract class JedisBench extends StrZeroAllocation {
 
     protected JedisCluster jedisCluster;
 

@@ -1,11 +1,11 @@
 package hz.map.str.base;
 
-import base.StrZeroAllocation;
+import base.StrKeyAllocation;
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.core.IMap;
 
 
-public abstract class StrMapBench extends StrZeroAllocation {
+public abstract class StrMapBench extends StrKeyAllocation {
 
     protected HazelcastInstance hzInstance;
     protected IMap map;

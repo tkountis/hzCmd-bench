@@ -1,20 +1,20 @@
-sz1@class=hz.map.SizeCheck
-sz1@driver=Member
-sz1@size=1000
-sz1@name=mapBak1HDSqlIdx
+sz_mapBak1HDSqlIdx@class=hz.map.SizeCheck
+sz_mapBak1HDSqlIdx@driver=Member
+sz_mapBak1HDSqlIdx@size=1000
+sz_mapBak1HDSqlIdx@name=mapBak1HDSqlIdx
 
-sz2@class=hz.map.SizeCheck
-sz2@driver=Member
-sz2@size=1000
-sz2@name=mapBak1SqlIdx
+sz_mapBak1SqlIdx@class=hz.map.SizeCheck
+sz_mapBak1SqlIdx@driver=Member
+sz_mapBak1SqlIdx@size=1000
+sz_mapBak1SqlIdx@name=mapBak1SqlIdx
 
 
-sz3@class=hz.map.SizeCheck
-sz3@driver=Member
-sz3@size=1000
-sz3@name=mapBak1HDSql
+sz_mapBak1HDSql@class=hz.map.SizeCheck
+sz_mapBak1HDSql@driver=Member
+sz_mapBak1HDSql@size=1000
+sz_mapBak1HDSql@name=mapBak1HDSql
 
-sz4@class=hz.map.SizeCheck
-sz4@driver=Member
-sz4@size=1000
-sz4@name=mapBak1Sql
+sz_mapBak1Sql@class=hz.map.SizeCheck
+sz_mapBak1Sql@driver=Member
+sz_mapBak1Sql@size=1000
+sz_mapBak1Sql@name=mapBak1Sql

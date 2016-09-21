@@ -1,28 +1,28 @@
-sql1@class=hz.map.sql.predicate.PredCheck
-sql1@driver=Client
-sql1@threads=4
-sql1@name=mapBak1HDSqlIdx
-sql1@keyDomain=1000
-sql1@ignore=com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+sql_mapBak1HDSqlIdx@class=hz.map.sql.predicate.PredCheck
+sql_mapBak1HDSqlIdx@driver=Client
+sql_mapBak1HDSqlIdx@threads=4
+sql_mapBak1HDSqlIdx@name=mapBak1HDSqlIdx
+sql_mapBak1HDSqlIdx@keyDomain=1000
+sql_mapBak1HDSqlIdx@ignore=com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
-sql2@class=hz.map.sql.predicate.PredCheck
-sql2@driver=Client
-sql2@threads=4
-sql2@name=mapBak1SqlIdx
-sql2@keyDomain=1000
-sql2@ignore=com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+sql_mapBak1SqlIdx@class=hz.map.sql.predicate.PredCheck
+sql_mapBak1SqlIdx@driver=Client
+sql_mapBak1SqlIdx@threads=4
+sql_mapBak1SqlIdx@name=mapBak1SqlIdx
+sql_mapBak1SqlIdx@keyDomain=1000
+sql_mapBak1SqlIdx@ignore=com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 
-sql3@class=hz.map.sql.predicate.PredCheck
-sql3@driver=Client
-sql3@threads=4
-sql3@name=mapBak1HDSql
-sql3@keyDomain=1000
-sql3@ignore=com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+sql_mapBak1HDSql@class=hz.map.sql.predicate.PredCheck
+sql_mapBak1HDSql@driver=Client
+sql_mapBak1HDSql@threads=4
+sql_mapBak1HDSql@name=mapBak1HDSql
+sql_mapBak1HDSql@keyDomain=1000
+sql_mapBak1HDSql@ignore=com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
-sql4@class=hz.map.sql.predicate.PredCheck
-sql4@driver=Client
-sql4@threads=4
-sql4@name=mapBak1Sql
-sql4@keyDomain=1000
-sql4@ignore=com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+sql_mapBak1Sql@class=hz.map.sql.predicate.PredCheck
+sql_mapBak1Sql@driver=Client
+sql_mapBak1Sql@threads=4
+sql_mapBak1Sql@name=mapBak1Sql
+sql_mapBak1Sql@keyDomain=1000
+sql_mapBak1Sql@ignore=com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

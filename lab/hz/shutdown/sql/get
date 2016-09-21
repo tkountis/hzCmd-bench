@@ -3,14 +3,14 @@ sql1@driver=Client
 sql1@threads=4
 sql1@name=mapBak1HDSqlIdx
 sql1@keyDomain=1000
-sql1@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+sql1@ignore=com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 sql2@class=hz.map.sql.predicate.PredCheck
 sql2@driver=Client
 sql2@threads=4
 sql2@name=mapBak1SqlIdx
 sql2@keyDomain=1000
-sql2@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+sql2@ignore=com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 
 sql3@class=hz.map.sql.predicate.PredCheck
@@ -18,11 +18,11 @@ sql3@driver=Client
 sql3@threads=4
 sql3@name=mapBak1HDSql
 sql3@keyDomain=1000
-sql3@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+sql3@ignore=com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 sql4@class=hz.map.sql.predicate.PredCheck
 sql4@driver=Client
 sql4@threads=4
 sql4@name=mapBak1Sql
 sql4@keyDomain=1000
-sql4@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+sql4@ignore=com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

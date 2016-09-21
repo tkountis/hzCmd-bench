@@ -17,16 +17,16 @@ public class PredCheck extends MapBench {
         int min= random.nextInt(keyDomain - range);
         int max=min+range;
 
-        SqlPredicate pred = new SqlPredicate("id >= "+min+" and id < "+max);
-        Collection<Person> res = map.values(pred);
+        SqlPredicate sqlPredicate = new SqlPredicate("id >= "+min+" and id < "+max);
+        Collection<Person> res = map.values(sqlPredicate);
 
         if(res.size()!=range){
-            throw new AssertionException(pred+" on map "+map.getName()+" returned "+res.size()+" expected "+range);
+            throw new AssertionException(sqlPredicate+" on map "+map.getName()+" returned "+res.size()+" expected "+range);
         }
 
         for (Person person : res) {
-            if(pred.getId() < min || pred.getId() >= max ){
-                throw new AssertionException(map.getName()+" "+person+" != "+pred);
+            if(person.getId() < min || person.getId() >= max ){
+                throw new AssertionException(map.getName()+" "+person+" != "+sqlPredicate);
             }
         }
     }

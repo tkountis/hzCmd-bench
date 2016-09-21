@@ -21,12 +21,12 @@ public class PredCheck extends MapBench {
         Collection<Person> res = map.values(pred);
 
         if(res.size()!=range){
-            throw new AssertionException("predicate "+pred+" on map "+map.getName()+" returned "+res.size()+" expected "+range);
+            throw new AssertionException(pred+" on map "+map.getName()+" returned "+res.size()+" expected "+range);
         }
 
         for (Person person : res) {
             if(pred.getId() < min || pred.getId() >= max ){
-                throw new AssertionException(person+" don't match "+pred);
+                throw new AssertionException(map.getName()+" "+person+" != "+pred);
             }
         }
     }

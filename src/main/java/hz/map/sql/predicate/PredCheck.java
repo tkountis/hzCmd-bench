@@ -21,14 +21,21 @@ public class PredCheck extends MapBench {
         Collection<Person> res = map.values(sqlPredicate);
 
         if(res.size()!=range){
+            printPersons(res);
             throw new AssertionException(sqlPredicate+" on map "+map.getName()+" returned "+res.size()+" expected "+range);
         }
 
         for (Person person : res) {
             if(person.getId() < min || person.getId() >= max ){
+                printPersons(res);
                 throw new AssertionException(map.getName()+" "+person+" != "+sqlPredicate);
             }
         }
     }
 
+    private void printPersons(Collection<Person> persons){
+        for (Person person : persons) {
+            System.out.println(person);
+        }
+    }
 }

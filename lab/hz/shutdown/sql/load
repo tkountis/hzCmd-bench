@@ -1,21 +1,21 @@
 load_mapBak1HDSqlIdx@class=hz.map.member.LoadPersons
 load_mapBak1HDSqlIdx@driver=Member
-load_mapBak1HDSqlIdx@keyDomain=1000
+load_mapBak1HDSqlIdx@keyDomain=10000
 load_mapBak1HDSqlIdx@name=mapBak1HDSqlIdx
 
 load_mapBak1SqlIdx@class=hz.map.member.LoadPersons
 load_mapBak1SqlIdx@driver=Member
-load_mapBak1SqlIdx@keyDomain=1000
+load_mapBak1SqlIdx@keyDomain=10000
 load_mapBak1SqlIdx@name=mapBak1SqlIdx
 
 
 load_mapBak1HDSql@class=hz.map.member.LoadPersons
 load_mapBak1HDSql@driver=Member
-load_mapBak1HDSql@keyDomain=1000
+load_mapBak1HDSql@keyDomain=10000
 load_mapBak1HDSql@name=mapBak1HDSql
 
 load_mapBak1Sql@class=hz.map.member.LoadPersons
 load_mapBak1Sql@driver=Member
-load_mapBak1Sql@keyDomain=1000
+load_mapBak1Sql@keyDomain=10000
 load_mapBak1Sql@name=mapBak1Sql
 

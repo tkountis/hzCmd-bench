@@ -2,14 +2,16 @@ sql_mapBak1HDSqlIdx@class=hz.map.sql.predicate.PredCheck
 sql_mapBak1HDSqlIdx@driver=Client
 sql_mapBak1HDSqlIdx@threads=4
 sql_mapBak1HDSqlIdx@name=mapBak1HDSqlIdx
-sql_mapBak1HDSqlIdx@keyDomain=1000
+sql_mapBak1HDSqlIdx@keyDomain=10000
+sql_mapBak1HDSqlIdx@range=1000
 sql_mapBak1HDSqlIdx@ignore=com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 sql_mapBak1SqlIdx@class=hz.map.sql.predicate.PredCheck
 sql_mapBak1SqlIdx@driver=Client
 sql_mapBak1SqlIdx@threads=4
 sql_mapBak1SqlIdx@name=mapBak1SqlIdx
-sql_mapBak1SqlIdx@keyDomain=1000
+sql_mapBak1SqlIdx@keyDomain=10000
+sql_mapBak1SqlIdx@range=1000
 sql_mapBak1SqlIdx@ignore=com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 
@@ -17,12 +19,14 @@ sql_mapBak1HDSql@class=hz.map.sql.predicate.PredCheck
 sql_mapBak1HDSql@driver=Client
 sql_mapBak1HDSql@threads=4
 sql_mapBak1HDSql@name=mapBak1HDSql
-sql_mapBak1HDSql@keyDomain=1000
+sql_mapBak1HDSql@keyDomain=10000
+sql_mapBak1HDSql@range=1000
 sql_mapBak1HDSql@ignore=com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 sql_mapBak1Sql@class=hz.map.sql.predicate.PredCheck
 sql_mapBak1Sql@driver=Client
 sql_mapBak1Sql@threads=4
 sql_mapBak1Sql@name=mapBak1Sql
-sql_mapBak1Sql@keyDomain=1000
+sql_mapBak1Sql@keyDomain=10000
+sql_mapBak1Sql@range=1000
 sql_mapBak1Sql@ignore=com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

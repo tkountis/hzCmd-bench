@@ -9,7 +9,7 @@ public class AddIndex extends MapBench {
     public boolean ordered=true;
 
     public void timeStep() throws Exception {
-
         map.addIndex(field, ordered);
+        setRunning(false);
     }
 }

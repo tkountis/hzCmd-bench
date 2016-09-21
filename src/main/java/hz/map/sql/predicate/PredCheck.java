@@ -18,7 +18,7 @@ public class PredCheck extends MapBench {
         int max=min+range;
 
         SqlPredicate pred = new SqlPredicate("id >= "+min+" and id < "+max);
-        Set<Person> res = map.keySet(pred);
+        Set<Person> res = (Set) map.values(pred);
 
         if(res.size()!=range){
             throw new AssertionException("predicate "+pred+" on map "+map.getName()+" returned "+res.size()+" expected "+range);

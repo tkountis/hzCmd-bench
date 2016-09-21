@@ -1,0 +1,9 @@
+sz1@class=hz.map.SizeCheck
+sz1@driver=Member
+sz1@size=1000
+sz1@name=mapBak1HDSql
+
+sz2@class=hz.map.SizeCheck
+sz2@driver=Member
+sz2@size=1000
+sz2@name=mapBak1Sql

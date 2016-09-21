@@ -1,2 +1,2 @@
-sql@class=hz.map.predicate.KeySet
+sql@class=hz.map.sql.predicate.KeySet
 sql@name=mapBak1

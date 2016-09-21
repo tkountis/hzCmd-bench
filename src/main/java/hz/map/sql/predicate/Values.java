@@ -1,8 +1,7 @@
-package hz.map.predicate;
+package hz.map.sql.predicate;
 
 import com.hazelcast.query.SqlPredicate;
-import hz.map.base.MapBench;
-import hz.map.predicate.base.PredicateBase;
+import hz.map.sql.predicate.base.PredicateBase;
 
 import static utils.Utils.randDouble;
 

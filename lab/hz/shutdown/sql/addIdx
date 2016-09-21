@@ -1,0 +1,11 @@
+sql1@class=hz.map.sql.predicate.AddIndex
+sql1@driver=Member1
+sql1@name=mapBak1HDSql
+sql1@field=id
+sql1@ordered=true
+
+sql2@class=hz.map.sql.predicate.AddIndex
+sql2@driver=Member1
+sql2@name=mapBak1Sql
+sql2@field=id
+sql2@ordered=true

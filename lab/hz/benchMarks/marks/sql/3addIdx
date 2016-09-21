@@ -1,0 +1,5 @@
+sql@class=hz.map.sql.predicate.AddIndex
+sql@driver=Member1
+sql@name=mapBak1
+sql@field=salary
+sql@ordered=true

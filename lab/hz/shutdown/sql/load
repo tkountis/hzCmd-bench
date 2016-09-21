@@ -1,0 +1,10 @@
+load1@class=hz.map.member.LoadPersons
+load1@driver=Member
+load1@keyDomain=1000
+load1@name=mapBak1HDSql
+
+load2@class=hz.map.member.LoadPersons
+load2@driver=Member
+load2@keyDomain=1000
+load2@name=mapBak1Sql
+

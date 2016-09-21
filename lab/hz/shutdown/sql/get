@@ -1,0 +1,14 @@
+sql1@class=hz.map.sql.predicate.PredCheck
+sql1@driver=Client
+sql1@threads=4
+sql1@name=mapBak1HDSql
+sql1@keyDomain=1000
+sql1@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+
+sql2@class=hz.map.sql.predicate.PredCheck
+sql2@driver=Client
+sql2@threads=4
+sql2@name=mapBak1Sql
+sql2@keyDomain=1000
+sql2@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+

@@ -5,7 +5,7 @@ import global.AssertionException;
 import hz.map.base.MapBench;
 import hz.model.Person;
 
-import java.util.Set;
+import java.util.Collection;
 
 
 public class PredCheck extends MapBench {
@@ -18,7 +18,7 @@ public class PredCheck extends MapBench {
         int max=min+range;
 
         SqlPredicate pred = new SqlPredicate("id >= "+min+" and id < "+max);
-        Set<Person> res = (Set) map.values(pred);
+        Collection<Person> res = map.values(pred);
 
         if(res.size()!=range){
             throw new AssertionException("predicate "+pred+" on map "+map.getName()+" returned "+res.size()+" expected "+range);

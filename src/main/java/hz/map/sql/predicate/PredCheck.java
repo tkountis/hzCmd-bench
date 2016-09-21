@@ -1,5 +1,6 @@
 package hz.map.sql.predicate;
 
+import com.hazelcast.core.IMap;
 import com.hazelcast.query.SqlPredicate;
 import global.AssertionException;
 import hz.map.base.MapBench;
@@ -21,19 +22,20 @@ public class PredCheck extends MapBench {
         Collection<Person> res = map.values(sqlPredicate);
 
         if(res.size()!=range){
-            printPersons(res);
+            printPersons(map, res);
             throw new AssertionException(sqlPredicate+" on map "+map.getName()+" returned "+res.size()+" expected "+range);
         }
 
         for (Person person : res) {
             if(person.getId() < min || person.getId() >= max ){
-                printPersons(res);
+                printPersons(map, res);
                 throw new AssertionException(map.getName()+" "+person+" != "+sqlPredicate);
             }
         }
     }
 
-    private void printPersons(Collection<Person> persons){
+    private void printPersons(IMap map, Collection<Person> persons){
+        System.out.println(map.getName());
         for (Person person : persons) {
             System.out.println(person);
         }

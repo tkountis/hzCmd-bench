@@ -1,9 +1,20 @@
 sz1@class=hz.map.SizeCheck
 sz1@driver=Member
 sz1@size=1000
-sz1@name=mapBak1HDSql
+sz1@name=mapBak1HDSqlIdx
 
 sz2@class=hz.map.SizeCheck
 sz2@driver=Member
 sz2@size=1000
-sz2@name=mapBak1Sql
+sz2@name=mapBak1SqlIdx
+
+
+sz3@class=hz.map.SizeCheck
+sz3@driver=Member
+sz3@size=1000
+sz3@name=mapBak1HDSql
+
+sz4@class=hz.map.SizeCheck
+sz4@driver=Member
+sz4@size=1000
+sz4@name=mapBak1Sql

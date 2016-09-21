@@ -22,22 +22,23 @@ public class PredCheck extends MapBench {
         Collection<Person> res = map.values(sqlPredicate);
 
         if(res.size()!=range){
-            printPersons(map, res);
+            printPersons(sqlPredicate, map, res);
             throw new AssertionException(sqlPredicate+" on map "+map.getName()+" returned "+res.size()+" expected "+range);
         }
 
         for (Person person : res) {
             if(person.getId() < min || person.getId() >= max ){
-                printPersons(map, res);
+                printPersons(sqlPredicate, map, res);
                 throw new AssertionException(map.getName()+" "+person+" != "+sqlPredicate);
             }
         }
     }
 
-    private void printPersons(IMap map, Collection<Person> persons){
-        System.out.println(map.getName());
+    private void printPersons(SqlPredicate predicate, IMap map, Collection<Person> persons){
+        int ref = random.nextInt(10000000);
+        System.out.println("ref("+ref+") "+predicate+" on map "+map.getName());
         for (Person person : persons) {
-            System.out.println(person);
+            System.out.println("ref("+ref+") "+person);
         }
     }
 }

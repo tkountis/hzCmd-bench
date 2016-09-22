@@ -16,7 +16,8 @@ public class Subscriber extends TopicBench {
     }
 
     public void postPhase() {
-        hzInstance.getAtomicLong(name).addAndGet(counter.getCount());
+        long subCount = hzInstance.getAtomicLong(name).addAndGet(1);
+        hzInstance.getAtomicLong(name+subPostFix+subCount).set(counter.getCount());
     }
 }
 

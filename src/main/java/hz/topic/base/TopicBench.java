@@ -9,6 +9,9 @@ public abstract class TopicBench extends BenchBase {
     protected HazelcastInstance hzInstance;
     protected ITopic<Object> topic;
 
+    protected String pubPostFix="-published";
+    protected String subPostFix="-subscriber-";
+
     public void init() throws Exception{
         super.init();
         topic = hzInstance.getReliableTopic(name);
@@ -20,6 +23,6 @@ public abstract class TopicBench extends BenchBase {
 
     @Override
     public String toString() {
-        return super.toString() + " MapBench{" + "hzInstance=" + hzInstance + ", topic=" + topic + '}';
+        return super.toString() + " TopicBench{" + "hzInstance=" + hzInstance + ", topic=" + topic + '}';
     }
 }

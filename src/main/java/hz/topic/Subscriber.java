@@ -22,7 +22,7 @@ public class Subscriber extends TopicBench {
             Thread.sleep(pauseForEvents);
         }catch (Exception ignore){}
 
-        long subCount = hzInstance.getAtomicLong(name).addAndGet(1);
+        long subCount = hzInstance.getAtomicLong(name).getAndAdd(1);
         hzInstance.getAtomicLong(name+subPostFix+subCount).set(counter.getCount());
     }
 }

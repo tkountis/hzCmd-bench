@@ -1,0 +1,3 @@
+validate@class=hz.topic.PubSubAssert
+validate@driver=Member1
+validate@name=topicA

@@ -14,7 +14,10 @@ public class Subscriber extends TopicBench {
     }
 
     public void timeStep() throws InterruptedException {
-        Thread.sleep(1);
+        //Thread.sleep(1);
+        synchronized(counter){
+            counter.wait();
+        }
     }
 
     public void postPhase() {

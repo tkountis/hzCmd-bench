@@ -4,6 +4,8 @@ import hz.topic.base.TopicBench;
 
 public class Subscriber extends TopicBench {
 
+    public int pauseForEvents=10000;
+
     private MsgCounter counter = new MsgCounter();
 
     public void init() throws Exception{
@@ -16,6 +18,10 @@ public class Subscriber extends TopicBench {
     }
 
     public void postPhase() {
+        try {
+            Thread.sleep(pauseForEvents);
+        }catch (Exception ignore){}
+
         long subCount = hzInstance.getAtomicLong(name).addAndGet(1);
         hzInstance.getAtomicLong(name+subPostFix+subCount).set(counter.getCount());
     }

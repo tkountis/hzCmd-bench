@@ -4,7 +4,7 @@ import hz.topic.base.TopicBench;
 
 public class Subscriber extends TopicBench {
 
-    public int pauseForEvents=10000;
+    public int pauseForEvents=60000;
 
     private MsgCounter counter = new MsgCounter();
 

@@ -1,5 +1,5 @@
 atomic@class=hz.atomic.validate.Cas
 atomic@driver=Client
 atomic@threads=12
-atomic@count=5
+atomic@count=500
 atomic@name=atomic

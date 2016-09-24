@@ -13,12 +13,14 @@ public class SetAssert extends SetBench {
     public void timeStep() throws AssertionException{
 
         if(set.size()!=size){
-            throw new AssertionException("map "+set.getName()+" size "+set.size()+" != expected "+size);
+            throw new AssertionException("set "+set.getName()+" size "+set.size()+" != "+size);
         }
 
+        Set<Integer> duplicates = findDuplicates(set);
 
-        findDuplicates(set);
-
+        if(!duplicates.isEmpty()){
+            throw new AssertionException("set "+set.getName()+" duplicates "+duplicates);
+        }
 
         setRunning(false);
     }

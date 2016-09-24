@@ -19,7 +19,7 @@ public class SetAssert extends SetBench {
         Set<Integer> duplicates = findDuplicates(set);
 
         if(!duplicates.isEmpty()){
-            throw new AssertionException("set "+set.getName()+" duplicates "+duplicates);
+            throw new AssertionException("set "+set.getName()+" has duplicates "+duplicates);
         }
 
         setRunning(false);

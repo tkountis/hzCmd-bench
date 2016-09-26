@@ -1,4 +1,5 @@
 validate_set@class=hz.set.SetAssert
 validate_set@driver=Member
+validate_set@count=500
 validate_set@size=10000
 validate_set@name=setA

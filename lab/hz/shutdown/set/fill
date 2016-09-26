@@ -1,5 +1,5 @@
 fill_set@class=hz.set.FillInt
 fill_set@driver=Member1
-fill_set@keyDomain=100000
+fill_set@keyDomain=10000
 fill_set@name=setA
 

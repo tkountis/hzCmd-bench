@@ -1,5 +1,6 @@
 package hz.set;
 
+import com.hazelcast.core.ISet;
 import hz.set.base.SetBench;
 
 public class FillInt extends SetBench {
@@ -7,7 +8,9 @@ public class FillInt extends SetBench {
     private int k=0;
 
     public void timeStep() {
-        set.add(k);
+        for (ISet set : sets) {
+            set.add(k);
+        }
         k++;
     }
 

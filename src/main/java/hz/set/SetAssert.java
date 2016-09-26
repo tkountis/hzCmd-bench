@@ -1,5 +1,6 @@
 package hz.set;
 
+import com.hazelcast.core.ISet;
 import global.AssertionException;
 import hz.set.base.SetBench;
 
@@ -12,14 +13,17 @@ public class SetAssert extends SetBench {
 
     public void timeStep() throws AssertionException{
 
-        if(set.size()!=size){
-            throw new AssertionException("set "+set.getName()+" size "+set.size()+" != "+size);
-        }
+        for (ISet set : sets) {
 
-        Set<Integer> duplicates = findDuplicates(set);
+            Set<Integer> duplicates = findDuplicates(set);
 
-        if(!duplicates.isEmpty()){
-            throw new AssertionException("set "+set.getName()+" has duplicates "+duplicates);
+            if (!duplicates.isEmpty()) {
+                throw new AssertionException("set " + set.getName() + " has duplicates " + duplicates);
+            }
+
+            if (set.size() != size) {
+                throw new AssertionException("set " + set.getName() + " size " + set.size() + " != " + size);
+            }
         }
 
         setRunning(false);

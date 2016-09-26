@@ -4,15 +4,27 @@ import base.BenchBase;
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.core.ISet;
 
-
 public abstract class SetBench extends BenchBase {
 
+    public int count=1;
     protected HazelcastInstance hzInstance;
-    protected ISet set;
+    protected ISet[] sets;
 
     public void init() throws Exception{
         super.init();
-        set = hzInstance.getSet(name);
+
+        sets = new ISet[count];
+        for (int i = 0; i < count; i++) {
+            sets[i] = hzInstance.getSet(name+i);
+        }
+    }
+
+    public ISet getRandomSet(){
+        return getSet(random.nextInt(count));
+    }
+
+    public ISet getSet(int i){
+        return sets[i];
     }
 
     public void setVendorObject(Object o) {
@@ -21,6 +33,6 @@ public abstract class SetBench extends BenchBase {
 
     @Override
     public String toString() {
-        return super.toString() + " SetBench{" + "hzInstance=" + hzInstance + ", set=" + set + '}';
+        return super.toString() + " SetBench{" + "hzInstance=" + hzInstance + ", set=" + sets + '}';
     }
 }

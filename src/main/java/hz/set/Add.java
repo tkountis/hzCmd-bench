@@ -6,7 +6,7 @@ public class Add extends SetBench {
 
     public void timeStep() {
         Object val = mapKeyToValue(random.nextInt( keyDomain ));
-        set.add(val);
+        getRandomSet().add(val);
     }
 
 }

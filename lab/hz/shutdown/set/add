@@ -3,5 +3,5 @@ set_add@driver=Client
 set_add@threads=8
 set_add@name=setA
 set_add@count=500
-set_add@keyDomain=10000
+set_add@keyDomain=1000
 set_add@ignore=com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

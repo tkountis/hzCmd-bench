@@ -1,0 +1,4 @@
+validate_set@class=hz.set.SetAssert
+validate_set@driver=Member
+validate_set@size=100000
+validate_set@name=setA

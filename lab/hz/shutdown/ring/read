@@ -1,6 +1,6 @@
-queue_poll@class=hz.ring.Read
-queue_poll@driver=Client4
-queue_poll@name=ring
-queue_poll@count=1
-queue_poll@threads=1
-queue_poll@ignore=com.hazelcast.spi.exception.TargetDisconnectedException
+ring_read@class=hz.ring.Read
+ring_read@driver=Client4
+ring_read@name=ring
+ring_read@count=1
+ring_read@threads=1
+ring_read@ignore=com.hazelcast.spi.exception.TargetDisconnectedException

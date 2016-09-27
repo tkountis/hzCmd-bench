@@ -9,8 +9,6 @@ import java.util.concurrent.ExecutionException;
 
 public class Add extends RingBench {
 
-
-    public int timeOutMillis=10;
     private long[] addPerRing;
 
     public void init() throws Exception{
@@ -24,7 +22,7 @@ public class Add extends RingBench {
         int idx = random.nextInt(count);
         Ringbuffer ringBuffer = getRingBuffer(idx);
 
-        ICompletableFuture<Integer> res = ringBuffer.addAsync(val, OverflowPolicy.FAIL);
+        ICompletableFuture<Long> res = ringBuffer.addAsync(val, OverflowPolicy.FAIL);
         if (res.get() != -1) {
             addPerRing[idx]++;
         }

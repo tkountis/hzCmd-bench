@@ -1,6 +1,6 @@
-queue_offer@class=hz.ring.Add
-queue_offer@driver=Client1
-queue_offer@name=ring
-queue_offer@count=1
-queue_offer@threads=1
-queue_offer@ignore=com.hazelcast.spi.exception.TargetDisconnectedException
+ring_add@class=hz.ring.Add
+ring_add@driver=Client1
+ring_add@name=ring
+ring_add@count=1
+ring_add@threads=1
+ring_add@ignore=com.hazelcast.spi.exception.TargetDisconnectedException

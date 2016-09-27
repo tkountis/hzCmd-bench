@@ -9,8 +9,6 @@ import java.util.concurrent.ExecutionException;
 
 public class Read extends RingBench {
 
-    public int pauseForEvents=30000;
-    public int timeOutMillis=50;
     private long[] readPerRing;
     private long[] seqs;
 

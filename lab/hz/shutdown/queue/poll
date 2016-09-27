@@ -1,0 +1,4 @@
+queue_poll@class=hz.queue.Poll
+queue_poll@driver=Client
+queue_poll@name=queueZ
+queue_poll@count=250

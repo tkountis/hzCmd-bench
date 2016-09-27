@@ -1,0 +1,47 @@
+package hz.queue;
+
+import com.hazelcast.core.IQueue;
+import hz.queue.base.QueueBench;
+
+import java.util.concurrent.TimeUnit;
+
+public class Poll extends QueueBench {
+
+    public int pauseForEvents=30000;
+    public int timeOutMillis=50;
+    private long[] pollPerQ;
+
+    public void init() throws Exception{
+        super.init();
+        pollPerQ = new long[count];
+    }
+
+    public void timeStep() throws InterruptedException {
+
+        int queueIdx = random.nextInt(count);
+        IQueue q = getQueue(queueIdx);
+
+        if(q.poll(timeOutMillis, TimeUnit.MILLISECONDS) != null) {
+            pollPerQ[queueIdx]++;
+        }
+    }
+
+    public void postPhase() {
+        try {
+            Thread.sleep(pauseForEvents);
+
+            for (int i = 0; i < queues.length; i++) {
+                IQueue q = getQueue(i);
+                if(q.poll(timeOutMillis, TimeUnit.MILLISECONDS) != null) {
+                    pollPerQ[i]++;
+                }
+            }
+        }catch (Exception ignore){}
+
+
+        for (int i = 0; i < queues.length; i++) {
+            IQueue q = getQueue(i);
+            hzInstance.getAtomicLong(q.getName()+"-poll").addAndGet(pollPerQ[i]);
+        }
+    }
+}

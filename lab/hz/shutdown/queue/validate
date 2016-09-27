@@ -1,0 +1,4 @@
+validate@class=hz.queue.Assert
+validate@driver=Member1
+validate@name=queueZ
+validate@count=250

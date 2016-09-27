@@ -31,6 +31,7 @@ public class Read extends RingBench {
         ReadResultSet<Object> objects = res.get();
 
         seqs[idx]+=objects.readCount();
+        readPerRing[idx]+=objects.readCount();
     }
 
     public void postPhase() {

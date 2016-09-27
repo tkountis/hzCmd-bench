@@ -1,0 +1,6 @@
+queue_offer@class=hz.ring.Add
+queue_offer@driver=Client1
+queue_offer@name=ring
+queue_offer@count=1
+queue_offer@threads=1
+queue_offer@ignore=com.hazelcast.spi.exception.TargetDisconnectedException

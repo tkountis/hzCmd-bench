@@ -32,7 +32,7 @@ public class Poll extends QueueBench {
 
             for (int i = 0; i < queues.length; i++) {
                 IQueue q = getQueue(i);
-                if(q.poll(timeOutMillis, TimeUnit.MILLISECONDS) != null) {
+                while (q.poll(timeOutMillis, TimeUnit.MILLISECONDS) != null) {
                     pollPerQ[i]++;
                 }
             }

@@ -2,3 +2,4 @@ queue_offer@class=hz.queue.Offer
 queue_offer@driver=Client
 queue_offer@name=queueZ
 queue_offer@count=250
+queue_offer@ignore=com.hazelcast.spi.exception.TargetDisconnectedException

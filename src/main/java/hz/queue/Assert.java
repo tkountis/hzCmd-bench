@@ -14,6 +14,14 @@ public class Assert extends QueueBench {
             IAtomicLong offer = hzInstance.getAtomicLong(q.getName()+"-offer");
             IAtomicLong take  = hzInstance.getAtomicLong(q.getName()+"-poll");
 
+            System.out.println(offer.getName() + "=" + offer.get() + " != " + take.getName() + "=" + take.get());
+        }
+
+        for (int i = 0; i < queues.length; i++) {
+            IQueue q = getQueue(i);
+            IAtomicLong offer = hzInstance.getAtomicLong(q.getName()+"-offer");
+            IAtomicLong take  = hzInstance.getAtomicLong(q.getName()+"-poll");
+
             if(offer.get() != take.get()){
                 throw new AssertionException(offer.getName()+"="+offer.get()+" != "+take.getName()+"="+take.get());
             }

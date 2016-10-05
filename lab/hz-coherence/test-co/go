@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+hz memberOps "-Xms1G -Xmx1G"
+hz clientOps "-Xms400M -Xmx400M"
+hz cluster -type CO -size M2C2 -v 12.2.1  -boxes a.box
+
+hz run fill
+hz run size
+
+hz download
+hz wipe

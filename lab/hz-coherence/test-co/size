@@ -1,0 +1,4 @@
+size@class=coherence.SizeCheck
+size@driver=Client2
+size@size=100
+size@name=cacheBak0,cacheBak1,cacheAsync1

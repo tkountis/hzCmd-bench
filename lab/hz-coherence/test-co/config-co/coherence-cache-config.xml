@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+
+<cache-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns="http://xmlns.oracle.com/coherence/coherence-cache-config"
+              xsi:schemaLocation="http://xmlns.oracle.com/coherence/coherence-cache-config
+   coherence-cache-config.xsd">
+
+    <caching-scheme-mapping>
+        <cache-mapping>
+            <cache-name>cacheBak0</cache-name>
+            <scheme-name>cacheBak0</scheme-name>
+        </cache-mapping>
+    </caching-scheme-mapping>
+
+    <caching-scheme-mapping>
+        <cache-mapping>
+            <cache-name>cacheBak1</cache-name>
+            <scheme-name>cacheBak1</scheme-name>
+        </cache-mapping>
+    </caching-scheme-mapping>
+
+    <caching-scheme-mapping>
+        <cache-mapping>
+            <cache-name>cacheAsync1</cache-name>
+            <scheme-name>cacheAsync1</scheme-name>
+        </cache-mapping>
+    </caching-scheme-mapping>
+
+
+
+    <distributed-scheme>
+        <backup-count>0</backup-count>
+        <scheme-name>cacheBak0</scheme-name>
+        <autostart>true</autostart>
+
+        <backing-map-scheme>
+            <local-scheme>
+            </local-scheme>
+        </backing-map-scheme>
+    </distributed-scheme>
+
+    <distributed-scheme>
+        <backup-count>1</backup-count>
+        <scheme-name>cacheBak1</scheme-name>
+        <autostart>true</autostart>
+
+        <backing-map-scheme>
+            <local-scheme>
+            </local-scheme>
+        </backing-map-scheme>
+    </distributed-scheme>
+
+    <distributed-scheme>
+        <backup-count>1</backup-count>
+        <async-backup>true</async-backup>
+        <scheme-name>cacheAsync1</scheme-name>
+        <autostart>true</autostart>
+
+        <backing-map-scheme>
+            <local-scheme>
+            </local-scheme>
+        </backing-map-scheme>
+    </distributed-scheme>
+
+
+</cache-config>

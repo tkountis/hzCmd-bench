@@ -14,7 +14,6 @@ public abstract class CacheBench extends BenchBase {
     public void init() throws Exception{
         super.init();
 
-        //CacheFactory.ensureCluster();
         cache = CacheFactory.getCache(name);
     }
 

@@ -20,43 +20,42 @@
             <cache-name>cacheAsync1</cache-name>
             <scheme-name>cacheAsync1</scheme-name>
         </cache-mapping>
-
     </caching-scheme-mapping>
 
+    <caching-schemes>
+        <distributed-scheme>
+            <backup-count>0</backup-count>
+            <scheme-name>cacheBak0</scheme-name>
+            <autostart>true</autostart>
 
-    <distributed-scheme>
-        <backup-count>0</backup-count>
-        <scheme-name>cacheBak0</scheme-name>
-        <autostart>true</autostart>
+            <backing-map-scheme>
+                <local-scheme>
+                </local-scheme>
+            </backing-map-scheme>
+        </distributed-scheme>
 
-        <backing-map-scheme>
-            <local-scheme>
-            </local-scheme>
-        </backing-map-scheme>
-    </distributed-scheme>
+        <distributed-scheme>
+            <backup-count>1</backup-count>
+            <scheme-name>cacheBak1</scheme-name>
+            <autostart>true</autostart>
 
-    <distributed-scheme>
-        <backup-count>1</backup-count>
-        <scheme-name>cacheBak1</scheme-name>
-        <autostart>true</autostart>
+            <backing-map-scheme>
+                <local-scheme>
+                </local-scheme>
+            </backing-map-scheme>
+        </distributed-scheme>
 
-        <backing-map-scheme>
-            <local-scheme>
-            </local-scheme>
-        </backing-map-scheme>
-    </distributed-scheme>
+        <distributed-scheme>
+            <backup-count>1</backup-count>
+            <async-backup>true</async-backup>
+            <scheme-name>cacheAsync1</scheme-name>
+            <autostart>true</autostart>
 
-    <distributed-scheme>
-        <backup-count>1</backup-count>
-        <async-backup>true</async-backup>
-        <scheme-name>cacheAsync1</scheme-name>
-        <autostart>true</autostart>
-
-        <backing-map-scheme>
-            <local-scheme>
-            </local-scheme>
-        </backing-map-scheme>
-    </distributed-scheme>
-
+            <backing-map-scheme>
+                <local-scheme>
+                </local-scheme>
+            </backing-map-scheme>
+        </distributed-scheme>
+    </caching-schemes>
 
 </cache-config>

@@ -1,0 +1,4 @@
+put@class=coherence.Put
+put@keyDomain=100000
+put@valueSize=1,1001
+put@name=cacheBak0,cacheBak1,cacheAsync1

@@ -9,6 +9,7 @@ public class Fill extends CacheBench {
     public void timeStep() {
         Object key = getKey(k);
         Object val = mapKeyToValue(k);
+        cache.put(key, val);
         k++;
     }
 

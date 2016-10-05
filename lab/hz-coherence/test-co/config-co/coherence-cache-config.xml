@@ -10,22 +10,18 @@
             <cache-name>cacheBak0</cache-name>
             <scheme-name>cacheBak0</scheme-name>
         </cache-mapping>
-    </caching-scheme-mapping>
 
-    <caching-scheme-mapping>
         <cache-mapping>
             <cache-name>cacheBak1</cache-name>
             <scheme-name>cacheBak1</scheme-name>
         </cache-mapping>
-    </caching-scheme-mapping>
 
-    <caching-scheme-mapping>
         <cache-mapping>
             <cache-name>cacheAsync1</cache-name>
             <scheme-name>cacheAsync1</scheme-name>
         </cache-mapping>
-    </caching-scheme-mapping>
 
+    </caching-scheme-mapping>
 
 
     <distributed-scheme>

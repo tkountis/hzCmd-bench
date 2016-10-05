@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -e
 
 hz memberOps "-Xms1G -Xmx1G"
 hz clientOps "-Xms400M -Xmx400M"

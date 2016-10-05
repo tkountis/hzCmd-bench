@@ -2,7 +2,6 @@
 
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 
-
 hz memberOps "-Xms2G -Xmx2G ${hzProps}"
 hz clientOps "-Xms1G -Xmx1G ${hzProps}"
 hz cluster -size M2C2 -id HZ -v 3.7.2 -type HZ -boxes a.box

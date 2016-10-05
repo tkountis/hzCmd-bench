@@ -1,3 +1,60 @@
+<!DOCTYPE cache-config SYSTEM "cache-config.dtd">
+<cache-config>
+    <caching-scheme-mapping>
+
+        <cache-mapping>
+            <cache-name>cacheBak0*</cache-name>
+            <scheme-name>cacheBak0</scheme-name>
+        </cache-mapping>
+
+        <cache-mapping>
+            <cache-name>cacheBak1*</cache-name>
+            <scheme-name>cacheBak1</scheme-name>
+        </cache-mapping>
+
+        <cache-mapping>
+            <cache-name>cacheAsync1*</cache-name>
+            <scheme-name>cacheAsync1</scheme-name>
+        </cache-mapping>
+
+    </caching-scheme-mapping>
+
+    <caching-schemes>
+        <distributed-scheme>
+            <scheme-name>cacheBak0</scheme-name>
+            <backing-map-scheme>
+                <local-scheme>
+                </local-scheme>
+            </backing-map-scheme>
+            <backup-count>0</backup-count>
+            <autostart>true</autostart>
+        </distributed-scheme>
+
+        <distributed-scheme>
+            <scheme-name>cacheBak1</scheme-name>
+            <backing-map-scheme>
+                <local-scheme>
+                </local-scheme>
+            </backing-map-scheme>
+            <backup-count>1</backup-count>
+            <autostart>true</autostart>
+        </distributed-scheme>
+
+        <distributed-scheme>
+            <scheme-name>cacheAsync1</scheme-name>
+            <backing-map-scheme>
+                <local-scheme>
+                </local-scheme>
+            </backing-map-scheme>
+            <backup-count>1</backup-count>
+            <async-backup>true</async-backup>
+            <autostart>true</autostart>
+        </distributed-scheme>
+
+    </caching-schemes>
+</cache-config>
+
+<!--
 <?xml version="1.0"?>
 
 <cache-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -7,30 +64,30 @@
 
     <caching-scheme-mapping>
         <cache-mapping>
-            <cache-name>cacheBak0</cache-name>
+            <cache-name>cacheBak0*</cache-name>
             <scheme-name>cacheBak0</scheme-name>
         </cache-mapping>
 
         <cache-mapping>
-            <cache-name>cacheBak1</cache-name>
+            <cache-name>cacheBak1*</cache-name>
             <scheme-name>cacheBak1</scheme-name>
         </cache-mapping>
 
         <cache-mapping>
-            <cache-name>cacheAsync1</cache-name>
+            <cache-name>cacheAsync1*</cache-name>
             <scheme-name>cacheAsync1</scheme-name>
         </cache-mapping>
     </caching-scheme-mapping>
 
     <caching-schemes>
         <distributed-scheme>
+
             <backup-count>0</backup-count>
             <scheme-name>cacheBak0</scheme-name>
             <autostart>true</autostart>
 
             <backing-map-scheme>
-                <local-scheme>
-                </local-scheme>
+                <local-scheme/>
             </backing-map-scheme>
         </distributed-scheme>
 
@@ -40,8 +97,7 @@
             <autostart>true</autostart>
 
             <backing-map-scheme>
-                <local-scheme>
-                </local-scheme>
+                <local-scheme/>
             </backing-map-scheme>
         </distributed-scheme>
 
@@ -52,10 +108,44 @@
             <autostart>true</autostart>
 
             <backing-map-scheme>
-                <local-scheme>
-                </local-scheme>
+                <local-scheme/>
             </backing-map-scheme>
         </distributed-scheme>
     </caching-schemes>
 
 </cache-config>
+-->
+
+
+<!--
+
+<?xml version="1.0"?>
+
+<cache-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns="http://xmlns.oracle.com/coherence/coherence-cache-config"
+              xsi:schemaLocation="http://xmlns.oracle.com/coherence/coherence-cache-config
+   coherence-cache-config.xsd">
+
+    <caching-scheme-mapping>
+        <cache-mapping>
+            <cache-name>cacheA</cache-name>
+            <scheme-name>MapDistCache</scheme-name>
+        </cache-mapping>
+    </caching-scheme-mapping>
+
+    <caching-schemes>
+        <distributed-scheme>
+            <scheme-name>MapDistCache</scheme-name>
+            <service-name>MapDistCache</service-name>
+            <backing-map-scheme>
+                <local-scheme>
+                    <unit-calculator>BINARY</unit-calculator>
+                </local-scheme>
+            </backing-map-scheme>
+            <autostart>true</autostart>
+        </distributed-scheme>
+    </caching-schemes>
+</cache-config>
+
+
+-->

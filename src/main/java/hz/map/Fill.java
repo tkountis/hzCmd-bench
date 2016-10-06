@@ -7,8 +7,8 @@ public class Fill extends MapBench {
     private int k=0;
 
     public void timeStep() {
-        String key = (String) getKey(k);
-        String val = (String) mapKeyToValue(k);
+        Object key =  getKey(k);
+        Object val =  mapKeyToValue(k);
         map.set(key, val);
         k++;
     }

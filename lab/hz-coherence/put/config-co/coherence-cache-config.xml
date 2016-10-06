@@ -22,7 +22,9 @@
     <caching-schemes>
         <distributed-scheme>
             <scheme-name>cacheBak0</scheme-name>
+            <service-name>cacheBak0</service-name>
             <backing-map-scheme>
+                <partitioned>true</partitioned>
                 <local-scheme>
                 </local-scheme>
             </backing-map-scheme>
@@ -32,7 +34,9 @@
 
         <distributed-scheme>
             <scheme-name>cacheBak1</scheme-name>
+            <service-name>cacheBak1</service-name>
             <backing-map-scheme>
+                <partitioned>true</partitioned>
                 <local-scheme>
                 </local-scheme>
             </backing-map-scheme>
@@ -42,7 +46,9 @@
 
         <distributed-scheme>
             <scheme-name>cacheAsync1</scheme-name>
+            <service-name>cacheAsync1</service-name>
             <backing-map-scheme>
+                <partitioned>true</partitioned>
                 <local-scheme>
                 </local-scheme>
             </backing-map-scheme>

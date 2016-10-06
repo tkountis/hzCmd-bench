@@ -20,6 +20,7 @@ hz bench 300
 nohup hz run -id HZ putHZ >> outHZ.txt &
 nohup hz run -id GG putCO >> outCO.txt &
 wait
+hz download
 hz wipe
 
 hz chart compare -dir output -red HZ -blue CO

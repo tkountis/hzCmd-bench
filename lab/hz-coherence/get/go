@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
+
+hz memberOps "-Xms2G -Xmx2G ${hzProps}"
+hz clientOps "-Xms1G -Xmx1G ${hzProps}"
+hz cluster -size M4C4 -id HZ -v 3.7.2 -type HZ -boxes a.box
+
+hz memberOps "-Xms2G -Xmx2G"
+hz clientOps "-Xms1G -Xmx1G"
+hz cluster -size M4C4 -id CO -v 12.2.1 -type CO -boxes b.box
+
+
+nohup hz run -id HZ fillHZ >> outHZ.out &
+nohup hz run -id CO fillCO >> outCO.out &
+
+nohup hz run -id HZ sizeHZ >> outHZ.out &
+nohup hz run -id CO sizeCO >> outCO.out &
+
+
+hz type Metrics
+hz driver Client
+hz threads 8,32
+hz warmup 30
+hz bench 60
+
+nohup hz run -id HZ getHZ >> outHZ.out &
+nohup hz run -id CO getCO >> outCO.out &
+wait
+hz download
+hz wipe
+
+hz chart compare -dir output -red HZ -blue CO

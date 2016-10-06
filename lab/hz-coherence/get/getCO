@@ -1,0 +1,3 @@
+put@class=coherence.Get
+put@keyDomain=100000
+put@name=cacheBak0

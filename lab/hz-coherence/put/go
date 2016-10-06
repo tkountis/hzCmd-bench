@@ -4,21 +4,20 @@ hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.back
 
 hz memberOps "-Xms2G -Xmx2G ${hzProps}"
 hz clientOps "-Xms1G -Xmx1G ${hzProps}"
-hz cluster -size M2C2 -id HZ -v 3.7.2 -type HZ -boxes a.box
+hz cluster -size M4C4 -id HZ -v 3.7.2 -type HZ -boxes a.box
 
 hz memberOps "-Xms2G -Xmx2G"
 hz clientOps "-Xms1G -Xmx1G"
-hz cluster -size M2C2 -id CO -v 12.2.1 -type CO -boxes b.box
-
+hz cluster -size M4C4 -id CO -v 12.2.1 -type CO -boxes b.box
 
 hz type Metrics
 hz driver Client
-hz threads 8
-hz warmup 60
-hz bench 300
+hz threads 8,32
+hz warmup 30
+hz bench 60
 
-nohup hz run -id HZ putHZ >> outHZ.txt &
-nohup hz run -id GG putCO >> outCO.txt &
+nohup hz run -id HZ putHZ >> outHZ.out &
+nohup hz run -id CO putCO >> outCO.out &
 wait
 hz download
 hz wipe

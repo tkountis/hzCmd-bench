@@ -1,4 +1,4 @@
-set@class=hz.map.Put
-set@keyDomain=100000
-set@valueSize=1,1001
-set@name=mapBak0,mapBak1,mapAsync1
+put@class=hz.map.Put
+put@keyDomain=100000
+put@valueSize=1,1001
+put@name=mapBak0,mapBak1

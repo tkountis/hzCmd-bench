@@ -9,7 +9,7 @@
         </unicast-listener>
 
         <member-identity>
-            <cluster-name>cluster_name</cluster-name>
+            <cluster-name>clusterCO</cluster-name>
         </member-identity>
 
     </cluster-config>

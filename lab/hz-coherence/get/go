@@ -20,9 +20,9 @@ hz run -id CO sizeCO >> outCO.out
 
 hz type Metrics
 hz driver Client
-hz threads 8,32
-hz warmup 30
-hz bench 60
+hz threads 32
+hz warmup 60
+hz bench 300
 
 nohup hz run -id HZ getHZ >> outHZ.out &
 nohup hz run -id CO getCO >> outCO.out &
@@ -31,3 +31,4 @@ hz download
 hz wipe
 
 hz chart compare -dir output -red HZ -blue CO
+mv *.out output

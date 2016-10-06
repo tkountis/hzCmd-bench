@@ -11,11 +11,11 @@ hz clientOps "-Xms1G -Xmx1G"
 hz cluster -size M4C4 -id CO -v 12.2.1 -type CO -boxes b.box
 
 
-nohup hz run -id HZ fillHZ >> outHZ.out &
-nohup hz run -id CO fillCO >> outCO.out &
+hz run -id HZ fillHZ >> outHZ.out
+hz run -id CO fillCO >> outCO.out
 
-nohup hz run -id HZ sizeHZ >> outHZ.out &
-nohup hz run -id CO sizeCO >> outCO.out &
+hz run -id HZ sizeHZ >> outHZ.out
+hz run -id CO sizeCO >> outCO.out
 
 
 hz type Metrics

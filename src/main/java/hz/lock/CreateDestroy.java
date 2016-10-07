@@ -8,7 +8,7 @@ import hz.lock.base.LockBench;
  */
 public class CreateDestroy extends LockBench {
     public void timeStep() {
-        ILock lock = hzInstance.getLock(""+random.nextInt());
+        ILock lock = hzInstance.getLock(name+random.nextInt());
         lock.destroy();
     }
 }

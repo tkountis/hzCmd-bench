@@ -7,7 +7,7 @@ import hz.map.base.MapBench;
  */
 public class CreateDestroy extends MapBench {
     public void timeStep() {
-        map = hzInstance.getMap("" + random.nextInt());
+        map = hzInstance.getMap(name + random.nextInt());
         map.destroy();
     }
 }

@@ -8,7 +8,7 @@ import hz.id.base.IdGenBench;
  */
 public class CreateDestroy extends IdGenBench {
     public void timeStep() {
-        IdGenerator id = hzInstance.getIdGenerator("" + random.nextInt());
+        IdGenerator id = hzInstance.getIdGenerator(name + random.nextInt());
         id.destroy();
     }
 }

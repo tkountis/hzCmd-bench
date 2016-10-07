@@ -19,14 +19,13 @@ hz cluster -size M1 -v 3.7          -ee -boxes a.box
 
 hz cluster -size C1 -v ${hzVersion} -ee -boxes a.box
 hz cluster -size C1 -v 3.7          -ee -boxes a.box
-hz cluster -size C1 -v 3.6          -ee -boxes a.box
+#hz cluster -size C1 -v 3.6          -ee -boxes a.box
 
 hz run load
 hz run validate
-hz bench 30
 
+hz bench 30
 hz driver Member
 hz run get
-
 hz driver Client
 hz run get

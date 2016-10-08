@@ -9,8 +9,6 @@ cleanup() {
 }
 trap "cleanup" INT TERM EXIT
 
-hzVersion=${1:-$(hazelcastVersion)}
-
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
 hz memberOps "-Xms500M -Xmx500M ${hzProps}"
 hz clientOps "-Xms100M -Xmx100M ${hzProps}"

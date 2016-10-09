@@ -30,8 +30,8 @@ cp a.box ${subDir} 2>/dev/null || true
 cd ${subDir}
 
 echo -e "\033[32m${HZ_CMD_BENCH_SRC}/lab/${testDir}\033[0m"
-echo -e "\033[32m${subDir}\033[0m"
-pwd
+echo -e "\033[32m$(pwd)\033[0m"
+
 cp -r ${HZ_CMD_BENCH_SRC}/lab/${testDir}/* .
 
 echo 'aws-create --count' ${boxCount} '--instanceType' ${type} '--imageId' ${ami}

@@ -23,7 +23,7 @@ hz cluster -size C1 -v 3.7.2 -ee -boxes a.box
 hz run load
 hz run validate
 
-hz bench 30
+hz bench 300
 hz driver Member
 hz run get
 hz driver Client

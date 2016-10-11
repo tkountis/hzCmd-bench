@@ -13,7 +13,7 @@ hzVersion=${1:-$(hazelcastVersion)}
 
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
 hz memberOps "-Xms500M -Xmx500M ${hzProps}"
-hz clientOps "-Xms1G -Xmx1G ${hzProps}"
+hz clientOps "-Xms100M -Xmx100M ${hzProps}"
 hz cluster -size M1 -v ${hzVersion} -ee -boxes a.box
 
 

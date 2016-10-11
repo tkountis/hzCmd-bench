@@ -24,8 +24,8 @@ hz cluster -size C1 -v 3.7.2        -ee -boxes a.box
 
 hz bench 900
 
-hz driver Member
-hz run createUseDestroy
+#hz driver Member
+#hz run createUseDestroy
 hz driver Client
 hz run createUseDestroy
 hz driver *

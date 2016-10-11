@@ -1,33 +1,40 @@
 createUseDestroy_mapBak1HD@class=hz.map.CreateUseDestroy
 createUseDestroy_mapBak1HD@threads=2
 createUseDestroy_mapBak1HD@name=mapBak1HD
+createUseDestroy_mapBak1HD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 createUseDestroy_mapBak1@class=hz.map.CreateUseDestroy
 createUseDestroy_mapBak1@threads=2
 createUseDestroy_mapBak1@name=mapBak1
+createUseDestroy_mapBak1@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 createUseDestroy_cacheBak1HD@class=hz.cache.CreateUseDestroy
 createUseDestroy_cacheBak1HD@threads=2
 createUseDestroy_cacheBak1HD@name=cacheBak1HD
+createUseDestroy_cacheBak1HD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 createUseDestroy_cacheBak1@class=hz.cache.CreateUseDestroy
 createUseDestroy_cacheBak1@threads=2
 createUseDestroy_cacheBak1@name=cacheBak1
-
+createUseDestroy_cacheBak1@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 
 createUseDestroy_mapBak0HD@class=hz.map.CreateUseDestroy
 createUseDestroy_mapBak0HD@threads=2
 createUseDestroy_mapBak0HD@name=mapBak0HD
+createUseDestroy_mapBak0HD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 createUseDestroy_mapBak0@class=hz.map.CreateUseDestroy
 createUseDestroy_mapBak0@threads=2
 createUseDestroy_mapBak0@name=mapBak0
+createUseDestroy_mapBak0@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 createUseDestroy_cacheBak0HD@class=hz.cache.CreateUseDestroy
 createUseDestroy_cacheBak0HD@threads=2
 createUseDestroy_cacheBak0HD@name=cacheBak0HD
+createUseDestroy_cacheBak0HD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 createUseDestroy_cacheBak0@class=hz.cache.CreateUseDestroy
 createUseDestroy_cacheBak0@threads=2
 createUseDestroy_cacheBak0@name=cacheBak0
+createUseDestroy_cacheBak0@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

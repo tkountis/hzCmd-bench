@@ -2,50 +2,40 @@ get_mapBak1HD@class=hz.map.GetCheck
 get_mapBak1HD@threads=2
 get_mapBak1HD@keyDomain=1000
 get_mapBak1HD@name=mapBak1HD
-get_mapBak1HD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 get_mapBak1@class=hz.map.GetCheck
 get_mapBak1@threads=2
 get_mapBak1@keyDomain=1000
 get_mapBak1@name=mapBak1
-get_mapBak1@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
-
 
 get_cacheBak1HD@class=hz.cache.GetCheck
 get_cacheBak1HD@threads=2
 get_cacheBak1HD@keyDomain=1000
 get_cacheBak1HD@name=cacheBak1HD
-get_cacheBak1HD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 get_cacheBak1@class=hz.cache.GetCheck
 get_cacheBak1@threads=2
 get_cacheBak1@keyDomain=1000
 get_cacheBak1@name=cacheBak1
-get_cacheBak1@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
-
 
 
 get_mapBak0HD@class=hz.map.GetCheck
 get_mapBak0HD@threads=2
 get_mapBak0HD@keyDomain=1000
 get_mapBak0HD@name=mapBak0HD
-get_mapBak0HD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 get_mapBak0@class=hz.map.GetCheck
 get_mapBak0@threads=2
 get_mapBak0@keyDomain=1000
 get_mapBak0@name=mapBak0
-get_mapBak0@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 
 get_cacheBak0HD@class=hz.cache.GetCheck
 get_cacheBak0HD@threads=2
 get_cacheBak0HD@keyDomain=1000
 get_cacheBak0HD@name=cacheBak0HD
-get_cacheBak0HD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 get_cacheBak0@class=hz.cache.GetCheck
 get_cacheBak0@threads=2
 get_cacheBak0@keyDomain=1000
 get_cacheBak0@name=cacheBak0
-get_cacheBak0@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

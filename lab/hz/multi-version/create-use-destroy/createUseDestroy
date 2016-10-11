@@ -73,10 +73,10 @@ createUseDestroy_lock@name=lockCreateUseDestroy
 createUseDestroy_lock@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 
-createUseDestroy_q@class=hz.queue.CreateUseDestroy
-createUseDestroy_q@threads=2
-createUseDestroy_q@name=qCreateUseDestroy
-createUseDestroy_q@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+createUseDestroy_queue@class=hz.queue.CreateUseDestroy
+createUseDestroy_queue@threads=2
+createUseDestroy_queue@name=qCreateUseDestroy
+createUseDestroy_queue@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 
 createUseDestroy_repmap@class=hz.repmap.CreateUseDestroy

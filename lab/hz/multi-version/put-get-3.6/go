@@ -18,6 +18,7 @@ hz cluster -size M1 -v 3.6.2 -ee -boxes a.box
 hz cluster -size M1 -v 3.6.3 -ee -boxes a.box
 hz cluster -size M1 -v 3.6.4 -ee -boxes a.box
 hz cluster -size M1 -v 3.6.5 -ee -boxes a.box
+hz cluster -size M1 -v 3.6.6 -ee -boxes a.box
 
 hz cluster -size C1 -v 3.6   -ee -boxes a.box
 hz cluster -size C1 -v 3.6.1 -ee -boxes a.box
@@ -25,6 +26,7 @@ hz cluster -size C1 -v 3.6.2 -ee -boxes a.box
 hz cluster -size C1 -v 3.6.3 -ee -boxes a.box
 hz cluster -size C1 -v 3.6.4 -ee -boxes a.box
 hz cluster -size C1 -v 3.6.5 -ee -boxes a.box
+hz cluster -size M1 -v 3.6.6 -ee -boxes a.box
 
 hz run load
 hz run validate

@@ -6,6 +6,7 @@ import com.hazelcast.core.ITopic;
 
 public abstract class TopicBench extends BenchBase {
 
+    public boolean reliable=true;
     protected HazelcastInstance hzInstance;
     protected ITopic<Object> topic;
 
@@ -14,7 +15,12 @@ public abstract class TopicBench extends BenchBase {
 
     public void init() throws Exception{
         super.init();
-        topic = hzInstance.getReliableTopic(name);
+
+        if(reliable){
+            topic = hzInstance.getReliableTopic(name);
+        }else{
+            topic = hzInstance.getTopic(name);
+        }
     }
 
     public void setVendorObject(Object o) {

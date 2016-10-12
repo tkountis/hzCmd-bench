@@ -49,6 +49,18 @@ createUseDestroy_atomic@name=atomicCreateUseDestroy
 createUseDestroy_atomic@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 
+createUseDestroy_executor@class=hz.executor.regular.CreateUseDestroy
+createUseDestroy_executor@threads=2
+createUseDestroy_executor@name=executorCreateUseDestroy
+createUseDestroy_executor@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+
+
+createUseDestroy_durableExecutor@class=hz.executor.durable.CreateUseDestroy
+createUseDestroy_durableEexecutor@threads=2
+createUseDestroy_durableEexecutor@name=durableExecutorCreateUseDestroy
+createUseDestroy_durableEexecutor@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+
+
 createUseDestroy_id@class=hz.id.CreateUseDestroy
 createUseDestroy_id@threads=2
 createUseDestroy_id@name=idCreateUseDestroy
@@ -91,13 +103,26 @@ createUseDestroy_ring@name=ringCreateUseDestroy
 createUseDestroy_ring@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 
+createUseDestroy_semaphore@class=hz.semaphore.CreateUseDestroy
+createUseDestroy_semaphore@threads=2
+createUseDestroy_semaphore@name=semaphoreCreateUseDestroy
+createUseDestroy_semaphore@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+
+
 createUseDestroy_set@class=hz.set.CreateUseDestroy
 createUseDestroy_set@threads=2
 createUseDestroy_set@name=setCreateUseDestroy
 createUseDestroy_set@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 
+createUseDestroy_reliableTopic@class=hz.topic.CreateUseDestroy
+createUseDestroy_reliableTopic@reliable=true
+createUseDestroy_reliableTopic@threads=2
+createUseDestroy_reliableTopic@name=reliableTopicCreateUseDestroy
+createUseDestroy_reliableTopic@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+
 createUseDestroy_topic@class=hz.topic.CreateUseDestroy
+createUseDestroy_topic@reliable=false
 createUseDestroy_topic@threads=2
 createUseDestroy_topic@name=topicCreateUseDestroy
 createUseDestroy_topic@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

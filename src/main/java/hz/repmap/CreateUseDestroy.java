@@ -1,9 +1,9 @@
 package hz.repmap;
 
 import com.hazelcast.core.ReplicatedMap;
-import hz.queue.base.QueueBench;
+import hz.repmap.base.RepMapBench;
 
-public class CreateUseDestroy extends QueueBench {
+public class CreateUseDestroy extends RepMapBench {
 
     public int max=10;
 

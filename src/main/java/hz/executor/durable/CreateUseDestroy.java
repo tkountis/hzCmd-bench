@@ -3,6 +3,7 @@ package hz.executor.durable;
 import com.hazelcast.durableexecutor.DurableExecutorService;
 import com.hazelcast.durableexecutor.DurableExecutorServiceFuture;
 import hz.executor.durable.base.ExecutorBench;
+import hz.executor.tasks.Counter;
 
 import java.util.concurrent.ExecutionException;
 

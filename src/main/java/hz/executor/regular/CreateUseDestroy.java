@@ -4,6 +4,7 @@ package hz.executor.regular;
 import com.hazelcast.core.IExecutorService;
 import com.hazelcast.core.Member;
 import hz.executor.regular.base.ExecutorBench;
+import hz.executor.tasks.Counter;
 
 import java.util.Map;
 import java.util.concurrent.ExecutionException;

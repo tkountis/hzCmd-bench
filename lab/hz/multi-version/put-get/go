@@ -28,17 +28,17 @@ hz cluster -size C1 -v 3.6.4        -ee -boxes a.box
 hz cluster -size C1 -v 3.6.5        -ee -boxes a.box
 hz cluster -size C1 -v 3.6.6        -ee -boxes a.box
 
-hz bench 900
+hz bench 1800
 hz driver Client
 hz run createDestroy
-hz driver Member
+hz driver HZ
 hz run createDestroy
 
 
-hz run load
-hz run validate
+#hz run load
+#hz run validate
 
-hz driver Member
-hz run get
-hz driver Client
-hz run get
+#hz driver Member
+#hz run get
+#hz driver Client
+#hz run get

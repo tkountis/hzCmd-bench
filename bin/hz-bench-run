@@ -30,6 +30,9 @@ cd ${subDir}
 
 echo -e "\033[32m${HZ_CMD_BENCH_SRC}/lab/${testDir}\033[0m"
 echo -e "\033[32m$(pwd)\033[0m"
+linkPath=$(pwd)
+linkPath=${linkPath#'/disk1/'}
+echo "http://54.87.52.100/~${linkPath}"
 
 cp -r ${HZ_CMD_BENCH_SRC}/lab/${testDir}/* .
 

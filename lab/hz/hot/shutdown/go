@@ -32,7 +32,7 @@ for i in {1..75} ; do
     sleep 60
     hz run clusterShutdown
     hz embeddedRestart Member
-    hz run active
+    #hz run active
     hz check
 done
 wait

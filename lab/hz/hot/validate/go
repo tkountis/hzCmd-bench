@@ -31,7 +31,7 @@ hz-ssh a.box 'df -h' ec2-user
 for i in {1..40} ; do
     hz run clusterShutdown
     hz embeddedRestart Member
-    hz run active
+    #hz run active
     hz check
 done
 hz run validate

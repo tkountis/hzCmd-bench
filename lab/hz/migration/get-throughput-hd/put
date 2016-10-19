@@ -1,8 +1,0 @@
-getMapHD@class=hz.map.Set
-getMapHD@driver=Client
-getMapHD@threads=64
-getMapHD@valueSetSize=1
-getMapHD@valueSize=1000
-getMapHD@keyDomain=50000000
-getMapHD@name=mapBak1HD
-getMapHD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

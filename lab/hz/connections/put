@@ -1,0 +1,4 @@
+put@class=hz.map.Put
+put@keyDomain=1000
+put@valueSize=101
+put@name=mapBak1

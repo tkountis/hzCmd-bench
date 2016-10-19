@@ -1,0 +1,9 @@
+setMapHD@class=hz.map.Set
+setMapHD@driver=Client
+setMapHD@threads=64
+setMapHD@valueSetSize=1
+setMapHD@valueSize=1000
+setMapHD@keyDomain=50000000
+setMapHD@name=mapBak1HD
+setMapHD@ignore=com.hazelcast.spi.exception.TargetDisconnectedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+

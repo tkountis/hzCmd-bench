@@ -13,7 +13,6 @@ public class Info extends MultiCacheBench {
 
         for (ICache cache : getCaches()) {
             String name = cache.getName();
-            System.out.println("cache "+name);
             System.out.println("cache "+name+".size()="+cache.size());
         }
         setRunning(false);

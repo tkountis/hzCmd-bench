@@ -1,13 +1,15 @@
-get_cacheBak0@class=hz.cache.multi.Clear
-get_cacheBak0@driver=Client
-get_cacheBak0@threads=1
-get_cacheBak0@count=3
-get_cacheBak0@name=cacheBak0
-get_cacheBak0@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+clear_cacheBak0@class=hz.cache.multi.Clear
+clear_cacheBak0@driver=Client
+clear_cacheBak0@interval=5000
+clear_cacheBak0@threads=1
+clear_cacheBak0@count=25
+clear_cacheBak0@name=cacheBak0
+clear_cacheBak0@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
-get_cacheBakDual@class=hz.cache.multi.Clear
-get_cacheBakDual@driver=Client
-get_cacheBakDual@threads=1
-get_cacheBakDual@count=3
-get_cacheBakDual@name=cacheBakDual
-get_cacheBakDual@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+clear_cacheBakDual@class=hz.cache.multi.Clear
+clear_cacheBakDual@driver=Client
+clear_cacheBakDual@interval=5000
+clear_cacheBakDual@threads=1
+clear_cacheBakDual@count=25
+clear_cacheBakDual@name=cacheBakDual
+clear_cacheBakDual@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

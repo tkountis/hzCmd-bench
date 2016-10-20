@@ -1,7 +1,4 @@
-<hazelcast xsi:schemaLocation="http://www.hazelcast.com/schema/config
-                               http://www.hazelcast.com/schema/config/hazelcast-config-3.6.xsd"
-           xmlns="http://www.hazelcast.com/schema/config"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><hazelcast xmlns="http://www.hazelcast.com/schema/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hazelcast.com/schema/config                                http://www.hazelcast.com/schema/config/hazelcast-config-3.6.xsd">
 
     <properties>
         <property name="hazelcast.phone.home.enabled">false</property>
@@ -44,21 +41,21 @@
 
 
     <group>
-        <name>group</name>
-    </group>
+        <name>HZ</name>
+    <password>HZ</password></group>
 
     <network>
-        <port port-count="200" auto-increment="true">5701</port>
+        <port auto-increment="true" port-count="200">5701</port>
         <join>
             <multicast enabled="false"/>
             <tcp-ip enabled="true">
-            </tcp-ip>
+            <member>10.212.40.101</member><member>10.212.40.102</member><member>10.212.40.103</member><member>10.212.40.104</member><member>10.212.40.105</member><member>10.212.40.106</member><member>10.212.40.108</member><member>10.212.40.109</member><member>10.212.40.110</member></tcp-ip>
         </join>
     </network>
 
 
     <native-memory allocator-type="POOLED" enabled="true">
-        <size unit="GIGABYTES" value="10" />
+        <size unit="GIGABYTES" value="10"/>
         <metadata-space-percentage>25</metadata-space-percentage>
     </native-memory>
 
@@ -66,7 +63,7 @@
     <cache name="cacheBak0*">
         <backup-count>0</backup-count>
         <in-memory-format>NATIVE</in-memory-format>
-        <eviction size="25" eviction-policy="LRU" max-size-policy="FREE_NATIVE_MEMORY_PERCENTAGE" />
+        <eviction eviction-policy="LRU" max-size-policy="FREE_NATIVE_MEMORY_PERCENTAGE" size="25"/>
         <statistics-enabled>true</statistics-enabled>
     </cache>
 
@@ -74,7 +71,7 @@
         <backup-count>1</backup-count>
         <async-backup-count>1</async-backup-count>
         <in-memory-format>NATIVE</in-memory-format>
-        <eviction size="25" eviction-policy="LRU" max-size-policy="FREE_NATIVE_MEMORY_PERCENTAGE" />
+        <eviction eviction-policy="LRU" max-size-policy="FREE_NATIVE_MEMORY_PERCENTAGE" size="25"/>
         <statistics-enabled>true</statistics-enabled>
     </cache>
 

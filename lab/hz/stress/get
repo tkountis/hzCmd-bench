@@ -1,17 +1,17 @@
 get_cacheBak0@class=hz.cache.multi.GetAsyncWait
 get_cacheBak0@driver=Client
-get_cacheBak0@threads=64
-get_cacheBak0@count=3
+get_cacheBak0@threads=16
+get_cacheBak0@count=100
 get_cacheBak0@timeout=50
-get_cacheBak0@keyDomain=50000000
+get_cacheBak0@keyDomain=1000
 get_cacheBak0@name=cacheBak0
 get_cacheBak0@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 get_cacheBakDual@class=hz.cache.multi.GetAsyncWait
 get_cacheBakDual@driver=Client
-get_cacheBakDual@threads=64
-get_cacheBakDual@count=3
+get_cacheBakDual@threads=16
+get_cacheBakDual@count=100
 get_cacheBakDual@timeout=50
-get_cacheBakDual@keyDomain=50000000
+get_cacheBakDual@keyDomain=1000
 get_cacheBakDual@name=cacheBakDual
 get_cacheBakDual@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

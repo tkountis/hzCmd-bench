@@ -1,7 +1,7 @@
 load_cacheBak0@class=hz.cache.member.multi.MultiLoad
 load_cacheBak0@driver=Member
 load_cacheBak0@seed=13
-load_cacheBak0@count=3
+load_cacheBak0@count=100
 load_cacheBak0@keyDomain=1000
 load_cacheBak0@valueSetSize=1
 load_cacheBak0@valueSize=1000
@@ -10,7 +10,7 @@ load_cacheBak0@name=cacheBak0
 load_cacheBakDual@class=hz.cache.member.multi.MultiLoad
 load_cacheBakDual@driver=Member
 load_cacheBakDual@seed=13
-load_cacheBakDual@count=3
+load_cacheBakDual@count=100
 load_cacheBakDual@keyDomain=1000
 load_cacheBakDual@valueSetSize=1
 load_cacheBakDual@valueSize=1000

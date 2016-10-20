@@ -1,11 +1,12 @@
 info_cacheBak0@class=hz.cache.multi.Info
 info_cacheBak0@driver=Member1
 info_cacheBak0@threads=1
-info_cacheBak0@count=3
+info_cacheBak0@count=100
 info_cacheBak0@name=cacheBak0
 
 info_cacheBakDual@class=hz.cache.multi.Info
 info_cacheBakDual@driver=Member1
 info_cacheBakDual@threads=1
-info_cacheBakDual@count=3
+info_cacheBakDual@count=100
 info_cacheBakDual@name=cacheBakDual
+

@@ -6,38 +6,33 @@
     <properties>
         <property name="hazelcast.phone.home.enabled">false</property>
 
-
+        <property name="hazelcast.partition.max.parallel.replications">0</property>
         <property name="hazelcast.partition.count">6144</property>
+
         <property name="hazelcast.performance.metric.level">INFO</property>
         <property name="hazelcast.performance.monitor.delay.seconds">30</property>
         <property name="hazelcast.performance.monitor.max.rolled.file.size.mb">10</property>
         <property name="hazelcast.performance.monitor.max.rolled.file.count">10</property>
         <property name="hazelcast.performance.monitor.human.friendly.format">true</property>
-        <property name="hazelcast.clientengine.thread.count">100</property>
-        <property name="hazelcast.event.thread.count">5</property>
+
         <property name="hazelcast.operation.thread.count">10</property>
         <property name="hazelcast.operation.generic.thread.count">20</property> <!-- #processors / 2  -->
-        <property name="hazelcast.io.thread.count">3</property>
+        <property name="hazelcast.operation.backup.timeout.millis">30000</property>
+
         <property name="hazelcast.backpressure.enabled">true</property>
-
-
-        <!--
-        other property's mentioned by us, are they used
-
         <property name="hazelcast.backpressure.syncwindow">20</property>
         <property name="hazelcast.backpressure.max.concurrent.invocations.per.partition">50</property>
-
 
         <property name="hazelcast.cache.invalidation.batch.size">25000</property>
         <property name="hazelcast.cache.invalidation.batchfrequency.seconds">5</property>
 
-        <property name="hazelcast.operation.backup.timeout.millis">30000</property>
-
         <property name="hazelcast.socket.receive.buffer.size">1024</property>
         <property name="hazelcast.socket.send.buffer.size">1024</property>
 
-        <property name="hazelcast.partition.max.parallel.replications">0</property>
-        -->
+        <property name="hazelcast.clientengine.thread.count">100</property>
+        <property name="hazelcast.event.thread.count">5</property>
+        <property name="hazelcast.io.thread.count">3</property>
+
     </properties>
 
     <!-- <management-center enabled="true">ip:8880/mancenter</management-center> -->

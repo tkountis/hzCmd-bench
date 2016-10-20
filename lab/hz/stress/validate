@@ -1,0 +1,17 @@
+val_cacheBak0@class=hz.cache.member.multi.MultiValidateNotNull
+val_cacheBak0@driver=Member
+val_cacheBak0@seed=13
+val_cacheBak0@count=3
+val_cacheBak0@keyDomain=1000
+val_cacheBak0@valueSetSize=1
+val_cacheBak0@valueSize=1000
+val_cacheBak0@name=cacheBak0
+        
+val_cacheBakDual@class=hz.cache.member.multi.MultiValidateNotNull
+val_cacheBakDual@driver=Member
+val_cacheBakDual@seed=13
+val_cacheBakDual@count=3
+val_cacheBakDual@keyDomain=1000
+val_cacheBakDual@valueSetSize=1
+val_cacheBakDual@valueSize=1000
+val_cacheBakDual@name=cacheBakDual

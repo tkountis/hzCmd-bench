@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -e
+cleanup() {
+    exitCode=$?
+    hz download
+    hz wipe
+    chartAll-JavaMetrics output
+    exit ${exitCode}
+}
+trap "cleanup" INT TERM EXIT
+
+hzVersion=${1:-$(hazelcastVersion)}
+
+hz broker -ip 10.212.1.107
+
+ops="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
+hz memberOps "-Xms2G -Xmx2G ${ops}"
+hz clientOps "-Xms400M -Xmx400M ${ops}"
+hz cluster -size DM3C2000 -v 3.6.1 -ee -boxes a.box -user danny
+
+hz run load
+hz run validate
+hz submit get
+sleep 30
+hz run clear
+hz run validate
+
+hz stop

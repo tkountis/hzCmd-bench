@@ -1,6 +1,5 @@
 package hz.cache.multi;
 
-import com.hazelcast.core.HazelcastOverloadException;
 import com.hazelcast.core.ICompletableFuture;
 import hz.cache.base.MultiCacheBench;
 
@@ -13,11 +12,9 @@ public class GetAsyncWait extends MultiCacheBench {
     public int timeout=0;
 
     public void timeStep() throws InterruptedException, ExecutionException {
+        ICompletableFuture f = getCache().getAsync(randomKey());
         try {
-            ICompletableFuture f = getCache().getAsync(randomKey());
-            try {
-                f.get(timeout, TimeUnit.MILLISECONDS);
-            } catch (TimeoutException t) { }
-        }catch (HazelcastOverloadException e){}
+            f.get(timeout, TimeUnit.MILLISECONDS);
+        } catch (TimeoutException t) { }
     }
 }

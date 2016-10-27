@@ -26,12 +26,10 @@ public class GetAsyncWaitNearCached extends MultiCacheBench {
 
     public void timeStep() throws InterruptedException, ExecutionException {
 
-        /*
-        if( !(random.nextDouble() < repeat) ){
+        if( random.nextDouble() > repeat ){
             cache = getCache();
             key = randomKey();
         }
-        */
 
         ICompletableFuture f = cache.getAsync(key);
         try {

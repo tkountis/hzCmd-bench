@@ -1,5 +1,0 @@
-
-createUseDestroy_lock@class=hz.lock.CreateUseDestroy
-createUseDestroy_lock@threads=8
-createUseDestroy_lock@name=lockCreateUseDestroy
-createUseDestroy_lock@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

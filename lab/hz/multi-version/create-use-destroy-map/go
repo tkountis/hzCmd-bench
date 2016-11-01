@@ -27,9 +27,9 @@ hz cluster -size C1 -v 3.7.3-SNAPSHOT -ee -boxes a.box
 
 hz bench 1800
 hz driver Client
-hz run createDestroy
+hz run createUseDestroy
 hz driver HZ
-hz run createDestroy
+hz run createUseDestroy
 hz download -dir output-case-1
 hz wipe
 
@@ -53,9 +53,9 @@ hz cluster -size C1 -v 3.6.6          -ee -boxes a.box
 
 hz bench 1800
 hz driver Client
-hz run createDestroy
+hz run createUseDestroy
 hz driver HZ
-hz run createDestroy
+hz run createUseDestroy
 hz download -dir output-case-2
 hz wipe
 
@@ -85,8 +85,8 @@ hz cluster -size C1 -v 3.6.6          -ee -boxes a.box
 
 hz bench 1800
 hz driver Client
-hz run createDestroy
+hz run createUseDestroy
 hz driver HZ
-hz run createDestroy
+hz run createUseDestroy
 hz download -dir output-case-3
 hz wipe

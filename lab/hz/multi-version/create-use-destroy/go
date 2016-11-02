@@ -28,9 +28,20 @@ hz cluster -size C1 -v 3.7.3-SNAPSHOT          -ee -boxes a.box
 
 #hz bounce -iterations 10  -iterationDelay 5 -restartDelay 5 RandomMember
 
-hz bench 300
+hz bench 1800
 hz driver Client
-hz run createUseDestroy
+hz run createUseDestroy &
+
+for i in {1..4} ; do
+    sleep 60
+    hz kill Member${i}
+    sleep 120
+    hz restart Member${i}
+    sleep 60
+    hz check
+done
+wait
+
 hz driver HZ
 hz run createUseDestroy
 hz download -dir output-case-1

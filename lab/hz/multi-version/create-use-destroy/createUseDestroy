@@ -2,7 +2,7 @@ createUseDestroy_mapBak1HD@class=hz.map.CreateUseDestroy
 createUseDestroy_mapBak1HD@threads=2
 createUseDestroy_mapBak1HD@name=mapBak1HDCreateUseDestroy
 createUseDestroy_mapBak1HD@max=1
-createUseDestroy_mapBak1HD@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.spi.exception.TargetDisconnectedException
+createUseDestroy_mapBak1HD@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException
 
 createUseDestroy_mapBak1@class=hz.map.CreateUseDestroy
 createUseDestroy_mapBak1@threads=2

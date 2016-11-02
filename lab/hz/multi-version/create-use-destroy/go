@@ -30,7 +30,7 @@ hz cluster -size C1 -v 3.7.3-SNAPSHOT          -ee -boxes a.box
 
 hz bench 1800
 hz driver Client
-hz run createUseDestroy &
+hz run createUseDestroy-withKill &
 
 for i in {1..4} ; do
     sleep 60

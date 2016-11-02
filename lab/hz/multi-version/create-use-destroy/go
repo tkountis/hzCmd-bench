@@ -26,6 +26,8 @@ hz cluster -size C1 -v 3.7.2          -ee -boxes a.box
 hz cluster -size C1 -v 3.7.3-SNAPSHOT          -ee -boxes a.box
 
 hz bench 300
+
+#hz bounce -iterations 10  -iterationDelay 5 -restartDelay 5 RandomMember
 hz driver Client
 hz run createUseDestroy
 hz driver HZ

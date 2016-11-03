@@ -38,7 +38,7 @@ for i in {1..4} ; do
     sleep 120
     hz restart Member${i}
     sleep 60
-    #hz check
+    #hz check    #it cause issue if the boxes are empty at is can find *ClusterID* dir on that box
 done
 wait
 

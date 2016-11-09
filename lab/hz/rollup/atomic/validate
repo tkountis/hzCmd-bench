@@ -1,0 +1,6 @@
+validate@class=hz.atomic.validate.CasAssert
+validate@driver=Member1
+validate@threads=1
+validate@count=500
+validate@name=atomic
+

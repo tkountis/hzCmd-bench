@@ -1,0 +1,6 @@
+queue_poll@class=hz.queue.Poll
+queue_poll@driver=Client
+queue_poll@name=queueZ
+queue_poll@count=200
+queue_poll@threads=1
+queue_poll@ignore=com.hazelcast.spi.exception.TargetDisconnectedException

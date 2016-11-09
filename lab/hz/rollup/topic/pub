@@ -1,0 +1,3 @@
+topic_pub@class=hz.topic.Publisher
+topic_pub@driver=Client1
+topic_pub@name=topicA

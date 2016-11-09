@@ -17,7 +17,7 @@ hz clientOps "-Xms400M -Xmx400M ${ops}"
 hz cluster -size M4C4 -v 3.7,3.7.1,3.7.2,3.7.3,${hzVersion} -ee -boxes a.box
 
 for version in 3.7 3.7.1 3.7.2 3.7.3 ${hzVersion} ; do
-  hz submit lock
+  hz run txn &
 
   for i in {1..4}; do
     sleep 10
@@ -28,7 +28,7 @@ for version in 3.7 3.7.1 3.7.2 3.7.3 ${hzVersion} ; do
   done
 
   hz stop
-  #wait
+  wait
   hz run validate
 
   hz bounce -v ${version} Client

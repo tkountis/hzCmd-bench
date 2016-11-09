@@ -1,0 +1,11 @@
+idx_mapBak1HDSqlIdx@class=hz.map.sql.predicate.AddIndex
+idx_mapBak1HDSqlIdx@driver=Member1
+idx_mapBak1HDSqlIdx@name=mapBak1HDSqlIdx
+idx_mapBak1HDSqlIdx@field=id
+idx_mapBak1HDSqlIdx@ordered=true
+
+idx_mapBak1SqlIdx@class=hz.map.sql.predicate.AddIndex
+idx_mapBak1SqlIdx@driver=Member1
+idx_mapBak1SqlIdx@name=mapBak1SqlIdx
+idx_mapBak1SqlIdx@field=id
+idx_mapBak1SqlIdx@ordered=true

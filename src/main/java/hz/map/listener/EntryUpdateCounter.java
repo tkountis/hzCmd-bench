@@ -4,24 +4,27 @@ package hz.map.listener;
 import com.hazelcast.core.EntryEvent;
 import com.hazelcast.map.listener.EntryUpdatedListener;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
+import static utils.Utils.sleep;
+
 public class EntryUpdateCounter implements EntryUpdatedListener{
 
-    private int updateCount=0;
+    private AtomicInteger updateCount = new AtomicInteger(0);
     private long updateTime=0;
 
     public void entryUpdated(EntryEvent entryEvent) {
-        updateCount++;
+        updateCount.incrementAndGet();
         updateTime = System.currentTimeMillis();
     }
 
     public boolean updatedIn(int seconds){
-
-        long now = System.currentTimeMillis();
-
-        if( (now - updateTime) < (seconds*1000) ){
-            return true;
+        int before = updateCount.get();
+        sleep(seconds);
+        if(before == updateCount.get()){
+            return false;
         }
-        return false;
+        return true;
     }
 
     @Override

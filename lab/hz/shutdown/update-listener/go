@@ -30,7 +30,9 @@ for j in {1..15}; do
   hz embeddedRestart Member${i}
  done
 
- hz run shutDown  Member4
+
+ hz driver Member4
+ hz run shutDown
  hz embeddedRestart Member4
 
 done

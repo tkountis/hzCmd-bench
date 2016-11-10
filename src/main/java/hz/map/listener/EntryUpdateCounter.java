@@ -20,7 +20,7 @@ public class EntryUpdateCounter implements EntryUpdatedListener{
 
     public boolean updatedIn(int seconds){
         int before = updateCount.get();
-        sleep(seconds);
+        sleep(seconds*1000);
         if(before == updateCount.get()){
             return false;
         }

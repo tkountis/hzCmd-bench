@@ -19,7 +19,10 @@ public abstract class LockValidate extends LockBench {
     }
 
     public void incMapIdx(int i){
-        int val = lockedMap.get(i);
+        Integer val = lockedMap.get(i);
+        if(val==null){
+            val=new Integer(0);
+        }
         utils.Utils.sleep(sleepMs);
         lockedMap.put(i, ++val);
     }

@@ -9,7 +9,10 @@ public abstract class LockValidate extends MapBench {
 
 
     public void incMapIdx(int i){
-        int val = (Integer) map.get(i);
+        Integer val = (Integer) map.get(i);
+        if(val==null){
+            val = new Integer(0);
+        }
         utils.Utils.sleep(sleepMs);
         map.put(i, ++val);
     }

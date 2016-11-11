@@ -14,9 +14,11 @@ public class LeaseLock extends LockValidate {
         super.init();
         increments = new int[count];
 
+        /*
         for (int i=0; i<count; i++) {
             zeroMapIdx(i);
         }
+        */
     }
 
     public void timeStep() {

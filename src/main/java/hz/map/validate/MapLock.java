@@ -10,9 +10,9 @@ public class MapLock extends LockValidate {
         super.init();
         increments = new int[keyDomain];
 
-        for(int i=0; i<keyDomain; i++){
-            map.put(getKey(i), 0);
-        }
+        //for(int i=0; i<keyDomain; i++){
+        //    map.put(getKey(i), 0);
+        //}
     }
 
     public void timeStep() {

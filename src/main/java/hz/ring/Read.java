@@ -6,6 +6,8 @@ import com.hazelcast.ringbuffer.Ringbuffer;
 import hz.ring.base.RingBench;
 
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 public class Read extends RingBench {
 
@@ -28,10 +30,14 @@ public class Read extends RingBench {
         Ringbuffer ringBuffer = getRingBuffer(idx);
 
         ICompletableFuture<ReadResultSet<Object>> res = ringBuffer.readManyAsync(seqs[idx], 1, 5, null);
-        ReadResultSet<Object> objects = res.get();
 
-        seqs[idx]+=objects.readCount();
-        readPerRing[idx]+=objects.readCount();
+        try{
+            ReadResultSet<Object> objects = res.get(5, TimeUnit.MINUTES);
+            seqs[idx]+=objects.readCount();
+            readPerRing[idx]+=objects.readCount();
+        } catch (TimeoutException e) {
+            e.printStackTrace();
+        }
     }
 
     public void postPhase() {

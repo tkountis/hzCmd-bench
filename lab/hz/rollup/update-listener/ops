@@ -8,6 +8,7 @@ put@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceN
 
 EntryUpdate@class=hz.map.listener.EntryUpdate
 EntryUpdate@driver=Client
+EntryUpdate@updateTime=5
 EntryUpdate@threads=1
 EntryUpdate@name=mapBak1HD
 EntryUpdate@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

@@ -5,6 +5,7 @@ import hz.map.base.MapBench;
 
 public class EntryUpdate extends MapBench {
 
+    public int updateTime=30;
     private EntryUpdateCounter counter= new EntryUpdateCounter();
 
     public void init() throws Exception{
@@ -13,7 +14,7 @@ public class EntryUpdate extends MapBench {
     }
 
     public void timeStep() throws AssertionException {
-        if(!counter.updatedIn(60)){
+        if(!counter.updatedIn(updateTime)){
             throw new AssertionException(map.getName()+"="+map.size()+" "+counter.toString());
         }
     }

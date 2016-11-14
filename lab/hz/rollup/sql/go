@@ -22,7 +22,7 @@ hz run validate
 
 for version in 3.7 3.7.1 3.7.2 3.7.3 ${hzVersion} ; do
 
-  hz run get &
+  hz submit get
   sleep 30
 
   for i in {1..4}; do
@@ -30,6 +30,7 @@ for version in 3.7 3.7.1 3.7.2 3.7.3 ${hzVersion} ; do
     hz driver Member${i}
     hz run shutdown
     hz bounce -v ${version} Member${i}
+    hz check
     sleep 10
   done
 

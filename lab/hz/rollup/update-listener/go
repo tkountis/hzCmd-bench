@@ -32,6 +32,5 @@ for version in 3.7 3.7.1 3.7.2 3.7.3 ${hzVersion} ; do
   hz stop
   wait
   hz bounce -v ${version} Client
+  hz check
 done
-
-hz check

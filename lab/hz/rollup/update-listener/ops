@@ -1,6 +1,6 @@
 put@class=hz.map.Put
-put@driver=Client
-put@threads=8
+put@driver=Client1
+put@threads=1
 put@keyDomain=10000
 put@name=mapBak1HD
 put@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

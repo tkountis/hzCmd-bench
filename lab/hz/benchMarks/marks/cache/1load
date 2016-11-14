@@ -4,4 +4,4 @@ cacheLoad@warmup=0
 cacheLoad@threads=1
 cacheLoad@driver=Member
 cacheLoad@keyDomain=100000
-cacheLoad@name=cacheBak0,cacheBak1,cacheAsync1
+cacheLoad@name=cacheBak0,cacheBak1

@@ -17,7 +17,7 @@ hz cluster -size M4C4 -v ${hzVersion}  -ee -boxes a.box
 
 hz run atomic &
 sleep 120
-hz freeze RandomMember -iterations 18 -restartDelay 125
+hz freeze RandomMember -iterations 13 -restartDelay 180
 hz stop
 wait
 hz run validate

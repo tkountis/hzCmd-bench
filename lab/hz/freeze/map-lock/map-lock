@@ -3,3 +3,4 @@ maplock@driver=Client
 maplock@threads=12
 maplock@keyDomain=1000
 maplock@name=mapLockKey
+maplock@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.core.OperationTimeoutException:com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException

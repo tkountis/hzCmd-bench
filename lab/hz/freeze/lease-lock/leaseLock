@@ -3,3 +3,4 @@ leaselock@driver=Client
 leaselock@threads=12
 leaselock@count=500
 leaselock@name=lease-lock
+leaselock@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.core.OperationTimeoutException:com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException

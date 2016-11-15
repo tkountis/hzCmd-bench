@@ -3,3 +3,4 @@ lock@driver=Client
 lock@threads=12
 lock@count=500
 lock@name=lock
+lock@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.core.OperationTimeoutException:com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException

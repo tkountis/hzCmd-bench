@@ -16,8 +16,6 @@ public class PubSubAssert extends TopicBench {
             String subName = name+subPostFix+i;
             long recivedCount = hzInstance.getAtomicLong(subName).get();
 
-            System.out.println(topixName+"="+publishedCount+" != "+subName+"="+recivedCount);
-
             if(publishedCount != recivedCount){
                 throw new AssertionException(topixName+"="+publishedCount+" != "+subName+"="+recivedCount);
             }

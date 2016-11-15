@@ -16,19 +16,8 @@ hz clientOps "-Xms400M -Xmx400M ${ops}"
 hz cluster -size M4C4 -v ${hzVersion} -ee -boxes a.box
 
 hz run leaseLock &
-
-for j in {1..15}; do
- for i in {1..3}; do
-  sleep 20
-  hz driver Member${i}
-  hz run shutDown
-  hz check
- done
-
- for i in {1..3}; do
-  hz embeddedRestart Member${i}
- done
-done
+sleep 30
+hz freeze RandomMember -iterations 13 -restartDelay 180 -iterationDelay 25
 
 hz stop
 wait

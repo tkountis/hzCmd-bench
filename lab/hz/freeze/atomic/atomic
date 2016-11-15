@@ -3,4 +3,4 @@ atomic@driver=Client
 atomic@threads=12
 atomic@count=500
 atomic@name=atomic
-atomic@ignore=com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException
+atomic@ignore=com.hazelcast.core.OperationTimeoutException:com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException

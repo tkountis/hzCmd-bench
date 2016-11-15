@@ -15,7 +15,7 @@ public class EntryUpdate extends MapBench {
 
     public void timeStep() throws AssertionException {
         if(!counter.updatedIn(updateTime)){
-            throw new AssertionException(map.getName()+"="+map.size()+" "+counter.toString());
+            throw new AssertionException("No events for "+updateTime+" seconds "+map.getName()+"="+map.size()+" "+counter.toString());
         }
     }
 

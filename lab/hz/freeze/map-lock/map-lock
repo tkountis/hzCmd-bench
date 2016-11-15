@@ -1,0 +1,5 @@
+maplock@class=hz.map.validate.MapLock
+maplock@driver=Client
+maplock@threads=12
+maplock@keyDomain=1000
+maplock@name=mapLockKey

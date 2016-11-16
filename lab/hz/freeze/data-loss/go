@@ -3,7 +3,7 @@
 set -e
 cleanup() {
     exitCode=$?
-    hz download
+    hz download || true
     hz chart metrics
     exit ${exitCode}
 }
@@ -23,15 +23,13 @@ sleep 30
   #hz freeze RandomMember -iterations 13 -restartDelay 180 -iterationDelay 25
 
   for i in {1..4}; do
-    hz freeze Member${i} -restartDelay 180 -iterationDelay 0
+    hz freeze Member${i} -restartDelay 180
 
     until hz run clusterSafe; do
       #hz run validate || true
       sleep 10
     done
-
-    hz run validate || true
-
+    hz run validate
   done
 
 hz stop

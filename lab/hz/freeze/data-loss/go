@@ -25,8 +25,9 @@ hz run clusterSize
 
   for i in {1..4}; do
     hz run clusterSafe || true
-    hz freeze Member${i} -restartDelay 180 -iterationDelay 0
+    hz freeze Member${i} -restartDelay 180 -iterationDelay 25
     hz run clusterSafe || true
+    hz run validate || true
   done
 
 hz stop

@@ -5,6 +5,7 @@ validate_mapBak1HD@keyDomain=1000
 validate_mapBak1HD@valueSetSize=1
 validate_mapBak1HD@valueSize=10
 validate_mapBak1HD@name=mapBak1HD
+validate_mapBak1HD@duration=600
 
 validate_mapBak1@class=hz.map.member.ValidateByteArray
 validate_mapBak1@driver=Member
@@ -13,6 +14,7 @@ validate_mapBak1@keyDomain=1000
 validate_mapBak1@valueSetSize=1
 validate_mapBak1@valueSize=10
 validate_mapBak1@name=mapBak1
+validate_mapBak1@duration=600
 
 
 validate_cacheBak1HD@class=hz.cache.member.ValidateByteArray
@@ -22,6 +24,7 @@ validate_cacheBak1HD@keyDomain=1000
 validate_cacheBak1HD@valueSetSize=1
 validate_cacheBak1HD@valueSize=10
 validate_cacheBak1HD@name=cacheBak1HD
+validate_cacheBak1HD@duration=600
 
 validate_cacheBak1@class=hz.cache.member.ValidateByteArray
 validate_cacheBak1@driver=Member
@@ -30,3 +33,4 @@ validate_cacheBak1@keyDomain=1000
 validate_cacheBak1@valueSetSize=1
 validate_cacheBak1@valueSize=10
 validate_cacheBak1@name=cacheBak1
+validate_cacheBak1@duration=600

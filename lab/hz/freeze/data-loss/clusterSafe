@@ -1,2 +1,2 @@
-clusterSize@class=hz.ops.ClusterSafe
-clusterSize@driver=Member
+clusterSafe@class=hz.ops.ClusterSafe
+clusterSafe@driver=Member

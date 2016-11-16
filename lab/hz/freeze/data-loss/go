@@ -24,10 +24,13 @@ hz run clusterSize
   #hz freeze RandomMember -iterations 13 -restartDelay 180 -iterationDelay 25
 
   for i in {1..4}; do
-    hz run clusterSafe || true
-    hz freeze Member${i} -restartDelay 180 -iterationDelay 25
-    hz run clusterSafe || true
-    hz run validate || true
+    hz freeze Member${i} -restartDelay 180 -iterationDelay 0
+
+    until hz run clusterSafe; do
+      hz run validate || true
+      sleep 10
+    done
+
   done
 
 hz stop

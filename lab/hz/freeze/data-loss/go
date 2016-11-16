@@ -26,7 +26,7 @@ sleep 30
     hz freeze Member${i} -restartDelay 180
 
     until hz run clusterSafe; do
-      hz run validate || true
+      #hz run validate || true
       sleep 10
     done
     hz run validate

@@ -30,7 +30,6 @@ hz run clusterSize
       hz run validate || true
       sleep 10
     done
-
   done
 
 hz stop

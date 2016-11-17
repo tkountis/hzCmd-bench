@@ -19,7 +19,13 @@ hz cluster -size M4C4 -v ${hzVersion} -ee -boxes a.box
 hz run offer &
 hz run poll &
 sleep 60
-hz freeze RandomMember -iterations 13 -restartDelay 180 -iterationDelay 25
+for i in {1..10}; do
+    hz freeze RandomMember -restartDelay 180
+
+    until hz run clusterSafe; do
+      sleep 10
+    done
+done
 
 hz stop
 wait

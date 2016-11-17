@@ -4,6 +4,7 @@ get_mapBak1HD@threads=4
 get_mapBak1HD@keyDomain=1000
 get_mapBak1HD@name=mapBak1HD
 get_mapBak1HD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.core.OperationTimeoutException:com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException
+get_mapBak1HD@duration=3000
 
 get_mapBak1@class=hz.map.GetCheck
 get_mapBak1@driver=Client
@@ -11,7 +12,7 @@ get_mapBak1@threads=4
 get_mapBak1@keyDomain=1000
 get_mapBak1@name=mapBak1
 get_mapBak1@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.core.OperationTimeoutException:com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException
-
+get_mapBak1@duration=3000
 
 get_cacheBak1HD@class=hz.cache.GetCheck
 get_cacheBak1HD@driver=Client
@@ -19,6 +20,7 @@ get_cacheBak1HD@threads=4
 get_cacheBak1HD@keyDomain=1000
 get_cacheBak1HD@name=cacheBak1HD
 get_cacheBak1HD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.core.OperationTimeoutException:com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException
+get_cacheBak1HD@duration=3000
 
 get_cacheBak1@class=hz.cache.GetCheck
 get_cacheBak1@driver=Client
@@ -26,3 +28,4 @@ get_cacheBak1@threads=4
 get_cacheBak1@keyDomain=1000
 get_cacheBak1@name=cacheBak1
 get_cacheBak1@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.core.OperationTimeoutException:com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException
+get_cacheBak1@duration=3000

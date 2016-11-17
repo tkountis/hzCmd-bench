@@ -1,3 +1,0 @@
-clusterSize@class=hz.ops.ClusterSize
-clusterSize@driver=Member
-clusterSize@size=4

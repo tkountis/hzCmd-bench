@@ -2,9 +2,6 @@
 set -e
 cleanup() {
     exitCode=$?
-
-    hz-ssh a.box 'df -h' ec2-user
-
     hz download || true
     hz chart metrics
     exit ${exitCode}

@@ -3,7 +3,7 @@
 set -e
 cleanup() {
     exitCode=$?
-    hz download || true
+    hz download
     hz chart metrics
     exit ${exitCode}
 }

@@ -23,7 +23,7 @@
     <hot-restart-persistence enabled="true">
         <data-load-timeout-seconds>1700</data-load-timeout-seconds>
         <base-dir>/home/ec2-user/hot-junk</base-dir>
-        <cluster-data-recovery-policy>PARTIAL_START_WITH_MOST_RECENT_DATA</cluster-data-recovery-policy>
+        <cluster-data-recovery-policy>PARTIAL_RECOVERY_MOST_RECENT</cluster-data-recovery-policy>
     </hot-restart-persistence>
 
     <native-memory allocator-type="POOLED" enabled="true">

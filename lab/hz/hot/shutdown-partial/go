@@ -48,3 +48,7 @@ hz run validate
 hz embeddedRestart 'Member(3|4)'
 hz run validate
 
+
+hz run clusterShutdown
+hz embeddedRestart 'Member'
+hz run validate

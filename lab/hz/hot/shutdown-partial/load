@@ -9,17 +9,6 @@ load_mapBak1HD@valueMinSize=101
 load_mapBak1HD@valueMaxSize=1001
 load_mapBak1HD@name=mapBak1HD
 
-load_mapBak0HD@class=hz.map.member.Load
-load_mapBak0HD@seed=13
-load_mapBak0HD@warmup=0
-load_mapBak0HD@duration=900
-load_mapBak0HD@threads=1
-load_mapBak0HD@keyDomain=10000
-load_mapBak0HD@valueSetSize=100
-load_mapBak0HD@valueMinSize=101
-load_mapBak0HD@valueMaxSize=1001
-load_mapBak0HD@name=mapBak0HD
-
 load_mapAsync1HD@class=hz.map.member.Load
 load_mapAsync1HD@seed=13
 load_mapAsync1HD@warmup=0
@@ -42,17 +31,6 @@ load_mapBak1@valueSetSize=100
 load_mapBak1@valueMinSize=101
 load_mapBak1@valueMaxSize=1001
 load_mapBak1@name=mapBak1
-
-load_mapBak0@class=hz.map.member.Load
-load_mapBak0@seed=13
-load_mapBak0@warmup=0
-load_mapBak0@duration=900
-load_mapBak0@threads=1
-load_mapBak0@keyDomain=10000
-load_mapBak0@valueSetSize=100
-load_mapBak0@valueMinSize=101
-load_mapBak0@valueMaxSize=1001
-load_mapBak0@name=mapBak0
 
 load_mapAsync1@class=hz.map.member.Load
 load_mapAsync1@seed=13
@@ -85,17 +63,6 @@ load_cacheBak1HD@valueMinSize=101
 load_cacheBak1HD@valueMaxSize=1001
 load_cacheBak1HD@name=cacheBak1HD
 
-load_cacheBak0HD@class=hz.cache.member.Load
-load_cacheBak0HD@driver=Member
-load_cacheBak0HD@seed=13
-load_cacheBak0HD@warmup=0
-load_cacheBak0HD@duration=900
-load_cacheBak0HD@threads=1
-load_cacheBak0HD@keyDomain=10000
-load_cacheBak0HD@valueSetSize=100
-load_cacheBak0HD@valueMinSize=101
-load_cacheBak0HD@valueMaxSize=1001
-load_cacheBak0HD@name=cacheBak0HD
 
 load_cacheAsync1HD@class=hz.cache.member.Load
 load_cacheAsync1HD@driver=Member
@@ -121,18 +88,6 @@ load_cacheBak1@valueSetSize=100
 load_cacheBak1@valueMinSize=101
 load_cacheBak1@valueMaxSize=1001
 load_cacheBak1@name=cacheBak1
-
-load_cacheBak0@class=hz.cache.member.Load
-load_cacheBak0@driver=Member
-load_cacheBak0@seed=13
-load_cacheBak0@warmup=0
-load_cacheBak0@duration=900
-load_cacheBak0@threads=1
-load_cacheBak0@keyDomain=10000
-load_cacheBak0@valueSetSize=100
-load_cacheBak0@valueMinSize=101
-load_cacheBak0@valueMaxSize=1001
-load_cacheBak0@name=cacheBak0
 
 load_cacheAsync1@class=hz.cache.member.Load
 load_cacheAsync1@driver=Member

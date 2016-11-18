@@ -20,17 +20,31 @@ mOps="$mOps -Dhazelcast.hotrestart.free.native.memory.percentage=15"
 hz memberOps "-Xms4G -Xmx4G ${ops} ${mOps}"
 hz cluster -size M4 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
 
+hz driver 'Member'
 hz run load
 hz run validate
 
 hz run clusterShutdown
 hz embeddedRestart 'Member(1|2|3)'
+hz driver 'Member(1|2|3)'
 hz run validate
 
 hz run clusterShutdown
 hz embeddedRestart 'Member(1|2)'
+hz driver 'Member(1|2)'
 hz run validate
 
 hz run clusterShutdown
 hz embeddedRestart 'Member1'
+hz driver 'Member1'
 hz run validate
+
+
+hz bash -jvmId 'Member(2|3|4)' rm -r /home/ec2-user/hot-junk
+
+hz embeddedRestart 'Member2'
+hz run validate
+
+hz embeddedRestart 'Member(3|4)'
+hz run validate
+

@@ -24,13 +24,13 @@ hz run load
 hz run validate
 
 hz run clusterShutdown
-hz embeddedRestart Member1\|2\|3
+hz embeddedRestart 'Member(1|2|3)'
 hz run validate
 
 hz run clusterShutdown
-hz embeddedRestart Member1\|2
+hz embeddedRestart 'Member(1|2)'
 hz run validate
 
 hz run clusterShutdown
-hz embeddedRestart Member1
+hz embeddedRestart 'Member1'
 hz run validate

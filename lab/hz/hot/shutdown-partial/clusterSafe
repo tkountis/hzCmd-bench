@@ -1,0 +1,4 @@
+clusterSafe@class=hz.ops.ClusterSafe
+clusterSafe@driver=Member
+clusterSafe@duration=300
+clusterSafe@recordException=false

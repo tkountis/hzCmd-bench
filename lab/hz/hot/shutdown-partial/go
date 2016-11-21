@@ -24,43 +24,47 @@ hz driver 'Member'
 hz run load
 hz run validate
 
-until hz run clusterSafe; do
-  sleep 5
+for i in {1..4}; do
+
+    until hz run clusterSafe; do
+      sleep 5
+    done
+
+    hz run clusterShutdown
+    hz embeddedRestart 'Member(1|2|3)'
+    hz driver 'Member(1|2|3)'
+    hz run validate
+
+    until hz run clusterSafe; do
+      sleep 5
+    done
+
+    hz run clusterShutdown
+    hz embeddedRestart 'Member(1|2)'
+    hz driver 'Member(1|2)'
+    hz run validate
+
+    until hz run clusterSafe; do
+      sleep 5
+    done
+
+    hz run clusterShutdown
+    hz embeddedRestart 'Member1'
+    hz driver 'Member1'
+    hz run validate
+
+    hz bash -jvmId 'Member(2|3|4)' rm -r /home/ec2-user/hot-junk
+    hz embeddedRestart 'Member2'
+    hz run validate
+    hz embeddedRestart 'Member(3|4)'
+    hz run validate
+
+    until hz run clusterSafe; do
+      sleep 5
+    done
+
+    hz run clusterShutdown
+    hz embeddedRestart 'Member'
+    hz run validate
+
 done
-
-hz run clusterShutdown
-hz embeddedRestart 'Member(1|2|3)'
-hz driver 'Member(1|2|3)'
-hz run validate
-
-until hz run clusterSafe; do
-  sleep 5
-done
-
-hz run clusterShutdown
-hz embeddedRestart 'Member(1|2)'
-hz driver 'Member(1|2)'
-hz run validate
-
-until hz run clusterSafe; do
-  sleep 5
-done
-
-hz run clusterShutdown
-hz embeddedRestart 'Member1'
-hz driver 'Member1'
-hz run validate
-
-hz bash -jvmId 'Member(2|3|4)' rm -r /home/ec2-user/hot-junk
-hz embeddedRestart 'Member2'
-hz run validate
-hz embeddedRestart 'Member(3|4)'
-hz run validate
-
-until hz run clusterSafe; do
-  sleep 5
-done
-
-hz run clusterShutdown
-hz embeddedRestart 'Member'
-hz run validate

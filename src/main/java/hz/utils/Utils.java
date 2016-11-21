@@ -1,12 +1,7 @@
 package hz.utils;
 
-import com.hazelcast.cache.ICache;
 import com.hazelcast.cache.impl.HazelcastServerCachingProvider;
-import com.hazelcast.cache.impl.nearcache.NearCache;
-import com.hazelcast.cache.impl.nearcache.NearCacheManager;
-import com.hazelcast.client.cache.impl.HazelcastClientCacheManager;
 import com.hazelcast.client.cache.impl.HazelcastClientCachingProvider;
-import com.hazelcast.config.CacheConfig;
 import com.hazelcast.core.*;
 import com.hazelcast.instance.HazelcastInstanceProxy;
 
@@ -58,16 +53,6 @@ public abstract class Utils {
         }
     }
 
-
-    public static NearCache getNearCache(CacheManager cacheManager, ICache cache){
-        CacheConfig cacheConfig = (CacheConfig) cache.getConfiguration(CacheConfig.class);
-        String cacheFullName = cacheConfig.getNameWithPrefix();
-
-        HazelcastClientCacheManager clientCacheManager = (HazelcastClientCacheManager)cacheManager;
-        NearCacheManager nearCacheManager = clientCacheManager.getNearCacheManager();
-        NearCache nearCache = nearCacheManager.getNearCache(cacheFullName);
-        return nearCache;
-    }
 
     public static CacheManager getCacheManager(HazelcastInstance instance){
         CachingProvider provider;

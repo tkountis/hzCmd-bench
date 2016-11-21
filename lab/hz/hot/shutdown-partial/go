@@ -26,6 +26,8 @@ hz run validate
 
 for i in {1..4}; do
 
+    echo iteration=${i}
+
     until hz run clusterSafe; do
       sleep 5
     done

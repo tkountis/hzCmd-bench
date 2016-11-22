@@ -1,0 +1,146 @@
+<hazelcast xsi:schemaLocation="http://www.hazelcast.com/schema/config
+                               http://www.hazelcast.com/schema/config/hazelcast-config-3.6.xsd"
+           xmlns="http://www.hazelcast.com/schema/config"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <properties>
+        <property name="hazelcast.phone.home.enabled">false</property>
+
+        <property name="hazelcast.partition.max.parallel.replications">0</property>
+        <property name="hazelcast.partition.count">6144</property>
+
+        <property name="hazelcast.performance.metric.level">INFO</property>
+        <property name="hazelcast.performance.monitor.delay.seconds">30</property>
+        <property name="hazelcast.performance.monitor.max.rolled.file.size.mb">10</property>
+        <property name="hazelcast.performance.monitor.max.rolled.file.count">10</property>
+        <property name="hazelcast.performance.monitor.human.friendly.format">true</property>
+
+        <property name="hazelcast.operation.thread.count">10</property>
+        <property name="hazelcast.operation.generic.thread.count">20</property> <!-- #processors / 2  -->
+        <property name="hazelcast.operation.backup.timeout.millis">30000</property>
+
+        <property name="hazelcast.backpressure.enabled">true</property>
+        <property name="hazelcast.backpressure.syncwindow">20</property>
+        <property name="hazelcast.backpressure.max.concurrent.invocations.per.partition">50</property>
+
+        <property name="hazelcast.cache.invalidation.batch.size">25000</property>
+        <property name="hazelcast.cache.invalidation.batchfrequency.seconds">5</property>
+
+        <property name="hazelcast.socket.receive.buffer.size">1024</property>
+        <property name="hazelcast.socket.send.buffer.size">1024</property>
+
+        <property name="hazelcast.clientengine.thread.count">100</property>
+        <property name="hazelcast.event.thread.count">5</property>
+        <property name="hazelcast.io.thread.count">3</property>
+
+    </properties>
+
+    <!-- <management-center enabled="true">ip:8880/mancenter</management-center> -->
+
+
+    <group>
+        <name>group</name>
+    </group>
+
+    <network>
+        <port port-count="200" auto-increment="true">5701</port>
+        <join>
+            <multicast enabled="false"/>
+            <tcp-ip enabled="true">
+            </tcp-ip>
+        </join>
+    </network>
+
+
+    <native-memory allocator-type="POOLED" enabled="true">
+        <size unit="GIGABYTES" value="100" />
+        <metadata-space-percentage>25</metadata-space-percentage>
+    </native-memory>
+
+
+    <cache name="cacheBak0*">
+        <backup-count>0</backup-count>
+        <in-memory-format>NATIVE</in-memory-format>
+        <eviction size="25" eviction-policy="LRU" max-size-policy="FREE_NATIVE_MEMORY_PERCENTAGE" />
+        <statistics-enabled>true</statistics-enabled>
+    </cache>
+
+    <cache name="cacheBakDual*">
+        <backup-count>1</backup-count>
+        <async-backup-count>1</async-backup-count>
+        <in-memory-format>NATIVE</in-memory-format>
+        <eviction size="25" eviction-policy="LRU" max-size-policy="FREE_NATIVE_MEMORY_PERCENTAGE" />
+        <statistics-enabled>true</statistics-enabled>
+    </cache>
+
+
+    <map name="map*">
+        <in-memory-format>NATIVE</in-memory-format>
+        <backup-count>0</backup-count>
+        <async-backup-count>0</async-backup-count>
+        <time-to-live-seconds>7200</time-to-live-seconds>
+        <max-idle-seconds>0</max-idle-seconds>
+        <eviction-policy>LRU</eviction-policy>
+        <max-size policy="PER_NODE">0</max-size>
+        <eviction-percentage>25</eviction-percentage>
+        <min-eviction-check-millis>100</min-eviction-check-millis>
+        <merge-policy>com.hazelcast.map.merge.PutIfAbsentMapMergePolicy</merge-policy>
+    </map>
+
+
+    <executor-service name="default">
+        <pool-size>16</pool-size>
+        <queue-capacity>0</queue-capacity>
+    </executor-service>
+
+    <queue name="default">
+        <max-size>0</max-size>
+        <backup-count>1</backup-count>
+        <async-backup-count>0</async-backup-count>
+        <empty-queue-ttl>-1</empty-queue-ttl>
+    </queue>
+
+    <multimap name="default">
+        <backup-count>1</backup-count>
+        <value-collection-type>SET</value-collection-type>
+    </multimap>
+
+    <list name="default">
+        <backup-count>1</backup-count>
+    </list>
+
+    <set name="default">
+        <backup-count>1</backup-count>
+    </set>
+
+    <jobtracker name="default">
+        <max-thread-size>0</max-thread-size>
+        <queue-size>0</queue-size>
+        <retry-count>0</retry-count>
+        <chunk-size>1000</chunk-size>
+        <communicate-stats>true</communicate-stats>
+        <topology-changed-strategy>CANCEL_RUNNING_OPERATION</topology-changed-strategy>
+    </jobtracker>
+
+    <semaphore name="default">
+        <initial-permits>0</initial-permits>
+        <backup-count>1</backup-count>
+        <async-backup-count>0</async-backup-count>
+    </semaphore>
+
+    <reliable-topic name="default">
+        <read-batch-size>10</read-batch-size>
+        <topic-overload-policy>BLOCK</topic-overload-policy>
+        <statistics-enabled>true</statistics-enabled>
+    </reliable-topic>
+
+    <ringbuffer name="default">
+        <capacity>10000</capacity>
+        <backup-count>1</backup-count>
+        <async-backup-count>0</async-backup-count>
+        <time-to-live-seconds>30</time-to-live-seconds>
+        <in-memory-format>BINARY</in-memory-format>
+    </ringbuffer>
+
+
+</hazelcast>

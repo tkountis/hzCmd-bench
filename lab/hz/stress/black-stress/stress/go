@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+set -e
+cleanup() {
+    exitCode=$?
+    hz download
+    hz wipe
+    chartAll-JavaMetrics output
+    exit ${exitCode}
+}
+trap "cleanup" INT TERM EXIT
+
+hz broker -ip 10.212.1.107
+
+ops="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
+#ops="-Dhazelcast.enterprise.license.key=HazelcastEnterpriseHD#9999Nodes#RiUHNE1lOrwITY7F5K3VAm539qt3h099W999C99999xn999PsQ1Pv19q39h0"
+
+gcOps="${gcOps} -XX:+UseG1GC -XX:+UseTLAB -XX:MaxMetaspaceSize=512m -XX:+AlwaysPreTouch"
+gcOps="${gcOps} -XX:+UseStringDeduplication -XX:MaxGCPauseMillis=20 -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20"
+
+hz memberOps "-server -Xms8G -Xmx8G ${gcOps} ${ops}"
+hz clientOps "-Xms400M -Xmx400M ${ops}"
+hz cluster -size DM3C2000 -v 3.6-RC1 -ee -boxes a.box -user danny
+
+hz run load
+hz run info
+#hz run validate
+
+hz warmup 0
+hz bench  900
+#hz run ops-interval
+hz run ops-flatOut-nearCache
+
+hz run info

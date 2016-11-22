@@ -1,0 +1,15 @@
+clear_cacheBak0@class=hz.cache.multi.Clear
+clear_cacheBak0@driver=Client1HZ
+clear_cacheBak0@interval=35000
+clear_cacheBak0@threads=1
+clear_cacheBak0@count=20
+clear_cacheBak0@name=cacheBak0
+clear_cacheBak0@ignore=com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.core.OperationTimeoutException:java.util.concurrent.ExecutionException:com.hazelcast.core.HazelcastOverloadException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+
+clear_cacheBakDual@class=hz.cache.multi.Clear
+clear_cacheBakDual@driver=Client2HZ
+clear_cacheBakDual@interval=35000
+clear_cacheBakDual@threads=1
+clear_cacheBakDual@count=20
+clear_cacheBakDual@name=cacheBakDual
+clear_cacheBakDual@ignore=com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.core.OperationTimeoutException:java.util.concurrent.ExecutionException:com.hazelcast.core.HazelcastOverloadException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

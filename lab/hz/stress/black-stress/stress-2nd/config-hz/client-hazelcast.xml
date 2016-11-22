@@ -15,11 +15,6 @@
         <property name="hazelcast.client.max.concurrent.invocations"> 10000 </property>
     </properties>
 
-    <!--
-        *** Set up Socket ******/
-        SocketOptions socketOptions = clientConfig.getNetworkConfig().getSocketOptions();
-        socketOptions.setBufferSize(config.getGlobalOptions().getSocketBufferSize());
-    -->
 
     <group>
         <name>group</name>
@@ -35,8 +30,8 @@
         <connection-timeout>10000</connection-timeout>
     </network>
 
-    
-     
+
+    <!--
     <near-cache name="cacheBak0*">
         <in-memory-format>OBJECT</in-memory-format>
         <cache-local-entries>true</cache-local-entries>
@@ -50,7 +45,6 @@
         <invalidate-on-change>true</invalidate-on-change>
         <eviction eviction-policy="LRU" max-size-policy="ENTRY_COUNT"  size="1000" />
     </near-cache>
-     
-
+    -->
 
 </hazelcast-client>

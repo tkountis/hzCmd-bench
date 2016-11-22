@@ -18,7 +18,7 @@
         <property name="hazelcast.performance.monitor.human.friendly.format">true</property>
 
         <property name="hazelcast.operation.thread.count">10</property>
-        <property name="hazelcast.operation.generic.thread.count">20</property> <!-- #processors / 2  -->
+        <property name="hazelcast.operation.generic.thread.count">20</property>
         <property name="hazelcast.operation.backup.timeout.millis">30000</property>
 
         <property name="hazelcast.backpressure.enabled">true</property>
@@ -28,12 +28,8 @@
         <property name="hazelcast.cache.invalidation.batch.size">2000</property>
         <property name="hazelcast.cache.invalidation.batchfrequency.seconds">5</property>
 
-<!--
         <property name="hazelcast.socket.receive.buffer.size">1024</property>
         <property name="hazelcast.socket.send.buffer.size">1024</property>
--->
-        <property name="hazelcast.socket.receive.buffer.size">128</property>
-        <property name="hazelcast.socket.send.buffer.size">128</property>
 
         <property name="hazelcast.clientengine.thread.count">100</property>
         <property name="hazelcast.event.thread.count">5</property>

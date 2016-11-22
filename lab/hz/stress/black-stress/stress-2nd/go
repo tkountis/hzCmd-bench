@@ -20,7 +20,7 @@ gcOps="${gcOps} -XX:+UseStringDeduplication -XX:MaxGCPauseMillis=20 -XX:+UnlockE
 hz memberOps "-server -Xms10G -Xmx10G ${gcOps} ${ops}"
 hz clientOps "-Xms400M -Xmx400M ${ops}"
 hz jfr "-XX:+UnlockCommercialFeatures -XX:+FlightRecorder -XX:StartFlightRecording=maxage=45m,dumponexit=true,settings=debug.jfc"
-hz cluster -size DM3C2000 -v 3.7.2 -ee -boxes a.box -user danny
+hz cluster -size DM3C2000 -v 3.6-RC1 -ee -boxes a.box -user danny
 
 hz run load
 hz run info

@@ -1,0 +1,56 @@
+<hazelcast-client
+        xsi:schemaLocation="http://www.hazelcast.com/schema/client-config
+            http://www.hazelcast.com/schema/config/hazelcast-client-config-3.6.xsd"
+        xmlns="http://www.hazelcast.com/schema/client-config"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <properties>
+        <!--
+        <property name="hazelcast.client.event.queue.capacity"> ? </property>
+        <property name="hazelcast.client.event.thread.count"> ? </property>
+        <property name="hazelcast.client.heartbeat.interval"> ? </property>
+        <property name="hazelcast.client.heartbeat.timeout"> ? </property>
+        <property name="hazelcast.client.invocation.timeout.seconds"> ? </property>
+        -->
+        <property name="hazelcast.client.max.concurrent.invocations"> 10000 </property>
+    </properties>
+
+    <!--
+        *** Set up Socket ******/
+        SocketOptions socketOptions = clientConfig.getNetworkConfig().getSocketOptions();
+        socketOptions.setBufferSize(config.getGlobalOptions().getSocketBufferSize());
+    -->
+
+    <group>
+        <name>group</name>
+    </group>
+
+    <network>
+        <cluster-members>
+        </cluster-members>
+	<smart-routing>true</smart-routing>
+        <redo-operation>true</redo-operation>
+        <connection-attempt-period>1000</connection-attempt-period>
+        <connection-attempt-limit>9000</connection-attempt-limit>
+        <connection-timeout>10000</connection-timeout>
+    </network>
+
+    
+     
+    <near-cache name="cacheBak0*">
+        <in-memory-format>OBJECT</in-memory-format>
+        <cache-local-entries>true</cache-local-entries>
+        <invalidate-on-change>true</invalidate-on-change>
+        <eviction eviction-policy="LRU" max-size-policy="ENTRY_COUNT"  size="1000" />
+    </near-cache>
+
+    <near-cache name="cacheBakDual*">
+        <in-memory-format>OBJECT</in-memory-format>
+        <cache-local-entries>true</cache-local-entries>
+        <invalidate-on-change>true</invalidate-on-change>
+        <eviction eviction-policy="LRU" max-size-policy="ENTRY_COUNT"  size="1000" />
+    </near-cache>
+     
+
+
+</hazelcast-client>

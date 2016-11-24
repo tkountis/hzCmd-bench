@@ -38,6 +38,9 @@
         <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
+        <wan-replication-ref name="wanReplication">
+            <merge-policy>com.hazelcast.map.merge.PassThroughMergePolicy</merge-policy>
+        </wan-replication-ref>
     </cache>
 
     <cache name="cacheBak1HD*">
@@ -48,6 +51,9 @@
         <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
+        <wan-replication-ref name="wanReplication">
+            <merge-policy>com.hazelcast.map.merge.PassThroughMergePolicy</merge-policy>
+        </wan-replication-ref>
     </cache>
 
     <cache name="cacheAsync1HD*">
@@ -59,6 +65,9 @@
         <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
+        <wan-replication-ref name="wanReplication">
+            <merge-policy>com.hazelcast.map.merge.PassThroughMergePolicy</merge-policy>
+        </wan-replication-ref>
     </cache>
 
 
@@ -70,6 +79,9 @@
         <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
+        <wan-replication-ref name="wanReplication">
+            <merge-policy>com.hazelcast.map.merge.PassThroughMergePolicy</merge-policy>
+        </wan-replication-ref>
     </cache>
 
     <cache name="cacheBak1*">
@@ -80,6 +92,9 @@
         <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
+        <wan-replication-ref name="wanReplication">
+            <merge-policy>com.hazelcast.map.merge.PassThroughMergePolicy</merge-policy>
+        </wan-replication-ref>
     </cache>
 
     <cache name="cacheAsync1*">
@@ -91,6 +106,9 @@
         <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
+        <wan-replication-ref name="wanReplication">
+            <merge-policy>com.hazelcast.map.merge.PassThroughMergePolicy</merge-policy>
+        </wan-replication-ref>
     </cache>
 
 
@@ -106,6 +124,9 @@
         <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
+        <wan-replication-ref name="wanReplication">
+            <merge-policy>com.hazelcast.map.merge.PassThroughMergePolicy</merge-policy>
+        </wan-replication-ref>
     </map>
 
     <map name="mapBak1HD*">
@@ -118,6 +139,9 @@
         <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
+        <wan-replication-ref name="wanReplication">
+            <merge-policy>com.hazelcast.map.merge.PassThroughMergePolicy</merge-policy>
+        </wan-replication-ref>
     </map>
 
     <map name="mapAsync1HD*">
@@ -131,6 +155,9 @@
         <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
+        <wan-replication-ref name="wanReplication">
+            <merge-policy>com.hazelcast.map.merge.PassThroughMergePolicy</merge-policy>
+        </wan-replication-ref>
     </map>
 
 
@@ -140,6 +167,9 @@
         <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
+        <wan-replication-ref name="wanReplication">
+            <merge-policy>com.hazelcast.map.merge.PassThroughMergePolicy</merge-policy>
+        </wan-replication-ref>
     </map>
 
     <map name="mapBak1*">
@@ -148,6 +178,9 @@
         <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
+        <wan-replication-ref name="wanReplication">
+            <merge-policy>com.hazelcast.map.merge.PassThroughMergePolicy</merge-policy>
+        </wan-replication-ref>
     </map>
 
     <map name="mapAsync1*">
@@ -157,6 +190,9 @@
         <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
+        <wan-replication-ref name="wanReplication">
+            <merge-policy>com.hazelcast.map.merge.PassThroughMergePolicy</merge-policy>
+        </wan-replication-ref>
     </map>
 
 </hazelcast>

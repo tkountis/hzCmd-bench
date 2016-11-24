@@ -56,3 +56,5 @@ for i in {0..8} ; do
         curl -H "Content-type: text/plain" -X POST -d "wanReplication&${group}&mapBak1HD${i}" --URL http://${ipMember1A}:5701/hazelcast/rest/wan/sync/map
     done
 done
+
+

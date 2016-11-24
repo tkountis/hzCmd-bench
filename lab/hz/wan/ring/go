@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+set -e
+cleanup() {
+    exitCode=$?
+    hz download
+    hz chart metrics
+    exit ${exitCode}
+}
+trap "cleanup" INT TERM EXIT
+
+hzVersion=${1:-$(hazelcastVersion)}
+
+hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
+hz memberOps "-Xms3G -Xmx3G ${hzProps}"
+hz clientOps "-Xms200M -Xmx400M ${hzProps}"
+
+hz cluster -id A -size M2C2 -v ${hzVersion} -ee -boxes a.box
+hz cluster -id B -size M2C2 -v ${hzVersion} -ee -boxes b.box
+hz cluster -id C -size M2C2 -v ${hzVersion} -ee -boxes c.box
+
+hz wan A B
+hz wan B C
+hz wan C A
+
+hz bounce
+
+hz run -id A load
+sleep 10
+hz run validate
+

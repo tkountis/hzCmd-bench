@@ -10,11 +10,11 @@ cleanup() {
 trap "cleanup" INT TERM EXIT
 
 ec2Type="c4.2xlarge"
-aws-create -count 5 --instanceType ${ec2Type} --outputFile a.box
-aws-create -count 5 --instanceType ${ec2Type} --outputFile b.box
-aws-create -count 5 --instanceType ${ec2Type} --outputFile c.box
-aws-create -count 5 --instanceType ${ec2Type} --outputFile d.box
-aws-create -count 5 --instanceType ${ec2Type} --outputFile e.box
+aws-create --count 5 --instanceType ${ec2Type} --outputFile a.box
+aws-create --count 5 --instanceType ${ec2Type} --outputFile b.box
+aws-create --count 5 --instanceType ${ec2Type} --outputFile c.box
+aws-create --count 5 --instanceType ${ec2Type} --outputFile d.box
+aws-create --count 5 --instanceType ${ec2Type} --outputFile e.box
 
 ops="${ops} -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 ops="${ops} -Dhazelcast.enterprise.wanrep.batch.size=150"

@@ -1,8 +1,8 @@
 get_mapBak1HD@class=hz.map.multi.Get
 get_mapBak1HD@driver=Client
-get_mapBak1HD@threads=8
+get_mapBak1HD@threads=16
 get_mapBak1HD@interval=0
 get_mapBak1HD@count=8
-get_mapBak1HD@keyDomain=1000
+get_mapBak1HD@keyDomain=10000
 get_mapBak1HD@name=mapBak1HD
 get_mapBak1HD@ignore=com.hazelcast.core.HazelcastInstanceNotActiveException

@@ -32,7 +32,7 @@ hz wan A B C D E
 hz bounce
 
 hz run -id A load
-sleep 10
+sleep 30
 hz run validate
 hz run clusterShutdown
 hz embeddedRestart Member
@@ -42,6 +42,9 @@ until hz run clusterSafe; do
 done
 hz run validate
 
+hz run -id A put &
+hz run -id '(B|C|D|E)' get &
+wait
 
 
 hz run -id A clusterShutdown

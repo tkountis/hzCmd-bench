@@ -1,10 +1,10 @@
 put_mapBak1HD@class=hz.map.multi.Put
 put_mapBak1HD@driver=Client
-put_mapBak1HD@threads=8
+put_mapBak1HD@threads=16
 put_mapBak1HD@interval=0
 put_mapBak1HD@count=8
-put_mapBak1HD@keyDomain=1000
-put_mapBak1HD@valueSetSize=5
+put_mapBak1HD@keyDomain=10000
+put_mapBak1HD@valueSetSize=10
 put_mapBak1HD@valueMinSize=4000
 put_mapBak1HD@valueMaxSize=20000
 put_mapBak1HD@name=mapBak1HD

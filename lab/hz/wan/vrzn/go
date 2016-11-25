@@ -18,8 +18,12 @@ aws-create --count 5 --instanceType ${ec2Type} --outputFile e.box
 
 ops="${ops} -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 ops="${ops} -Dhazelcast.enterprise.wanrep.batch.size=150"
-hz memberOps "-Xms4G -Xmx4G ${ops}"
-hz clientOps "-Xms200M -Xmx400M ${ops}"
+
+mOps="${mOps} -Dhazelcast.hotrestart.gc.stuck.detect.threshold=10000 -Dhazelcast.hotrestart.free.native.memory.percentage=15"
+mOps="${mOps} -Dhazelcast.connection.monitor.interval=1000 -Dhazelcast.connection.monitor.max.faults=30"
+
+hz memberOps "-Xms4G -Xmx4G ${ops} ${mOps}"
+hz clientOps "-Xms400M -Xmx400M ${ops}"
 
 hzVersion="3.8-SNAPSHOT"
 hz cluster -id A -size M5C10 -v ${hzVersion} -ee -boxes a.box

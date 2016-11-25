@@ -35,7 +35,7 @@
         <in-memory-format>NATIVE</in-memory-format>
         <backup-count>0</backup-count>
         <statistics-enabled>false</statistics-enabled>
-        <eviction size="1000000" eviction-policy="LRU" max-size-policy="ENTRY_COUNT"/>
+        <eviction size="95" eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE"/>
         <hot-restart enabled="true">
             <fsync>false</fsync>
         </hot-restart>
@@ -45,7 +45,7 @@
         <in-memory-format>NATIVE</in-memory-format>
         <backup-count>1</backup-count>
         <statistics-enabled>false</statistics-enabled>
-        <eviction size="1000000" eviction-policy="LRU" max-size-policy="ENTRY_COUNT"/>
+        <eviction size="95" eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE"/>
         <hot-restart enabled="true">
             <fsync>false</fsync>
         </hot-restart>
@@ -56,7 +56,7 @@
         <backup-count>0</backup-count>
         <async-backup-count>1</async-backup-count>
         <statistics-enabled>false</statistics-enabled>
-        <eviction size="1000000" eviction-policy="LRU" max-size-policy="ENTRY_COUNT"/>
+        <eviction size="95" eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE"/>
         <hot-restart enabled="true">
             <fsync>false</fsync>
         </hot-restart>

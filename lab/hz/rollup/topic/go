@@ -14,9 +14,9 @@ ops="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
 hz memberOps "-Xms2G -Xmx2G ${ops}"
 hz clientOps "-Xms400M -Xmx400M ${ops}"
 
-hz cluster -size M4C4 -v 3.7,3.7.1,3.7.2,3.7.3,${hzVersion} -ee -boxes a.box
+hz cluster -size M4C4 -v 3.7,3.7.1,3.7.2,3.7.3 -ee -boxes a.box
 
-for version in 3.7 3.7.1 3.7.2 3.7.3 ${hzVersion} ; do
+for version in 3.7 3.7.1 3.7.2 3.7.3 ; do
 
   hz run sub &
   hz run pub &

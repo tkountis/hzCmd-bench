@@ -39,22 +39,10 @@ hz cluster -id E -size M5C10 -v ${hzVersion} -ee -boxes e.box
 #  | /  \|
 #  D-----E
 
-hz wan A B
-hz wan B A
-
-hz wan B E
-hz wan E B
-
-hz wan E D
-hz wan D E
-
-hz wan D A
-hz wan A D
-
-hz wan A C
-hz wan B C
-hz wan D C
-hz wan E C
+hz wan A B D C
+hz wan B E A C
+hz wan E D B C
+hz wan D A E C
 
 hz wan C A B D E
 hz bounce Member

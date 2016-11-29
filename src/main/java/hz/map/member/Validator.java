@@ -5,7 +5,6 @@ import hz.utils.Utils;
 
 public abstract class Validator extends MapBench {
 
-    public String prefix=null;
     private int key=0;
 
     public void init() throws Exception{
@@ -14,19 +13,15 @@ public abstract class Validator extends MapBench {
     }
 
     public void timeStep() throws Exception{
-
-        Object keyObj = getKey(key);
-        if(prefix!=null){
-            keyObj = prefix + keyObj;
-        }
-
-        while(Utils.remoteKey(keyObj, hzInstance)){
+        while(Utils.remoteKey(key, hzInstance)){
             key++;
         }
 
         if(key >= keyDomain){
             return;
         }
+
+        Object keyObj = getKey(key);
         Object val = map.get(keyObj);
 
         validate(key, val);

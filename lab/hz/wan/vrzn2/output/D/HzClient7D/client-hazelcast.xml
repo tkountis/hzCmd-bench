@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><hazelcast-client xmlns="http://www.hazelcast.com/schema/client-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hazelcast.com/schema/client-config             http://www.hazelcast.com/schema/config/hazelcast-client-config-3.6.xsd">
+
+    <group>
+        <name>D</name>
+    <password>D</password></group>
+
+    <network>
+        <cluster-members>
+        <address>10.0.0.194</address><address>10.0.0.190</address><address>10.0.0.191</address><address>10.0.0.192</address><address>10.0.0.193</address></cluster-members>
+        <smart-routing>true</smart-routing>
+        <connection-attempt-period>9000</connection-attempt-period>
+        <connection-attempt-limit>200</connection-attempt-limit>
+    </network>
+
+</hazelcast-client>

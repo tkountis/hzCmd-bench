@@ -1,0 +1,9 @@
+load_mapBak1HD@class=hz.map.member.multi.MultiLoad
+load_mapBak1HD@driver=Member
+load_mapBak1HD@seed=13
+load_mapBak1HD@count=8
+load_mapBak1HD@keyDomain=10000
+load_mapBak1HD@valueSetSize=5
+load_mapBak1HD@valueMinSize=4000
+load_mapBak1HD@valueMaxSize=20000
+load_mapBak1HD@name=mapBak1HD

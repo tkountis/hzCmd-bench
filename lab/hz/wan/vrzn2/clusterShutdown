@@ -1,0 +1,2 @@
+shutdown@class=hz.ops.ClusterShutDown
+shutdown@driver=Member1

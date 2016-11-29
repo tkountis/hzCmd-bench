@@ -1,0 +1,9 @@
+validate_mapBak1HD@class=hz.map.member.multi.MultiValidateNotNull
+validate_mapBak1HD@driver=Member
+validate_mapBak1HD@seed=13
+validate_mapBak1HD@count=8
+validate_mapBak1HD@keyDomain=10000
+validate_mapBak1HD@valueSetSize=5
+validate_mapBak1HD@valueMinSize=4000
+validate_mapBak1HD@valueMaxSize=20000
+validate_mapBak1HD@name=mapBak1HD

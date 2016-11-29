@@ -1,0 +1,7 @@
+for i in {0..1} ; do
+ ./syncMap50 & 
+ hz run -id '(B|C|D|E)' clusterShutdown
+ hz embeddedRestart -id '(B|C|D|E)' Member
+ hz run -id validate
+ wait
+done

@@ -1,0 +1,100 @@
+HzCmd{ ID=HzClient9D Q=/disk1/jenkins/workspace/temp/hz/wan/vrzn/HzClient9D jvmPidId=28974@ip-10-0-0-192 lib=/home/ec2-user/hz-root/hz-lib/3.8-SNAPSHOT}
+log4j:WARN No appenders could be found for logger (org.apache.activemq.transport.WireFormatNegotiator).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+MQ msg in = StartEmbeddedObjectCmd{}
+Nov 29, 2016 4:11:52 AM com.hazelcast.config.AbstractXmlConfigHelper
+WARNING: Name of the hazelcast schema location incorrect using default
+Nov 29, 2016 4:11:52 AM com.hazelcast.core.LifecycleService
+INFO: hz.client_0 [D] [3.8-SNAPSHOT] HazelcastClient 3.8-SNAPSHOT (20161128 - bc37db7) is STARTING
+Nov 29, 2016 4:11:52 AM com.hazelcast.core.LifecycleService
+INFO: hz.client_0 [D] [3.8-SNAPSHOT] HazelcastClient 3.8-SNAPSHOT (20161128 - bc37db7) is STARTED
+Nov 29, 2016 4:11:53 AM com.hazelcast.client.connection.nio.ClientSocketWriterInitializer
+INFO: Initializing ClientSocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:11:53 AM com.hazelcast.client.connection.ClientConnectionManager
+INFO: hz.client_0 [D] [3.8-SNAPSHOT] Authenticated with server [10.0.0.192]:5701, server version:3.8-SNAPSHOT Local address: /10.0.0.192:44106
+Nov 29, 2016 4:11:53 AM com.hazelcast.client.spi.impl.ClientMembershipListener
+INFO: hz.client_0 [D] [3.8-SNAPSHOT] 
+
+Members [5] {
+	Member [10.0.0.190]:5701 - ab140882-c17a-4ecb-ad38-fcdfc48d76b7
+	Member [10.0.0.192]:5701 - 478ded1e-982a-4142-b1b4-c792d8ce5c07
+	Member [10.0.0.191]:5701 - a96b0255-bd14-4be1-bf54-061d6dbe4349
+	Member [10.0.0.194]:5701 - d0109a87-237b-4cf9-abd8-65d34f0577b8
+	Member [10.0.0.193]:5701 - 7833d11f-0e0a-4ecc-a9bd-6057a721a410
+}
+
+Nov 29, 2016 4:11:53 AM com.hazelcast.core.LifecycleService
+INFO: hz.client_0 [D] [3.8-SNAPSHOT] HazelcastClient 3.8-SNAPSHOT (20161128 - bc37db7) is CLIENT_CONNECTED
+HzCmd{ ID=HzClient9D Q=/disk1/jenkins/workspace/temp/hz/wan/vrzn/HzClient9D jvmPidId=29234@ip-10-0-0-192 lib=/home/ec2-user/hz-root/hz-lib/3.8-SNAPSHOT}
+log4j:WARN No appenders could be found for logger (org.apache.activemq.transport.WireFormatNegotiator).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+MQ msg in = StartEmbeddedObjectCmd{}
+Nov 29, 2016 4:13:48 AM com.hazelcast.config.AbstractXmlConfigHelper
+WARNING: Name of the hazelcast schema location incorrect using default
+Nov 29, 2016 4:13:49 AM com.hazelcast.core.LifecycleService
+INFO: hz.client_0 [D] [3.8-SNAPSHOT] HazelcastClient 3.8-SNAPSHOT (20161128 - bc37db7) is STARTING
+Nov 29, 2016 4:13:49 AM com.hazelcast.core.LifecycleService
+INFO: hz.client_0 [D] [3.8-SNAPSHOT] HazelcastClient 3.8-SNAPSHOT (20161128 - bc37db7) is STARTED
+Nov 29, 2016 4:13:49 AM com.hazelcast.client.connection.nio.ClientSocketWriterInitializer
+INFO: Initializing ClientSocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:49 AM com.hazelcast.client.connection.nio.ClientConnection
+WARNING: hz.client_0 [D] [3.8-SNAPSHOT] Connection [/10.0.0.192:5701] lost. Reason: java.util.concurrent.ExecutionException[com.hazelcast.core.HazelcastInstanceNotActiveException: Hazelcast instance is not ready yet!]
+Nov 29, 2016 4:13:49 AM com.hazelcast.client.connection.nio.ClientSocketWriterInitializer
+INFO: Initializing ClientSocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.client.connection.nio.ClientConnection
+WARNING: hz.client_0 [D] [3.8-SNAPSHOT] Connection [/10.0.0.190:5701] lost. Reason: java.util.concurrent.ExecutionException[com.hazelcast.core.HazelcastInstanceNotActiveException: Hazelcast instance is not ready yet!]
+Nov 29, 2016 4:13:50 AM com.hazelcast.client.connection.nio.ClientSocketWriterInitializer
+INFO: Initializing ClientSocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.client.connection.nio.ClientConnection
+WARNING: hz.client_0 [D] [3.8-SNAPSHOT] Connection [/10.0.0.194:5701] lost. Reason: java.util.concurrent.ExecutionException[com.hazelcast.core.HazelcastInstanceNotActiveException: Hazelcast instance is not ready yet!]
+Nov 29, 2016 4:13:50 AM com.hazelcast.client.connection.nio.ClientSocketWriterInitializer
+INFO: Initializing ClientSocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.client.connection.nio.ClientConnection
+WARNING: hz.client_0 [D] [3.8-SNAPSHOT] Connection [/10.0.0.193:5701] lost. Reason: java.util.concurrent.ExecutionException[com.hazelcast.core.HazelcastInstanceNotActiveException: Hazelcast instance is not ready yet!]
+Nov 29, 2016 4:13:50 AM com.hazelcast.client.connection.nio.ClientSocketWriterInitializer
+INFO: Initializing ClientSocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.client.connection.nio.ClientConnection
+WARNING: hz.client_0 [D] [3.8-SNAPSHOT] Connection [/10.0.0.191:5701] lost. Reason: java.util.concurrent.ExecutionException[com.hazelcast.core.HazelcastInstanceNotActiveException: Hazelcast instance is not ready yet!]
+Nov 29, 2016 4:13:50 AM com.hazelcast.client.spi.impl.ClusterListenerSupport
+WARNING: hz.client_0 [D] [3.8-SNAPSHOT] Unable to get alive cluster connection, try in 8132 ms later, attempt 1 of 200.
+Nov 29, 2016 4:13:58 AM com.hazelcast.client.connection.nio.ClientSocketWriterInitializer
+INFO: Initializing ClientSocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.client.connection.nio.ClientConnection
+WARNING: hz.client_0 [D] [3.8-SNAPSHOT] Connection [/10.0.0.192:5701] lost. Reason: java.util.concurrent.ExecutionException[com.hazelcast.core.HazelcastInstanceNotActiveException: Hazelcast instance is not ready yet!]
+Nov 29, 2016 4:13:58 AM com.hazelcast.client.connection.nio.ClientSocketWriterInitializer
+INFO: Initializing ClientSocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.client.connection.nio.ClientConnection
+WARNING: hz.client_0 [D] [3.8-SNAPSHOT] Connection [/10.0.0.191:5701] lost. Reason: java.util.concurrent.ExecutionException[com.hazelcast.core.HazelcastInstanceNotActiveException: Hazelcast instance is not ready yet!]
+Nov 29, 2016 4:13:58 AM com.hazelcast.client.connection.nio.ClientSocketWriterInitializer
+INFO: Initializing ClientSocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.client.connection.nio.ClientConnection
+WARNING: hz.client_0 [D] [3.8-SNAPSHOT] Connection [/10.0.0.190:5701] lost. Reason: java.util.concurrent.ExecutionException[com.hazelcast.core.HazelcastInstanceNotActiveException: Hazelcast instance is not ready yet!]
+Nov 29, 2016 4:13:58 AM com.hazelcast.client.connection.nio.ClientSocketWriterInitializer
+INFO: Initializing ClientSocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.client.connection.nio.ClientConnection
+WARNING: hz.client_0 [D] [3.8-SNAPSHOT] Connection [/10.0.0.194:5701] lost. Reason: java.util.concurrent.ExecutionException[com.hazelcast.core.HazelcastInstanceNotActiveException: Hazelcast instance is not ready yet!]
+Nov 29, 2016 4:13:58 AM com.hazelcast.client.connection.nio.ClientSocketWriterInitializer
+INFO: Initializing ClientSocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.client.connection.nio.ClientConnection
+WARNING: hz.client_0 [D] [3.8-SNAPSHOT] Connection [/10.0.0.193:5701] lost. Reason: java.util.concurrent.ExecutionException[com.hazelcast.core.HazelcastInstanceNotActiveException: Hazelcast instance is not ready yet!]
+Nov 29, 2016 4:13:58 AM com.hazelcast.client.spi.impl.ClusterListenerSupport
+WARNING: hz.client_0 [D] [3.8-SNAPSHOT] Unable to get alive cluster connection, try in 8977 ms later, attempt 2 of 200.
+Nov 29, 2016 4:14:07 AM com.hazelcast.client.connection.nio.ClientSocketWriterInitializer
+INFO: Initializing ClientSocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:07 AM com.hazelcast.client.connection.ClientConnectionManager
+INFO: hz.client_0 [D] [3.8-SNAPSHOT] Authenticated with server [10.0.0.193]:5701, server version:3.8-SNAPSHOT Local address: /10.0.0.192:53948
+Nov 29, 2016 4:14:07 AM com.hazelcast.client.spi.impl.ClientMembershipListener
+INFO: hz.client_0 [D] [3.8-SNAPSHOT] 
+
+Members [5] {
+	Member [10.0.0.190]:5701 - ab140882-c17a-4ecb-ad38-fcdfc48d76b7
+	Member [10.0.0.194]:5701 - d0109a87-237b-4cf9-abd8-65d34f0577b8
+	Member [10.0.0.193]:5701 - 7833d11f-0e0a-4ecc-a9bd-6057a721a410
+	Member [10.0.0.191]:5701 - a96b0255-bd14-4be1-bf54-061d6dbe4349
+	Member [10.0.0.192]:5701 - 478ded1e-982a-4142-b1b4-c792d8ce5c07
+}
+
+Nov 29, 2016 4:14:07 AM com.hazelcast.core.LifecycleService
+INFO: hz.client_0 [D] [3.8-SNAPSHOT] HazelcastClient 3.8-SNAPSHOT (20161128 - bc37db7) is CLIENT_CONNECTED

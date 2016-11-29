@@ -1,0 +1,6 @@
+
+for i in {0..100} ; do
+ hz run -id A clusterShutdown
+ sleep 2
+ hz embeddedRestart -id A Member
+done

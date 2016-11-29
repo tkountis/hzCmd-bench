@@ -1,0 +1,1195 @@
+HzCmd{ ID=HzMember5E Q=/disk1/jenkins/workspace/temp/hz/wan/vrzn/HzMember5E jvmPidId=24775@ip-10-0-0-164 lib=/home/ec2-user/hz-root/hz-lib/3.8-SNAPSHOT}
+log4j:WARN No appenders could be found for logger (org.apache.activemq.transport.WireFormatNegotiator).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+MQ msg in = StartEmbeddedObjectCmd{}
+Nov 29, 2016 4:12:05 AM com.hazelcast.config.AbstractXmlConfigHelper
+WARNING: Name of the hazelcast schema location incorrect using default
+Nov 29, 2016 4:12:06 AM com.hazelcast.instance.DefaultAddressPicker
+INFO: [LOCAL] [E] [3.8-SNAPSHOT] Interfaces is disabled, trying to pick one address from TCP-IP config addresses: [10.0.0.162, 10.0.0.163, 10.0.0.166, 10.0.0.164, 10.0.0.165]
+Nov 29, 2016 4:12:06 AM com.hazelcast.instance.DefaultAddressPicker
+INFO: [LOCAL] [E] [3.8-SNAPSHOT] Prefer IPv4 stack is true.
+Nov 29, 2016 4:12:06 AM com.hazelcast.instance.DefaultAddressPicker
+INFO: [LOCAL] [E] [3.8-SNAPSHOT] Picked [10.0.0.164]:5701, using socket ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5701], bind any local is true
+Nov 29, 2016 4:12:06 AM com.hazelcast.system
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Hazelcast Enterprise 3.8-SNAPSHOT (20161128 - bc37db7) starting at [10.0.0.164]:5701
+Nov 29, 2016 4:12:06 AM com.hazelcast.system
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Copyright (c) 2008-2015, Hazelcast, Inc. All Rights Reserved.
+Nov 29, 2016 4:12:06 AM com.hazelcast.instance.NodeExtension
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Checking Hazelcast Enterprise license...
+Nov 29, 2016 4:12:06 AM com.hazelcast.instance.NodeExtension
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] License{allowedNumberOfNodes=9999, expiryDate=11/30/2099, featureList=[ Management Center, Web Session, Clustered Rest, Clustered JMX, Security, Wan Replication, Continuous Query Cache, High Density Memory, Hot Restart ], No Version Restriction}
+Nov 29, 2016 4:12:06 AM com.hazelcast.instance.NodeExtension
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Creating POOLED native memory manager with 2048 MB size
+Nov 29, 2016 4:12:06 AM com.hazelcast.spi.impl.operationservice.impl.BackpressureRegulator
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Backpressure is enabled, maxConcurrentInvocations:27200, syncWindow: 100
+Nov 29, 2016 4:12:06 AM com.hazelcast.instance.Node
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Creating TcpIpJoiner
+Nov 29, 2016 4:12:06 AM com.hazelcast.core.LifecycleService
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.164]:5701 is STARTING
+Nov 29, 2016 4:12:06 AM com.hazelcast.spi.impl.operationexecutor.impl.OperationExecutorImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Starting 8 partition threads
+Nov 29, 2016 4:12:06 AM com.hazelcast.spi.impl.operationexecutor.impl.OperationExecutorImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Starting 5 generic threads (1 dedicated for priority tasks)
+Nov 29, 2016 4:12:06 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Cluster state not found on disk. Will not load Hot Restart data.
+Nov 29, 2016 4:12:06 AM com.hazelcast.spi.hotrestart
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] hz._hzInstance_1_E.s00 homeDir: /home/ec2-user/hot-junk/s00
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.162:35582
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.162:35582
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.166:38180
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.166:38180
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.165:44449
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.165:44449
+Nov 29, 2016 4:12:06 AM com.hazelcast.spi.hotrestart
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] hz._hzInstance_1_E.s01 homeDir: /home/ec2-user/hot-junk/s01
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.163:40114
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.163:40114
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.162:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.164:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.165:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.166:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.163:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.165:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.166:5703. Reason: SocketException[Connection refused to address /10.0.0.166:5703]
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.165:5702. Reason: SocketException[Connection refused to address /10.0.0.165:5702]
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.163:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.164:5703. Reason: SocketException[Connection refused to address /10.0.0.164:5703]
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.164:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.162:5703. Reason: SocketException[Connection refused to address /10.0.0.162:5703]
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.163:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:12:06 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.162]:5703 is added to the blacklist.
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.164:5702. Reason: SocketException[Connection refused to address /10.0.0.164:5702]
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.166:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:12:06 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.164]:5703 is added to the blacklist.
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.163:5702. Reason: SocketException[Connection refused to address /10.0.0.163:5702]
+Nov 29, 2016 4:12:06 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.165]:5702 is added to the blacklist.
+Nov 29, 2016 4:12:06 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.166]:5703 is added to the blacklist.
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.165:5703. Reason: SocketException[Connection refused to address /10.0.0.165:5703]
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.166:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:55725 and /10.0.0.163:5701
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.162:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.166:5702. Reason: SocketException[Connection refused to address /10.0.0.166:5702]
+Nov 29, 2016 4:12:06 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.165]:5703 is added to the blacklist.
+Nov 29, 2016 4:12:06 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.163]:5702 is added to the blacklist.
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.166:5703. Reason: SocketException[Connection refused to address /10.0.0.166:5703]
+Nov 29, 2016 4:12:06 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.164]:5702 is added to the blacklist.
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.163:5703. Reason: SocketException[Connection refused to address /10.0.0.163:5703]
+Nov 29, 2016 4:12:06 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.166]:5703 is added to the blacklist.
+Nov 29, 2016 4:12:06 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.166]:5702 is added to the blacklist.
+Nov 29, 2016 4:12:06 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.162:5702. Reason: SocketException[Connection refused to address /10.0.0.162:5702]
+Nov 29, 2016 4:12:06 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.163]:5703 is added to the blacklist.
+Nov 29, 2016 4:12:06 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.162]:5702 is added to the blacklist.
+Nov 29, 2016 4:12:18 AM com.hazelcast.system
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Cluster version changed to 3.8.0
+Nov 29, 2016 4:12:18 AM com.hazelcast.internal.cluster.ClusterService
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] 
+
+Members [5] {
+	Member [10.0.0.162]:5701 - 90ad9766-8a3f-499a-8dac-71a84c4c94dc
+	Member [10.0.0.165]:5701 - ea1d0bab-8941-4e6f-bc9b-d1d7619dc53c
+	Member [10.0.0.163]:5701 - a3f377a6-7055-41f7-99db-d0ac135dcc5c
+	Member [10.0.0.164]:5701 - fac06d3a-5d7a-4644-85e1-51c557428bbf this
+	Member [10.0.0.166]:5701 - bf8d93e7-f959-480a-a3d6-b7ff4a440877
+}
+
+Nov 29, 2016 4:12:19 AM com.hazelcast.spi.hotrestart.HotRestartService
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Starting hot-restart service. Base directory: /home/ec2-user/hot-junk
+Nov 29, 2016 4:12:19 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] No need to start validation since expected member count is: 1
+Nov 29, 2016 4:12:19 AM com.hazelcast.internal.partition.impl.PartitionStateManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Setting cluster partition table ...
+Nov 29, 2016 4:12:19 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Starting hot restart local data load.
+Nov 29, 2016 4:12:19 AM com.hazelcast.spi.hotrestart.HotRestartService
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing Hot Restart stores, not expecting to reload any data.
+Nov 29, 2016 4:12:19 AM com.hazelcast.spi.hotrestart
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] hz._hzInstance_1_E.s00 reloaded 0 keys; chunk seq 001
+Nov 29, 2016 4:12:19 AM com.hazelcast.spi.hotrestart
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] hz._hzInstance_1_E.s01 reloaded 0 keys; chunk seq 001
+Nov 29, 2016 4:12:19 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Local Hot Restart procedure completed with success.
+Nov 29, 2016 4:12:19 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Shortcutting cluster start to success as there is no hot restart data on disk.
+Nov 29, 2016 4:12:19 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Setting final cluster state to: ACTIVE
+Nov 29, 2016 4:12:19 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Completed hot restart with final cluster state: ACTIVE
+Nov 29, 2016 4:12:20 AM com.hazelcast.spi.hotrestart.HotRestartService
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Hot Restart procedure completed in 1 seconds
+Nov 29, 2016 4:12:20 AM com.hazelcast.core.LifecycleService
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.164]:5701 is STARTED
+Nov 29, 2016 4:12:28 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.162:40042
+Nov 29, 2016 4:12:28 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.162:40042
+Nov 29, 2016 4:12:28 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:12:28 AM com.hazelcast.client.impl.protocol.task.AuthenticationMessageTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Received auth from Connection[id=6, /10.0.0.164:5701->/10.0.0.162:40042, endpoint=null, alive=true, type=JAVA_CLIENT], successfully authenticated, principal : ClientPrincipal{uuid='e929c48f-d29e-47d1-a277-febd77a6e4fd', ownerUuid='fac06d3a-5d7a-4644-85e1-51c557428bbf'}, owner connection : true, client version : 3.8-SNAPSHOT
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=3, /10.0.0.164:5701->/10.0.0.165:44449, endpoint=[10.0.0.165]:5701, alive=false, type=MEMBER] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.165:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.165:5701. Reason: SocketException[Connection refused to address /10.0.0.165:5701]
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.162:40048
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.162:40048
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.165:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.165:5701. Reason: SocketException[Connection refused to address /10.0.0.165:5701]
+Nov 29, 2016 4:13:04 AM com.hazelcast.client.impl.protocol.task.AuthenticationMessageTask
+WARNING: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Cluster reAuthentication failed.
+com.hazelcast.core.HazelcastException: java.util.concurrent.ExecutionException: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.util.FutureUtil$5.handleException(FutureUtil.java:107)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:329)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:301)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.getReAuthenticationResponses(AuthenticationBaseMessageTask.java:245)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.reAuthenticateWithMembers(AuthenticationBaseMessageTask.java:231)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.handleAuthenticated(AuthenticationBaseMessageTask.java:173)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.call(AuthenticationBaseMessageTask.java:98)
+	at com.hazelcast.client.impl.protocol.task.AbstractCallableMessageTask.processMessage(AbstractCallableMessageTask.java:35)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.initializeAndProcessMessage(AbstractMessageTask.java:128)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.run(AbstractMessageTask.java:100)
+	at com.hazelcast.client.impl.ClientEngineImpl$PriorityPartitionSpecificRunnable.run(ClientEngineImpl.java:546)
+	at com.hazelcast.spi.impl.operationservice.impl.OperationRunnerImpl.run(OperationRunnerImpl.java:142)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.process(OperationThread.java:127)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.run(OperationThread.java:102)
+Caused by: java.util.concurrent.ExecutionException: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolveAndThrowIfException(InvocationFuture.java:88)
+	at com.hazelcast.spi.impl.AbstractInvocationFuture.get(AbstractInvocationFuture.java:171)
+	at com.hazelcast.util.FutureUtil.executeWithDeadline(FutureUtil.java:343)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:327)
+	... 12 more
+Caused by: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.doInvokeRemote(Invocation.java:534)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.doInvoke(Invocation.java:511)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.invoke0(Invocation.java:484)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.invoke(Invocation.java:198)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationBuilderImpl.invoke(InvocationBuilderImpl.java:59)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.reAuthenticateWithMembers(AuthenticationBaseMessageTask.java:216)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.handleAuthenticated(AuthenticationBaseMessageTask.java:173)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.call(AuthenticationBaseMessageTask.java:98)
+	at com.hazelcast.client.impl.protocol.task.AbstractCallableMessageTask.processMessage(AbstractCallableMessageTask.java:35)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.initializeAndProcessMessage(AbstractMessageTask.java:128)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.run(AbstractMessageTask.java:100)
+	at com.hazelcast.client.impl.ClientEngineImpl$PriorityPartitionSpecificRunnable.run(ClientEngineImpl.java:546)
+	at com.hazelcast.spi.impl.operationservice.impl.OperationRunnerImpl.run(OperationRunnerImpl.java:142)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.process(OperationThread.java:127)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.run(OperationThread.java:102)
+	at ------ submitted from ------.(Unknown Source)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolve(InvocationFuture.java:114)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolveAndThrowIfException(InvocationFuture.java:75)
+	... 15 more
+
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=7, /10.0.0.164:5701->/10.0.0.162:40048, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.163:39692
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.163:39692
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.165:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:04 AM com.hazelcast.client.impl.protocol.task.AuthenticationMessageTask
+WARNING: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Cluster reAuthentication failed.
+com.hazelcast.core.HazelcastException: java.util.concurrent.ExecutionException: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.util.FutureUtil$5.handleException(FutureUtil.java:107)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:329)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:301)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.getReAuthenticationResponses(AuthenticationBaseMessageTask.java:245)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.reAuthenticateWithMembers(AuthenticationBaseMessageTask.java:231)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.handleAuthenticated(AuthenticationBaseMessageTask.java:173)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.call(AuthenticationBaseMessageTask.java:98)
+	at com.hazelcast.client.impl.protocol.task.AbstractCallableMessageTask.processMessage(AbstractCallableMessageTask.java:35)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.initializeAndProcessMessage(AbstractMessageTask.java:128)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.run(AbstractMessageTask.java:100)
+	at com.hazelcast.client.impl.ClientEngineImpl$PriorityPartitionSpecificRunnable.run(ClientEngineImpl.java:546)
+	at com.hazelcast.spi.impl.operationservice.impl.OperationRunnerImpl.run(OperationRunnerImpl.java:142)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.process(OperationThread.java:127)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.run(OperationThread.java:102)
+Caused by: java.util.concurrent.ExecutionException: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolveAndThrowIfException(InvocationFuture.java:88)
+	at com.hazelcast.spi.impl.AbstractInvocationFuture.get(AbstractInvocationFuture.java:171)
+	at com.hazelcast.util.FutureUtil.executeWithDeadline(FutureUtil.java:343)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:327)
+	... 12 more
+Caused by: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.doInvokeRemote(Invocation.java:534)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.doInvoke(Invocation.java:511)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.invoke0(Invocation.java:484)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.invoke(Invocation.java:198)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationBuilderImpl.invoke(InvocationBuilderImpl.java:59)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.reAuthenticateWithMembers(AuthenticationBaseMessageTask.java:216)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.handleAuthenticated(AuthenticationBaseMessageTask.java:173)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.call(AuthenticationBaseMessageTask.java:98)
+	at com.hazelcast.client.impl.protocol.task.AbstractCallableMessageTask.processMessage(AbstractCallableMessageTask.java:35)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.initializeAndProcessMessage(AbstractMessageTask.java:128)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.run(AbstractMessageTask.java:100)
+	at com.hazelcast.client.impl.ClientEngineImpl$PriorityPartitionSpecificRunnable.run(ClientEngineImpl.java:546)
+	at com.hazelcast.spi.impl.operationservice.impl.OperationRunnerImpl.run(OperationRunnerImpl.java:142)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.process(OperationThread.java:127)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.run(OperationThread.java:102)
+	at ------ submitted from ------.(Unknown Source)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolve(InvocationFuture.java:114)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolveAndThrowIfException(InvocationFuture.java:75)
+	... 15 more
+
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.165:5701. Reason: SocketException[Connection refused to address /10.0.0.165:5701]
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=8, /10.0.0.164:5701->/10.0.0.163:39692, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.163:39694
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.163:39694
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.165:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:04 AM com.hazelcast.client.impl.protocol.task.AuthenticationMessageTask
+WARNING: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Cluster reAuthentication failed.
+com.hazelcast.core.HazelcastException: java.util.concurrent.ExecutionException: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.util.FutureUtil$5.handleException(FutureUtil.java:107)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:329)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:301)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.getReAuthenticationResponses(AuthenticationBaseMessageTask.java:245)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.reAuthenticateWithMembers(AuthenticationBaseMessageTask.java:231)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.handleAuthenticated(AuthenticationBaseMessageTask.java:173)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.call(AuthenticationBaseMessageTask.java:98)
+	at com.hazelcast.client.impl.protocol.task.AbstractCallableMessageTask.processMessage(AbstractCallableMessageTask.java:35)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.initializeAndProcessMessage(AbstractMessageTask.java:128)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.run(AbstractMessageTask.java:100)
+	at com.hazelcast.client.impl.ClientEngineImpl$PriorityPartitionSpecificRunnable.run(ClientEngineImpl.java:546)
+	at com.hazelcast.spi.impl.operationservice.impl.OperationRunnerImpl.run(OperationRunnerImpl.java:142)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.process(OperationThread.java:127)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.run(OperationThread.java:102)
+Caused by: java.util.concurrent.ExecutionException: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolveAndThrowIfException(InvocationFuture.java:88)
+	at com.hazelcast.spi.impl.AbstractInvocationFuture.get(AbstractInvocationFuture.java:171)
+	at com.hazelcast.util.FutureUtil.executeWithDeadline(FutureUtil.java:343)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:327)
+	... 12 more
+Caused by: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.doInvokeRemote(Invocation.java:534)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.doInvoke(Invocation.java:511)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.invoke0(Invocation.java:484)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.invoke(Invocation.java:198)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationBuilderImpl.invoke(InvocationBuilderImpl.java:59)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.reAuthenticateWithMembers(AuthenticationBaseMessageTask.java:216)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.handleAuthenticated(AuthenticationBaseMessageTask.java:173)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.call(AuthenticationBaseMessageTask.java:98)
+	at com.hazelcast.client.impl.protocol.task.AbstractCallableMessageTask.processMessage(AbstractCallableMessageTask.java:35)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.initializeAndProcessMessage(AbstractMessageTask.java:128)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.run(AbstractMessageTask.java:100)
+	at com.hazelcast.client.impl.ClientEngineImpl$PriorityPartitionSpecificRunnable.run(ClientEngineImpl.java:546)
+	at com.hazelcast.spi.impl.operationservice.impl.OperationRunnerImpl.run(OperationRunnerImpl.java:142)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.process(OperationThread.java:127)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.run(OperationThread.java:102)
+	at ------ submitted from ------.(Unknown Source)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolve(InvocationFuture.java:114)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolveAndThrowIfException(InvocationFuture.java:75)
+	... 15 more
+
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.165:5701. Reason: SocketException[Connection refused to address /10.0.0.165:5701]
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=9, /10.0.0.164:5701->/10.0.0.163:39694, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.162:40082
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.162:40082
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.165:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:04 AM com.hazelcast.client.impl.protocol.task.AuthenticationMessageTask
+WARNING: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Cluster reAuthentication failed.
+com.hazelcast.core.HazelcastException: java.util.concurrent.ExecutionException: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.util.FutureUtil$5.handleException(FutureUtil.java:107)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:329)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:301)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.getReAuthenticationResponses(AuthenticationBaseMessageTask.java:245)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.reAuthenticateWithMembers(AuthenticationBaseMessageTask.java:231)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.handleAuthenticated(AuthenticationBaseMessageTask.java:173)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.call(AuthenticationBaseMessageTask.java:98)
+	at com.hazelcast.client.impl.protocol.task.AbstractCallableMessageTask.processMessage(AbstractCallableMessageTask.java:35)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.initializeAndProcessMessage(AbstractMessageTask.java:128)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.run(AbstractMessageTask.java:100)
+	at com.hazelcast.client.impl.ClientEngineImpl$PriorityPartitionSpecificRunnable.run(ClientEngineImpl.java:546)
+	at com.hazelcast.spi.impl.operationservice.impl.OperationRunnerImpl.run(OperationRunnerImpl.java:142)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.process(OperationThread.java:127)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.run(OperationThread.java:102)
+Caused by: java.util.concurrent.ExecutionException: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolveAndThrowIfException(InvocationFuture.java:88)
+	at com.hazelcast.spi.impl.AbstractInvocationFuture.get(AbstractInvocationFuture.java:171)
+	at com.hazelcast.util.FutureUtil.executeWithDeadline(FutureUtil.java:343)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:327)
+	... 12 more
+Caused by: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.doInvokeRemote(Invocation.java:534)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.doInvoke(Invocation.java:511)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.invoke0(Invocation.java:484)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.invoke(Invocation.java:198)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationBuilderImpl.invoke(InvocationBuilderImpl.java:59)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.reAuthenticateWithMembers(AuthenticationBaseMessageTask.java:216)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.handleAuthenticated(AuthenticationBaseMessageTask.java:173)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.call(AuthenticationBaseMessageTask.java:98)
+	at com.hazelcast.client.impl.protocol.task.AbstractCallableMessageTask.processMessage(AbstractCallableMessageTask.java:35)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.initializeAndProcessMessage(AbstractMessageTask.java:128)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.run(AbstractMessageTask.java:100)
+	at com.hazelcast.client.impl.ClientEngineImpl$PriorityPartitionSpecificRunnable.run(ClientEngineImpl.java:546)
+	at com.hazelcast.spi.impl.operationservice.impl.OperationRunnerImpl.run(OperationRunnerImpl.java:142)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.process(OperationThread.java:127)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.run(OperationThread.java:102)
+	at ------ submitted from ------.(Unknown Source)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolve(InvocationFuture.java:114)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolveAndThrowIfException(InvocationFuture.java:75)
+	... 15 more
+
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.165:5701. Reason: SocketException[Connection refused to address /10.0.0.165:5701]
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=10, /10.0.0.164:5701->/10.0.0.162:40082, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:04 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=6, /10.0.0.164:5701->/10.0.0.162:40042, endpoint=[10.0.0.162]:40042, alive=false, type=JAVA_CLIENT] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=4, /10.0.0.164:5701->/10.0.0.163:40114, endpoint=[10.0.0.163]:5701, alive=false, type=MEMBER] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=5, /10.0.0.164:55725->/10.0.0.163:5701, endpoint=[10.0.0.163]:5701, alive=false, type=MEMBER] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.163:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.163:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.163:5701. Reason: SocketException[Connection refused to address /10.0.0.163:5701]
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.163:5701. Reason: SocketException[Connection refused to address /10.0.0.163:5701]
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.165:54232
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.165:54232
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.165:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.163:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.165:5701. Reason: SocketException[Connection refused to address /10.0.0.165:5701]
+Nov 29, 2016 4:13:05 AM com.hazelcast.client.impl.protocol.task.AuthenticationMessageTask
+WARNING: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Cluster reAuthentication failed.
+com.hazelcast.core.HazelcastException: java.util.concurrent.ExecutionException: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.util.FutureUtil$5.handleException(FutureUtil.java:107)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:329)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:301)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.getReAuthenticationResponses(AuthenticationBaseMessageTask.java:245)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.reAuthenticateWithMembers(AuthenticationBaseMessageTask.java:231)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.handleAuthenticated(AuthenticationBaseMessageTask.java:173)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.call(AuthenticationBaseMessageTask.java:98)
+	at com.hazelcast.client.impl.protocol.task.AbstractCallableMessageTask.processMessage(AbstractCallableMessageTask.java:35)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.initializeAndProcessMessage(AbstractMessageTask.java:128)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.run(AbstractMessageTask.java:100)
+	at com.hazelcast.client.impl.ClientEngineImpl$PriorityPartitionSpecificRunnable.run(ClientEngineImpl.java:546)
+	at com.hazelcast.spi.impl.operationservice.impl.OperationRunnerImpl.run(OperationRunnerImpl.java:142)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.process(OperationThread.java:127)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.run(OperationThread.java:102)
+Caused by: java.util.concurrent.ExecutionException: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolveAndThrowIfException(InvocationFuture.java:88)
+	at com.hazelcast.spi.impl.AbstractInvocationFuture.get(AbstractInvocationFuture.java:171)
+	at com.hazelcast.util.FutureUtil.executeWithDeadline(FutureUtil.java:343)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:327)
+	... 12 more
+Caused by: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.doInvokeRemote(Invocation.java:534)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.doInvoke(Invocation.java:511)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.invoke0(Invocation.java:484)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.invoke(Invocation.java:198)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationBuilderImpl.invoke(InvocationBuilderImpl.java:59)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.reAuthenticateWithMembers(AuthenticationBaseMessageTask.java:216)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.handleAuthenticated(AuthenticationBaseMessageTask.java:173)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.call(AuthenticationBaseMessageTask.java:98)
+	at com.hazelcast.client.impl.protocol.task.AbstractCallableMessageTask.processMessage(AbstractCallableMessageTask.java:35)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.initializeAndProcessMessage(AbstractMessageTask.java:128)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.run(AbstractMessageTask.java:100)
+	at com.hazelcast.client.impl.ClientEngineImpl$PriorityPartitionSpecificRunnable.run(ClientEngineImpl.java:546)
+	at com.hazelcast.spi.impl.operationservice.impl.OperationRunnerImpl.run(OperationRunnerImpl.java:142)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.process(OperationThread.java:127)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.run(OperationThread.java:102)
+	at ------ submitted from ------.(Unknown Source)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolve(InvocationFuture.java:114)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolveAndThrowIfException(InvocationFuture.java:75)
+	... 15 more
+
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.163:5701. Reason: SocketException[Connection refused to address /10.0.0.163:5701]
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=11, /10.0.0.164:5701->/10.0.0.165:54232, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.166:52022
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.166:52022
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.165:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.163:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.165:5701. Reason: SocketException[Connection refused to address /10.0.0.165:5701]
+Nov 29, 2016 4:13:05 AM com.hazelcast.client.impl.protocol.task.AuthenticationMessageTask
+WARNING: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Cluster reAuthentication failed.
+com.hazelcast.core.HazelcastException: java.util.concurrent.ExecutionException: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.util.FutureUtil$5.handleException(FutureUtil.java:107)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:329)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:301)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.getReAuthenticationResponses(AuthenticationBaseMessageTask.java:245)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.reAuthenticateWithMembers(AuthenticationBaseMessageTask.java:231)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.handleAuthenticated(AuthenticationBaseMessageTask.java:173)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.call(AuthenticationBaseMessageTask.java:98)
+	at com.hazelcast.client.impl.protocol.task.AbstractCallableMessageTask.processMessage(AbstractCallableMessageTask.java:35)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.initializeAndProcessMessage(AbstractMessageTask.java:128)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.run(AbstractMessageTask.java:100)
+	at com.hazelcast.client.impl.ClientEngineImpl$PriorityPartitionSpecificRunnable.run(ClientEngineImpl.java:546)
+	at com.hazelcast.spi.impl.operationservice.impl.OperationRunnerImpl.run(OperationRunnerImpl.java:142)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.process(OperationThread.java:127)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.run(OperationThread.java:102)
+Caused by: java.util.concurrent.ExecutionException: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolveAndThrowIfException(InvocationFuture.java:88)
+	at com.hazelcast.spi.impl.AbstractInvocationFuture.get(AbstractInvocationFuture.java:171)
+	at com.hazelcast.util.FutureUtil.executeWithDeadline(FutureUtil.java:343)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:327)
+	... 12 more
+Caused by: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.doInvokeRemote(Invocation.java:534)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.doInvoke(Invocation.java:511)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.invoke0(Invocation.java:484)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.invoke(Invocation.java:198)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationBuilderImpl.invoke(InvocationBuilderImpl.java:59)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.reAuthenticateWithMembers(AuthenticationBaseMessageTask.java:216)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.handleAuthenticated(AuthenticationBaseMessageTask.java:173)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.call(AuthenticationBaseMessageTask.java:98)
+	at com.hazelcast.client.impl.protocol.task.AbstractCallableMessageTask.processMessage(AbstractCallableMessageTask.java:35)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.initializeAndProcessMessage(AbstractMessageTask.java:128)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.run(AbstractMessageTask.java:100)
+	at com.hazelcast.client.impl.ClientEngineImpl$PriorityPartitionSpecificRunnable.run(ClientEngineImpl.java:546)
+	at com.hazelcast.spi.impl.operationservice.impl.OperationRunnerImpl.run(OperationRunnerImpl.java:142)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.process(OperationThread.java:127)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.run(OperationThread.java:102)
+	at ------ submitted from ------.(Unknown Source)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolve(InvocationFuture.java:114)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolveAndThrowIfException(InvocationFuture.java:75)
+	... 15 more
+
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.163:5701. Reason: SocketException[Connection refused to address /10.0.0.163:5701]
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=12, /10.0.0.164:5701->/10.0.0.166:52022, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.165:54254
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.165:54254
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.166:52028
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.166:52028
+Nov 29, 2016 4:13:05 AM com.hazelcast.client.impl.protocol.task.AuthenticationMessageTask
+WARNING: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Cluster reAuthentication failed.
+com.hazelcast.core.HazelcastException: java.util.concurrent.ExecutionException: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.util.FutureUtil$5.handleException(FutureUtil.java:107)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:329)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:301)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.getReAuthenticationResponses(AuthenticationBaseMessageTask.java:245)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.reAuthenticateWithMembers(AuthenticationBaseMessageTask.java:231)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.handleAuthenticated(AuthenticationBaseMessageTask.java:173)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.call(AuthenticationBaseMessageTask.java:98)
+	at com.hazelcast.client.impl.protocol.task.AbstractCallableMessageTask.processMessage(AbstractCallableMessageTask.java:35)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.initializeAndProcessMessage(AbstractMessageTask.java:128)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.run(AbstractMessageTask.java:100)
+	at com.hazelcast.client.impl.ClientEngineImpl$PriorityPartitionSpecificRunnable.run(ClientEngineImpl.java:546)
+	at com.hazelcast.spi.impl.operationservice.impl.OperationRunnerImpl.run(OperationRunnerImpl.java:142)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.process(OperationThread.java:127)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.run(OperationThread.java:102)
+Caused by: java.util.concurrent.ExecutionException: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolveAndThrowIfException(InvocationFuture.java:88)
+	at com.hazelcast.spi.impl.AbstractInvocationFuture.get(AbstractInvocationFuture.java:171)
+	at com.hazelcast.util.FutureUtil.executeWithDeadline(FutureUtil.java:343)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:327)
+	... 12 more
+Caused by: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.doInvokeRemote(Invocation.java:534)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.doInvoke(Invocation.java:511)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.invoke0(Invocation.java:484)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.invoke(Invocation.java:198)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationBuilderImpl.invoke(InvocationBuilderImpl.java:59)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.reAuthenticateWithMembers(AuthenticationBaseMessageTask.java:216)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.handleAuthenticated(AuthenticationBaseMessageTask.java:173)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.call(AuthenticationBaseMessageTask.java:98)
+	at com.hazelcast.client.impl.protocol.task.AbstractCallableMessageTask.processMessage(AbstractCallableMessageTask.java:35)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.initializeAndProcessMessage(AbstractMessageTask.java:128)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.run(AbstractMessageTask.java:100)
+	at com.hazelcast.client.impl.ClientEngineImpl$PriorityPartitionSpecificRunnable.run(ClientEngineImpl.java:546)
+	at com.hazelcast.spi.impl.operationservice.impl.OperationRunnerImpl.run(OperationRunnerImpl.java:142)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.process(OperationThread.java:127)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.run(OperationThread.java:102)
+	at ------ submitted from ------.(Unknown Source)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolve(InvocationFuture.java:114)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolveAndThrowIfException(InvocationFuture.java:75)
+	... 15 more
+
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.163:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.165:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.163:5701. Reason: SocketException[Connection refused to address /10.0.0.163:5701]
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=13, /10.0.0.164:5701->/10.0.0.165:54254, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:05 AM com.hazelcast.client.impl.protocol.task.AuthenticationMessageTask
+WARNING: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Cluster reAuthentication failed.
+com.hazelcast.core.HazelcastException: java.util.concurrent.ExecutionException: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.util.FutureUtil$5.handleException(FutureUtil.java:107)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:329)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:301)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.getReAuthenticationResponses(AuthenticationBaseMessageTask.java:245)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.reAuthenticateWithMembers(AuthenticationBaseMessageTask.java:231)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.handleAuthenticated(AuthenticationBaseMessageTask.java:173)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.call(AuthenticationBaseMessageTask.java:98)
+	at com.hazelcast.client.impl.protocol.task.AbstractCallableMessageTask.processMessage(AbstractCallableMessageTask.java:35)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.initializeAndProcessMessage(AbstractMessageTask.java:128)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.run(AbstractMessageTask.java:100)
+	at com.hazelcast.client.impl.ClientEngineImpl$PriorityPartitionSpecificRunnable.run(ClientEngineImpl.java:546)
+	at com.hazelcast.spi.impl.operationservice.impl.OperationRunnerImpl.run(OperationRunnerImpl.java:142)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.process(OperationThread.java:127)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.run(OperationThread.java:102)
+Caused by: java.util.concurrent.ExecutionException: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolveAndThrowIfException(InvocationFuture.java:88)
+	at com.hazelcast.spi.impl.AbstractInvocationFuture.get(AbstractInvocationFuture.java:171)
+	at com.hazelcast.util.FutureUtil.executeWithDeadline(FutureUtil.java:343)
+	at com.hazelcast.util.FutureUtil.waitWithDeadline(FutureUtil.java:327)
+	... 12 more
+Caused by: com.hazelcast.spi.exception.RetryableIOException: Packet not send to -> [10.0.0.165]:5701
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.doInvokeRemote(Invocation.java:534)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.doInvoke(Invocation.java:511)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.invoke0(Invocation.java:484)
+	at com.hazelcast.spi.impl.operationservice.impl.Invocation.invoke(Invocation.java:198)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationBuilderImpl.invoke(InvocationBuilderImpl.java:59)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.reAuthenticateWithMembers(AuthenticationBaseMessageTask.java:216)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.handleAuthenticated(AuthenticationBaseMessageTask.java:173)
+	at com.hazelcast.client.impl.protocol.task.AuthenticationBaseMessageTask.call(AuthenticationBaseMessageTask.java:98)
+	at com.hazelcast.client.impl.protocol.task.AbstractCallableMessageTask.processMessage(AbstractCallableMessageTask.java:35)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.initializeAndProcessMessage(AbstractMessageTask.java:128)
+	at com.hazelcast.client.impl.protocol.task.AbstractMessageTask.run(AbstractMessageTask.java:100)
+	at com.hazelcast.client.impl.ClientEngineImpl$PriorityPartitionSpecificRunnable.run(ClientEngineImpl.java:546)
+	at com.hazelcast.spi.impl.operationservice.impl.OperationRunnerImpl.run(OperationRunnerImpl.java:142)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.process(OperationThread.java:127)
+	at com.hazelcast.spi.impl.operationexecutor.impl.OperationThread.run(OperationThread.java:102)
+	at ------ submitted from ------.(Unknown Source)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolve(InvocationFuture.java:114)
+	at com.hazelcast.spi.impl.operationservice.impl.InvocationFuture.resolveAndThrowIfException(InvocationFuture.java:75)
+	... 15 more
+
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.165:5701. Reason: SocketException[Connection refused to address /10.0.0.165:5701]
+Nov 29, 2016 4:13:05 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=14, /10.0.0.164:5701->/10.0.0.166:52028, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+HzCmd{ ID=HzMember5E Q=/disk1/jenkins/workspace/temp/hz/wan/vrzn/HzMember5E jvmPidId=25096@ip-10-0-0-164 lib=/home/ec2-user/hz-root/hz-lib/3.8-SNAPSHOT}
+log4j:WARN No appenders could be found for logger (org.apache.activemq.transport.WireFormatNegotiator).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+MQ msg in = StartEmbeddedObjectCmd{}
+Nov 29, 2016 4:13:48 AM com.hazelcast.config.AbstractXmlConfigHelper
+WARNING: Name of the hazelcast schema location incorrect using default
+Nov 29, 2016 4:13:49 AM com.hazelcast.instance.DefaultAddressPicker
+INFO: [LOCAL] [E] [3.8-SNAPSHOT] Interfaces is disabled, trying to pick one address from TCP-IP config addresses: [10.0.0.162, 10.0.0.163, 10.0.0.166, 10.0.0.164, 10.0.0.165]
+Nov 29, 2016 4:13:49 AM com.hazelcast.instance.DefaultAddressPicker
+INFO: [LOCAL] [E] [3.8-SNAPSHOT] Prefer IPv4 stack is true.
+Nov 29, 2016 4:13:49 AM com.hazelcast.instance.DefaultAddressPicker
+INFO: [LOCAL] [E] [3.8-SNAPSHOT] Picked [10.0.0.164]:5701, using socket ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5701], bind any local is true
+Nov 29, 2016 4:13:49 AM com.hazelcast.system
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Hazelcast Enterprise 3.8-SNAPSHOT (20161128 - bc37db7) starting at [10.0.0.164]:5701
+Nov 29, 2016 4:13:49 AM com.hazelcast.system
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Copyright (c) 2008-2015, Hazelcast, Inc. All Rights Reserved.
+Nov 29, 2016 4:13:49 AM com.hazelcast.instance.NodeExtension
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Checking Hazelcast Enterprise license...
+Nov 29, 2016 4:13:49 AM com.hazelcast.instance.NodeExtension
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] License{allowedNumberOfNodes=9999, expiryDate=11/30/2099, featureList=[ Management Center, Web Session, Clustered Rest, Clustered JMX, Security, Wan Replication, Continuous Query Cache, High Density Memory, Hot Restart ], No Version Restriction}
+Nov 29, 2016 4:13:49 AM com.hazelcast.instance.NodeExtension
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Creating POOLED native memory manager with 2048 MB size
+Nov 29, 2016 4:13:49 AM com.hazelcast.spi.impl.operationservice.impl.BackpressureRegulator
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Backpressure is enabled, maxConcurrentInvocations:27200, syncWindow: 100
+Nov 29, 2016 4:13:49 AM com.hazelcast.instance.Node
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Creating TcpIpJoiner
+Nov 29, 2016 4:13:49 AM com.hazelcast.core.LifecycleService
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.164]:5701 is STARTING
+Nov 29, 2016 4:13:49 AM com.hazelcast.spi.impl.operationexecutor.impl.OperationExecutorImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Starting 8 partition threads
+Nov 29, 2016 4:13:49 AM com.hazelcast.spi.impl.operationexecutor.impl.OperationExecutorImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Starting 5 generic threads (1 dedicated for priority tasks)
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.165:54270
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.166:52052
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.164:45586
+Nov 29, 2016 4:13:49 AM com.hazelcast.system
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Cluster version changed to 3.8.0
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.163:39738
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.162:40102
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.165:54270
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.163:39748
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.163:39748
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.162:40102
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.166:52052
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.163:39738
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.164:45586
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=3, /10.0.0.164:5701->/10.0.0.162:40102, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=2, /10.0.0.164:5701->/10.0.0.163:39748, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=5, /10.0.0.164:5701->/10.0.0.163:39738, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=1, /10.0.0.164:5701->/10.0.0.165:54270, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=4, /10.0.0.164:5701->/10.0.0.166:52052, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=6, /10.0.0.164:5701->/10.0.0.164:45586, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:50 AM com.hazelcast.spi.hotrestart
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] hz._hzInstance_1_E.s00 homeDir: /home/ec2-user/hot-junk/s00
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.162:59196
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.162:59196
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.163:42951
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.163:42951
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.spi.hotrestart
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] hz._hzInstance_1_E.s01 homeDir: /home/ec2-user/hot-junk/s01
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.162:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.164:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.165:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.165:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.166:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.166:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.164:5703. Reason: SocketException[Connection refused to address /10.0.0.164:5703]
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:35202 and /10.0.0.166:5701
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.162:5703. Reason: SocketException[Connection refused to address /10.0.0.162:5703]
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.163:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.164:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.163:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.164:5702. Reason: SocketException[Connection refused to address /10.0.0.164:5702]
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.163:5702. Reason: SocketException[Connection refused to address /10.0.0.163:5702]
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.162]:5703 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.165:5703. Reason: SocketException[Connection refused to address /10.0.0.165:5703]
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.165:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.166:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.165:5702. Reason: SocketException[Connection refused to address /10.0.0.165:5702]
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.162:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.165]:5702 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.166:5702. Reason: SocketException[Connection refused to address /10.0.0.166:5702]
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:56179 and /10.0.0.165:5701
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.165]:5703 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.166:5703. Reason: SocketException[Connection refused to address /10.0.0.166:5703]
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.164]:5703 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.163]:5702 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.164]:5702 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.163:5703. Reason: SocketException[Connection refused to address /10.0.0.163:5703]
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.166]:5703 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.166]:5702 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Could not connect to: /10.0.0.162:5702. Reason: SocketException[Connection refused to address /10.0.0.162:5702]
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.163]:5703 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.162]:5702 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.166:52082
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.165:54290
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.166:52082
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.165:54290
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=11, /10.0.0.164:5701->/10.0.0.166:52082, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=12, /10.0.0.164:5701->/10.0.0.165:54290, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.164:45642
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.164:45642
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=13, /10.0.0.164:5701->/10.0.0.164:45642, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.162:40148
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.162:40148
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=14, /10.0.0.164:5701->/10.0.0.162:40148, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.165:54336
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.165:54336
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=15, /10.0.0.164:5701->/10.0.0.165:54336, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.166:52112
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.166:52112
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=16, /10.0.0.164:5701->/10.0.0.166:52112, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.164:45664
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.164:45664
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=17, /10.0.0.164:5701->/10.0.0.164:45664, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.163:39796
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.163:39796
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=18, /10.0.0.164:5701->/10.0.0.163:39796, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.162:40172
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.162:40172
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=19, /10.0.0.164:5701->/10.0.0.162:40172, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.164:45694
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.164:45694
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.162:40206
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.162:40206
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=20, /10.0.0.164:5701->/10.0.0.164:45694, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=21, /10.0.0.164:5701->/10.0.0.162:40206, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.163:39822
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.163:39822
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=22, /10.0.0.164:5701->/10.0.0.163:39822, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.166:52150
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.166:52150
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=23, /10.0.0.164:5701->/10.0.0.166:52150, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.165:54368
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.165:54368
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connection[id=24, /10.0.0.164:5701->/10.0.0.165:54368, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:14:01 AM com.hazelcast.system
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Cluster version changed to 3.8.0
+Nov 29, 2016 4:14:01 AM com.hazelcast.internal.cluster.ClusterService
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] 
+
+Members [5] {
+	Member [10.0.0.162]:5701 - 90ad9766-8a3f-499a-8dac-71a84c4c94dc
+	Member [10.0.0.163]:5701 - a3f377a6-7055-41f7-99db-d0ac135dcc5c
+	Member [10.0.0.164]:5701 - fac06d3a-5d7a-4644-85e1-51c557428bbf this
+	Member [10.0.0.165]:5701 - ea1d0bab-8941-4e6f-bc9b-d1d7619dc53c
+	Member [10.0.0.166]:5701 - bf8d93e7-f959-480a-a3d6-b7ff4a440877
+}
+
+Nov 29, 2016 4:14:02 AM com.hazelcast.spi.hotrestart.HotRestartService
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Starting hot-restart service. Base directory: /home/ec2-user/hot-junk
+Nov 29, 2016 4:14:02 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Starting cluster member-list & partition table validation.
+Nov 29, 2016 4:14:02 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Expected member list after await until all members join: [bf8d93e7-f959-480a-a3d6-b7ff4a440877, 90ad9766-8a3f-499a-8dac-71a84c4c94dc, ea1d0bab-8941-4e6f-bc9b-d1d7619dc53c, a3f377a6-7055-41f7-99db-d0ac135dcc5c, fac06d3a-5d7a-4644-85e1-51c557428bbf]
+Nov 29, 2016 4:14:02 AM com.hazelcast.internal.partition.impl.PartitionStateManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Setting cluster partition table ...
+Nov 29, 2016 4:14:02 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Starting hot restart local data load.
+Nov 29, 2016 4:14:02 AM com.hazelcast.spi.hotrestart.HotRestartService
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Starting the Hot Restart procedure.
+Nov 29, 2016 4:14:02 AM com.hazelcast.spi.hotrestart
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] hz._hzInstance_1_E.s00 reloaded 0 keys; chunk seq 001
+Nov 29, 2016 4:14:02 AM com.hazelcast.spi.hotrestart
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] hz._hzInstance_1_E.s01 reloaded 0 keys; chunk seq 001
+Nov 29, 2016 4:14:02 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Local Hot Restart procedure completed with success.
+Nov 29, 2016 4:14:04 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Setting cluster-wide start status to CLUSTER_START_SUCCEEDED with cluster state ACTIVE received from: [10.0.0.162]:5701
+Nov 29, 2016 4:14:04 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Setting final cluster state to: ACTIVE
+Nov 29, 2016 4:14:04 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Completed hot restart with final cluster state: ACTIVE
+Nov 29, 2016 4:14:05 AM com.hazelcast.spi.hotrestart.HotRestartService
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Hot Restart procedure completed in 3 seconds
+Nov 29, 2016 4:14:05 AM com.hazelcast.core.LifecycleService
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] [10.0.0.164]:5701 is STARTED
+Nov 29, 2016 4:14:07 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.162:40212
+Nov 29, 2016 4:14:07 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.162:40212
+Nov 29, 2016 4:14:07 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:14:07 AM com.hazelcast.client.impl.protocol.task.AuthenticationMessageTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Received auth from Connection[id=25, /10.0.0.164:5701->/10.0.0.162:40212, endpoint=null, alive=true, type=JAVA_CLIENT], successfully authenticated, principal : ClientPrincipal{uuid='e0ccfe91-b7a1-4d77-ab6d-38632969559f', ownerUuid='fac06d3a-5d7a-4644-85e1-51c557428bbf'}, owner connection : true, client version : 3.8-SNAPSHOT
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.210:59572
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.210:59572
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.206:36169
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.206:36169
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.208:40667
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.209:52294
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.208:40667
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.209:52294
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.207:48427
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.207:48427
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.191:38615
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.191:38615
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.190:46055
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.190:46055
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.194:57800
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.194:57800
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.60:33419
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.60:33419
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.193:38812
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.193:38812
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.192:52783
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.192:52783
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.61:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.193:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:49094 and /10.0.0.61:5701
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.192:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.62:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:49585 and /10.0.0.193:5701
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Connecting to /10.0.0.59:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:48390 and /10.0.0.62:5701
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.62:40549
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:55574 and /10.0.0.192:5701
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.61:48389
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.62:40549
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.61:48389
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:42044 and /10.0.0.59:5701
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.59:45041
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.59:45041
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.58:45925
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Established socket connection between /10.0.0.164:5701 and /10.0.0.58:45925
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:34 AM com.hazelcast.enterprise.wan.replication.WanBatchReplication
+SEVERE: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Wan replication event queue is full. Dropping events. Queue size : 10000
+Nov 29, 2016 4:14:38 AM com.hazelcast.enterprise.wan.replication.WanBatchReplication
+SEVERE: [10.0.0.164]:5701 [E] [3.8-SNAPSHOT] Wan replication event queue is full. Dropping events. Queue size : 10000
+MQ msg in = LoadCmd{className='hz.map.member.multi.MultiValidateNotNull', taskId='validate_mapBak1HD'}
+MQ msg in = ThreadCountCmd{taskId='validate_mapBak1HD', threadCount=1}
+MQ msg in = SetBenchTypeCmd{intervalNanos=0, taskId='validate_mapBak1HD', type=Metrics, recordException=true, outFile='E_3.8-SNAPSHOT_validate_mapBak1HD_hz.map.member.multi.MultiValidateNotNull_1'}
+MQ msg in = SetFieldCmd{taskId='validate_mapBak1HD', field='seed', value='13'}
+MQ msg in = SetFieldCmd{taskId='validate_mapBak1HD', field='count', value='8'}
+MQ msg in = SetFieldCmd{taskId='validate_mapBak1HD', field='keyDomain', value='10000'}
+MQ msg in = SetFieldCmd{taskId='validate_mapBak1HD', field='valueSetSize', value='5'}
+MQ msg in = SetFieldCmd{taskId='validate_mapBak1HD', field='valueMinSize', value='4000'}
+MQ msg in = SetFieldCmd{taskId='validate_mapBak1HD', field='valueMaxSize', value='20000'}
+MQ msg in = SetFieldCmd{taskId='validate_mapBak1HD', field='name', value='mapBak1HD'}
+MQ msg in = InitCmd{taskId='validate_mapBak1HD'}
+Nov 29, 2016 4:14:58 AM com.hazelcast.config.MapConfig
+WARNING: Beware that eviction mechanism is different for NATIVE in-memory format. For this in-memory format, `minEvictionCheckMillis` and `evictionPercentage` has no effect
+Nov 29, 2016 4:14:58 AM com.hazelcast.config.MapConfig
+WARNING: Beware that eviction mechanism is different for NATIVE in-memory format. For this in-memory format, `minEvictionCheckMillis` and `evictionPercentage` has no effect
+Nov 29, 2016 4:14:58 AM com.hazelcast.config.MapConfig
+WARNING: Beware that eviction mechanism is different for NATIVE in-memory format. For this in-memory format, `minEvictionCheckMillis` and `evictionPercentage` has no effect
+Nov 29, 2016 4:14:58 AM com.hazelcast.config.MapConfig
+WARNING: Beware that eviction mechanism is different for NATIVE in-memory format. For this in-memory format, `minEvictionCheckMillis` and `evictionPercentage` has no effect
+Nov 29, 2016 4:14:58 AM com.hazelcast.config.MapConfig
+WARNING: Beware that eviction mechanism is different for NATIVE in-memory format. For this in-memory format, `minEvictionCheckMillis` and `evictionPercentage` has no effect
+Nov 29, 2016 4:14:58 AM com.hazelcast.config.MapConfig
+WARNING: Beware that eviction mechanism is different for NATIVE in-memory format. For this in-memory format, `minEvictionCheckMillis` and `evictionPercentage` has no effect
+Nov 29, 2016 4:14:58 AM com.hazelcast.config.MapConfig
+WARNING: Beware that eviction mechanism is different for NATIVE in-memory format. For this in-memory format, `minEvictionCheckMillis` and `evictionPercentage` has no effect
+Nov 29, 2016 4:14:58 AM com.hazelcast.config.MapConfig
+WARNING: Beware that eviction mechanism is different for NATIVE in-memory format. For this in-memory format, `minEvictionCheckMillis` and `evictionPercentage` has no effect
+MQ msg in = RunBenchCmd{seconds=0, taskId='validate_mapBak1HD'}
+[32mHzMember5E validate_mapBak1HD hz.map.member.multi.MultiValidateNotNull [0m started
+global.AssertionException: key 8774 == null
+	at hz.map.member.multi.MultiValidateNotNull.validate(MultiValidateNotNull.java:10)
+	at hz.map.member.multi.MultiValidator.timeStep(MultiValidator.java:29)
+	at remote.bench.marker.MetricsMarker.flatOut(MetricsMarker.java:52)
+	at remote.bench.marker.MetricsMarker.bench(MetricsMarker.java:39)
+	at remote.bench.BenchThread.call(BenchThread.java:38)
+	at remote.bench.BenchThread.call(BenchThread.java:12)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+javax.jms.InvalidDestinationException: Cannot publish to a deleted Destination: temp-queue://ID:ip-10-72-134-107.ec2.internal-34720-1480392897530-1:1:1
+	at org.apache.activemq.ActiveMQSession.send(ActiveMQSession.java:1904)
+	at org.apache.activemq.ActiveMQMessageProducer.send(ActiveMQMessageProducer.java:288)
+	at org.apache.activemq.ActiveMQMessageProducer.send(ActiveMQMessageProducer.java:223)
+	at org.apache.activemq.ActiveMQMessageProducerSupport.send(ActiveMQMessageProducerSupport.java:241)
+	at mq.MQ.sendReply(MQ.java:96)
+	at remote.bench.BenchManager.run(BenchManager.java:233)
+	at remote.bench.BenchManager.bench(BenchManager.java:191)
+	at remote.main.Controler$Runner.call(Controler.java:149)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+javax.jms.InvalidDestinationException: Cannot publish to a deleted Destination: temp-queue://ID:ip-10-72-134-107.ec2.internal-34720-1480392897530-1:1:1
+	at org.apache.activemq.ActiveMQSession.send(ActiveMQSession.java:1904)
+	at org.apache.activemq.ActiveMQMessageProducer.send(ActiveMQMessageProducer.java:288)
+	at org.apache.activemq.ActiveMQMessageProducer.send(ActiveMQMessageProducer.java:223)
+	at org.apache.activemq.ActiveMQMessageProducerSupport.send(ActiveMQMessageProducerSupport.java:241)
+	at mq.MQ.sendReply(MQ.java:96)
+	at remote.bench.BenchManager.run(BenchManager.java:233)
+	at remote.bench.BenchManager.bench(BenchManager.java:191)
+	at remote.main.Controler$Runner.call(Controler.java:149)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+javax.jms.InvalidDestinationException: Cannot publish to a deleted Destination: temp-queue://ID:ip-10-72-134-107.ec2.internal-34720-1480392897530-1:1:1
+	at org.apache.activemq.ActiveMQSession.send(ActiveMQSession.java:1904)
+	at org.apache.activemq.ActiveMQMessageProducer.send(ActiveMQMessageProducer.java:288)
+	at org.apache.activemq.ActiveMQMessageProducer.send(ActiveMQMessageProducer.java:223)
+	at org.apache.activemq.ActiveMQMessageProducerSupport.send(ActiveMQMessageProducerSupport.java:241)
+	at mq.MQ.sendReply(MQ.java:96)
+	at remote.bench.BenchManager.run(BenchManager.java:233)
+	at remote.bench.BenchManager.bench(BenchManager.java:191)
+	at remote.main.Controler$Runner.call(Controler.java:149)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)

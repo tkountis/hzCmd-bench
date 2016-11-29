@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+
+set -e
+cleanup() {
+    exitCode=$?
+    hz download
+    hz chart metrics
+    exit ${exitCode}
+}
+trap "cleanup" INT TERM EXIT
+
+ec2Type="c4.2xlarge"
+aws-create --count 5 --instanceType ${ec2Type} --outputFile a.box
+aws-create --count 5 --instanceType ${ec2Type} --outputFile b.box
+aws-create --count 5 --instanceType ${ec2Type} --outputFile c.box
+aws-create --count 5 --instanceType ${ec2Type} --outputFile d.box
+aws-create --count 5 --instanceType ${ec2Type} --outputFile e.box
+
+ops="${ops} -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
+ops="${ops} -Dhazelcast.enterprise.wanrep.batch.size=150"
+mOps="${mOps} -Dhazelcast.hotrestart.gc.stuck.detect.threshold=10000 -Dhazelcast.hotrestart.free.native.memory.percentage=15"
+mOps="${mOps} -Dhazelcast.connection.monitor.interval=1000 -Dhazelcast.connection.monitor.max.faults=30 -Dhazelcast.rest.enabled=true"
+hz memberOps "-Xms4G -Xmx4G ${ops} ${mOps}"
+hz clientOps "-Xms400M -Xmx400M ${ops}"
+
+hzVersion="3.8-SNAPSHOT"
+hz cluster -id A -size M5C10 -v ${hzVersion} -ee -boxes a.box
+hz cluster -id B -size M5C10 -v ${hzVersion} -ee -boxes b.box
+hz cluster -id C -size M5C10 -v ${hzVersion} -ee -boxes c.box
+hz cluster -id D -size M5C10 -v ${hzVersion} -ee -boxes d.box
+hz cluster -id E -size M5C10 -v ${hzVersion} -ee -boxes e.box
+
+hz wan A B C D E
+hz bounce Member
+
+hz run -id A load
+sleep 30
+hz run validate
+hz run clusterShutdown
+hz embeddedRestart Member
+
+until hz run clusterSafe; do
+    sleep 10
+done
+hz run validate
+
+hz run -id A put &
+hz run -id '(B|C|D|E)' get &
+sleep 120
+
+
+for i in {0..50} ; do
+ hz run -id '(B|C|D|E)' clusterShutdown
+ hz embeddedRestart -id '(B|C|D|E)' Member
+ hz run -id validate
+done
+
+for i in {0..50} ; do
+ hz run -id A clusterShutdown
+ hz embeddedRestart -id A Member
+ ./syncMap
+ hz run -id validate
+ sleep 60 
+done
+
+
+for i in {0..100} ; do
+  ./syncMap
+done
+
+
+wait

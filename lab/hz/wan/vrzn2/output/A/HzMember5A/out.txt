@@ -1,0 +1,751 @@
+HzCmd{ ID=HzMember5A Q=/disk1/jenkins/workspace/temp/hz/wan/vrzn/HzMember5A jvmPidId=27229@ip-10-0-0-70 lib=/home/ec2-user/hz-root/hz-lib/3.8-SNAPSHOT}
+log4j:WARN No appenders could be found for logger (org.apache.activemq.transport.WireFormatNegotiator).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+MQ msg in = StartEmbeddedObjectCmd{}
+Nov 29, 2016 4:09:28 AM com.hazelcast.config.AbstractXmlConfigHelper
+WARNING: Name of the hazelcast schema location incorrect using default
+Nov 29, 2016 4:09:28 AM com.hazelcast.instance.DefaultAddressPicker
+INFO: [LOCAL] [A] [3.8-SNAPSHOT] Interfaces is disabled, trying to pick one address from TCP-IP config addresses: [10.0.0.74, 10.0.0.71, 10.0.0.70, 10.0.0.73, 10.0.0.72]
+Nov 29, 2016 4:09:28 AM com.hazelcast.instance.DefaultAddressPicker
+INFO: [LOCAL] [A] [3.8-SNAPSHOT] Prefer IPv4 stack is true.
+Nov 29, 2016 4:09:28 AM com.hazelcast.instance.DefaultAddressPicker
+INFO: [LOCAL] [A] [3.8-SNAPSHOT] Picked [10.0.0.70]:5701, using socket ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5701], bind any local is true
+Nov 29, 2016 4:09:28 AM com.hazelcast.system
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Hazelcast Enterprise 3.8-SNAPSHOT (20161128 - bc37db7) starting at [10.0.0.70]:5701
+Nov 29, 2016 4:09:28 AM com.hazelcast.system
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Copyright (c) 2008-2015, Hazelcast, Inc. All Rights Reserved.
+Nov 29, 2016 4:09:28 AM com.hazelcast.instance.NodeExtension
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Checking Hazelcast Enterprise license...
+Nov 29, 2016 4:09:28 AM com.hazelcast.instance.NodeExtension
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] License{allowedNumberOfNodes=9999, expiryDate=11/30/2099, featureList=[ Management Center, Web Session, Clustered Rest, Clustered JMX, Security, Wan Replication, Continuous Query Cache, High Density Memory, Hot Restart ], No Version Restriction}
+Nov 29, 2016 4:09:28 AM com.hazelcast.instance.NodeExtension
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Creating POOLED native memory manager with 2048 MB size
+Nov 29, 2016 4:09:28 AM com.hazelcast.spi.impl.operationservice.impl.BackpressureRegulator
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Backpressure is enabled, maxConcurrentInvocations:27200, syncWindow: 100
+Nov 29, 2016 4:09:28 AM com.hazelcast.instance.Node
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Creating TcpIpJoiner
+Nov 29, 2016 4:09:28 AM com.hazelcast.core.LifecycleService
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.70]:5701 is STARTING
+Nov 29, 2016 4:09:29 AM com.hazelcast.spi.impl.operationexecutor.impl.OperationExecutorImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Starting 8 partition threads
+Nov 29, 2016 4:09:29 AM com.hazelcast.spi.impl.operationexecutor.impl.OperationExecutorImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Starting 5 generic threads (1 dedicated for priority tasks)
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.71:33630
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.72:33898
+Nov 29, 2016 4:09:29 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Cluster state not found on disk. Will not load Hot Restart data.
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.71:33630
+Nov 29, 2016 4:09:29 AM com.hazelcast.spi.hotrestart
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] hz._hzInstance_1_A.s00 homeDir: /home/ec2-user/hot-junk/s00
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.72:33898
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.73:52856
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.73:52856
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.74:45985
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.74:45985
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:09:29 AM com.hazelcast.spi.hotrestart
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] hz._hzInstance_1_A.s01 homeDir: /home/ec2-user/hot-junk/s01
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.74:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.73:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.72:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.73:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.74:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.70:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.70:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.73:5703. Reason: SocketException[Connection refused to address /10.0.0.73:5703]
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.72:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.72:5702. Reason: SocketException[Connection refused to address /10.0.0.72:5702]
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.71:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.74:5703. Reason: SocketException[Connection refused to address /10.0.0.74:5703]
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.71:5703. Reason: SocketException[Connection refused to address /10.0.0.71:5703]
+Nov 29, 2016 4:09:29 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.72]:5702 is added to the blacklist.
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.72:5703. Reason: SocketException[Connection refused to address /10.0.0.72:5703]
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.73:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:09:29 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.73]:5703 is added to the blacklist.
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.70:5702. Reason: SocketException[Connection refused to address /10.0.0.70:5702]
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.71:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.74:5702. Reason: SocketException[Connection refused to address /10.0.0.74:5702]
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.71:5702. Reason: SocketException[Connection refused to address /10.0.0.71:5702]
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.70:5703. Reason: SocketException[Connection refused to address /10.0.0.70:5703]
+Nov 29, 2016 4:09:29 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.70]:5702 is added to the blacklist.
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.73:5703. Reason: SocketException[Connection refused to address /10.0.0.73:5703]
+Nov 29, 2016 4:09:29 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.72]:5703 is added to the blacklist.
+Nov 29, 2016 4:09:29 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.71]:5703 is added to the blacklist.
+Nov 29, 2016 4:09:29 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.73:5702. Reason: SocketException[Connection refused to address /10.0.0.73:5702]
+Nov 29, 2016 4:09:29 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.74]:5703 is added to the blacklist.
+Nov 29, 2016 4:09:29 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.73]:5702 is added to the blacklist.
+Nov 29, 2016 4:09:29 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.73]:5703 is added to the blacklist.
+Nov 29, 2016 4:09:29 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.70]:5703 is added to the blacklist.
+Nov 29, 2016 4:09:29 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.71]:5702 is added to the blacklist.
+Nov 29, 2016 4:09:29 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.74]:5702 is added to the blacklist.
+Nov 29, 2016 4:09:34 AM com.hazelcast.system
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Cluster version changed to 3.8.0
+Nov 29, 2016 4:09:34 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] 
+
+
+Members [1] {
+	Member [10.0.0.70]:5701 - 422e207d-0165-4658-8ac6-d062aaf52319 this
+}
+
+Nov 29, 2016 4:09:34 AM com.hazelcast.spi.hotrestart.HotRestartService
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Starting hot-restart service. Base directory: /home/ec2-user/hot-junk
+Nov 29, 2016 4:09:34 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] No need to start validation since expected member count is: 1
+Nov 29, 2016 4:09:34 AM com.hazelcast.internal.partition.impl.PartitionStateManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Setting cluster partition table ...
+Nov 29, 2016 4:09:34 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Starting hot restart local data load.
+Nov 29, 2016 4:09:34 AM com.hazelcast.spi.hotrestart.HotRestartService
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing Hot Restart stores, not expecting to reload any data.
+Nov 29, 2016 4:09:34 AM com.hazelcast.spi.hotrestart
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] hz._hzInstance_1_A.s00 reloaded 0 keys; chunk seq 001
+Nov 29, 2016 4:09:34 AM com.hazelcast.spi.hotrestart
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] hz._hzInstance_1_A.s01 reloaded 0 keys; chunk seq 001
+Nov 29, 2016 4:09:34 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Local Hot Restart procedure completed with success.
+Nov 29, 2016 4:09:34 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Shortcutting cluster start to success as there is no hot restart data on disk.
+Nov 29, 2016 4:09:34 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Setting final cluster state to: ACTIVE
+Nov 29, 2016 4:09:34 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Completed hot restart with final cluster state: ACTIVE
+Nov 29, 2016 4:09:35 AM com.hazelcast.spi.hotrestart.HotRestartService
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Hot Restart procedure completed in 1 seconds
+Nov 29, 2016 4:09:35 AM com.hazelcast.core.LifecycleService
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.70]:5701 is STARTED
+Nov 29, 2016 4:09:41 AM com.hazelcast.internal.cluster.ClusterService
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] 
+
+Members [5] {
+	Member [10.0.0.70]:5701 - 422e207d-0165-4658-8ac6-d062aaf52319 this
+	Member [10.0.0.72]:5701 - 103bee7a-369f-4322-83bd-25a10c2f957c
+	Member [10.0.0.71]:5701 - 7c8731c3-c7fd-45e1-9f78-59f33322934a
+	Member [10.0.0.73]:5701 - d168806f-7216-4762-b538-2dd0bcc7255b
+	Member [10.0.0.74]:5701 - 7920c4f2-05ee-423c-9672-6c07914f8e3e
+}
+
+Nov 29, 2016 4:10:00 AM com.hazelcast.internal.partition.impl.PartitionStateManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing cluster partition table arrangement...
+Nov 29, 2016 4:12:59 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=4, /10.0.0.70:5701->/10.0.0.74:45985, endpoint=[10.0.0.74]:5701, alive=false, type=MEMBER] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:12:59 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.74:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:12:59 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.74:5701. Reason: SocketException[Connection refused to address /10.0.0.74:5701]
+HzCmd{ ID=HzMember5A Q=/disk1/jenkins/workspace/temp/hz/wan/vrzn/HzMember5A jvmPidId=27558@ip-10-0-0-70 lib=/home/ec2-user/hz-root/hz-lib/3.8-SNAPSHOT}
+log4j:WARN No appenders could be found for logger (org.apache.activemq.transport.WireFormatNegotiator).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+MQ msg in = StartEmbeddedObjectCmd{}
+Nov 29, 2016 4:13:48 AM com.hazelcast.config.AbstractXmlConfigHelper
+WARNING: Name of the hazelcast schema location incorrect using default
+Nov 29, 2016 4:13:49 AM com.hazelcast.instance.DefaultAddressPicker
+INFO: [LOCAL] [A] [3.8-SNAPSHOT] Interfaces is disabled, trying to pick one address from TCP-IP config addresses: [10.0.0.74, 10.0.0.71, 10.0.0.70, 10.0.0.73, 10.0.0.72]
+Nov 29, 2016 4:13:49 AM com.hazelcast.instance.DefaultAddressPicker
+INFO: [LOCAL] [A] [3.8-SNAPSHOT] Prefer IPv4 stack is true.
+Nov 29, 2016 4:13:49 AM com.hazelcast.instance.DefaultAddressPicker
+INFO: [LOCAL] [A] [3.8-SNAPSHOT] Picked [10.0.0.70]:5701, using socket ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=5701], bind any local is true
+Nov 29, 2016 4:13:49 AM com.hazelcast.system
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Hazelcast Enterprise 3.8-SNAPSHOT (20161128 - bc37db7) starting at [10.0.0.70]:5701
+Nov 29, 2016 4:13:49 AM com.hazelcast.system
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Copyright (c) 2008-2015, Hazelcast, Inc. All Rights Reserved.
+Nov 29, 2016 4:13:49 AM com.hazelcast.instance.NodeExtension
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Checking Hazelcast Enterprise license...
+Nov 29, 2016 4:13:49 AM com.hazelcast.instance.NodeExtension
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] License{allowedNumberOfNodes=9999, expiryDate=11/30/2099, featureList=[ Management Center, Web Session, Clustered Rest, Clustered JMX, Security, Wan Replication, Continuous Query Cache, High Density Memory, Hot Restart ], No Version Restriction}
+Nov 29, 2016 4:13:49 AM com.hazelcast.instance.NodeExtension
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Creating POOLED native memory manager with 2048 MB size
+Nov 29, 2016 4:13:49 AM com.hazelcast.spi.impl.operationservice.impl.BackpressureRegulator
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Backpressure is enabled, maxConcurrentInvocations:27200, syncWindow: 100
+Nov 29, 2016 4:13:49 AM com.hazelcast.instance.Node
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Creating TcpIpJoiner
+Nov 29, 2016 4:13:49 AM com.hazelcast.core.LifecycleService
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.70]:5701 is STARTING
+Nov 29, 2016 4:13:49 AM com.hazelcast.spi.impl.operationexecutor.impl.OperationExecutorImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Starting 8 partition threads
+Nov 29, 2016 4:13:49 AM com.hazelcast.spi.impl.operationexecutor.impl.OperationExecutorImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Starting 5 generic threads (1 dedicated for priority tasks)
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.72:48926
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.71:54866
+Nov 29, 2016 4:13:49 AM com.hazelcast.system
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Cluster version changed to 3.8.0
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.72:48938
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.72:48926
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.72:48938
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.71:54866
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.73:53512
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.73:53512
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=4, /10.0.0.70:5701->/10.0.0.73:53512, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=3, /10.0.0.70:5701->/10.0.0.71:54866, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=1, /10.0.0.70:5701->/10.0.0.72:48926, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=2, /10.0.0.70:5701->/10.0.0.72:48938, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.74:48592
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.74:48592
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=5, /10.0.0.70:5701->/10.0.0.74:48592, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.71:54902
+Nov 29, 2016 4:13:49 AM com.hazelcast.spi.hotrestart
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] hz._hzInstance_1_A.s00 homeDir: /home/ec2-user/hot-junk/s00
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.71:54902
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=6, /10.0.0.70:5701->/10.0.0.71:54902, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.74:48167
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.74:48167
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:49 AM com.hazelcast.spi.hotrestart
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] hz._hzInstance_1_A.s01 homeDir: /home/ec2-user/hot-junk/s01
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.71:39884
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.71:39884
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.72:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.74:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.74:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.73:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.74:5702. Reason: SocketException[Connection refused to address /10.0.0.74:5702]
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:53818 and /10.0.0.72:5701
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.73:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.71:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.70:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.72:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.71:5703, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:49 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.74]:5702 is added to the blacklist.
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.72:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.73:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.73:5702. Reason: SocketException[Connection refused to address /10.0.0.73:5702]
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.74:5703. Reason: SocketException[Connection refused to address /10.0.0.74:5703]
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.73]:5702 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.70:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.74:5702, timeout: 0, bind-any: true
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.71:5703. Reason: SocketException[Connection refused to address /10.0.0.71:5703]
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.72:5703. Reason: SocketException[Connection refused to address /10.0.0.72:5703]
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.70:5703. Reason: SocketException[Connection refused to address /10.0.0.70:5703]
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.71:5702. Reason: SocketException[Connection refused to address /10.0.0.71:5702]
+Nov 29, 2016 4:13:49 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.73:5703. Reason: SocketException[Connection refused to address /10.0.0.73:5703]
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.71]:5702 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.70]:5703 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.72]:5703 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.71]:5703 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.72:5702. Reason: SocketException[Connection refused to address /10.0.0.72:5702]
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.74:5702. Reason: SocketException[Connection refused to address /10.0.0.74:5702]
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Could not connect to: /10.0.0.70:5702. Reason: SocketException[Connection refused to address /10.0.0.70:5702]
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:36975 and /10.0.0.73:5701
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.74]:5703 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.70]:5702 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.74]:5702 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.72]:5702 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.cluster.impl.TcpIpJoiner
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.73]:5703 is added to the blacklist.
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.73:53520
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.73:53520
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=11, /10.0.0.70:5701->/10.0.0.73:53520, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.70:57722
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.70:57722
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=12, /10.0.0.70:5701->/10.0.0.70:57722, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.74:48620
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.74:48620
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=13, /10.0.0.70:5701->/10.0.0.74:48620, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.70:57754
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.70:57754
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:50 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=14, /10.0.0.70:5701->/10.0.0.70:57754, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:55 AM com.hazelcast.spi.hotrestart.HotRestartService
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Starting hot-restart service. Base directory: /home/ec2-user/hot-junk
+Nov 29, 2016 4:13:55 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Starting cluster member-list & partition table validation.
+Nov 29, 2016 4:13:55 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Waiting for cluster formation... Expected-Size: 5, Actual-Size: 1, Missing member: Member [10.0.0.74]:5701 - 7920c4f2-05ee-423c-9672-6c07914f8e3e
+Nov 29, 2016 4:13:56 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Waiting for cluster formation... Expected-Size: 5, Actual-Size: 1, Missing member: Member [10.0.0.74]:5701 - 7920c4f2-05ee-423c-9672-6c07914f8e3e
+Nov 29, 2016 4:13:57 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Waiting for cluster formation... Expected-Size: 5, Actual-Size: 1, Missing member: Member [10.0.0.74]:5701 - 7920c4f2-05ee-423c-9672-6c07914f8e3e
+Nov 29, 2016 4:13:58 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Waiting for cluster formation... Expected-Size: 5, Actual-Size: 1, Missing member: Member [10.0.0.74]:5701 - 7920c4f2-05ee-423c-9672-6c07914f8e3e
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.72:48984
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.72:48984
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=15, /10.0.0.70:5701->/10.0.0.72:48984, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.74:48648
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.74:48648
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=16, /10.0.0.70:5701->/10.0.0.74:48648, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.73:53546
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.73:53546
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=17, /10.0.0.70:5701->/10.0.0.73:53546, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.71:54932
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.71:54932
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.71:54934
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=18, /10.0.0.70:5701->/10.0.0.71:54932, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.71:54934
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=19, /10.0.0.70:5701->/10.0.0.71:54934, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.70:57794
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.70:57794
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=20, /10.0.0.70:5701->/10.0.0.70:57794, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.74:48670
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.74:48670
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.70:57816
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=21, /10.0.0.70:5701->/10.0.0.74:48670, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.70:57816
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=22, /10.0.0.70:5701->/10.0.0.70:57816, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.72:49004
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.72:49004
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=23, /10.0.0.70:5701->/10.0.0.72:49004, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.73:53556
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.73:53556
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:13:58 AM com.hazelcast.nio.tcp.TcpIpConnection
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connection[id=24, /10.0.0.70:5701->/10.0.0.73:53556, endpoint=null, alive=false, type=NONE] closed. Reason: Connection closed by the other side
+Nov 29, 2016 4:13:59 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Waiting for cluster formation... Expected-Size: 5, Actual-Size: 1, Missing member: Member [10.0.0.74]:5701 - 7920c4f2-05ee-423c-9672-6c07914f8e3e
+Nov 29, 2016 4:14:00 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Waiting for cluster formation... Expected-Size: 5, Actual-Size: 1, Missing member: Member [10.0.0.74]:5701 - 7920c4f2-05ee-423c-9672-6c07914f8e3e
+Nov 29, 2016 4:14:00 AM com.hazelcast.internal.cluster.ClusterService
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] 
+
+Members [5] {
+	Member [10.0.0.70]:5701 - 422e207d-0165-4658-8ac6-d062aaf52319 this
+	Member [10.0.0.72]:5701 - 103bee7a-369f-4322-83bd-25a10c2f957c
+	Member [10.0.0.73]:5701 - d168806f-7216-4762-b538-2dd0bcc7255b
+	Member [10.0.0.74]:5701 - 7920c4f2-05ee-423c-9672-6c07914f8e3e
+	Member [10.0.0.71]:5701 - 7c8731c3-c7fd-45e1-9f78-59f33322934a
+}
+
+Nov 29, 2016 4:14:01 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Expected member list after await until all members join: [422e207d-0165-4658-8ac6-d062aaf52319, 103bee7a-369f-4322-83bd-25a10c2f957c, 7c8731c3-c7fd-45e1-9f78-59f33322934a, 7920c4f2-05ee-423c-9672-6c07914f8e3e, d168806f-7216-4762-b538-2dd0bcc7255b]
+Nov 29, 2016 4:14:01 AM com.hazelcast.internal.partition.impl.PartitionStateManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Setting cluster partition table ...
+Nov 29, 2016 4:14:01 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Starting hot restart local data load.
+Nov 29, 2016 4:14:01 AM com.hazelcast.spi.hotrestart.HotRestartService
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Starting the Hot Restart procedure.
+Nov 29, 2016 4:14:01 AM com.hazelcast.spi.hotrestart
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] hz._hzInstance_1_A.s00 reloaded 0 keys; chunk seq 001
+Nov 29, 2016 4:14:01 AM com.hazelcast.spi.hotrestart
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] hz._hzInstance_1_A.s01 reloaded 0 keys; chunk seq 001
+Nov 29, 2016 4:14:01 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Local Hot Restart procedure completed with success.
+Nov 29, 2016 4:14:03 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] All members completed! Setting final result to success!
+Nov 29, 2016 4:14:03 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Setting final cluster state to: ACTIVE
+Nov 29, 2016 4:14:03 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Completed hot restart with final cluster state: ACTIVE
+Nov 29, 2016 4:14:03 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Sender: [10.0.0.73]:5701 succeeded after cluster is started
+Nov 29, 2016 4:14:03 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Sender: [10.0.0.74]:5701 succeeded after cluster is started
+Nov 29, 2016 4:14:04 AM com.hazelcast.spi.hotrestart.cluster.ClusterMetadataManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Sender: [10.0.0.71]:5701 succeeded after cluster is started
+Nov 29, 2016 4:14:04 AM com.hazelcast.spi.hotrestart.HotRestartService
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Hot Restart procedure completed in 3 seconds
+Nov 29, 2016 4:14:04 AM com.hazelcast.core.LifecycleService
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] [10.0.0.70]:5701 is STARTED
+Nov 29, 2016 4:14:07 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.73:53590
+Nov 29, 2016 4:14:07 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.73:53590
+Nov 29, 2016 4:14:07 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:14:07 AM com.hazelcast.client.impl.protocol.task.AuthenticationMessageTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Received auth from Connection[id=25, /10.0.0.70:5701->/10.0.0.73:53590, endpoint=null, alive=true, type=JAVA_CLIENT], successfully authenticated, principal : ClientPrincipal{uuid='5b384205-a29c-4c20-955b-415c4abe0a51', ownerUuid='422e207d-0165-4658-8ac6-d062aaf52319'}, owner connection : true, client version : 3.8-SNAPSHOT
+Nov 29, 2016 4:14:07 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.71:54982
+Nov 29, 2016 4:14:07 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.71:54982
+Nov 29, 2016 4:14:07 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:14:07 AM com.hazelcast.client.impl.protocol.task.AuthenticationMessageTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Received auth from Connection[id=26, /10.0.0.70:5701->/10.0.0.71:54982, endpoint=null, alive=true, type=JAVA_CLIENT], successfully authenticated, principal : ClientPrincipal{uuid='c20a96d6-7af9-4884-8a0f-4bfa5bf112c5', ownerUuid='422e207d-0165-4658-8ac6-d062aaf52319'}, owner connection : true, client version : 3.8-SNAPSHOT
+Nov 29, 2016 4:14:07 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.72:49042
+Nov 29, 2016 4:14:07 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.72:49042
+Nov 29, 2016 4:14:07 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Client Open Binary Protocol
+Nov 29, 2016 4:14:07 AM com.hazelcast.client.impl.protocol.task.AuthenticationMessageTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Received auth from Connection[id=27, /10.0.0.70:5701->/10.0.0.72:49042, endpoint=null, alive=true, type=JAVA_CLIENT], successfully authenticated, principal : ClientPrincipal{uuid='15687247-e918-46ad-b667-39c110f175a3', ownerUuid='422e207d-0165-4658-8ac6-d062aaf52319'}, owner connection : true, client version : 3.8-SNAPSHOT
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.206:41039
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.206:41039
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.208:41206
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.208:41206
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.210:43779
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.210:43779
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.209:52405
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.209:52405
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.207:38721
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.207:38721
+Nov 29, 2016 4:14:15 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.191:49499
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.191:49499
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.60:53709
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.60:53709
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.190:49221
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.190:49221
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.194:43494
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.194:43494
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.192:55177
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.192:55177
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.59:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.61:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.62:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:53145 and /10.0.0.59:5701
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:33425 and /10.0.0.62:5701
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:59934 and /10.0.0.61:5701
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.59:53579
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.59:53579
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.62:37067
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.62:37067
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.193:57977
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.61:36325
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.193:57977
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.InitConnectionTask
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Connecting to /10.0.0.193:5701, timeout: 0, bind-any: true
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.61:36325
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketAcceptorThread
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Accepting socket connection from /10.0.0.58:39878
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:51131 and /10.0.0.193:5701
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.TcpIpConnectionManager
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Established socket connection between /10.0.0.70:5701 and /10.0.0.58:39878
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:17 AM com.hazelcast.nio.tcp.SocketWriterInitializerImpl
+INFO: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Initializing SocketWriter WriteHandler with Cluster Protocol
+Nov 29, 2016 4:14:36 AM com.hazelcast.enterprise.wan.replication.WanBatchReplication
+SEVERE: [10.0.0.70]:5701 [A] [3.8-SNAPSHOT] Wan replication event queue is full. Dropping events. Queue size : 10000
+MQ msg in = LoadCmd{className='hz.map.member.multi.MultiValidateNotNull', taskId='validate_mapBak1HD'}
+MQ msg in = ThreadCountCmd{taskId='validate_mapBak1HD', threadCount=1}
+MQ msg in = SetBenchTypeCmd{intervalNanos=0, taskId='validate_mapBak1HD', type=Metrics, recordException=true, outFile='A_3.8-SNAPSHOT_validate_mapBak1HD_hz.map.member.multi.MultiValidateNotNull_1'}
+MQ msg in = SetFieldCmd{taskId='validate_mapBak1HD', field='seed', value='13'}
+MQ msg in = SetFieldCmd{taskId='validate_mapBak1HD', field='count', value='8'}
+MQ msg in = SetFieldCmd{taskId='validate_mapBak1HD', field='keyDomain', value='10000'}
+MQ msg in = SetFieldCmd{taskId='validate_mapBak1HD', field='valueSetSize', value='5'}
+MQ msg in = SetFieldCmd{taskId='validate_mapBak1HD', field='valueMinSize', value='4000'}
+MQ msg in = SetFieldCmd{taskId='validate_mapBak1HD', field='valueMaxSize', value='20000'}
+MQ msg in = SetFieldCmd{taskId='validate_mapBak1HD', field='name', value='mapBak1HD'}
+MQ msg in = InitCmd{taskId='validate_mapBak1HD'}
+Nov 29, 2016 4:14:58 AM com.hazelcast.config.MapConfig
+WARNING: Beware that eviction mechanism is different for NATIVE in-memory format. For this in-memory format, `minEvictionCheckMillis` and `evictionPercentage` has no effect
+Nov 29, 2016 4:14:58 AM com.hazelcast.config.MapConfig
+WARNING: Beware that eviction mechanism is different for NATIVE in-memory format. For this in-memory format, `minEvictionCheckMillis` and `evictionPercentage` has no effect
+Nov 29, 2016 4:14:58 AM com.hazelcast.config.MapConfig
+WARNING: Beware that eviction mechanism is different for NATIVE in-memory format. For this in-memory format, `minEvictionCheckMillis` and `evictionPercentage` has no effect
+Nov 29, 2016 4:14:58 AM com.hazelcast.config.MapConfig
+WARNING: Beware that eviction mechanism is different for NATIVE in-memory format. For this in-memory format, `minEvictionCheckMillis` and `evictionPercentage` has no effect
+Nov 29, 2016 4:14:58 AM com.hazelcast.config.MapConfig
+WARNING: Beware that eviction mechanism is different for NATIVE in-memory format. For this in-memory format, `minEvictionCheckMillis` and `evictionPercentage` has no effect
+Nov 29, 2016 4:14:58 AM com.hazelcast.config.MapConfig
+WARNING: Beware that eviction mechanism is different for NATIVE in-memory format. For this in-memory format, `minEvictionCheckMillis` and `evictionPercentage` has no effect
+Nov 29, 2016 4:14:58 AM com.hazelcast.config.MapConfig
+WARNING: Beware that eviction mechanism is different for NATIVE in-memory format. For this in-memory format, `minEvictionCheckMillis` and `evictionPercentage` has no effect
+Nov 29, 2016 4:14:58 AM com.hazelcast.config.MapConfig
+WARNING: Beware that eviction mechanism is different for NATIVE in-memory format. For this in-memory format, `minEvictionCheckMillis` and `evictionPercentage` has no effect
+MQ msg in = RunBenchCmd{seconds=0, taskId='validate_mapBak1HD'}
+[32mHzMember5A validate_mapBak1HD hz.map.member.multi.MultiValidateNotNull [0m started
+global.AssertionException: key 8212 == null
+	at hz.map.member.multi.MultiValidateNotNull.validate(MultiValidateNotNull.java:10)
+	at hz.map.member.multi.MultiValidator.timeStep(MultiValidator.java:29)
+	at remote.bench.marker.MetricsMarker.flatOut(MetricsMarker.java:52)
+	at remote.bench.marker.MetricsMarker.bench(MetricsMarker.java:39)
+	at remote.bench.BenchThread.call(BenchThread.java:38)
+	at remote.bench.BenchThread.call(BenchThread.java:12)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+javax.jms.InvalidDestinationException: Cannot publish to a deleted Destination: temp-queue://ID:ip-10-72-134-107.ec2.internal-34720-1480392897530-1:1:1
+	at org.apache.activemq.ActiveMQSession.send(ActiveMQSession.java:1904)
+	at org.apache.activemq.ActiveMQMessageProducer.send(ActiveMQMessageProducer.java:288)
+	at org.apache.activemq.ActiveMQMessageProducer.send(ActiveMQMessageProducer.java:223)
+	at org.apache.activemq.ActiveMQMessageProducerSupport.send(ActiveMQMessageProducerSupport.java:241)
+	at mq.MQ.sendReply(MQ.java:96)
+	at remote.bench.BenchManager.run(BenchManager.java:233)
+	at remote.bench.BenchManager.bench(BenchManager.java:191)
+	at remote.main.Controler$Runner.call(Controler.java:149)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+javax.jms.InvalidDestinationException: Cannot publish to a deleted Destination: temp-queue://ID:ip-10-72-134-107.ec2.internal-34720-1480392897530-1:1:1
+	at org.apache.activemq.ActiveMQSession.send(ActiveMQSession.java:1904)
+	at org.apache.activemq.ActiveMQMessageProducer.send(ActiveMQMessageProducer.java:288)
+	at org.apache.activemq.ActiveMQMessageProducer.send(ActiveMQMessageProducer.java:223)
+	at org.apache.activemq.ActiveMQMessageProducerSupport.send(ActiveMQMessageProducerSupport.java:241)
+	at mq.MQ.sendReply(MQ.java:96)
+	at remote.bench.BenchManager.run(BenchManager.java:233)
+	at remote.bench.BenchManager.bench(BenchManager.java:191)
+	at remote.main.Controler$Runner.call(Controler.java:149)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+javax.jms.InvalidDestinationException: Cannot publish to a deleted Destination: temp-queue://ID:ip-10-72-134-107.ec2.internal-34720-1480392897530-1:1:1
+	at org.apache.activemq.ActiveMQSession.send(ActiveMQSession.java:1904)
+	at org.apache.activemq.ActiveMQMessageProducer.send(ActiveMQMessageProducer.java:288)
+	at org.apache.activemq.ActiveMQMessageProducer.send(ActiveMQMessageProducer.java:223)
+	at org.apache.activemq.ActiveMQMessageProducerSupport.send(ActiveMQMessageProducerSupport.java:241)
+	at mq.MQ.sendReply(MQ.java:96)
+	at remote.bench.BenchManager.run(BenchManager.java:233)
+	at remote.bench.BenchManager.bench(BenchManager.java:191)
+	at remote.main.Controler$Runner.call(Controler.java:149)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)

@@ -32,31 +32,49 @@ hz cluster -id C -size M5C10 -v ${hzVersion} -ee -boxes c.box
 hz cluster -id D -size M5C10 -v ${hzVersion} -ee -boxes d.box
 hz cluster -id E -size M5C10 -v ${hzVersion} -ee -boxes e.box
 
-hz wan A B C D E
-hz bounce
 
-hz run -id A load
+#  A-----B
+#  |\  / |
+#  |  C  |
+#  | /  \|
+#  D-----E
+
+hz wan A B
+hz wan B A
+
+hz wan B E
+hz wan E B
+
+hz wan E D
+hz wan D E
+
+hz wan D A
+hz wan A D
+
+hz wan A C
+hz wan B C
+hz wan D C
+hz wan E C
+
+hz wan C A B D E
+hz bounce Member
+
+
+hz run -id C load
 sleep 30
 hz run validate
-hz run clusterShutdown
+hz run clusterShutdown Member
 hz embeddedRestart Member
-
-until hz run clusterSafe; do
-    sleep 10
-done
 hz run validate
 
-hz run -id A put &
-hz run -id '(B|C|D|E)' get &
-wait
-
+hz run put
 
 hz run -id A clusterShutdown
 hz embeddedRestart -id A Member
 
-pubIp=$(hz ip -id A Member1);
-for i in {0..8} ; do
-    for group in B C D E ${hzVersion} ; do
+pubIp=$(hz ip -id C Member1);
+for i in {0..7} ; do
+    for group in A B D E ${hzVersion} ; do
         curl -H "Content-type: text/plain" -X POST -d "wanReplication&${group}&mapBak1HD${i}" --URL http://${pubIp}:5701/hazelcast/rest/wan/sync/map
     done
 done

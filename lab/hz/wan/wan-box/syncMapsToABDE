@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+ip=$1;
+
+for i in {0..7} ; do
+    for group in A B D E ; do
+        curl -H "Content-type: text/plain" -X POST -d "wanReplication&${group}&mapBak1HD${i}" --URL http://${ip}:5701/hazelcast/rest/wan/sync/map
+    done
+done

@@ -1,0 +1,4 @@
+validate_mapBak1HD_SZ@class=hz.map.SizeCheck
+validate_mapBak1HD_SZ@driver=Member
+validate_mapBak1HD_SZ@name=mapBak1HD
+validate_mapBak1HD_SZ@size=0

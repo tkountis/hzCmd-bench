@@ -6,10 +6,9 @@ import hz.map.base.MultiMapBench;
 
 public class SizeAssert extends MultiMapBench {
 
+    public int size=0;
+
     public void timeStep() throws AssertionException {
-
-        int size=0;
-
         for (IMap map : getMaps()) {
 
             if(map.size()!=size){

@@ -1,0 +1,5 @@
+validate_mapBak1HD@class=hz.map.member.ValidateNotNull
+validate_mapBak1HD@driver=Member
+validate_mapBak1HD@prefix=C
+validate_mapBak1HD@keyDomain=10000
+validate_mapBak1HD@name=mapBak1HD

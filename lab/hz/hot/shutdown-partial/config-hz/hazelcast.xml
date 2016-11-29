@@ -83,16 +83,16 @@
 		    </hot-restart>
 		    </cache>
 
-		    <cache name="cacheAsync1*">
-		    <in-memory-format>BINARY</in-memory-format>
-		    <backup-count>0</backup-count>
-		    <async-backup-count>1</async-backup-count>
-		    <statistics-enabled>false</statistics-enabled>
-		    <eviction size="1000000" eviction-policy="LRU" max-size-policy="ENTRY_COUNT"/>
-		    <hot-restart enabled="true">
-		    <fsync>false</fsync>
-		    </hot-restart>
-		    </cache>
+			<!--<cache name="cacheAsync1*">-->
+			        <!--<in-memory-format>BINARY</in-memory-format>-->
+			        <!--<backup-count>0</backup-count>-->
+			        <!--<async-backup-count>1</async-backup-count>-->
+			        <!--<statistics-enabled>false</statistics-enabled>-->
+			        <!--<eviction size="1000000" eviction-policy="LRU" max-size-policy="ENTRY_COUNT"/>-->
+			        <!--<hot-restart enabled="true">-->
+			            <!--<fsync>false</fsync>-->
+			        <!--</hot-restart>-->
+			    <!--</cache>-->
 
 
     <map name="mapBak0HD*">

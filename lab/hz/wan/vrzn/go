@@ -33,12 +33,12 @@ hz cluster -id D -size M5C10 -v ${hzVersion} -ee -boxes d.box
 hz cluster -id E -size M5C10 -v ${hzVersion} -ee -boxes e.box
 
 hz wan A B C D E
-hz bounce
+hz bounce Member
 
 hz run -id A load
 sleep 30
 hz run validate
-hz run clusterShutdown
+hz run clusterShutdown Member
 hz embeddedRestart Member
 
 until hz run clusterSafe; do

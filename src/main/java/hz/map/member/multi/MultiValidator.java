@@ -17,7 +17,6 @@ public abstract class MultiValidator extends MultiMapBench {
     public void timeStep() throws Exception{
 
         Object keyObj = getKey(key);
-
         if(prefix!=null){
             keyObj = prefix + keyObj;
         }

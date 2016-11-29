@@ -4,9 +4,11 @@ import hz.map.base.MultiMapBench;
 
 import java.util.concurrent.ExecutionException;
 
-public class Get extends MultiMapBench {
+public class PreFixGet extends MultiMapBench {
+
+    public String prefix = "A";
 
     public void timeStep() throws InterruptedException, ExecutionException {
-        getMap().get(randomKey());
+        getMap().get(prefix + randomKey());
     }
 }

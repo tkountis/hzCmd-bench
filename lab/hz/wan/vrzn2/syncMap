@@ -1,6 +1,0 @@
-ipMember1A="54.157.239.47";
-for i in {0..7} ; do
-    for group in B C D E ${hzVersion} ; do
-        curl -H "Content-type: text/plain" -X POST -d "wanReplication&${group}&mapBak1HD${i}" --URL http://${ipMember1A}:5701/hazelcast/rest/wan/sync/map
-    done
-done

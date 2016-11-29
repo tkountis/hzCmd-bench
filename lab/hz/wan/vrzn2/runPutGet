@@ -1,2 +1,0 @@
-hz run -id A put &
-hz run -id '(B|C|D|E)' get &

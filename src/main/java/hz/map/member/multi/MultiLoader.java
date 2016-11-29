@@ -6,6 +6,8 @@ import hz.utils.Utils;
 
 public abstract class MultiLoader extends MultiMapBench {
 
+
+    public String prefix=null;
     private int key=0;
 
     public void init() throws Exception{
@@ -14,7 +16,14 @@ public abstract class MultiLoader extends MultiMapBench {
     }
 
     public void timeStep() {
-        while(Utils.remoteKey(key, hzInstance)){
+
+        Object keyObj = getKey(key);
+        if(prefix!=null){
+            keyObj = prefix + keyObj;
+        }
+
+
+        while(Utils.remoteKey(keyObj, hzInstance)){
             key++;
         }
 
@@ -22,7 +31,6 @@ public abstract class MultiLoader extends MultiMapBench {
             return;
         }
 
-        Object keyObj = getKey(key);
         Object val = getValue(key);
 
         for (IMap map : getMaps()) {

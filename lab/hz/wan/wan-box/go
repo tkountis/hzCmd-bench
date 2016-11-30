@@ -59,14 +59,15 @@ hz run -id A ops/remove_load
 sleep 30
 hz run -id '(A|B|D|E)' ops/validateSize0
 
-echo 'restart C and validate map Sync from C to (A|B|D|E)'
+echo 'restart C validate data loaded by C at hot restart, is cleared by queued remove events'
 hz embeddedRestart -id C Member
-echo 'validate data loaded by C at hot restart, is cleared by queued remove events'
+sleep 30
 hz run -id 'C' ops/validateSize0
-sleep 60
-hz run ops/validate
+
 
 echo 'Sync from C to (A|B|D|E) while Shutdown restart (A|E)'
+hz run -id C ops/load
+sleep 30
 for i in {0..10} ; do
  ./syncMapsToABDE_50 $(hz ip -id C Member1) &
  hz run -id '(A|E)' clusterShutdown

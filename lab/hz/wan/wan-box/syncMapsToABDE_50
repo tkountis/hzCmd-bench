@@ -2,6 +2,7 @@
 
 ip=$1;
 
-for i in {0..100} ; do
+for i in {0..30} ; do
   ./syncMapsToABDE ${ip}
+  sleep 1
 done

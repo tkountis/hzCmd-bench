@@ -1,10 +1,9 @@
-package hz.map.member.multi;
+package hz.map.member;
 
-import com.hazelcast.core.IMap;
-import hz.map.base.MultiMapBench;
+import hz.map.base.MapBench;
 import hz.utils.Utils;
 
-public abstract class MultiValidator extends MultiMapBench {
+public class Remover extends MapBench {
 
     private int key=0;
 
@@ -13,7 +12,7 @@ public abstract class MultiValidator extends MultiMapBench {
         Utils.warmupPartitions(hzInstance);
     }
 
-    public void timeStep() throws Exception{
+    public void timeStep() {
         while(Utils.remoteKey(key, hzInstance)){
             key++;
         }
@@ -24,15 +23,10 @@ public abstract class MultiValidator extends MultiMapBench {
 
         Object keyObj = getKey(key);
 
-        for (IMap map : getMaps()) {
-            Object val = map.get(keyObj);
-            validate(key, val);
-        }
+        map.remove(keyObj);
 
         key++;
     }
-
-    public abstract void validate(int key, Object value) throws Exception;
 
     public boolean isRunning() {
         return key<keyDomain;

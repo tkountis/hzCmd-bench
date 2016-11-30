@@ -20,7 +20,7 @@ ops="${ops} -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.b
 ops="${ops} -Dhazelcast.enterprise.wanrep.batch.size=150"
 
 mOps="${mOps} -Dhazelcast.hotrestart.gc.stuck.detect.threshold=10000 -Dhazelcast.hotrestart.free.native.memory.percentage=15"
-mOps="${mOps} -Dhazelcast.connection.monitor.interval=1000 -Dhazelcast.connection.monitor.max.faults=30 -Dhazelcast.rest.enabled=true"]
+mOps="${mOps} -Dhazelcast.connection.monitor.interval=1000 -Dhazelcast.connection.monitor.max.faults=30 -Dhazelcast.rest.enabled=true"
 
 hz memberOps "-Xms4G -Xmx4G ${ops} ${mOps}"
 hz clientOps "-Xms400M -Xmx400M ${ops}"
@@ -32,11 +32,12 @@ hz cluster -id C -size M5C10 -v ${hzVersion} -ee -boxes c.box
 hz cluster -id D -size M5C10 -v ${hzVersion} -ee -boxes d.box
 hz cluster -id E -size M5C10 -v ${hzVersion} -ee -boxes e.box
 
-#  A-----B
-#  | \  /|
-#  |  C  |
-#  | /  \|
-#  D-----E
+echo '  WAN  '
+echo 'A-----B'
+echo '| \  /|'
+echo '|  C  |'
+echo '| /  \|'
+echo 'D-----E'
 hz wan A B D C
 hz wan B E A C
 hz wan E D B C
@@ -44,20 +45,42 @@ hz wan D A E C
 hz wan C A B D E
 hz bounce Member
 
-hz run -id C ops/loadC
+echo 'validate wan rep, and hot restart'
+hz run -id C ops/load
 sleep 30
-hz run ops/validateC
-hz run clusterShutdown
+hz run ops/validate
+hz run ops/clusterShutdown
 hz embeddedRestart Member
 hz run ops/validate
 
+echo 'shutdown C and validate remove data from (A|B|D|E)'
 hz run -id C ops/clusterShutdown
-hz run -id A ops/clear
+hz run -id A ops/remove_load
 sleep 30
-hz embeddedRestart -id C Member
-hz run -id C ops/validate
 hz run -id '(A|B|D|E)' ops/validateSize0
 
+echo 'restart C and validate map Sync from C to (A|B|D|E)'
+hz embeddedRestart -id C Member
 ./syncMapsToABDE $(hz ip -id C Member1)
-sleep 60
+sleep 30
 hz run ops/validate
+
+echo 'Sync from C to (A|B|D|E) while Shutdown restart (A|E)'
+for i in {0..10} ; do
+ ./syncMapsToABDE_50 $(hz ip -id C Member1) &
+ hz run -id '(A|E)' clusterShutdown
+ hz embeddedRestart -id '(A|E)' Member
+ hz run -id validate
+ wait
+done
+
+
+echo 'Sync from C to (A|B|D|E) while kill Member of C'
+for i in {0..10} ; do
+ ./syncMapsToABDE_50 $(hz ip -id C Member1) &
+ hz kill -id C Member3
+ hz bash -id C -jvmId Member3 'rm -r hot-junk'
+ hz restart -id C Member3
+ hz run -id validate
+ wait
+done

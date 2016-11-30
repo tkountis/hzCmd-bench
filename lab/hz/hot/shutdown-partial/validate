@@ -1,12 +1,12 @@
 
 
-validate_cacheBak1@class=hz.cache.member.ValidateByteArray
-validate_cacheBak1@seed=13
-validate_cacheBak1@warmup=0
-validate_cacheBak1@duration=900
-validate_cacheBak1@threads=1
-validate_cacheBak1@keyDomain=1000
-validate_cacheBak1@valueSetSize=100
-validate_cacheBak1@valueMinSize=101
-validate_cacheBak1@valueMaxSize=1001
-validate_cacheBak1@name=cacheBak1
+validate_cacheBak1HD@class=hz.cache.member.ValidateByteArray
+validate_cacheBak1HD@seed=13
+validate_cacheBak1HD@warmup=0
+validate_cacheBak1HD@duration=900
+validate_cacheBak1HD@threads=1
+validate_cacheBak1HD@keyDomain=10000
+validate_cacheBak1HD@valueSetSize=100
+validate_cacheBak1HD@valueMinSize=101
+validate_cacheBak1HD@valueMaxSize=1001
+validate_cacheBak1HD@name=cacheBak1HD

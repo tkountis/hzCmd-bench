@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+ip=$1;
+
+for i in {0..50} ; do
+  ./syncMapsToABDE ${ip}
+done

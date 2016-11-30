@@ -31,68 +31,67 @@
         <metadata-space-percentage>50</metadata-space-percentage>
     </native-memory>
 
-    <!--<cache name="cacheBak0HD*">-->
-        <!--<in-memory-format>NATIVE</in-memory-format>-->
-        <!--<backup-count>0</backup-count>-->
-        <!--<statistics-enabled>false</statistics-enabled>-->
-        <!--<eviction size="95" eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE"/>-->
-        <!--<hot-restart enabled="true">-->
-            <!--<fsync>false</fsync>-->
-        <!--</hot-restart>-->
-    <!--</cache>-->
+    <cache name="cacheBak0HD*">
+		<in-memory-format>NATIVE</in-memory-format>
+		<backup-count>0</backup-count>
+		<statistics-enabled>false</statistics-enabled>
+		<eviction size="95" eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE"/>
+		<hot-restart enabled="true">
+			<fsync>false</fsync>
+		</hot-restart>
+    </cache>
 
-	<!--<cache name="cacheBak1HD*">-->
-	        <!--<in-memory-format>NATIVE</in-memory-format>-->
-	        <!--<backup-count>1</backup-count>-->
-	        <!--<statistics-enabled>false</statistics-enabled>-->
-	        <!--<eviction size="95" eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE"/>-->
-	        <!--<hot-restart enabled="true">-->
-	            <!--<fsync>false</fsync>-->
-	        <!--</hot-restart>-->
-	    <!--</cache>-->
+    <cache name="cacheBak1HD*">
+		<in-memory-format>NATIVE</in-memory-format>
+		<backup-count>1</backup-count>
+		<statistics-enabled>false</statistics-enabled>
+		<eviction size="95" eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE"/>
+		<hot-restart enabled="true">
+			<fsync>false</fsync>
+		</hot-restart>
+    </cache>
 
-	    <!--<cache name="cacheAsync1HD*">-->
-	        <!--<in-memory-format>NATIVE</in-memory-format>-->
-	        <!--<backup-count>0</backup-count>-->
-	        <!--<async-backup-count>1</async-backup-count>-->
-	        <!--<statistics-enabled>false</statistics-enabled>-->
-	        <!--<eviction size="95" eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE"/>-->
-	        <!--<hot-restart enabled="true">-->
-	            <!--<fsync>false</fsync>-->
-	        <!--</hot-restart>-->
-	    <!--</cache>-->
+    <cache name="cacheAsync1HD*">
+ 	   <in-memory-format>NATIVE</in-memory-format>
+		<backup-count>0</backup-count>
+		<async-backup-count>1</async-backup-count>
+		<statistics-enabled>false</statistics-enabled>
+		<eviction size="95" eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE"/>
+		<hot-restart enabled="true">
+			<fsync>false</fsync>
+		</hot-restart>
+    </cache>
 
+    <cache name="cacheBak0*">
+		<in-memory-format>BINARY</in-memory-format>
+		<backup-count>0</backup-count>
+		<statistics-enabled>false</statistics-enabled>
+		<eviction size="1000000" eviction-policy="LRU" max-size-policy="ENTRY_COUNT"/>
+		<hot-restart enabled="true">
+			<fsync>false</fsync>
+		</hot-restart>
+    </cache>
 
-	    <!--<cache name="cacheBak0*">-->
-	        <!--<in-memory-format>BINARY</in-memory-format>-->
-	        <!--<backup-count>0</backup-count>-->
-	        <!--<statistics-enabled>false</statistics-enabled>-->
-	        <!--<eviction size="1000000" eviction-policy="LRU" max-size-policy="ENTRY_COUNT"/>-->
-	        <!--<hot-restart enabled="true">-->
-	            <!--<fsync>false</fsync>-->
-	        <!--</hot-restart>-->
-	    <!--</cache>-->
+	<cache name="cacheBak1*">
+		<in-memory-format>BINARY</in-memory-format>
+		<backup-count>1</backup-count>
+		<statistics-enabled>false</statistics-enabled>
+		<eviction size="1000000" eviction-policy="LRU" max-size-policy="ENTRY_COUNT"/>
+		<hot-restart enabled="true">
+			<fsync>false</fsync>
+		</hot-restart>
+	</cache>
 
-		<cache name="cacheBak1*">
-		    <in-memory-format>BINARY</in-memory-format>
-		    <backup-count>1</backup-count>
-		    <statistics-enabled>false</statistics-enabled>
-		    <eviction size="1000000" eviction-policy="LRU" max-size-policy="ENTRY_COUNT"/>
-		    <hot-restart enabled="true">
-		    <fsync>false</fsync>
-		    </hot-restart>
-		    </cache>
-
-			<!--<cache name="cacheAsync1*">-->
-			        <!--<in-memory-format>BINARY</in-memory-format>-->
-			        <!--<backup-count>0</backup-count>-->
-			        <!--<async-backup-count>1</async-backup-count>-->
-			        <!--<statistics-enabled>false</statistics-enabled>-->
-			        <!--<eviction size="1000000" eviction-policy="LRU" max-size-policy="ENTRY_COUNT"/>-->
-			        <!--<hot-restart enabled="true">-->
-			            <!--<fsync>false</fsync>-->
-			        <!--</hot-restart>-->
-			    <!--</cache>-->
+	<cache name="cacheAsync1*">
+		<in-memory-format>BINARY</in-memory-format>
+		<backup-count>0</backup-count>
+		<async-backup-count>1</async-backup-count>
+		<statistics-enabled>false</statistics-enabled>
+		<eviction size="1000000" eviction-policy="LRU" max-size-policy="ENTRY_COUNT"/>
+		<hot-restart enabled="true">
+			<fsync>false</fsync>
+		</hot-restart>
+	</cache>
 
 
     <map name="mapBak0HD*">

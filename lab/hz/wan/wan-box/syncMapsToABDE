@@ -5,5 +5,5 @@ ip=$1;
 for group in A B D E ; do
     curl -H "Content-type: text/plain" -X POST -d "wanReplication&${group}&mapBak1HD" --URL http://${ip}:5701/hazelcast/rest/wan/sync/map
 
-    curl -H "Content-type: text/plain" -X POST -d "wanReplication&$notaGroup{group}&notaRealMap" --URL http://${ip}:5701/hazelcast/rest/wan/sync/map
+    curl -H "Content-type: text/plain" -X POST -d "wanReplication&$fakeGroup{group}&fakeMap" --URL http://${ip}:5701/hazelcast/rest/wan/sync/map
 done

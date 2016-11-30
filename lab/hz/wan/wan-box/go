@@ -55,11 +55,9 @@ hz run -id C ops/clusterShutdown
 hz run -id A ops/remove_load
 sleep 10
 hz run -id '(A|B|D|E)' ops/validateSize0
-sleep 30
+
 hz embeddedRestart -id C Member
 hz run -id C ops/validate
-
-
 ./syncMapsToABDE $(hz ip -id C Member1)
 sleep 60
 hz run ops/validate

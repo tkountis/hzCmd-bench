@@ -44,19 +44,21 @@ hz wan D A E C
 hz wan C A B D E
 hz bounce Member
 
-hz run -id C ops/loadC
+hz run -id C ops/load
 sleep 30
-hz run ops/validateC
-hz run clusterShutdown
+hz run ops/validate
+hz run ops/clusterShutdown
 hz embeddedRestart Member
 hz run ops/validate
 
 hz run -id C ops/clusterShutdown
-hz run -id A ops/clear
+hz run -id A ops/remove_load
+sleep 10
+hz run -id '(A|B|D|E)' ops/validateSize0
 sleep 30
 hz embeddedRestart -id C Member
 hz run -id C ops/validate
-hz run -id '(A|B|D|E)' ops/validateSize0
+
 
 ./syncMapsToABDE $(hz ip -id C Member1)
 sleep 60

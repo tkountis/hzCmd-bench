@@ -70,9 +70,9 @@ hz run -id C ops/load
 sleep 30
 for i in {0..10} ; do
  ./syncMapsToABDE_50 $(hz ip -id C Member1) &
- hz run -id '(A|E)' clusterShutdown
+ hz run -id '(A|E)' ops/clusterShutdown
  hz embeddedRestart -id '(A|E)' Member
- hz run -id validate
+ hz run -id ops/validate
  wait
 done
 
@@ -83,6 +83,6 @@ for i in {0..10} ; do
  hz kill -id 'C' Member3
  hz bash -id 'C' -jvmId Member3 'rm -r hot-junk'
  hz restart -id 'C' Member3
- hz run -id validate
+ hz run -id ops/validate
  wait
 done

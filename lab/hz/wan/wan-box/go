@@ -44,7 +44,7 @@ hz wan D A E C
 hz wan C A B D E
 hz bounce Member
 
-#validate wan rep, and hot restart
+echo 'validate wan rep, and hot restart'
 hz run -id C ops/load
 sleep 30
 hz run ops/validate
@@ -52,19 +52,19 @@ hz run ops/clusterShutdown
 hz embeddedRestart Member
 hz run ops/validate
 
-#shutdown C and validate remove data from '(A|B|D|E)'
+echo 'shutdown C and validate remove data from (A|B|D|E)'
 hz run -id C ops/clusterShutdown
 hz run -id A ops/remove_load
 sleep 30
 hz run -id '(A|B|D|E)' ops/validateSize0
 
-#restart C and validate map Sync from C to '(A|B|D|E)'
+echo 'restart C and validate map Sync from C to (A|B|D|E)'
 hz embeddedRestart -id C Member
 ./syncMapsToABDE $(hz ip -id C Member1)
 sleep 30
 hz run ops/validate
 
-#Sync from C to '(A|B|D|E)' while Shutdown restart '(A|E)'
+echo 'Sync from C to (A|B|D|E) while Shutdown restart (A|E)'
 for i in {0..10} ; do
  ./syncMapsToABDE_50 $(hz ip -id C Member1) &
  hz run -id '(A|E)' clusterShutdown
@@ -74,7 +74,7 @@ for i in {0..10} ; do
 done
 
 
-#Sync from C to '(A|B|D|E)' while kill Member of C
+echo 'Sync from C to (A|B|D|E) while kill Member of C'
 for i in {0..10} ; do
  ./syncMapsToABDE_50 $(hz ip -id C Member1) &
  hz kill -id C Member3

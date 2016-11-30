@@ -61,8 +61,10 @@ hz run -id '(A|B|D|E)' ops/validateSize0
 
 echo 'restart C and validate map Sync from C to (A|B|D|E)'
 hz embeddedRestart -id C Member
+echo 'validate C loaded data by hot restart'
+hz run -id C ops/validate
 ./syncMapsToABDE $(hz ip -id C Member1)
-sleep 30
+sleep 60
 hz run ops/validate
 
 echo 'Sync from C to (A|B|D|E) while Shutdown restart (A|E)'

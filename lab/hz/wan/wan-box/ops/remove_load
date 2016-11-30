@@ -1,4 +1,4 @@
-load_mapBak1HD@class=hz.map.member.Remover
-load_mapBak1HD@driver=Member
-load_mapBak1HD@keyDomain=10000
-load_mapBak1HD@name=mapBak1HD
+removeData_mapBak1HD@class=hz.map.member.Remover
+removeData_mapBak1HD@driver=Member
+removeData_mapBak1HD@keyDomain=10000
+removeData_mapBak1HD@name=mapBak1HD

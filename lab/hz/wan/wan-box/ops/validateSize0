@@ -1,4 +1,4 @@
-validate_mapBak1HD_SZ@class=hz.map.SizeCheck
-validate_mapBak1HD_SZ@driver=Member
-validate_mapBak1HD_SZ@name=mapBak1HD
-validate_mapBak1HD_SZ@size=0
+validate_SZ0_mapBak1HD@class=hz.map.SizeCheck
+validate_SZ0_mapBak1HD@driver=Member
+validate_SZ0_mapBak1HD@name=mapBak1HD
+validate_SZ0_mapBak1HD@size=0

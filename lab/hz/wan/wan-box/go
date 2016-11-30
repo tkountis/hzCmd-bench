@@ -61,7 +61,7 @@ hz run -id '(A|B|D|E)' ops/validateSize0
 
 echo 'restart C validate data loaded by C at hot restart, is cleared by queued remove events'
 hz embeddedRestart -id C Member
-sleep 30
+sleep 60
 hz run -id 'C' ops/validateSize0
 
 

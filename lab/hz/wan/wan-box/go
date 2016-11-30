@@ -32,11 +32,12 @@ hz cluster -id C -size M5C10 -v ${hzVersion} -ee -boxes c.box
 hz cluster -id D -size M5C10 -v ${hzVersion} -ee -boxes d.box
 hz cluster -id E -size M5C10 -v ${hzVersion} -ee -boxes e.box
 
-#  A-----B
-#  | \  /|
-#  |  C  |
-#  | /  \|
-#  D-----E
+echo '  WAN  '
+echo 'A-----B'
+echo '| \  /|'
+echo '|  C  |'
+echo '| /  \|'
+echo 'D-----E'
 hz wan A B D C
 hz wan B E A C
 hz wan E D B C

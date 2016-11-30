@@ -61,9 +61,8 @@ hz run -id '(A|B|D|E)' ops/validateSize0
 
 echo 'restart C and validate map Sync from C to (A|B|D|E)'
 hz embeddedRestart -id C Member
-echo 'validate C loaded data by hot restart'
-hz run -id C ops/validate
-./syncMapsToABDE $(hz ip -id C Member1)
+echo 'validate data loaded by C at hot restart, is cleared by queued remove events'
+hz run -id 'C' ops/validateSize0
 sleep 60
 hz run ops/validate
 
@@ -80,9 +79,9 @@ done
 echo 'Sync from C to (A|B|D|E) while kill Member of C'
 for i in {0..10} ; do
  ./syncMapsToABDE_50 $(hz ip -id C Member1) &
- hz kill -id C Member3
- hz bash -id C -jvmId Member3 'rm -r hot-junk'
- hz restart -id C Member3
+ hz kill -id 'C' Member3
+ hz bash -id 'C' -jvmId Member3 'rm -r hot-junk'
+ hz restart -id 'C' Member3
  hz run -id validate
  wait
 done

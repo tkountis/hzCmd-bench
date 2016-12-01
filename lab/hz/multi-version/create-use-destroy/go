@@ -19,11 +19,13 @@ hz cluster -size M1 -v 3.7            -ee -boxes a.box
 hz cluster -size M1 -v 3.7.1          -ee -boxes a.box
 hz cluster -size M1 -v 3.7.2          -ee -boxes a.box
 hz cluster -size M1 -v 3.7.3          -ee -boxes a.box
+hz cluster -size M1 -v 3.7.4          -ee -boxes a.box
 
 hz cluster -size C1 -v 3.7            -ee -boxes a.box
 hz cluster -size C1 -v 3.7.1          -ee -boxes a.box
 hz cluster -size C1 -v 3.7.2          -ee -boxes a.box
 hz cluster -size C1 -v 3.7.3          -ee -boxes a.box
+hz cluster -size C1 -v 3.7.4          -ee -boxes a.box
 
 hz bench 1800
 hz driver HZ
@@ -38,9 +40,11 @@ hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
 hz memberOps "-Xms500M -Xmx500M -Dhazelcast.compatibility.3.6.client=true ${hzProps}"
 hz clientOps "-Xms100M -Xmx100M ${hzProps}"
 
-hz cluster -size M4 -v 3.7.3          -ee -boxes a.box
+hz cluster -size M2 -v 3.7.3          -ee -boxes a.box
+hz cluster -size M2 -v 3.7.4          -ee -boxes a.box
 
 hz cluster -size C1 -v 3.7.3          -ee -boxes a.box
+hz cluster -size C1 -v 3.7.4          -ee -boxes a.box
 hz cluster -size C1 -v 3.6            -ee -boxes a.box
 hz cluster -size C1 -v 3.6.1          -ee -boxes a.box
 hz cluster -size C1 -v 3.6.2          -ee -boxes a.box
@@ -71,6 +75,7 @@ hz cluster -size M1 -v 3.6.5          -ee -boxes a.box
 hz cluster -size M1 -v 3.6.6          -ee -boxes a.box
 
 hz cluster -size C1 -v 3.7.3          -ee -boxes a.box
+hz cluster -size C1 -v 3.7.4          -ee -boxes a.box
 hz cluster -size C1 -v 3.6            -ee -boxes a.box
 hz cluster -size C1 -v 3.6.1          -ee -boxes a.box
 hz cluster -size C1 -v 3.6.2          -ee -boxes a.box

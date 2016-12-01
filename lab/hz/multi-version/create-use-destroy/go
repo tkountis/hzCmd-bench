@@ -25,23 +25,7 @@ hz cluster -size C1 -v 3.7.1          -ee -boxes a.box
 hz cluster -size C1 -v 3.7.2          -ee -boxes a.box
 hz cluster -size C1 -v 3.7.3          -ee -boxes a.box
 
-
-#hz bounce -iterations 10  -iterationDelay 5 -restartDelay 5 RandomMember
-
 hz bench 1800
-hz driver Client
-hz run createUseDestroy-withKill &
-
-for i in {1..4} ; do
-    sleep 60
-    hz kill Member${i}
-    sleep 120
-    hz restart Member${i}
-    sleep 60
-    #hz check    #it cause issue if the boxes are empty at is can find *ClusterID* dir on that box
-done
-wait
-
 hz driver HZ
 hz run createUseDestroy
 hz download -dir output-case-1
@@ -65,13 +49,12 @@ hz cluster -size C1 -v 3.6.4          -ee -boxes a.box
 hz cluster -size C1 -v 3.6.5          -ee -boxes a.box
 hz cluster -size C1 -v 3.6.6          -ee -boxes a.box
 
-hz bench 300
-hz driver Client
-hz run createUseDestroy
+hz bench 1800
 hz driver HZ
 hz run createUseDestroy
 hz download -dir output-case-2
 hz wipe
+
 
 
 #Case 3: cluster 3.6.x                                   clients: 3.6.x and 3.7.3
@@ -96,10 +79,7 @@ hz cluster -size C1 -v 3.6.4          -ee -boxes a.box
 hz cluster -size C1 -v 3.6.5          -ee -boxes a.box
 hz cluster -size C1 -v 3.6.6          -ee -boxes a.box
 
-
-hz bench 300
-hz driver Client
-hz run createUseDestroy
+hz bench 1800
 hz driver HZ
 hz run createUseDestroy
 hz download -dir output-case-3

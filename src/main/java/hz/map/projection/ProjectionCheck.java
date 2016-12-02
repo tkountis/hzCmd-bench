@@ -1,6 +1,5 @@
 package hz.map.projection;
 
-import com.hazelcast.projection.Projection;
 import com.hazelcast.query.SqlPredicate;
 import global.AssertionException;
 import hz.map.base.MapBench;

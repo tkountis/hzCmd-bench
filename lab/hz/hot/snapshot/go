@@ -30,7 +30,7 @@ hz run methods &
 sleep 300
 
 for i in {0..100} ; do
- ./syncMapsToABDE_50 $(hz ip -id C Member1) &
+ ./snapshot $(hz ip -id C Member1) &
  sleep 30
 done
 

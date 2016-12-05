@@ -1,14 +1,14 @@
 getMapHD@class=hz.map.GetCheck
 getMapHD@driver=Client
 getMapHD@threads=4
-getMapHD@keyDomain=1000
+getMapHD@keyDomain=10000
 getMapHD@name=mapBak1HD
 getMapHD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 getMap@class=hz.map.GetCheck
 getMap@driver=Client
 getMap@threads=4
-getMap@keyDomain=1000
+getMap@keyDomain=10000
 getMap@name=mapBak1
 getMap@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
@@ -16,13 +16,13 @@ getMap@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstan
 getCacheHD@class=hz.cache.GetCheck
 getCacheHD@driver=Client
 getCacheHD@threads=4
-getCacheHD@keyDomain=1000
+getCacheHD@keyDomain=10000
 getCacheHD@name=cacheBak1HD
 getCacheHD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 getCache@class=hz.cache.GetCheck
 getCache@driver=Client
 getCache@threads=4
-getCache@keyDomain=1000
+getCache@keyDomain=10000
 getCache@name=cacheBak1
 getCache@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

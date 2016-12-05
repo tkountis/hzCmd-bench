@@ -24,7 +24,7 @@ hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms2G -Xmx2G ${ops} ${mOp
 hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms500M -Xmx500M ${ops} ${cOps}"
 hz cluster -size M4C50 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
 
-hz bench 9000
+hz bench 7000
 hz driver Client
 hz run methodz &
 
@@ -32,7 +32,6 @@ for i in {1..75} ; do
     sleep 60
     hz run clusterShutdown
     hz embeddedRestart Member
-    #hz run active
     hz check
 done
 wait

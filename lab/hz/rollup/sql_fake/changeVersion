@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+ip=$1
+version=$2
+
+curl -H "Content-type: text/plain" -X POST -d "HZ&HZ&${version}" --URL http://${ip}:5701/hazelcast/rest/management/cluster/changeVersion

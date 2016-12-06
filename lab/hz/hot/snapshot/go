@@ -26,10 +26,10 @@ hz cluster -size M4C50 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
 
 hz bench 3200
 hz driver Client
-hz run methods &
+hz run ops &
 sleep 300
 
-for i in {0..100} ; do
+for i in {0..25} ; do
  ./snapshot $(hz ip -id C Member1) &
  sleep 30
 done

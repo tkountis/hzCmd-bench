@@ -32,8 +32,8 @@ for version in 3.9 3.10 3.11 ; do
     hz memberOps "-Xms2G -Xmx2G ${ops} -Dhazelcast.version=${version}"
     hz kill Member${i}
 
-    hz bash Member${i} 'ls'
-    hz bash Member${i} 'cat hazelcast.xml'
+    hz bash -jvmId Member${i} 'ls'
+    hz bash -jvmId Member${i} 'cat hazelcast.xml'
 
     hz relaunch Member${i}
     hz check

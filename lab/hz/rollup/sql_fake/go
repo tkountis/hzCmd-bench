@@ -30,7 +30,8 @@ for version in 3.9 3.10 3.11 ; do
     hz driver Member${i}
     hz run shutdown
     hz memberOps "-Xms2G -Xmx2G ${ops} -Dhazelcast.version=${version}"
-    hz bounce Member${i}
+    hz kill Member${i}
+    hz relaunch Member${i}
     hz check
     sleep 10
   done

@@ -96,9 +96,10 @@ hz check
 echo 'Sync from C to (A|B|D|E) while shutting down Member of (A|E)'
 for i in {0..10} ; do
  ./syncMapsToABDE_30 $(hz ip -id C Member1) &
- hz run  -id '(A|E)' ops/shutdown Member1
- hz bash -id '(A|E)' -jvmId Member1 'rm -r hot-junk'
- hz embeddedRestart -id '(A|E)' Member1
+ n=$(hz rand -min 1 -max 3)
+ hz run  -id '(A|E)' ops/shutdown Member${n}
+ hz bash -id '(A|E)' -jvmId Member${n} 'rm -r hot-junk'
+ hz embeddedRestart -id '(A|E)' Member${n}
  hz run ops/validate
  wait
 done
@@ -107,9 +108,10 @@ hz check
 echo 'Sync from C to (A|B|D|E) while killing Member of (A|E)'
 for i in {0..10} ; do
  ./syncMapsToABDE_30 $(hz ip -id C Member1) &
- hz kill -id '(A|E)' Member1
- hz bash -id '(A|E)' -jvmId Member1 'rm -r hot-junk'
- hz restart -id '(A|E)' Member1
+ n=$(hz rand -min 1 -max 3)
+ hz kill -id '(A|E)' Member${n}
+ hz bash -id '(A|E)' -jvmId Member${n} 'rm -r hot-junk'
+ hz restart -id '(A|E)' Member${n}
  hz run ops/validate
  wait
 done
@@ -122,9 +124,10 @@ hz check
 echo 'Sync from C to (A|B|D|E) while shutting down Member of C'
 for i in {0..10} ; do
  ./syncMapsToABDE_30 $(hz ip -id C Member1) &
- hz run  -id 'C' ops/shutdown Member1
- hz bash -id 'C' -jvmId Member1 'rm -r hot-junk'
- hz embeddedRestart -id 'C' Member1
+ n=$(hz rand -min 1 -max 3)
+ hz run  -id 'C' ops/shutdown Member${n}
+ hz bash -id 'C' -jvmId Member${n} 'rm -r hot-junk'
+ hz embeddedRestart -id 'C' Member${n}
  hz run ops/validate
  wait
 done
@@ -133,9 +136,10 @@ hz check
 echo 'Sync from C to (A|B|D|E) while killing Member of C'
 for i in {0..10} ; do
  ./syncMapsToABDE_30 $(hz ip -id C Member1) &
- hz kill -id 'C' Member1
- hz bash -id 'C' -jvmId Member1 'rm -r hot-junk'
- hz restart -id 'C' Member1
+ n=$(hz rand -min 1 -max 3)
+ hz kill -id 'C' Member${n}
+ hz bash -id 'C' -jvmId Member${n} 'rm -r hot-junk'
+ hz restart -id 'C' Member${n}
  hz run ops/validate
  wait
 done

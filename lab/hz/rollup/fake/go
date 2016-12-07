@@ -29,7 +29,7 @@ for version in 3.9 3.10 3.11 ; do
     sleep 10
     hz driver Member${i}
     hz run shutdown
-    hz memberOps "-Xms2G -Xmx2G ${ops} -Dhazelcast.version=${version}"
+    hz memberOps "-Xms2G -Xmx2G ${ops} -Dhazelcast.internal.override.version=${version}"
     hz kill Member${i}
 
     hz bash -jvmId Member${i} 'ls'

@@ -17,7 +17,7 @@ ops="$ops -ea"
 mOps="$mOps -Dhazelcast.hotrestart.gc.stuck.detect.threshold=10000"
 mOps="$mOps -Dhazelcast.hotrestart.free.native.memory.percentage=15"
 mOps="$mOps -Dhazelcast.hidensity.check.freememory=false"
-
+mOps="$mOps -Dhazelcast.rest.enabled=true"
 mOps="$mOps -Dhazelcast.connection.monitor.interval=1000 -Dhazelcast.connection.monitor.max.faults=30"
 
 hz memberOps "-Xms2G -Xmx2G ${ops} ${mOps}"
@@ -30,7 +30,7 @@ hz run ops &
 sleep 300
 
 for i in {0..25} ; do
- ./snapshot $(hz ip -id C Member1) &
+ ./snapshot $(hz ip Member1) &
  sleep 30
 done
 

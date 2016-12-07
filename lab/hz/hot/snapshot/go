@@ -32,6 +32,13 @@ sleep 300
 for i in {0..25} ; do
  ./snapshot $(hz ip Member1) &
  sleep 30
+
+ hz bash -jvmId Member 'ls /home/ec2-user/hot-junk/*'
+ hz bash -jvmId Member 'ls /home/ec2-user/hot-backup/*'
+
+ hz run clusterShutdown
+ hz embeddedRestart Member
+
 done
 
 wait

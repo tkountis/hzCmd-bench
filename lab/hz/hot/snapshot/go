@@ -39,7 +39,6 @@ for i in {0..50} ; do
  hz run clusterShutdown
  ./mvHotFiles
  hz embeddedRestart Member
- hz run validate
 done
 
 hz stop

@@ -2,4 +2,4 @@
 
 hz bash -jvmId Member 'rm -fr /home/ec2-user/hot-junk/*'
 hz bash -jvmId Member 'cp -r /home/ec2-user/hot-backup/backup-*/* /home/ec2-user/hot-junk/'
-hz bash -jvmId Member 'rm -fr /home/ec2-user/hot-backup/backup-*/*'
+hz bash -jvmId Member 'rm -fr /home/ec2-user/hot-backup/*'

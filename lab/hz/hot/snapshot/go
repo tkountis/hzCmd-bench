@@ -13,21 +13,50 @@ hzVersion=${1:-$(hazelcastVersion)}
 ops="$ops -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
 ops="$ops -Dhazelcast.backpressure.enabled=true"
 ops="$ops -ea"
-ops="$ops -XX:+PrintFlagsFinal -XX:+UseLargePages"
 
 mOps="$mOps -Dhazelcast.hotrestart.gc.stuck.detect.threshold=10000"
 mOps="$mOps -Dhazelcast.hotrestart.free.native.memory.percentage=15"
 mOps="$mOps -Dhazelcast.hidensity.check.freememory=false"
-
+mOps="$mOps -Dhazelcast.rest.enabled=true"
 mOps="$mOps -Dhazelcast.connection.monitor.interval=1000 -Dhazelcast.connection.monitor.max.faults=30"
 
 hz memberOps "-Xms2G -Xmx2G ${ops} ${mOps}"
 hz clientOps "-Xms500M -Xmx500M ${ops}"
 hz cluster -size M4C50 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
 
-hz bounce -iterations 50 -iterationDelay 60 Member &
-
-hz bench 5400
 hz driver Client
-hz run methods
+hz run ops &
+
+echo 'snapshot while clients make operations'
+for i in {0..50} ; do
+ ./snapshot $(hz ip Member1)
+done
+hz bash -jvmId Member 'rm -fr /home/ec2-user/hot-backup/backup-*/*'
+
+echo 'snapshot, restart while clients make operations'
+for i in {0..50} ; do
+ ./snapshot $(hz ip Member1)
+ hz run clusterShutdown
+ ./mvHotFiles
+ hz embeddedRestart Member
+ hz run validate
+done
+
+hz stop
 wait
+
+echo 'load cluster data. snapshot, restart, validate'
+for i in {0..50} ; do
+ hz run load
+ hz run validate
+
+ ./snapshot $(hz ip Member1)
+ hz run clusterShutdown
+ ./mvHotFiles
+ hz embeddedRestart Member
+ hz run validate
+done
+
+
+
+

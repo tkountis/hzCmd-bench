@@ -10,11 +10,11 @@ cleanup() {
 trap "cleanup" INT TERM EXIT
 
 ec2Type="c4.2xlarge"
-aws-create --count 5 --instanceType ${ec2Type} --outputFile a.box
-aws-create --count 5 --instanceType ${ec2Type} --outputFile b.box
-aws-create --count 5 --instanceType ${ec2Type} --outputFile c.box
-aws-create --count 5 --instanceType ${ec2Type} --outputFile d.box
-aws-create --count 5 --instanceType ${ec2Type} --outputFile e.box
+aws-create --count 2 --instanceType ${ec2Type} --outputFile a.box
+aws-create --count 2 --instanceType ${ec2Type} --outputFile b.box
+aws-create --count 2 --instanceType ${ec2Type} --outputFile c.box
+aws-create --count 2 --instanceType ${ec2Type} --outputFile d.box
+aws-create --count 2 --instanceType ${ec2Type} --outputFile e.box
 
 ops="${ops} -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 ops="${ops} -Dhazelcast.enterprise.wanrep.batch.size=150"
@@ -26,11 +26,11 @@ hz memberOps "-Xms4G -Xmx4G ${ops} ${mOps}"
 hz clientOps "-Xms400M -Xmx400M ${ops}"
 
 hzVersion="3.8-SNAPSHOT"
-hz cluster -id A -size M5C10 -v ${hzVersion} -ee -boxes a.box
-hz cluster -id B -size M5C10 -v ${hzVersion} -ee -boxes b.box
-hz cluster -id C -size M5C10 -v ${hzVersion} -ee -boxes c.box
-hz cluster -id D -size M5C10 -v ${hzVersion} -ee -boxes d.box
-hz cluster -id E -size M5C10 -v ${hzVersion} -ee -boxes e.box
+hz cluster -id A -size M2C4 -v ${hzVersion} -ee -boxes a.box
+hz cluster -id B -size M2C4 -v ${hzVersion} -ee -boxes b.box
+hz cluster -id C -size M2C4 -v ${hzVersion} -ee -boxes c.box
+hz cluster -id D -size M2C4 -v ${hzVersion} -ee -boxes d.box
+hz cluster -id E -size M2C4 -v ${hzVersion} -ee -boxes e.box
 
 echo '  WAN  '
 echo 'A-----B'
@@ -45,42 +45,103 @@ hz wan D A E C
 hz wan C A B D E
 hz bounce Member
 
-echo 'validate wan rep, and hot restart'
+echo 'load C with data validate replication'
 hz run -id C ops/load
 sleep 30
 hz run ops/validate
+
+echo 'shutdown all cluster validate hot restart data'
 hz run ops/clusterShutdown
 hz embeddedRestart Member
 hz run ops/validate
 
-echo 'shutdown C and validate remove data from (A|B|D|E)'
+echo 'shutdown C and remove data from A validate data removed from (A|B|D|E)'
 hz run -id C ops/clusterShutdown
 hz run -id A ops/remove_load
 sleep 30
 hz run -id '(A|B|D|E)' ops/validateSize0
 
-echo 'restart C and validate map Sync from C to (A|B|D|E)'
+echo 'restart C validate data loaded by C at hot restart, is cleared by queued remove events'
 hz embeddedRestart -id C Member
-./syncMapsToABDE $(hz ip -id C Member1)
+sleep 60
+hz run -id 'C' ops/validateSize0
+
+
+echo 'load C with data validate replication'
+hz run -id C ops/load
 sleep 30
 hz run ops/validate
 
+
+echo 'clear data from (A|B|D|E) and wan sync from C'
+hz run -id '(A|B|D|E)' ops/clear
+sleep 10
+hz run -id '(A|B|D|E)' ops/validateSize0
+hz run -id C ops/validate
+./syncMapsToABDE_30 $(hz ip -id C Member1)
+hz run -id '(A|B|D|E)' ops/validate
+
+
 echo 'Sync from C to (A|B|D|E) while Shutdown restart (A|E)'
 for i in {0..10} ; do
- ./syncMapsToABDE_50 $(hz ip -id C Member1) &
- hz run -id '(A|E)' clusterShutdown
+ ./syncMapsToABDE_30 $(hz ip -id C Member1) &
+ hz run -id '(A|E)' ops/clusterShutdown
+ sleep 10
  hz embeddedRestart -id '(A|E)' Member
- hz run -id validate
+ hz run ops/validate
  wait
 done
+hz check
 
-
-echo 'Sync from C to (A|B|D|E) while kill Member of C'
+echo 'Sync from C to (A|B|D|E) while shutting down Member of (A|E)'
 for i in {0..10} ; do
- ./syncMapsToABDE_50 $(hz ip -id C Member1) &
- hz kill -id C Member3
- hz bash -id C -jvmId Member3 'rm -r hot-junk'
- hz restart -id C Member3
- hz run -id validate
+ ./syncMapsToABDE_30 $(hz ip -id C Member1) &
+ n=$(hz rand -min 1 -max 3)
+ hz run  -id '(A|E)' ops/shutdown Member${n}
+ hz bash -id '(A|E)' -jvmId Member${n} 'rm -r hot-junk'
+ hz embeddedRestart -id '(A|E)' Member${n}
+ hz run ops/validate
  wait
 done
+hz check
+
+echo 'Sync from C to (A|B|D|E) while killing Member of (A|E)'
+for i in {0..10} ; do
+ ./syncMapsToABDE_30 $(hz ip -id C Member1) &
+ n=$(hz rand -min 1 -max 3)
+ hz kill -id '(A|E)' Member${n}
+ hz bash -id '(A|E)' -jvmId Member${n} 'rm -r hot-junk'
+ hz restart -id '(A|E)' Member${n}
+ hz run ops/validate
+ wait
+done
+hz check
+
+
+
+
+
+echo 'Sync from C to (A|B|D|E) while shutting down Member of C'
+for i in {0..10} ; do
+ ./syncMapsToABDE_30 $(hz ip -id C Member1) &
+ n=$(hz rand -min 1 -max 3)
+ hz run  -id 'C' ops/shutdown Member${n}
+ hz bash -id 'C' -jvmId Member${n} 'rm -r hot-junk'
+ hz embeddedRestart -id 'C' Member${n}
+ hz run ops/validate
+ wait
+done
+hz check
+
+echo 'Sync from C to (A|B|D|E) while killing Member of C'
+for i in {0..10} ; do
+ ./syncMapsToABDE_30 $(hz ip -id C Member1) &
+ n=$(hz rand -min 1 -max 3)
+ hz kill -id 'C' Member${n}
+ hz bash -id 'C' -jvmId Member${n} 'rm -r hot-junk'
+ hz restart -id 'C' Member${n}
+ hz run ops/validate
+ wait
+done
+hz check
+

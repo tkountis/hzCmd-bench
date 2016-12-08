@@ -28,15 +28,14 @@ hz run validate
 
 hz-ssh a.box 'df -h' ec2-user
 
-for i in {1..40} ; do
+for i in {1..35} ; do
     hz run clusterShutdown
     hz embeddedRestart Member
-    #hz run active
     hz check
 done
 hz run validate
 
 hz-ssh a.box 'df -h' ec2-user
 
-hz bounce -iterations 100 -iterationDelay 1 Member
+hz bounce -iterations 75 -iterationDelay 1 Member
 hz run validate

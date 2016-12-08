@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+ip=$1;
+
+curl -g -H "Content-type: text/plain" -X POST -d "HZ&HZ" --URL http://${ip}:5701/hazelcast/rest/management/cluster/hotBackup
+
+sleep 30

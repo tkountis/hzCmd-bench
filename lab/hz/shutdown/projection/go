@@ -10,6 +10,7 @@ cleanup() {
 trap "cleanup" INT TERM EXIT
 
 hzVersion=${1:-$(hazelcastVersion)}
+hzVersion="3.8-SNAPSHOT"
 
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true -Dhazelcast.connection.monitor.max.faults=1"
 hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms3G -Xmx3G ${hzProps}"
@@ -20,7 +21,7 @@ hz run load
 hz run addIdx
 hz run validate
 
-hz submit get
+hz run get &
 
 for j in {1..30}; do
  for i in {1..3}; do
@@ -34,5 +35,7 @@ for j in {1..30}; do
   hz embeddedRestart Member${i}
  done
 done
+
+hz stop
 
 hz run validate

@@ -28,9 +28,9 @@ hz clientOps "-Xms500M -Xmx500M ${ops}"
 hz cluster -size M4C40 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
 
 
-hz bounce -iterations 24 -iterationDelay 300 Member &
+hz bounce -iterations 24 -iterationDelay 222 Member &
 
-hz bench 8300
+hz bench 6500
 hz driver Client
 hz run methods
 

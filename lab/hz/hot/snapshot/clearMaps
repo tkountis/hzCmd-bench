@@ -1,0 +1,3 @@
+clear@class=hz.map.ClearOnce
+clear@driver=Client
+clear@name=mapBak1HD,mapBak1

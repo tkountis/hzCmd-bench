@@ -3,6 +3,10 @@
 ip=$1
 version=$2
 
-echo "curl -H  Content-type: text/plain  -X POST -d  HZ&HZ&${version}  --URL http://${ip}:5701/hazelcast/rest/management/cluster/changeVersion"
+echo "curl -H  Content-type: text/plain  -X POST -d  HZ&HZ&${version}  --URL http://${ip}:5701/hazelcast/rest/management/cluster/version"
+      curl -H "Content-type: text/plain" -X POST -d "HZ&HZ&${version}" --URL http://${ip}:5701/hazelcast/rest/management/cluster/version
 
-      curl -H "Content-type: text/plain" -X POST -d "HZ&HZ&${version}" --URL http://${ip}:5701/hazelcast/rest/management/cluster/changeVersion
+sleep 20
+
+echo "curl -H  Content-type: text/plain  -X GET --URL http://${ip}:5701/hazelcast/rest/management/cluster/version"
+      curl -H "Content-type: text/plain" -X GET --URL http://${ip}:5701/hazelcast/rest/management/cluster/version

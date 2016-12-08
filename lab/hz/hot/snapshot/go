@@ -24,21 +24,39 @@ hz memberOps "-Xms2G -Xmx2G ${ops} ${mOps}"
 hz clientOps "-Xms500M -Xmx500M ${ops}"
 hz cluster -size M4C50 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
 
-hz bench 3200
 hz driver Client
 hz run ops &
-sleep 300
 
-for i in {0..25} ; do
- ./snapshot $(hz ip Member1) &
- sleep 30
+echo 'snapshot while clients make operations'
+for i in {0..50} ; do
+ ./snapshot $(hz ip Member1)
+done
+hz bash -jvmId Member 'rm -fr /home/ec2-user/hot-backup/backup-*/*'
 
- hz bash -jvmId Member 'ls /home/ec2-user/hot-junk/*'
- hz bash -jvmId Member 'ls /home/ec2-user/hot-backup/*'
-
+echo 'snapshot, restart while clients make operations'
+for i in {0..50} ; do
+ ./snapshot $(hz ip Member1)
  hz run clusterShutdown
+ ./mvHotFiles
  hz embeddedRestart Member
-
+ hz run validate
 done
 
+hz stop
 wait
+
+echo 'load cluster data. snapshot, restart, validate'
+for i in {0..50} ; do
+ hz run load
+ hz run validate
+
+ ./snapshot $(hz ip Member1)
+ hz run clusterShutdown
+ ./mvHotFiles
+ hz embeddedRestart Member
+ hz run validate
+done
+
+
+
+

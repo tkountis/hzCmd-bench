@@ -1,5 +1,8 @@
+#!/usr/bin/env bash
+
 hz-clean ec2-user
 
 for boxFile in *.box; do
   hz-ssh ${boxFile} 'rm -r hot-junk' ec2-user
 done
+

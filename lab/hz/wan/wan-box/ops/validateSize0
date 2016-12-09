@@ -2,3 +2,9 @@ validate_SZ0_mapBak1HD@class=hz.map.SizeCheck
 validate_SZ0_mapBak1HD@driver=Member
 validate_SZ0_mapBak1HD@name=mapBak1HD
 validate_SZ0_mapBak1HD@size=0
+
+
+validate_SZ0_mapBak1@class=hz.map.SizeCheck
+validate_SZ0_mapBak1@driver=Member
+validate_SZ0_mapBak1@name=mapBak1
+validate_SZ0_mapBak1@size=0

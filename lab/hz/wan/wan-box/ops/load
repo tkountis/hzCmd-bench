@@ -5,3 +5,11 @@ load_mapBak1HD@valueSetSize=5
 load_mapBak1HD@valueMinSize=4000
 load_mapBak1HD@valueMaxSize=20000
 load_mapBak1HD@name=mapBak1HD
+
+load_mapBak1@class=hz.map.member.Load
+load_mapBak1@driver=Member
+load_mapBak1@keyDomain=1000
+load_mapBak1@valueSetSize=5
+load_mapBak1@valueMinSize=4000
+load_mapBak1@valueMaxSize=20000
+load_mapBak1@name=mapBak1

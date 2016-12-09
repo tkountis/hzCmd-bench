@@ -5,3 +5,12 @@ get_mapBak1HD@interval=0
 get_mapBak1HD@keyDomain=10000
 get_mapBak1HD@name=mapBak1HD
 get_mapBak1HD@ignore=com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.core.HazelcastInstanceNotActiveException:java.lang.IllegalStateException
+
+
+get_mapBak1@class=hz.map.Get
+get_mapBak1@driver=Client
+get_mapBak1@threads=16
+get_mapBak1@interval=0
+get_mapBak1@keyDomain=10000
+get_mapBak1@name=mapBak1
+get_mapBak1@ignore=com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.core.HazelcastInstanceNotActiveException:java.lang.IllegalStateException

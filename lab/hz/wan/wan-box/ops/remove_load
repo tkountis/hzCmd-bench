@@ -2,3 +2,8 @@ removeData_mapBak1HD@class=hz.map.member.Remover
 removeData_mapBak1HD@driver=Member
 removeData_mapBak1HD@keyDomain=1000
 removeData_mapBak1HD@name=mapBak1HD
+
+removeData_mapBak1@class=hz.map.member.Remover
+removeData_mapBak1@driver=Member
+removeData_mapBak1@keyDomain=1000
+removeData_mapBak1@name=mapBak1

@@ -6,3 +6,12 @@ put_mapBak1HD@valueMinSize=4000
 put_mapBak1HD@valueMaxSize=20000
 put_mapBak1HD@name=mapBak1HD
 put_mapBak1HD@ignore=com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.core.HazelcastInstanceNotActiveException:java.lang.IllegalStateException
+
+put_mapBak1@class=hz.map.multi.Put
+put_mapBak1@driver=Client
+put_mapBak1@threads=32
+put_mapBak1@valueSetSize=10
+put_mapBak1@valueMinSize=4000
+put_mapBak1@valueMaxSize=20000
+put_mapBak1@name=mapBak1
+put_mapBak1@ignore=com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.core.HazelcastInstanceNotActiveException:java.lang.IllegalStateException

@@ -1,3 +1,7 @@
-clear@class=hz.map.ClearOnce
-clear@driver=Client
-clear@name=mapBak1HD
+clear_mapBak1HD@class=hz.map.ClearOnce
+clear_mapBak1HD@driver=Client
+clear_mapBak1HD@name=mapBak1HD
+
+clear_mapBak1@class=hz.map.ClearOnce
+clear_mapBak1@driver=Client
+clear_mapBak1@name=mapBak1

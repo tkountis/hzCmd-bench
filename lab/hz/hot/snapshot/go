@@ -29,14 +29,14 @@ hz run ops &
 
 
 for i in {0..20} ; do
- echo 'snapshot while clients make operations ${i}'
+ echo "snapshot while clients make operations ${i}"
  ./snapshot $(hz ip Member1)
 done
-hz bash -jvmId Member 'rm -fr /home/ec2-user/hot-backup/*'
+hz bash -jvmId Member "rm -fr /home/ec2-user/hot-backup/*"
 
 
 for i in {0..20} ; do
- echo 'snapshot, restart while clients make operations ${i}'
+ echo "snapshot, restart while clients make operations ${i}"
  ./snapshot $(hz ip Member1)
  hz run clusterShutdown
  ./mvHotFiles
@@ -49,7 +49,7 @@ wait
 hz run clearCaches
 hz run clearMaps
 sleep 10
-echo 'load cluster data. snapshot, restart, validate'
+echo "load cluster data. snapshot, restart, validate"
 for i in {0..50} ; do
  hz run load
  hz run validate

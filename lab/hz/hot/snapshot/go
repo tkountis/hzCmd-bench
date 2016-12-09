@@ -28,13 +28,13 @@ hz driver Client
 hz run ops &
 
 echo 'snapshot while clients make operations'
-for i in {0..50} ; do
+for i in {0..20} ; do
  ./snapshot $(hz ip Member1)
 done
 hz bash -jvmId Member 'rm -fr /home/ec2-user/hot-backup/*'
 
 echo 'snapshot, restart while clients make operations'
-for i in {0..50} ; do
+for i in {0..20} ; do
  ./snapshot $(hz ip Member1)
  hz run clusterShutdown
  ./mvHotFiles
@@ -46,7 +46,7 @@ wait
 
 hz run clearCaches
 hz run clearMaps
-
+sleep 10
 echo 'load cluster data. snapshot, restart, validate'
 for i in {0..50} ; do
  hz run load
@@ -58,7 +58,3 @@ for i in {0..50} ; do
  hz embeddedRestart Member
  hz run validate
 done
-
-
-
-

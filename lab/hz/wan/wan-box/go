@@ -46,11 +46,11 @@ hz wan C A B D E
 hz bounce Member
 
 for i in {0..10} ; do
-  echo 'load C with data validate replication ${i}'
+  echo "load C with data validate replication ${i}"
   hz run -id C ops/load
   sleep 30
   hz run ops/validate
-  echo 'remove data from C validate replication ${i}'
+  echo "remove data from C validate replication ${i}"
   hz run -id C ops/remove_load
   sleep 30
   hz run ops/validateSize0
@@ -61,7 +61,7 @@ sleep 30
 hz run ops/validate
 
 for i in {0..10} ; do
-  echo 'shutdown all clusters validate hot restart data ${i}'
+  echo "shutdown all clusters validate hot restart data ${i}"
   hz run ops/clusterShutdown
   hz embeddedRestart Member
   hz run ops/validate
@@ -69,7 +69,7 @@ done
 
 
 for i in {0..10} ; do
-  echo 'clear data from (A|B|D|E) and wan sync from C ${i}'
+  echo "clear data from (A|B|D|E) and wan sync from C ${i}"
   hz run -id '(A|B|D|E)' ops/clear
   sleep 10
   hz run -id '(A|B|D|E)' ops/validateSize0
@@ -80,19 +80,19 @@ done
 
 
 
-echo 'shutdown C and remove data from A validate data removed from (A|B|D|E)'
+echo "shutdown C and remove data from A validate data removed from (A|B|D|E)"
 hz run -id C ops/clusterShutdown
 hz run -id A ops/remove_load
 sleep 30
 hz run -id '(A|B|D|E)' ops/validateSize0
 
-echo 'restart C validate data loaded by C at hot restart, is cleared by queued remove events'
+echo "restart C validate data loaded by C at hot restart, is cleared by queued remove events"
 hz embeddedRestart -id C Member
 sleep 60
 hz run -id 'C' ops/validateSize0
 
 
-echo 'load C with data validate replication'
+echo "load C with data validate replication"
 hz run -id C ops/load
 sleep 30
 hz run ops/validate

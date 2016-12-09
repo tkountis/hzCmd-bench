@@ -4,9 +4,8 @@ import hz.ops.base.OpsBase;
 
 public class HotSnapShot extends OpsBase {
 
-
     public void timeStep() throws Exception {
-        //HotRestartBackupService hot = hzInstance
+        hzInstance.getCluster().getHotRestartService().backup();
         setRunning(false);
     }
 

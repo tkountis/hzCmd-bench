@@ -32,7 +32,7 @@ hz cluster -id C -size M2C4 -v ${hzVersion} -ee -boxes c.box
 hz cluster -id D -size M2C4 -v ${hzVersion} -ee -boxes d.box
 hz cluster -id E -size M2C4 -v ${hzVersion} -ee -boxes e.box
 
-echo '  WAN  '
+echo 'WAN Active Active'
 echo 'A-----B'
 echo '| \  /|'
 echo '|  C  |'
@@ -46,11 +46,11 @@ hz wan C A B D E
 hz bounce Member
 
 for i in {0..10} ; do
-  echo 'load C with data validate replication'
+  echo 'load C with data validate replication ${i}'
   hz run -id C ops/load
   sleep 30
   hz run ops/validate
-  echo 'remove data from C validate replication'
+  echo 'remove data from C validate replication ${i}'
   hz run -id C ops/remove_load
   sleep 30
   hz run ops/validateSize0
@@ -58,7 +58,7 @@ done
 
 
 for i in {0..10} ; do
-  echo 'shutdown all clusters validate hot restart data'
+  echo 'shutdown all clusters validate hot restart data ${i}'
   hz run ops/clusterShutdown
   hz embeddedRestart Member
   hz run ops/validate
@@ -66,7 +66,7 @@ done
 
 
 for i in {0..10} ; do
-  echo 'clear data from (A|B|D|E) and wan sync from C'
+  echo 'clear data from (A|B|D|E) and wan sync from C ${i}'
   hz run -id '(A|B|D|E)' ops/clear
   sleep 10
   hz run -id '(A|B|D|E)' ops/validateSize0

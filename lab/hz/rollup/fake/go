@@ -2,7 +2,7 @@
 set -e
 cleanup() {
     exitCode=$?
-    hz download
+    hz download || true
     hz chart metrics
     exit ${exitCode}
 }
@@ -16,15 +16,12 @@ hz clientOps "-Xms400M -Xmx400M ${ops}"
 
 hz cluster -size M4C4 -v ${hzVersion} -ee -boxes a.box
 
-#hz run load
-#hz run addIdx
-#hz run validate
+hz run load
+hz run addIdx
+hz run validate
+hz run put
 
 for version in 3.9 3.10 3.11 ; do
-
-  #hz submit get
-  #sleep 30
-
   for i in {1..4}; do
     sleep 10
     hz driver Member${i}
@@ -34,11 +31,8 @@ for version in 3.9 3.10 3.11 ; do
     hz relaunch Member${i}
     sleep 10
   done
-
   ./changeVersion $(hz ip -id HZ Member1) ${version}
-  #hz run validate
-  #hz bounce Client
 done
 
-#hz run validate
+hz run validate
 hz check

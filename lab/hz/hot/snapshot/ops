@@ -6,7 +6,7 @@ mapBak1HDSet@valueSetSize=100
 mapBak1HDSet@valueMinSize=1
 mapBak1HDSet@valueMaxSize=1001
 mapBak1HDSet@name=mapBak1HD
-mapBak1HDSet@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException
+mapBak1HDSet@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.core.HazelcastException
 
 mapBak1HDRem@class=hz.map.SetRemove
 mapBak1HDRem@threads=4

@@ -1,20 +1,20 @@
 sz_mapBak1HDSqlIdx@class=hz.map.SizeCheck
 sz_mapBak1HDSqlIdx@driver=Member
-sz_mapBak1HDSqlIdx@size=100000
+sz_mapBak1HDSqlIdx@size=10000
 sz_mapBak1HDSqlIdx@name=mapBak1HDSqlIdx
 
 sz_mapBak1SqlIdx@class=hz.map.SizeCheck
 sz_mapBak1SqlIdx@driver=Member
-sz_mapBak1SqlIdx@size=100000
+sz_mapBak1SqlIdx@size=10000
 sz_mapBak1SqlIdx@name=mapBak1SqlIdx
 
 
 sz_mapBak1HDSql@class=hz.map.SizeCheck
 sz_mapBak1HDSql@driver=Member
-sz_mapBak1HDSql@size=100000
+sz_mapBak1HDSql@size=10000
 sz_mapBak1HDSql@name=mapBak1HDSql
 
 sz_mapBak1Sql@class=hz.map.SizeCheck
 sz_mapBak1Sql@driver=Member
-sz_mapBak1Sql@size=100000
+sz_mapBak1Sql@size=10000
 sz_mapBak1Sql@name=mapBak1Sql

@@ -1,12 +1,14 @@
 putMapHD@class=hz.map.Put
 putMapHD@threads=4
 putMapHD@keyDomain=10000
+putMapHD@valueSize=101
 putMapHD@name=mapBak1HD
 putMapHD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 putMap@class=hz.map.Put
 putMap@threads=4
 putMap@keyDomain=10000
+putMap@valueSize=101
 putMap@name=mapBak1
 putMap@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
@@ -14,11 +16,13 @@ putMap@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstan
 putCacheHD@class=hz.cache.Put
 putCacheHD@threads=4
 putCacheHD@keyDomain=10000
+putCacheHD@valueSize=101
 putCacheHD@name=cacheBak1HD
 putCacheHD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 putCache@class=hz.cache.Put
 putCache@threads=4
 putCache@keyDomain=10000
+putCache@valueSize=101
 putCache@name=cacheBak1
 putCache@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException

@@ -56,6 +56,9 @@ for i in {0..10} ; do
   hz run ops/validateSize0
 done
 
+hz run -id C ops/load
+sleep 30
+hz run ops/validate
 
 for i in {0..10} ; do
   echo 'shutdown all clusters validate hot restart data ${i}'

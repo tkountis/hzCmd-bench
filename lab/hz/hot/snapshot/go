@@ -27,14 +27,16 @@ hz cluster -size M4C50 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
 hz driver Client
 hz run ops &
 
-echo 'snapshot while clients make operations'
+
 for i in {0..20} ; do
+ echo 'snapshot while clients make operations ${i}'
  ./snapshot $(hz ip Member1)
 done
 hz bash -jvmId Member 'rm -fr /home/ec2-user/hot-backup/*'
 
-echo 'snapshot, restart while clients make operations'
+
 for i in {0..20} ; do
+ echo 'snapshot, restart while clients make operations ${i}'
  ./snapshot $(hz ip Member1)
  hz run clusterShutdown
  ./mvHotFiles

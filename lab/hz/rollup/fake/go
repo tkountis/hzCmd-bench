@@ -19,17 +19,23 @@ hz cluster -size M4C4 -v ${hzVersion} -ee -boxes a.box
 hz run load
 hz run addIdx
 hz run validate
-hz run put
+hz driver Client
+hz run get &
+hz run put &
 
 for version in 3.9 3.10 3.11 ; do
   for i in {1..4}; do
-    sleep 10
+    sleep 15
     hz driver Member${i}
     hz run shutdown
     hz kill Member${i}
     hz memberOps "-Xms2G -Xmx2G ${ops} -Dhazelcast.internal.override.version=${version}"
     hz relaunch Member${i}
-    sleep 10
+
+    hz driver Member${i}
+    hz run get &
+    hz run put &
+    sleep 15
   done
   ./changeVersion $(hz ip -id HZ Member1) ${version}
 done

@@ -31,9 +31,7 @@ hz run ops &
 for i in {0..10} ; do
  echo "snapshot while clients make operations ${i}"
  hz run snapShotStart
- until hz run snapShotEnd; do
-   sleep 2
- done
+ hz run snapShotEnd
 done
 hz bash -jvmId Member "rm -fr /home/ec2-user/hot-backup/*"
 
@@ -41,10 +39,7 @@ hz bash -jvmId Member "rm -fr /home/ec2-user/hot-backup/*"
 for i in {0..10} ; do
  echo "snapshot, restart while clients make operations ${i}"
  hz run snapShotStart
- until hz run snapShotEnd; do
-   sleep 2
- done
-
+ hz run snapShotEnd
  hz run clusterShutdown
  ./mvHotFiles
  hz embeddedRestart Member
@@ -61,7 +56,8 @@ for i in {0..50} ; do
  hz run load
  hz run validate
 
- ./curl/snapshot $(hz ip Member1)
+ hz run snapShotStart
+ hz run snapShotEnd
  hz run clusterShutdown
  ./mvHotFiles
  hz embeddedRestart Member

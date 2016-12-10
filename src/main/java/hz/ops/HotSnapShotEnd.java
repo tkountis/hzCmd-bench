@@ -9,7 +9,7 @@ public class HotSnapShotEnd extends OpsBase {
     public void timeStep() throws Exception {
         BackupTaskState state = hzInstance.getCluster().getHotRestartService().getBackupTaskStatus().getState();
 
-        if ( state.equals(BackupTaskState.IN_PROGRESS) ) {
+        if ( state.equals(BackupTaskState.SUCCESS) ) {
             setRunning(false);
         }
         if ( state.equals(BackupTaskState.FAILURE) ) {

@@ -19,6 +19,4 @@ hz run load
 hz run validate
 hz run get &
 hz bounce -iterations 175  -iterationDelay 5 -restartDelay 5 RandomMember
-hz stop
-wait
 hz run validate

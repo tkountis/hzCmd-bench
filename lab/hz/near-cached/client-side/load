@@ -1,8 +1,5 @@
 load@class=hz.map.member.Load
 load@driver=Member
-load@threads=1
-load@warmup=0
-load@duration=0
 load@keyDomain=1000001
 load@valueSize=1001
 load@name=cacheBak0HD-ncHD

@@ -5,7 +5,7 @@ put_cacheBak0HD-ncHD@valueSize=1001
 put_cacheBak0HD-ncHD@name=cacheBak0HD-ncHD
 put_cacheBak0HD-ncHD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException
 
-get_cacheBak0HD-ncHD@class=hz.cache.GetClump
+get_cacheBak0HD-ncHD@class=hz.cache.RepeatGet
 get_cacheBak0HD-ncHD@threads=8
 get_cacheBak0HD-ncHD@keyDomain=1000001
 get_cacheBak0HD-ncHD@name=cacheBak0HD-ncHD

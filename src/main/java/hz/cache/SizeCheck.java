@@ -11,7 +11,7 @@ public class SizeCheck extends CacheBench {
     public void timeStep() throws AssertionException {
 
         if(cache.size()!=size){
-            throw new AssertionException("map "+cache.getName()+" size "+cache.size()+" != expected "+size);
+            throw new AssertionException(cache.getName()+" size "+cache.size()+" != expected "+size);
         }
         setRunning(false);
     }

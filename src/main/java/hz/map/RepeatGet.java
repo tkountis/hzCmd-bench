@@ -1,20 +1,20 @@
-package hz.cache;
+package hz.map;
 
-import hz.cache.base.CacheBench;
+import hz.map.base.MapBench;
 
-public class GetClump extends CacheBench {
+public class RepeatGet extends MapBench {
 
     public double repeatProb=0.35;
 
-    private Object previousKey;
+    private Object previousKey = randomKey();
 
     public void timeStep() {
 
         if(random.nextDouble() < repeatProb){
-            cache.get(previousKey);
+            map.get(previousKey);
         }else{
             Object k = randomKey();
-            cache.get(k);
+            map.get(k);
             previousKey=k;
         }
     }

@@ -27,22 +27,9 @@
         <cache-local-entries>true</cache-local-entries>
         <invalidate-on-change>true</invalidate-on-change>
         <eviction eviction-policy="LFU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="90" />
+        <max-idle-seconds>5</max-idle-seconds>
+        <time-to-live-seconds>45</time-to-live-seconds>
     </near-cache>
-
-    <near-cache name="cacheBak1HD-ncHD*">
-        <in-memory-format>NATIVE</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>true</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="90" />
-    </near-cache>
-
-    <near-cache name="cacheAsync1HD-ncHD*">
-        <in-memory-format>NATIVE</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>true</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="90" />
-    </near-cache>
-
 
     <near-cache name="cacheBak0HD-ncBin*">
         <in-memory-format>BINARY</in-memory-format>
@@ -51,43 +38,12 @@
         <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
     </near-cache>
 
-    <near-cache name="cacheBak1HD-ncBin*">
-        <in-memory-format>BINARY</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>false</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
-    </near-cache>
-
-    <near-cache name="cacheAsync1HD-ncBin*">
-        <in-memory-format>BINARY</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>false</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
-    </near-cache>
-
-
     <near-cache name="cacheBak0HD-ncObj*">
         <in-memory-format>OBJECT</in-memory-format>
         <cache-local-entries>true</cache-local-entries>
         <invalidate-on-change>false</invalidate-on-change>
         <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
     </near-cache>
-
-    <near-cache name="cacheBak1HD-ncObj*">
-        <in-memory-format>OBJECT</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>false</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
-    </near-cache>
-
-    <near-cache name="cacheAsync1HD-ncObj*">
-        <in-memory-format>OBJECT</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>false</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
-    </near-cache>
-
-
 
 
 
@@ -99,21 +55,6 @@
         <eviction eviction-policy="LFU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="90" />
     </near-cache>
 
-    <near-cache name="cacheBak1Bin-ncHD*">
-        <in-memory-format>NATIVE</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>true</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="90" />
-    </near-cache>
-
-    <near-cache name="cacheAsync1Bin-ncHD*">
-        <in-memory-format>NATIVE</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>true</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="90" />
-    </near-cache>
-
-
     <near-cache name="cacheBak0Bin-ncBin*">
         <in-memory-format>BINARY</in-memory-format>
         <cache-local-entries>true</cache-local-entries>
@@ -121,45 +62,12 @@
         <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
     </near-cache>
 
-    <near-cache name="cacheBak1Bin-ncBin*">
-        <in-memory-format>BINARY</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>false</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
-    </near-cache>
-
-    <near-cache name="cacheAsync1Bin-ncBin*">
-        <in-memory-format>BINARY</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>false</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
-    </near-cache>
-
-
     <near-cache name="cacheBak0Bin-ncObj*">
         <in-memory-format>OBJECT</in-memory-format>
         <cache-local-entries>true</cache-local-entries>
         <invalidate-on-change>false</invalidate-on-change>
         <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
     </near-cache>
-
-    <near-cache name="cacheBak1Bin-ncObj*">
-        <in-memory-format>OBJECT</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>false</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
-    </near-cache>
-
-    <near-cache name="cacheAsync1Bin-ncObj*">
-        <in-memory-format>OBJECT</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>false</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
-    </near-cache>
-
-
-
-
 
 
 
@@ -171,21 +79,6 @@
         <eviction eviction-policy="LFU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="90" />
     </near-cache>
 
-    <near-cache name="cacheBak1Obj-ncHD*">
-        <in-memory-format>NATIVE</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>true</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="90" />
-    </near-cache>
-
-    <near-cache name="cacheAsync1Obj-ncHD*">
-        <in-memory-format>NATIVE</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>true</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="90" />
-    </near-cache>
-
-
     <near-cache name="cacheBak0Obj-ncBin*">
         <in-memory-format>BINARY</in-memory-format>
         <cache-local-entries>true</cache-local-entries>
@@ -193,44 +86,12 @@
         <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
     </near-cache>
 
-    <near-cache name="cacheBak1Obj-ncBin*">
-        <in-memory-format>BINARY</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>false</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
-    </near-cache>
-
-    <near-cache name="cacheAsync1Obj-ncBin*">
-        <in-memory-format>BINARY</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>false</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
-    </near-cache>
-
-
     <near-cache name="cacheBak0Obj-ncObj*">
         <in-memory-format>OBJECT</in-memory-format>
         <cache-local-entries>true</cache-local-entries>
         <invalidate-on-change>false</invalidate-on-change>
         <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
     </near-cache>
-
-    <near-cache name="cacheBak1Obj-ncObj*">
-        <in-memory-format>OBJECT</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>false</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
-    </near-cache>
-
-    <near-cache name="cacheAsync1Obj-ncObj*">
-        <in-memory-format>OBJECT</in-memory-format>
-        <cache-local-entries>true</cache-local-entries>
-        <invalidate-on-change>false</invalidate-on-change>
-        <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT"  size="1000" />
-    </near-cache>
-
-
-
 
 
 </hazelcast-client>

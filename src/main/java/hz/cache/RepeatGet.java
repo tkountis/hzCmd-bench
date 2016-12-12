@@ -5,7 +5,7 @@ import hz.cache.base.CacheBench;
 
 public class RepeatGet extends CacheBench {
 
-    public double repeatProb=0.35;
+    public double repeatProb=0.85;
 
     private Object previousKey = randomKey();
 

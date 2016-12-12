@@ -27,7 +27,4 @@ for i in {1..10}; do
       sleep 10
     done
 done
-
-hz stop
-wait
 hz run validate

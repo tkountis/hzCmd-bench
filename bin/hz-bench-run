@@ -4,7 +4,7 @@ set -e
 cleanup() {
     exitCode=$?
     echo "exitCode=${exitCode}"
-    aws-terminate a.box
+    aws-terminate *.box
     hz-killSubJava
 
     if [[ ${exitCode} != 0 ]]; then

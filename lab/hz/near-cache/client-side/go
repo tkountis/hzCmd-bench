@@ -22,7 +22,10 @@ hz clientOps "-Xms500M -Xmx500M ${ops}"
 hz cluster -size M4C4 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
 
 hz run load
+
 hz bench 1800
+hz driver Member
+hz run put &
+
 hz driver Client
-hz run ops
-wait
+hz run get

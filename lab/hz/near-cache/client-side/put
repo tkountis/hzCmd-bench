@@ -1,0 +1,14 @@
+put_cacheBak0HD-ncHD@class=hz.cache.Put
+put_cacheBak0HD-ncHD@threads=4
+put_cacheBak0HD-ncHD@keyDomain=500000
+put_cacheBak0HD-ncHD@valueSize=1000
+put_cacheBak0HD-ncHD@name=cacheBak0HD-ncHD
+put_cacheBak0HD-ncHD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException
+
+
+put_mapBak0HD-ncHD@class=hz.map.Set
+put_mapBak0HD-ncHD@threads=4
+put_mapBak0HD-ncHD@keyDomain=500000
+put_mapBak0HD-ncHD@valueSize=1000
+put_mapBak0HD-ncHD@name=mapBak0HD-ncHD
+put_mapBak0HD-ncHD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException

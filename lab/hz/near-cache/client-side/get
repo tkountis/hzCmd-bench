@@ -1,0 +1,12 @@
+get_cacheBak0HD-ncHD@class=hz.cache.RepeatGet
+get_cacheBak0HD-ncHD@threads=8
+get_cacheBak0HD-ncHD@keyDomain=500000
+get_cacheBak0HD-ncHD@name=cacheBak0HD-ncHD
+get_cacheBak0HD-ncHD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException
+
+
+get_mapBak0HD-ncHD@class=hz.map.RepeatGet
+get_mapBak0HD-ncHD@threads=8
+get_mapBak0HD-ncHD@keyDomain=500000
+get_mapBak0HD-ncHD@name=mapBak0HD-ncHD
+get_mapBak0HD-ncHD@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException

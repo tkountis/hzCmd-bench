@@ -3,7 +3,7 @@ validate_cacheBak0HD-ncHD@driver=Member
 validate_cacheBak0HD-ncHD@keyDomain=500000
 validate_cacheBak0HD-ncHD@name=cacheBak0HD-ncHD
 
-validate_mapBak0HD-ncHD@class=hz.map.member.ValidateNotNull
+validate_mapBak0HD-ncHD@class=hz.cache.member.ValidateNotNull
 validate_mapBak0HD-ncHD@driver=Member
 validate_mapBak0HD-ncHD@keyDomain=500000
 validate_mapBak0HD-ncHD@name=mapBak0HD-ncHD

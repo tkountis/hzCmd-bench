@@ -20,7 +20,7 @@
         </join>
     </network>
 
-    <hot-restart-persistence enabled="true">
+    <hot-restart-persistence enabled="false">
         <data-load-timeout-seconds>1700</data-load-timeout-seconds>
         <base-dir>/home/ec2-user/hot-junk</base-dir>
     </hot-restart-persistence>
@@ -35,7 +35,7 @@
         <backup-count>0</backup-count>
         <statistics-enabled>false</statistics-enabled>
         <eviction eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="70"/>
-        <hot-restart enabled="true">
+        <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
     </cache>
@@ -45,7 +45,7 @@
         <backup-count>1</backup-count>
         <statistics-enabled>false</statistics-enabled>
         <eviction eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="70"/>
-        <hot-restart enabled="true">
+       <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
     </cache>
@@ -56,7 +56,7 @@
         <async-backup-count>1</async-backup-count>
         <statistics-enabled>false</statistics-enabled>
         <eviction eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="70"/>
-        <hot-restart enabled="true">
+       <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
     </cache>
@@ -66,7 +66,7 @@
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>0</backup-count>
         <statistics-enabled>false</statistics-enabled>
-        <hot-restart enabled="true">
+       <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
     </cache>
@@ -75,7 +75,7 @@
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>1</backup-count>
         <statistics-enabled>false</statistics-enabled>
-        <hot-restart enabled="true">
+       <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
     </cache>
@@ -85,7 +85,7 @@
         <backup-count>0</backup-count>
         <async-backup-count>1</async-backup-count>
         <statistics-enabled>false</statistics-enabled>
-        <hot-restart enabled="true">
+       <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
     </cache>
@@ -95,7 +95,7 @@
         <in-memory-format>OBJECT</in-memory-format>
         <backup-count>0</backup-count>
         <statistics-enabled>false</statistics-enabled>
-        <hot-restart enabled="true">
+       <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
     </cache>
@@ -104,7 +104,7 @@
         <in-memory-format>OBJECT</in-memory-format>
         <backup-count>1</backup-count>
         <statistics-enabled>false</statistics-enabled>
-        <hot-restart enabled="true">
+       <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
     </cache>
@@ -114,7 +114,7 @@
         <backup-count>0</backup-count>
         <async-backup-count>1</async-backup-count>
         <statistics-enabled>false</statistics-enabled>
-        <hot-restart enabled="true">
+       <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
     </cache>
@@ -130,7 +130,7 @@
         <eviction-percentage>5</eviction-percentage>
         <min-eviction-check-millis>0</min-eviction-check-millis>
         <max-size policy="FREE_NATIVE_MEMORY_PERCENTAGE">15</max-size>
-        <hot-restart enabled="true">
+       <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
     </map>
@@ -142,7 +142,7 @@
         <eviction-percentage>5</eviction-percentage>
         <min-eviction-check-millis>0</min-eviction-check-millis>
         <max-size policy="FREE_NATIVE_MEMORY_PERCENTAGE">50</max-size>
-        <hot-restart enabled="true">
+       <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
     </map>
@@ -155,7 +155,7 @@
         <eviction-percentage>5</eviction-percentage>
         <min-eviction-check-millis>0</min-eviction-check-millis>
         <max-size policy="FREE_NATIVE_MEMORY_PERCENTAGE">15</max-size>
-        <hot-restart enabled="true">
+       <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
     </map>
@@ -164,7 +164,7 @@
     <map name="mapBak0*">
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>0</backup-count>
-        <hot-restart enabled="true">
+       <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
     </map>
@@ -172,7 +172,7 @@
     <map name="mapBak1*">
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>1</backup-count>
-        <hot-restart enabled="true">
+       <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
     </map>
@@ -181,7 +181,7 @@
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>0</backup-count>
         <async-backup-count>1</async-backup-count>
-        <hot-restart enabled="true">
+       <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
     </map>

@@ -7,7 +7,7 @@ public class RepeatGet extends CacheBench {
 
     public double repeatProb=0.85;
 
-    private Object previousKey = randomKey();
+    private Object previousKey=0;
 
     public void timeStep() throws AssertionException {
         Object val = null;

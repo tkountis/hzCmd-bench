@@ -6,7 +6,7 @@ public class RepeatGet extends MapBench {
 
     public double repeatProb=0.35;
 
-    private Object previousKey = randomKey();
+    private Object previousKey=0;
 
     public void timeStep() {
 

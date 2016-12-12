@@ -20,7 +20,7 @@ mOps="$mOps -Dhazelcast.cache.invalidation.batchfrequency.seconds=5"
 
 
 cOps="$cOps -Dhazelcast.invalidation.max.tolerated.miss.count=1"
-cOps="$cOps -Dhazelcast.invalidation.reconciliation.interval.seconds=2"
+cOps="$cOps -Dhazelcast.invalidation.reconciliation.interval.seconds=30"
 
 
 

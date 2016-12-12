@@ -133,6 +133,16 @@
        <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
+
+        <near-cache name="mapBak0HD" >
+            <in-memory-format>NATIVE</in-memory-format>
+            <cache-local-entries>true</cache-local-entries>
+            <invalidate-on-change>true</invalidate-on-change>
+            <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT" size="10000" ></eviction>
+            <max-idle-seconds>45</max-idle-seconds>
+            <time-to-live-seconds>61</time-to-live-seconds>
+        </near-cache>
+
     </map>
 
     <map name="mapBak1HD*">

@@ -27,8 +27,8 @@
         <cache-local-entries>true</cache-local-entries>
         <invalidate-on-change>true</invalidate-on-change>
         <eviction eviction-policy="LFU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="90" />
-        <max-idle-seconds>10</max-idle-seconds>
-        <time-to-live-seconds>45</time-to-live-seconds>
+        <max-idle-seconds>45</max-idle-seconds>
+        <time-to-live-seconds>61</time-to-live-seconds>
         <local-update-policy>CACHE</local-update-policy>
     </near-cache>
 
@@ -38,8 +38,8 @@
         <cache-local-entries>true</cache-local-entries>
         <invalidate-on-change>true</invalidate-on-change>
         <eviction eviction-policy="LFU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="90" />
-        <max-idle-seconds>10</max-idle-seconds>
-        <time-to-live-seconds>45</time-to-live-seconds>
+        <max-idle-seconds>45</max-idle-seconds>
+        <time-to-live-seconds>61</time-to-live-seconds>
         <local-update-policy>CACHE</local-update-policy>
     </near-cache>
 

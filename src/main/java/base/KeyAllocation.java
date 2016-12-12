@@ -7,7 +7,7 @@ import static utils.Utils.randInt;
 public abstract class KeyAllocation extends BasicBenchBase {
 
     public int seed=0;
-    protected Random random;
+    protected Random random = new Random();
     protected byte[][] valueSet;
 
     public String name;
@@ -20,9 +20,7 @@ public abstract class KeyAllocation extends BasicBenchBase {
     public void init() throws Exception{
         super.init();
 
-        if(seed==0){
-            random = new Random();
-        }else{
+        if(seed!=0){
             random = new Random(seed);
         }
 

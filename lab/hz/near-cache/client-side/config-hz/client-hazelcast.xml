@@ -29,6 +29,7 @@
         <eviction eviction-policy="LFU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="90" />
         <max-idle-seconds>10</max-idle-seconds>
         <time-to-live-seconds>45</time-to-live-seconds>
+        <local-update-policy>CACHE</local-update-policy>
     </near-cache>
 
 
@@ -39,6 +40,7 @@
         <eviction eviction-policy="LFU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="90" />
         <max-idle-seconds>10</max-idle-seconds>
         <time-to-live-seconds>45</time-to-live-seconds>
+        <local-update-policy>CACHE</local-update-policy>
     </near-cache>
 
     <near-cache name="cacheBak0HD-ncBin*">

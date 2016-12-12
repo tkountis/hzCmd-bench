@@ -12,17 +12,14 @@ trap "cleanup" INT TERM EXIT
 hzVersion=${1:-$(hazelcastVersion)}
 
 ops="$ops -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
-ops="$ops -Dhazelcast.backpressure.enabled=true"
-ops="$ops -ea"
 
 mOps="$mOps -Dhazelcast.cache.invalidation.batch.size=1000"
 mOps="$mOps -Dhazelcast.cache.invalidation.batchfrequency.seconds=5"
-
+mOps="$mOps -Dhazelcast.map.invalidation.batch.size=1000"
+mOps="$mOps -Dhazelcast.map.invalidation.batchfrequency.seconds=5"
 
 cOps="$cOps -Dhazelcast.invalidation.max.tolerated.miss.count=1"
 cOps="$cOps -Dhazelcast.invalidation.reconciliation.interval.seconds=30"
-
-
 
 hz memberOps "-Xms2G -Xmx2G ${ops} ${mOps}"
 hz clientOps "-Xms500M -Xmx500M ${ops}"
@@ -30,5 +27,5 @@ hz cluster -size M4C4 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
 
 hz run load
 
-hz bench 1800
+hz bench 14400
 hz run ops

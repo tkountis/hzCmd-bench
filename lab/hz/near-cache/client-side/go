@@ -26,6 +26,7 @@ hz clientOps "-Xms500M -Xmx500M ${ops}"
 hz cluster -size M4C8 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
 
 hz run load
-
-hz bench 14400
+hz run validate
+hz bench 28800
 hz run ops
+hz check

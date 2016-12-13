@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+set -e
+cleanup() {
+    exitCode=$?
+    hz download
+    hz chart metrics
+    exit ${exitCode}
+}
+trap "cleanup" INT TERM EXIT
+
+hzVersion=${1:-$(hazelcastVersion)}
+
+hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.connection.monitor.max.faults=1"
+hz memberOps "-Xms3G -Xmx3G ${hzProps}"
+hz clientOps "-Xms400M -Xmx400M ${hzProps}"
+hz cluster -size M4C4 -v ${hzVersion} -ee -boxes a.box
+
+hz run load
+hz run addIdx
+hz run validate
+
+hz run count &
+
+for j in {1..30}; do
+ for i in {1..3}; do
+  sleep 20
+  hz driver Member${i}
+  hz run shutDown
+  hz check
+ done
+
+ for i in {1..3}; do
+  hz embeddedRestart Member${i}
+ done
+done
+
+hz run validate

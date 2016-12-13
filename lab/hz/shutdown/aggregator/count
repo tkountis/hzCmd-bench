@@ -17,7 +17,7 @@ count_mapBak1HD@class=hz.map.aggregate.Count
 count_mapBak1HD@driver=Client
 count_mapBak1HD@threads=4
 count_mapBak1HD@name=mapBak1HD
-count_mapBak1HD@rcount=100000
+count_mapBak1HD@count=100000
 count_mapBak1HD@ignore=com.hazelcast.core.HazelcastException:com.hazelcast.spi.exception.TargetDisconnectedException:com.hazelcast.spi.exception.TargetNotMemberException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 count_mapBak1@class=hz.map.aggregate.Count

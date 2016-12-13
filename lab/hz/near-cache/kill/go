@@ -27,5 +27,5 @@ hz cluster -size M4C8 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
 hz run load
 hz run validate
 hz run ops &
-hz bounce -iterations 375  -iterationDelay 5 -restartDelay 5 RandomMember
+hz bounce -iterations 175  -iterationDelay 5 -restartDelay 5 RandomMember
 hz check

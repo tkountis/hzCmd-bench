@@ -28,6 +28,6 @@ hz cluster -size M4C8 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
 
 hz run load
 hz run validate
-hz bench 28800
+hz bench 3000
 hz run ops
 hz check

@@ -30,14 +30,14 @@ hz run validate
 hz driver Client
 hz run ops &
 sleep 30
-hz driver Member
-hz submit ops
-sleep 30
+#hz driver Member
+#hz submit ops
+#sleep 30
 for i in {1..100}; do
     n=$(hz rand -min 1 -max 5)
     hz bounce -iterationDelay 5 -restartDelay 5 Member${n}
-    hz driver Member${n}
-    hz submit ops
+    #hz driver Member${n}
+    #hz submit ops
     hz check
 done
 

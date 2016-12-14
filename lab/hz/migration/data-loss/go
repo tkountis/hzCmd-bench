@@ -28,6 +28,7 @@ for i in {1..175}; do
     hz bounce -iterationDelay 5 -restartDelay 5 Member${n}
     hz driver Member${n}
     hz submit get
+    hz check
 done
 
 hz run validate

@@ -33,7 +33,7 @@ sleep 30
 hz driver Member
 hz submit ops
 sleep 30
-for i in {1..175}; do
+for i in {1..100}; do
     n=$(hz rand -min 1 -max 5)
     hz bounce -iterationDelay 5 -restartDelay 5 Member${n}
     hz driver Member${n}

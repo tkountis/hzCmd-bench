@@ -51,8 +51,8 @@ wait
 hz run clearCaches
 hz run clearMaps
 sleep 10
-echo "load cluster data. snapshot, restart, validate"
 for i in {0..50} ; do
+ echo "load cluster data. snapshot, restart, validate ${i}"
  hz run load
  hz run validate
 

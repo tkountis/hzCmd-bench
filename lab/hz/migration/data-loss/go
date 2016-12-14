@@ -17,6 +17,43 @@ hz cluster -size M4C4 -v ${hzVersion} -ee -boxes a.box
 
 hz run load
 hz run validate
+
+hz driver Client
 hz run get &
-hz bounce -iterations 175  -iterationDelay 5 -restartDelay 5 RandomMember
+hz driver Member
+hz submit get
+
+for i in {1..175}; do
+    n=$(hz rand 1 5)
+    hz bounce -iterationDelay 5 -restartDelay 5 Member${n}
+    hz driver Member${n}
+    hz submit get
+done
+
 hz run validate
+
+
+
+
+##!/usr/bin/env bash
+#set -e
+#cleanup() {
+#    exitCode=$?
+#    hz download
+#    hz chart metrics
+#    exit ${exitCode}
+#}
+#trap "cleanup" INT TERM EXIT
+
+#hzVersion=${1:-$(hazelcastVersion)}
+
+#ops="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
+#hz memberOps "-Xms2G -Xmx2G ${ops}"
+#hz clientOps "-Xms400M -Xmx400M ${ops}"
+#hz cluster -size M4C4 -v ${hzVersion} -ee -boxes a.box
+
+#hz run load
+#hz run validate
+#hz run get &
+#hz bounce -iterations 175  -iterationDelay 5 -restartDelay 5 RandomMember
+#hz run validate

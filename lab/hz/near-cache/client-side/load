@@ -1,11 +1,11 @@
 load_cacheBak0HD-ncHD@class=hz.cache.member.Load
 load_cacheBak0HD-ncHD@driver=Member
 load_cacheBak0HD-ncHD@keyDomain=500000
-load_cacheBak0HD-ncHD@valueSize=1
+load_cacheBak0HD-ncHD@valueSize=1000
 load_cacheBak0HD-ncHD@name=cacheBak0HD-ncHD
 
 load_mapBak0HD-ncHD@class=hz.map.member.Load
 load_mapBak0HD-ncHD@driver=Member
 load_mapBak0HD-ncHD@keyDomain=500000
-load_mapBak0HD-ncHD@valueSize=1
+load_mapBak0HD-ncHD@valueSize=1000
 load_mapBak0HD-ncHD@name=mapBak0HD-ncHD

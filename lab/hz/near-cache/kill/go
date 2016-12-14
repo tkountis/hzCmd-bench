@@ -21,7 +21,7 @@ cOps="$cOps -Dhazelcast.invalidation.max.tolerated.miss.count=1"
 cOps="$cOps -Dhazelcast.invalidation.reconciliation.interval.seconds=30"
 
 hz memberOps "-Xms2G -Xmx2G ${ops} ${mOps}"
-hz clientOps "-Xms500M -Xmx500M ${ops}"
+hz clientOps "-Xms500M -Xmx500M ${ops} ${cOps}"
 hz cluster -size M4C8 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
 
 hz run load

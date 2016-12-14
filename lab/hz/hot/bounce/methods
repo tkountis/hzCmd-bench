@@ -6,13 +6,13 @@ mapBak1HDSet@valueSetSize=100
 mapBak1HDSet@valueMinSize=1
 mapBak1HDSet@valueMaxSize=1001
 mapBak1HDSet@name=mapBak1HD
-mapBak1HDSet@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException
+mapBak1HDSet@ignore=com.hazelcast.core.HazelcastException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException
 
 mapBak1HDRem@class=hz.map.SetRemove
 mapBak1HDRem@threads=4
 mapBak1HDRem@warmup=0
 mapBak1HDRem@name=mapBak1HD
-mapBak1HDRem@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException
+mapBak1HDRem@ignore=com.hazelcast.core.HazelcastException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException
 
 
 mapBak1Set@class=hz.map.Set
@@ -23,14 +23,14 @@ mapBak1Set@valueSetSize=100
 mapBak1Set@valueMinSize=1
 mapBak1Set@valueMaxSize=1001
 mapBak1Set@name=mapBak1
-mapBak1Set@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException
+mapBak1Set@ignore=com.hazelcast.core.HazelcastException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException
 
 mapBak1Rem@class=hz.map.SetRemove
 mapBak1Rem@keyDomain=10001
 mapBak1Rem@threads=4
 mapBak1Rem@warmup=0
 mapBak1Rem@name=mapBak1
-mapBak1Rem@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException
+mapBak1Rem@ignore=com.hazelcast.core.HazelcastException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.spi.exception.TargetDisconnectedException
 
 
 
@@ -42,13 +42,13 @@ cacheBak1HDPut@valueSetSize=100
 cacheBak1HDPut@valueMinSize=1
 cacheBak1HDPut@valueMaxSize=1001
 cacheBak1HDPut@name=cacheBak1HD
-cacheBak1HDPut@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException
+cacheBak1HDPut@ignore=com.hazelcast.core.HazelcastException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException
 
 cacheBak1HDRem@class=hz.cache.PutRemove
 cacheBak1HDRem@threads=4
 cacheBak1HDRem@warmup=0
 cacheBak1HDRem@name=cacheBak1HD
-cacheBak1HDRem@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException
+cacheBak1HDRem@ignore=com.hazelcast.core.HazelcastException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException
 
 
 cacheBak1Put@class=hz.cache.Put
@@ -59,11 +59,11 @@ cacheBak1Put@valueSetSize=100
 cacheBak1Put@valueMinSize=1
 cacheBak1Put@valueMaxSize=1001
 cacheBak1Put@name=cacheBak1
-cacheBak1Put@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException
+cacheBak1Put@ignore=com.hazelcast.core.HazelcastException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException
 
 cacheBak1Rem@class=hz.cache.PutRemove
 cacheBak1Rem@keyDomain=10001
 cacheBak1Rem@threads=4
 cacheBak1Rem@warmup=0
 cacheBak1Rem@name=cacheBak1
-cacheBak1Rem@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException
+cacheBak1Rem@ignore=com.hazelcast.core.HazelcastException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException:com.hazelcast.cache.CacheNotExistsException:com.hazelcast.spi.exception.TargetDisconnectedException

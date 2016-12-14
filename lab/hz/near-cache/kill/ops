@@ -1,5 +1,4 @@
 put_cacheBak0HD-ncHD@class=hz.cache.Put
-put_cacheBak0HD-ncHD@driver=HZ
 put_cacheBak0HD-ncHD@threads=4
 put_cacheBak0HD-ncHD@keyDomain=500000
 put_cacheBak0HD-ncHD@valueSize=1000
@@ -8,7 +7,6 @@ put_cacheBak0HD-ncHD@ignore=java.lang.IllegalStateException:com.hazelcast.core.H
 
 put_mapBak0HD-ncHD@class=hz.map.Set
 put_mapBak0HD-ncHD@threads=4
-put_mapBak0HD-ncHD@driver=HZ
 put_mapBak0HD-ncHD@keyDomain=500000
 put_mapBak0HD-ncHD@valueSize=1000
 put_mapBak0HD-ncHD@name=mapBak0HD-ncHD
@@ -19,7 +17,6 @@ put_mapBak0HD-ncHD@ignore=java.lang.IllegalStateException:com.hazelcast.core.Haz
 
 get_cacheBak0HD-ncHD@class=hz.cache.RepeatGet
 get_cacheBak0HD-ncHD@threads=8
-get_cacheBak0HD-ncHD@driver=HZ
 get_cacheBak0HD-ncHD@keyDomain=500000
 get_cacheBak0HD-ncHD@valueSize=1000
 get_cacheBak0HD-ncHD@name=cacheBak0HD-ncHD
@@ -28,7 +25,6 @@ get_cacheBak0HD-ncHD@ignore=java.lang.IllegalStateException:com.hazelcast.core.H
 
 get_mapBak0HD-ncHD@class=hz.map.RepeatGet
 get_mapBak0HD-ncHD@threads=8
-get_mapBak0HD-ncHD@driver=HZ
 get_mapBak0HD-ncHD@keyDomain=500000
 get_mapBak0HD-ncHD@valueSize=1000
 get_mapBak0HD-ncHD@name=mapBak0HD-ncHD

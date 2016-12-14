@@ -26,6 +26,19 @@ hz cluster -size M4C8 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
 
 hz run load
 hz run validate
+
+hz driver Client
 hz run ops &
-hz bounce -iterations 175  -iterationDelay 5 -restartDelay 5 RandomMember
-hz check
+sleep 30
+hz driver Member
+hz submit ops
+sleep 30
+for i in {1..175}; do
+    n=$(hz rand -min 1 -max 5)
+    hz bounce -iterationDelay 5 -restartDelay 5 Member${n}
+    hz driver Member${n}
+    hz submit ops
+    hz check
+done
+
+hz run validate

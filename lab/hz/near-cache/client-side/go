@@ -4,7 +4,7 @@ cleanup() {
     exitCode=$?
     hz download || true
     hz chart metrics
-    gcViewerPics
+    gcViewerPics & > /dev/null
     hz-viewGc > gc.html
     exit ${exitCode}
 }

@@ -17,7 +17,7 @@ mOps="$mOps -Dhazelcast.cache.invalidation.batchfrequency.seconds=5"
 mOps="$mOps -Dhazelcast.map.invalidation.batch.size=1000"
 mOps="$mOps -Dhazelcast.map.invalidation.batchfrequency.seconds=5"
 
-cOps="$cOps -Dhazelcast.invalidation.max.tolerated.miss.count=1"
+cOps="$cOps -Dhazelcast.invalidation.max.tolerated.miss.count=0"
 cOps="$cOps -Dhazelcast.invalidation.reconciliation.interval.seconds=30"
 
 hz memberOps "-Xms2G -Xmx2G ${ops} ${mOps}"

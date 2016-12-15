@@ -21,5 +21,6 @@ public class Schedule extends ExecutorBench {
                 executor.schedule(counter, delaySec, TimeUnit.SECONDS);
             }
         }
+        setRunning(false);
     }
 }

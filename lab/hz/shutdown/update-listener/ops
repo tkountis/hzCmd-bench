@@ -3,7 +3,7 @@ put@driver=Client
 put@threads=8
 put@keyDomain=10000
 put@name=mapBak1HD
-put@ignore=java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
+put@ignore=com.hazelcast.spi.exception.TargetDisconnectedException:java.lang.IllegalStateException:com.hazelcast.core.HazelcastInstanceNotActiveException
 
 
 EntryUpdate@class=hz.map.listener.EntryUpdate

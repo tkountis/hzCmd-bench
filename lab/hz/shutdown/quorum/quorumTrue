@@ -1,0 +1,4 @@
+quorumTrue@class=hz.quorum.QuorumStateCheck
+quorumTrue@driver=Client
+quorumTrue@name=4NodeWrite
+quorumTrue@present=true

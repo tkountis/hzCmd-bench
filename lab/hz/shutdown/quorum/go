@@ -27,5 +27,6 @@ for i in {1..50}; do
   hz driver ${drivers}
   hz run quorumFalse
   hz embeddedRestart Member${n}
+  hz driver Member
   hz run quorumTrue
 done

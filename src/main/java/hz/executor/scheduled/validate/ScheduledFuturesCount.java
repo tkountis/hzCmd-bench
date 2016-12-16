@@ -28,6 +28,5 @@ public class ScheduledFuturesCount extends ExecutorBench {
         if(totalScheduledFuturesCount != count ){
             throw new AssertionException("total Scheduled Futures Count "+totalScheduledFuturesCount+" != "+count);
         }
-        setRunning(false);
     }
 }

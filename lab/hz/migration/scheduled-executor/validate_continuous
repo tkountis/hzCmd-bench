@@ -1,0 +1,4 @@
+validate_schedule@class=hz.executor.scheduled.validate.ScheduledFuturesCount
+validate_schedule@driver=Client
+validate_schedule@executorCount=100
+validate_schedule@scheduleCount=100

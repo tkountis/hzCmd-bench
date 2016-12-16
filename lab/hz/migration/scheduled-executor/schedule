@@ -1,0 +1,5 @@
+schedule_task@class=hz.executor.scheduled.Schedule
+schedule_task@driver=Member1
+schedule_task@executorCount=100
+schedule_task@scheduleCount=100
+schedule_task@delaySec=36000

@@ -1,4 +1,3 @@
 quorumFalse@class=hz.quorum.QuorumStateCheck
-quorumFalse@driver=Client
 quorumFalse@name=4NodeWrite
 quorumFalse@present=false

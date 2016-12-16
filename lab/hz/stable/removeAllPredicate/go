@@ -21,4 +21,4 @@ hz run addIdx
 hz run validate
 
 hz bench 2700
-hz submit getRemoveAllPut
+hz run getRemoveAllPut

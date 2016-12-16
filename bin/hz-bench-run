@@ -6,7 +6,7 @@ cleanup() {
     echo "exitCode=${exitCode}"
     aws-terminate *.box
     hz-killSubJava
-    gcViewerPics & > /dev/null || true
+    gcViewerPics &> /dev/null || true
     hz-viewGc > gc.html || true
 
     if [[ ${exitCode} != 0 ]]; then

@@ -12,8 +12,8 @@ trap "cleanup" INT TERM EXIT
 hzVersion=${1:-$(hazelcastVersion)}
 
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
-hz memberOps "-Xms3G -Xmx3G ${hzProps}"
-hz clientOps "-Xms400M -Xmx400M ${hzProps}"
+hz memberOps "-Xms2G -Xmx2G ${hzProps}"
+hz clientOps "-Xms1G -Xmx1G ${hzProps}"
 hz cluster -size M4C4 -v ${hzVersion} -ee -boxes a.box
 
 hz run load

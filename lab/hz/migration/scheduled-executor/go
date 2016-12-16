@@ -22,5 +22,5 @@ sleep 60
 hz run validate_continuous &
 sleep 30
 
-hz bounce -iterations 175  -iterationDelay 5 -restartDelay 5 RandomMember
+hz bounce -iterations 8  -iterationDelay 5 -restartDelay 5 RandomMember
 

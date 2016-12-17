@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+n=$1
+drivers='1234'
+drivers="${drivers//${n}}"
+drivers=$(echo ${drivers} | sed 's/./&|/g')
+drivers=$(echo ${drivers} | rev | cut -c 2- | rev)
+echod ${drivers}

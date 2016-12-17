@@ -21,14 +21,9 @@ hz run quorumTrue
 for i in {1..50}; do
   n=$(hz rand -min 1 -max 5)
 
-  drivers='1234'
-  drivers="${drivers//${n}}"
-  drivers=$(echo ${drivers} | sed 's/./&|/g')
-  drivers=$(echo ${drivers} | rev | cut -c 2- | rev)
-
   hz driver Member${n}
   hz run shutdown
-  hz driver "(${drivers})"
+  hz driver "$(./setDriver ${n})"
   hz run quorumFalse
   hz embeddedRestart Member${n}
   hz driver Member

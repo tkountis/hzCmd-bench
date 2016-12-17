@@ -1,5 +1,3 @@
 quorumTrue@class=hz.quorum.QuorumStateCheck
-quorumTrue@driver=Member
 quorumTrue@name=4NodeWrite
 quorumTrue@present=true
-quorumTrue@ignore=com.hazelcast.core.HazelcastInstanceNotActiveException

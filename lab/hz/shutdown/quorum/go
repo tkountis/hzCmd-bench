@@ -25,7 +25,7 @@ for i in {1..50}; do
   drivers="${drivers//${n}}"
   drivers=$(echo ${drivers} | sed 's/./&|/g')
   drivers=$(echo ${drivers} | rev | cut -c 2- | rev)
-
+  echo "(${drivers})"
   hz driver Member${n}
   hz run shutdown
   hz driver "(${drivers})"

@@ -5,6 +5,10 @@ cleanup() {
     exitCode=$?
     hz download
     hz chart metrics
+
+    gcViewerPics &> /dev/null || true
+    hz-viewGc > gc.html || true
+
     exit ${exitCode}
 }
 trap "cleanup" INT TERM EXIT

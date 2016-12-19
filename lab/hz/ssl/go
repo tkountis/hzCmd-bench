@@ -15,9 +15,9 @@ trap "cleanup" INT TERM EXIT
 
 hzVersion=${1:-$(hazelcastVersion)}
 
-hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true -Dhazelcast.connection.monitor.max.faults=1"
-hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms3G -Xmx3G ${hzProps}"
-hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms200M -Xmx400M ${hzProps}"
+hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
+hz memberOps "-server -XX:+PrintFlagsFinal -Xms3G -Xmx3G ${hzProps}"
+hz clientOps "-server -XX:+PrintFlagsFinal -Xms500M -Xmx500M ${hzProps}"
 hz cluster -size M4C4 -v ${hzVersion} -ee -boxes a.box -upcwd hazelcast.keystore,hazelcast.truststore
 
 hz run load

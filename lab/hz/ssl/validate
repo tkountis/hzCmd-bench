@@ -1,0 +1,15 @@
+validate_mapBak1HD@class=hz.map.member.ValidateByteArray
+validate_mapBak1HD@driver=Member
+validate_mapBak1HD@seed=13
+validate_mapBak1HD@keyDomain=10000
+validate_mapBak1HD@valueSetSize=1
+validate_mapBak1HD@valueSize=10000
+validate_mapBak1HD@name=mapBak1HD
+
+#validate_mapBak1@class=hz.map.member.ValidateByteArray
+#validate_mapBak1@driver=Member
+#validate_mapBak1@seed=13
+#validate_mapBak1@keyDomain=10000
+#validate_mapBak1@valueSetSize=1
+#validate_mapBak1@valueSize=10000
+#validate_mapBak1@name=mapBak1

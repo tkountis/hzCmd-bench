@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+hz-bench-update
+
+subDir="$(hazelcastVersion)/$(date '+%Y_%m_%d-%H_%M_%S')"
+mkdir -p ${subDir}
+cd ${subDir}
+
+hz-bench-get hz
+
+for i in $(find . -name go) ; do
+  cd $(dirname $i)
+
+    ./go $(hazelcastVersion) M10C1000 danny
+    hz-killSubJava
+    gcViewerPics &> /dev/null || true
+    hz-viewGc > gc.html || true
+  cd -
+done

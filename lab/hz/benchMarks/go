@@ -19,6 +19,8 @@ cleanup() {
 trap "cleanup" INT TERM EXIT
 
 hzVersion=${1:-$(hazelcastVersion)}
+size=${2:-"M4C4"}
+user=${2:-ec2-user}
 
 split -l 4 a.box
 
@@ -26,8 +28,8 @@ split -l 4 a.box
 hzOps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 hz memberOps "-XX:+PrintFlagsFinal -Xms4G -Xmx4G ${hzOps}"
 hz clientOps "-XX:+PrintFlagsFinal -Xms500M -Xmx500M ${hzOps}"
-hz cluster -size M4C4 -id NEW -v 3.7 -type HZ -boxes xaa -user ec2-user
-hz cluster -size M4C4 -id OLD -v 3.6 -type HZ -boxes xab -user ec2-user
+hz cluster -size ${size} -id NEW -v ${hzVersion} -type HZ -boxes xaa -user ${user}
+hz cluster -size ${size} -id OLD -v 3.7          -type HZ -boxes xab -user ${user}
 
 hz driver Client,Member
 hz type Metrics

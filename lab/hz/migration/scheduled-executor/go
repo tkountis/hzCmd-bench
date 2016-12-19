@@ -16,11 +16,13 @@ hz clientOps "-Xms400M -Xmx400M ${ops}"
 hz cluster -size M4C4 -v ${hzVersion} -ee -boxes a.box
 
 hz run schedule
-hz run validate &
+hz run validate
 sleep 60
 
 hz run validate_continuous &
 sleep 30
 
-hz bounce -iterations 8  -iterationDelay 5 -restartDelay 5 RandomMember
+hz bounce -iterations 50  -iterationDelay 5 -restartDelay 5 RandomMember
 
+hz stop
+wait

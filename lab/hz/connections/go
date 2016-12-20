@@ -7,11 +7,13 @@ cleanup() {
 }
 trap "cleanup" INT TERM EXIT
 
-hz broker -ip 10.212.1.107
+hzVersion=${1:-$(hazelcastVersion)}
+size=${2:-"M4C4"}
+user=${2:-ec2-user}
 
 hz memberOps "-Xms500M -Xmx500M"
 hz clientOps "-Xms200M -Xmx200M"
-hz cluster -size M3C100 -v 3.7 -boxes local.box -user danny
+hz cluster -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 
 hz driver Client
 hz type Metrics
@@ -19,13 +21,14 @@ hz threads 8
 
 hz submit put
 
-for x in {1..500}; do
+for x in {1..100}; do
  for i in {1..9}; do
   sleep 5
   hz kill Client${i}
   hz restart Client${i}
   hz driver Client${i}
   hz submit put
+  hz bounce -restartDelay 5 RandomMember
   hz check
  done
 done

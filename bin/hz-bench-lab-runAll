@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-hz-bench-get hz
+hz-bench-get $1
 
 for i in $(find . -name go) ; do
   cd $(dirname $i)
@@ -15,7 +15,7 @@ for i in $(find . -name go) ; do
     echo "10.212.1.110,10.212.40.110" >> a.box
 
     hz broker -ip 10.212.1.107
-    ./go $(hazelcastVersion) M10C500 danny
+    ./go $(hazelcastVersion) M8C8000 danny
     exitCode=$?
 
     hz wipe

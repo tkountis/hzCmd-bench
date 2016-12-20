@@ -1,15 +1,9 @@
 #!/usr/bin/env bash
 
-
-subDir="$(hazelcastVersion)/$(date '+%Y_%m_%d-%H_%M_%S')"
-mkdir -p ${subDir}
-cd ${subDir}
-
 hz-bench-get hz
 
 for i in $(find . -name go) ; do
   cd $(dirname $i)
-
     echo "10.212.1.101,10.212.40.101" >> a.box
     echo "10.212.1.102,10.212.40.102" >> a.box
     echo "10.212.1.103,10.212.40.103" >> a.box
@@ -19,7 +13,6 @@ for i in $(find . -name go) ; do
     echo "10.212.1.108,10.212.40.108" >> a.box
     echo "10.212.1.109,10.212.40.109" >> a.box
     echo "10.212.1.110,10.212.40.110" >> a.box
-
 
     hz broker -ip 10.212.1.107
     ./go $(hazelcastVersion) M10C500 danny

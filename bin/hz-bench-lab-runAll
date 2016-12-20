@@ -11,9 +11,18 @@ hz-bench-get hz
 for i in $(find . -name go) ; do
   cd $(dirname $i)
 
-    ./go $(hazelcastVersion) M10C1000 danny
+    hz broker -ip 10.212.1.107
+    ./go $(hazelcastVersion) M10C500 danny
+    exitCode=$?
+
+    hz wipe
     hz-killSubJava
     gcViewerPics &> /dev/null || true
     hz-viewGc > gc.html || true
   cd -
+
+  if [[ ${exitCode} != 0 ]]; then
+       echo "$(dirname $i) Failed" >> results.txt
+  fi
+
 done

@@ -24,7 +24,7 @@ user=${2:-ec2-user}
 
 split -l 4 a.box
 
-#hz broker -ip 10.212.1.107
+
 hzOps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true"
 hz memberOps "-XX:+PrintFlagsFinal -Xms4G -Xmx4G ${hzOps}"
 hz clientOps "-XX:+PrintFlagsFinal -Xms500M -Xmx500M ${hzOps}"

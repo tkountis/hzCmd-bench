@@ -16,7 +16,6 @@ hz clientOps "-Xms200M -Xmx200M"
 hz cluster -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 
 hz driver Client
-hz type Metrics
 hz threads 8
 
 hz submit put

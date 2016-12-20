@@ -10,12 +10,6 @@ public class Lock extends LockValidate {
     public void init() throws Exception{
         super.init();
         increments = new int[count];
-
-        /*
-        for (int i=0; i<count; i++) {
-            zeroMapIdx(i);
-        }
-        */
     }
 
     public void timeStep() {

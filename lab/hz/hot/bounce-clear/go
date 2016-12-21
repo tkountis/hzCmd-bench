@@ -32,6 +32,6 @@ hz bounce -iterations 24 -iterationDelay 222 Member &
 
 hz bench 6500
 hz driver Client
-hz run methods
+hz run ops
 
 wait

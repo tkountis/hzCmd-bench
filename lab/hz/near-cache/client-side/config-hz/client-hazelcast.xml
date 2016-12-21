@@ -30,6 +30,7 @@
         <max-idle-seconds>45</max-idle-seconds>
         <time-to-live-seconds>61</time-to-live-seconds>
         <local-update-policy>CACHE</local-update-policy>
+        <preloader enabled="true" file-name="/home/ec2-user/nearCache.map" store-interval-seconds="3"></preloader>
     </near-cache>
 
 
@@ -41,6 +42,7 @@
         <max-idle-seconds>45</max-idle-seconds>
         <time-to-live-seconds>61</time-to-live-seconds>
         <local-update-policy>CACHE</local-update-policy>
+        <preloader enabled="true" file-name="/home/ec2-user/nearCache.cache" store-interval-seconds="3"></preloader>
     </near-cache>
 
     <near-cache name="cacheBak0HD-ncBin*">

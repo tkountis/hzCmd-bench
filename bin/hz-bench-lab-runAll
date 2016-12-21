@@ -15,7 +15,7 @@ for i in $(find . -name go) ; do
     echo "10.212.1.110,10.212.40.110" >> a.box
 
     hz broker -ip 10.212.1.107
-    ./go $(hazelcastVersion) M8C800 danny
+    ./go $(hazelcastVersion) M4C400 danny > go_out.txt
     exitCode=$?
 
     hz wipe
@@ -25,7 +25,7 @@ for i in $(find . -name go) ; do
   cd -
 
   if [[ ${exitCode} != 0 ]]; then
-       echo "$(dirname $i) Failed" >> results.txt
+       echo "$(dirname $i) Failed" >> fail.txt
   fi
 
 done

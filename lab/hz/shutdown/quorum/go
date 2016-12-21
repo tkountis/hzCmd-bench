@@ -23,7 +23,7 @@ for i in {1..50}; do
 
   hz driver Member${n}
   hz run shutdown
-  hz driver "$(./setDriver ${n})"
+  hz driver "$(./setDrivers ${n})"
   hz run quorumFalse
   hz embeddedRestart Member${n}
   hz driver Member

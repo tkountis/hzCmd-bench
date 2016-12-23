@@ -20,7 +20,7 @@ hzProps="${hzProps} -XX:-UseAES -XX:-UseAESIntrinsics"
 
 hz memberOps "-server -XX:+PrintFlagsFinal -Xms3G -Xmx3G ${hzProps}"
 hz clientOps "-server -XX:+PrintFlagsFinal -Xms500M -Xmx500M ${hzProps}"
-hz cluster -size M4C4 -v ${hzVersion} -ee -boxes a.box -upcwd hazelcast.keystore,hazelcast.truststore
+hz cluster -size DM4C40 -v ${hzVersion} -ee -boxes a.box -upcwd hazelcast.keystore,hazelcast.truststore
 
 hz run load
 hz run validate

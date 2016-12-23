@@ -1,11 +1,13 @@
-get_mapBak1HD@class=hz.map.Set
-get_mapBak1HD@driver=Client
-get_mapBak1HD@threads=4
-get_mapBak1HD@keyDomain=10000
-get_mapBak1HD@name=mapBak1HD
+set_mapBak1HD@class=hz.map.Set
+set_mapBak1HD@driver=Client
+set_mapBak1HD@threads=4
+set_mapBak1HD@keyDomain=10000
+set_mapBak1HD@valueSetSize=1
+set_mapBak1HD@valueSize=10000
+set_mapBak1HD@name=mapBak1HD
 
-#get_mapBak1@class=hz.map.Set
-#get_mapBak1@driver=Client
-#get_mapBak1@threads=4
-#get_mapBak1@keyDomain=1000
-#get_mapBak1@name=mapBak1
+#set_mapBak1@class=hz.map.Set
+#set_mapBak1@driver=Client
+#set_mapBak1@threads=4
+#set_mapBak1@keyDomain=1000
+#set_mapBak1@name=mapBak1

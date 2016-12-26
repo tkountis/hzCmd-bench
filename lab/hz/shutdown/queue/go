@@ -10,6 +10,8 @@ cleanup() {
 trap "cleanup" INT TERM EXIT
 
 hzVersion=${1:-$(hazelcastVersion)}
+size=${2:-"M4C4"}
+user=${3:-ec2-user}
 
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY} -Dhazelcast.backpressure.enabled=true -Dhazelcast.connection.monitor.max.faults=1"
 hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms3G -Xmx3G ${hzProps}"

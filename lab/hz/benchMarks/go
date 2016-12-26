@@ -20,7 +20,7 @@ trap "cleanup" INT TERM EXIT
 
 hzVersion=${1:-$(hazelcastVersion)}
 size=${2:-"M4C4"}
-user=${2:-ec2-user}
+user=${3:-ec2-user}
 
 split -l 4 a.box
 

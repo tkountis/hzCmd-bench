@@ -21,7 +21,7 @@ for i in $(find . -name go) ; do
   cd $(dirname $i)
 
     hz broker -ip 10.212.1.107
-    hz bench 60
+    hz bench 900
     hz driver HZ
     hz type Graphite
     curl -X POST "10.212.1.107/events/" -d '{ "what": "started", "tags": "bench", "data": "fluff" }'

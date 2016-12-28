@@ -17,7 +17,7 @@ public class ReadOne extends RingBench {
     public void timeStep() throws InterruptedException, ExecutionException {
         int idx = random.nextInt(count);
         Ringbuffer ringBuffer = getRingBuffer(idx);
-        Object res = ringBuffer.readOne(ringBuffer.tailSequence());
+        Object res = ringBuffer.readOne(ringBuffer.headSequence());
         readPerRing[idx]++;
     }
 

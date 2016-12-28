@@ -21,6 +21,4 @@ hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 hz run load
 hz run addIdx
 hz run validate
-
-hz bench 2700
 hz run getRemoveAllPut

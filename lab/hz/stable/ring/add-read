@@ -7,5 +7,5 @@ ring_read@class=hz.ring.ReadOne
 ring_read@name=ring
 ring_read@count=500
 ring_read@threads=8
-ring_read@ignore=java.util.concurrent.ExecutionException
+ring_read@ignore=java.util.concurrent.ExecutionException:com.hazelcast.ringbuffer.StaleSequenceException
 

@@ -15,7 +15,7 @@ user=${3:-ec2-user}
 ops="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
 hz memberOps "-Xms2G -Xmx2G ${ops}"
 hz clientOps "-Xms400M -Xmx400M ${ops}"
-hz cluster -size M4C4 -v ${hzVersion} -ee -boxes a.box
+hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 
 hz run map-lock &
 

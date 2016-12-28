@@ -1,0 +1,4 @@
+validate@class=hz.ring.Assert
+validate@driver=Member1
+validate@name=ring
+validate@count=1

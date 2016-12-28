@@ -14,13 +14,11 @@ size=${2:-"M4C4"}
 user=${3:-ec2-user}
 
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
-hz memberOps "-Xms2G -Xmx2G ${hzProps}"
+hz memberOps "-Xms3G -Xmx3G ${hzProps}"
 hz clientOps "-Xms400M -Xmx400M ${hzProps}"
 hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 
 hz run load
-hz run addIdx
 hz run validate
-
-hz bench 2700
-hz run getRemoveAllPut
+hz run get
+hz run validate

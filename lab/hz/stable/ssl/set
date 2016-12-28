@@ -1,5 +1,4 @@
 set_mapBak1HD@class=hz.map.Set
-set_mapBak1HD@driver=Client
 set_mapBak1HD@threads=4
 set_mapBak1HD@keyDomain=10000
 set_mapBak1HD@valueSetSize=1

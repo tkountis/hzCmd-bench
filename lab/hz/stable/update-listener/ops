@@ -1,0 +1,9 @@
+put@class=hz.map.Put
+put@threads=8
+put@keyDomain=10000
+put@name=mapBak1HD
+
+
+EntryUpdate@class=hz.map.listener.EntryUpdate
+EntryUpdate@threads=1
+EntryUpdate@name=mapBak1HD

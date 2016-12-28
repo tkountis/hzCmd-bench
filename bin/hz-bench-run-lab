@@ -29,7 +29,7 @@ for i in $(find . -name go) ; do
     hz check
     hz wipe
     hz-killSubJava
-    gcViewerPics &> /dev/null || true
+    gcViewerPics . Member &> /dev/null || true
     hz-viewGc > gc.html || true
   cd -
 

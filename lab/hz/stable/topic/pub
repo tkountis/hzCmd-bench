@@ -1,3 +1,5 @@
 topic_pub@class=hz.topic.Publisher
-topic_pub@driver=Client1
 topic_pub@name=topicA
+
+topic_sub@class=hz.topic.Subscriber
+topic_sub@name=topicA

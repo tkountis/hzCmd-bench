@@ -23,7 +23,7 @@ for i in $(find . -name go) ; do
     hz broker -ip 10.212.1.107
     hz bench 60
     hz driver HZ
-    ./go $(hazelcastVersion) M2C400 danny > out.txt
+    ./go $(hazelcastVersion) M2C4 danny > out.txt
     exitCode=$?
 
     hz check

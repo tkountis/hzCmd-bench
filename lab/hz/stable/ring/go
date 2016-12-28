@@ -18,7 +18,5 @@ hz memberOps "-Xms3G -Xmx3G ${hzProps}"
 hz clientOps "-Xms400M -Xmx400M ${hzProps}"
 hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 
-hz run read &
-hz run add &
-wait
+hz run add-read
 hz run validate

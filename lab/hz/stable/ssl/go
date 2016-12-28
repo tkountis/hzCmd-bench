@@ -5,22 +5,20 @@ cleanup() {
     exitCode=$?
     hz download
     hz chart metrics
-
-    gcViewerPics &> /dev/null || true
-    hz-viewGc > gc.html || true
-
     exit ${exitCode}
 }
 trap "cleanup" INT TERM EXIT
 
 hzVersion=${1:-$(hazelcastVersion)}
+size=${2:-"M4C4"}
+user=${3:-ec2-user}
 
 hzProps="${hzProps} -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
 hzProps="${hzProps} -XX:-UseAES -XX:-UseAESIntrinsics"
 
 hz memberOps "-server -XX:+PrintFlagsFinal -Xms3G -Xmx3G ${hzProps}"
 hz clientOps "-server -XX:+PrintFlagsFinal -Xms500M -Xmx500M ${hzProps}"
-hz cluster -size DM4C40 -v ${hzVersion} -ee -boxes a.box -upcwd hazelcast.keystore,hazelcast.truststore
+hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user} -upcwd hazelcast.keystore,hazelcast.truststore
 
 hz run load
 hz run validate

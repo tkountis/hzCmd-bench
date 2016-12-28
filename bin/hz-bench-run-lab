@@ -17,7 +17,7 @@ for i in $(find . -name go) ; do
     echo "10.212.1.110,10.212.40.110" >> a.box
 
     hz broker -ip 10.212.1.107
-    ./go $(hazelcastVersion) M4C400 danny > go_out.txt
+    ./go $(hazelcastVersion) M4C400 danny > out.txt
     exitCode=$?
 
     hz wipe

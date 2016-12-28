@@ -4,24 +4,24 @@ echo $$ > pid.txt
 
 hz-bench-get $1
 
+#echo "10.212.1.101,10.212.40.101" >> a.box
+#echo "10.212.1.102,10.212.40.102" >> a.box
+#echo "10.212.1.103,10.212.40.103" >> a.box
+#echo "10.212.1.104,10.212.40.104" >> a.box
+#echo "10.212.1.105,10.212.40.105" >> a.box
+#echo "10.212.1.106,10.212.40.106" >> a.box
+echo "10.212.1.108,10.212.40.108" >> a.box
+echo "10.212.1.109,10.212.40.109" >> a.box
+#echo "10.212.1.110,10.212.40.110" >> a.box
+
 for i in $(find . -name go) ; do
 
+  cp a.box $(dirname $i)
   echo -n "$(dirname $i) " >> info.txt
-
   cd $(dirname $i)
 
-    #echo "10.212.1.101,10.212.40.101" >> a.box
-    #echo "10.212.1.102,10.212.40.102" >> a.box
-    #echo "10.212.1.103,10.212.40.103" >> a.box
-    #echo "10.212.1.104,10.212.40.104" >> a.box
-    #echo "10.212.1.105,10.212.40.105" >> a.box
-    #echo "10.212.1.106,10.212.40.106" >> a.box
-    echo "10.212.1.108,10.212.40.108" >> a.box
-    echo "10.212.1.109,10.212.40.109" >> a.box
-    #echo "10.212.1.110,10.212.40.110" >> a.box
-
     hz broker -ip 10.212.1.107
-    hz bench 300
+    hz bench 60
     hz driver HZ
     ./go $(hazelcastVersion) M2C400 danny > out.txt
     exitCode=$?

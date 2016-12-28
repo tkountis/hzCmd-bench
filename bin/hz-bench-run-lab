@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo $$ > pid.txt
+
 hz-bench-get $1
 
 for i in $(find . -name go) ; do

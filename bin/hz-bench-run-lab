@@ -34,9 +34,9 @@ for i in $(find . -name go) ; do
   cd -
 
   if [[ ${exitCode} != 0 ]]; then
-       echo "Failed" >> info.txt
+       echo -e "\033[31m Failed\033[0m" >> info.txt
     else
-       echo "Passed" >> info.txt
+       echo -e "\033[32m Passed\033[0m" >> info.txt
   fi
 
 done

@@ -29,7 +29,7 @@ public class GetRemoveAllPut extends MapBench {
             m.put(person.getId(), person);
         }
 
-        map.putAll(map);
+        map.putAll(m);
     }
 
 }

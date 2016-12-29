@@ -9,6 +9,8 @@ cleanup() {
 trap "cleanup" INT TERM EXIT
 
 hzVersion=${1:-$(hazelcastVersion)}
+size=${2:-"M4C4"}
+user=${3:-ec2-user}
 
 ops="$ops -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
 
@@ -22,10 +24,9 @@ cOps="$cOps -Dhazelcast.invalidation.reconciliation.interval.seconds=30"
 
 hz memberOps "-Xms2G -Xmx2G ${ops} ${mOps}"
 hz clientOps "-Xms500M -Xmx500M ${ops} ${cOps}"
-hz cluster -size M4C8 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
+hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 
 hz run load
 hz run validate
-hz bench 3000
 hz run ops
 hz check

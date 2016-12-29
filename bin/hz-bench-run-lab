@@ -14,17 +14,20 @@ echo "10.212.1.108,10.212.40.108" >> a.box
 echo "10.212.1.109,10.212.40.109" >> a.box
 #echo "10.212.1.110,10.212.40.110" >> a.box
 
-for i in $(find . -name go) ; do
 
-  cp a.box $(dirname $i)
-  echo -n "$(dirname $i) " >> info.txt
-  cd $(dirname $i)
+for benchMark in $(find . -name go) ; do
+  benchDir=$(dirname $benchMark)
+  cp a.box ${benchDir}
+  echo -n "${benchDir} " >> info.txt
+  cd  ${benchDir}
 
     hz broker -ip 10.212.1.107
     hz bench 900
     hz driver HZ
     hz type Graphite
-    curl -X POST "10.212.1.107/events/" -d '{ "what": "started", "tags": "bench", "data": "fluff" }'
+
+    graphite-event "${benchDir}" "bench started" "at $(pwd)"
+
     ./go $(hazelcastVersion) M2C4 danny > out.txt
     exitCode=$?
 
@@ -37,8 +40,10 @@ for i in $(find . -name go) ; do
 
   if [[ ${exitCode} != 0 ]]; then
        echo -e "\033[31m Failed\033[0m" >> info.txt
+       graphite-event "${benchDir}" "bench Failed" "at $(pwd)"
     else
        echo -e "\033[32m Passed\033[0m" >> info.txt
+       graphite-event "${benchDir}" "bench Passed" "at $(pwd)"
   fi
 
 done

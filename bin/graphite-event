@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+what=$1
+tags=$2
+data=$3
+
+curl -X POST "10.212.1.107/events/" -d "{ \"what\": \"${what}\", \"tags\": \"${tags}\", \"data\": \"${data}\" }"

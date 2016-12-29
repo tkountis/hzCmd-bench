@@ -26,9 +26,10 @@ for benchMark in $(find . -name go) ; do
     hz driver HZ
     hz type Graphite
 
-    graphite-event "${benchDir}" "bench started" "at $(pwd)"
+    version=$(hazelcastVersion)
+    graphite-event "${benchDir}" "bench started" "${version}"
 
-    ./go $(hazelcastVersion) M2C4 danny > out.txt
+    ./go "${version}" M2C4 danny > out.txt
     exitCode=$?
 
     hz check
@@ -40,10 +41,10 @@ for benchMark in $(find . -name go) ; do
 
   if [[ ${exitCode} != 0 ]]; then
        echo -e "\033[31m Failed\033[0m" >> info.txt
-       graphite-event "${benchDir}" "bench Failed" "at $(pwd)"
+       graphite-event "${benchDir}" "bench Failed" "${version}"
     else
        echo -e "\033[32m Passed\033[0m" >> info.txt
-       graphite-event "${benchDir}" "bench Passed" "at $(pwd)"
+       graphite-event "${benchDir}" "bench Passed" "${version}"
   fi
 
 done

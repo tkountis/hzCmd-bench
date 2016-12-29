@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 public class Poll extends QueueBench {
 
     public int pauseForEvents=30000;
-    public int timeOutMillis=50;
+    public int timeOutMillis=10;
     private long[] pollPerQ;
 
     public void init() throws Exception{
@@ -27,7 +27,9 @@ public class Poll extends QueueBench {
     }
 
     public void postPhase() {
-        try {
+
+        /*
+        * try {
             Thread.sleep(pauseForEvents);
 
             for (int i = 0; i < queues.length; i++) {
@@ -36,7 +38,28 @@ public class Poll extends QueueBench {
                     pollPerQ[i]++;
                 }
             }
-        }catch (Exception ignore){}
+          }catch (Exception ignore){}
+        * */
+
+
+        try {
+            Thread.sleep(pauseForEvents);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        for (int i = 0; i < queues.length; i++) {
+            IQueue q = getQueue(i);
+
+            Object res=null;
+            do{
+                try {
+                    res = q.poll(timeOutMillis, TimeUnit.MILLISECONDS);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }while(res != null);
+        }
 
 
         for (int i = 0; i < queues.length; i++) {

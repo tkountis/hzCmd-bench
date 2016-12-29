@@ -66,7 +66,6 @@ public class Poll extends QueueBench {
             System.out.println(q.getName()+" size = "+q.size());
         }
 
-
         for (int i = 0; i < queues.length; i++) {
             IQueue q = getQueue(i);
             hzInstance.getAtomicLong(q.getName()+"-poll").addAndGet(pollPerQ[i]);

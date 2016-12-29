@@ -55,6 +55,9 @@ public class Poll extends QueueBench {
             do{
                 try {
                     res = q.poll(timeOutMillis, TimeUnit.MILLISECONDS);
+                    if(res!=null){
+                        pollPerQ[i]++;
+                    }
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

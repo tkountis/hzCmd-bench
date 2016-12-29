@@ -3,7 +3,7 @@
 echo $$ > pid.txt
 
 hz-bench-get $1
-duration=${2:-600}
+duration=${2:-60}
 
 #echo "10.212.1.101,10.212.40.101" >> a.box
 #echo "10.212.1.102,10.212.40.102" >> a.box
@@ -30,7 +30,7 @@ for benchMark in $(find . -name go) ; do
     version=$(hazelcastVersion)
     graphite-event "${benchDir}" "bench started" "${version}"
 
-    ./go "${version}" M2C4 danny > out.txt
+    ./go "${version}" M2C400 danny > out.txt
     exitCode=$?
 
     hz check

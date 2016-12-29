@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 public class Poll extends QueueBench {
 
     public int pauseForEvents=30000;
-    public int timeOutMillis=10;
+    public int timeOutMillis=8;
     private long[] pollPerQ;
 
     public void init() throws Exception{

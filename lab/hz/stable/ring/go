@@ -19,4 +19,6 @@ hz clientOps "-Xms400M -Xmx400M ${hzProps}"
 hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 
 hz run add-read
-hz run validate
+
+#not possible to make a validation about the number of items added and read.
+#hz run validate

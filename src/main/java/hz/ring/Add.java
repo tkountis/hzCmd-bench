@@ -1,7 +1,5 @@
 package hz.ring;
 
-import com.hazelcast.core.ICompletableFuture;
-import com.hazelcast.ringbuffer.OverflowPolicy;
 import com.hazelcast.ringbuffer.Ringbuffer;
 import hz.ring.base.RingBench;
 
@@ -22,8 +20,8 @@ public class Add extends RingBench {
         int idx = random.nextInt(count);
         Ringbuffer ringBuffer = getRingBuffer(idx);
 
-        ICompletableFuture<Long> res = ringBuffer.addAsync(val, OverflowPolicy.FAIL);
-        if (res.get() != -1) {
+        long res = ringBuffer.add(val);
+        if (res != -1) {
             addPerRing[idx]++;
         }
     }

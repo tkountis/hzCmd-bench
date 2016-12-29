@@ -1,4 +1,4 @@
-ring_add@class=hz.ring.Add
+ring_add@class=hz.ring.AddAsync
 ring_add@name=ring
 ring_add@count=500
 ring_add@threads=12

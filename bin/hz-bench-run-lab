@@ -3,7 +3,7 @@
 echo $$ > pid.txt
 
 hz-bench-get $1
-duration=${2:-60}
+duration=${2:-1800}
 
 #echo "10.212.1.101,10.212.40.101" >> a.box
 #echo "10.212.1.102,10.212.40.102" >> a.box

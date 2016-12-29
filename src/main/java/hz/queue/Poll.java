@@ -59,6 +59,8 @@ public class Poll extends QueueBench {
                     e.printStackTrace();
                 }
             }while(res != null);
+
+            System.out.println(q.getName()+" size = "+q.size());
         }
 
 

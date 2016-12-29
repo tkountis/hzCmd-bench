@@ -17,4 +17,4 @@ hz memberOps "-Xms2G -Xmx2G ${ops}"
 hz clientOps "-Xms400M -Xmx400M ${ops}"
 hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 
-hz run createUseDestroy
+hz run createUseDestroy_map_only

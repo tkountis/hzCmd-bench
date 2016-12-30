@@ -62,7 +62,7 @@ public class GetForUpdateSet extends TxnBench {
             try {
                 context.rollbackTransaction();
             }catch (TransactionException rollBackException){
-                rollBackException.printStackTrace();
+                throw rollBackException;
             }
         }
     }

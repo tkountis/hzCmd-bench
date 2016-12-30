@@ -25,7 +25,7 @@ for benchMark in $(find . -name go) ; do
     hz broker -ip 10.212.1.107
     hz bench ${duration}
     hz driver HZ
-    hz marker Graphite
+    hz marker Metrics
 
     version=$(hazelcastVersion)
     graphite-event "${benchDir}" "bench started" "${version}"
@@ -33,7 +33,6 @@ for benchMark in $(find . -name go) ; do
     ./go "${version}" M2C400 danny > out.txt
     exitCode=$?
 
-    hz check
     hz wipe
     hz-killSubJava
     gcViewerPics . Member &> /dev/null || true

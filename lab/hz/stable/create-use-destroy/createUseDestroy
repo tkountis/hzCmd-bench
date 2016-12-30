@@ -14,13 +14,13 @@ createUseDestroy_cacheBak1HD@class=hz.cache.CreateUseDestroy
 createUseDestroy_cacheBak1HD@threads=1
 createUseDestroy_cacheBak1HD@name=cacheBak1HDCreateUseDestroy
 createUseDestroy_cacheBak1HD@max=1
-createUseDestroy_cacheBak1HD@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
+createUseDestroy_cacheBak1HD@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException:com.hazelcast.cache.CacheNotExistsException
 
 createUseDestroy_cacheBak1@class=hz.cache.CreateUseDestroy
 createUseDestroy_cacheBak1@threads=1
 createUseDestroy_cacheBak1@name=cacheBak1createUseDestroy
 createUseDestroy_cacheBak1@max=1
-createUseDestroy_cacheBak1@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
+createUseDestroy_cacheBak1@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException:com.hazelcast.cache.CacheNotExistsException
 
 
 createUseDestroy_atomic@class=hz.atomic.CreateUseDestroy

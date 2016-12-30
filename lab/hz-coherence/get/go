@@ -18,7 +18,7 @@ hz run -id HZ sizeHZ >> outHZ.out
 hz run -id CO sizeCO >> outCO.out
 
 
-hz type Metrics
+hz marker Metrics
 hz driver Client
 hz threads 32
 hz warmup 60

@@ -19,7 +19,7 @@ nohup hz run -id HZ bench/sizeHZ >> hz.out &
 nohup hz run -id GG bench/sizeGG >> gg.out &
 wait
 
-hz type Metrics
+hz marker Metrics
 hz driver Client
 hz threads 64
 hz interval 0

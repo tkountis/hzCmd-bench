@@ -12,7 +12,7 @@ hz memberOps "-Xms1G -Xmx1G"
 hz clientOps "-Xms1G -Xmx1G"
 hz cluster -size M4C4 -id GG  -v 1.6.0            -type GG -boxes box.b -user danny
 
-hz type Metrics
+hz marker Metrics
 hz driver Client
 hz threads 16
 hz interval 500u

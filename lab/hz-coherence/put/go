@@ -10,7 +10,7 @@ hz memberOps "-Xms2G -Xmx2G"
 hz clientOps "-Xms1G -Xmx1G"
 hz cluster -size M4C4 -id CO -v 12.2.1 -type CO -boxes b.box
 
-hz type Metrics
+hz marker Metrics
 hz driver Client
 hz threads 8,32
 hz warmup 60

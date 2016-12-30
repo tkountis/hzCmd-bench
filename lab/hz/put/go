@@ -7,7 +7,7 @@ hz clientOps "-Xms200M -Xmx200M"
 hz cluster -size M2C2 -v 3.7.2 -boxes local.box -user $(whoami)
 
 hz driver Client
-hz type Metrics
+hz marker Metrics
 hz threads 2
 hz warmup 30
 hz bench 60

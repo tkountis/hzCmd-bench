@@ -25,7 +25,7 @@ for benchMark in $(find . -name go) ; do
     hz broker -ip 10.212.1.107
     hz bench ${duration}
     hz driver HZ
-    hz type Graphite
+    hz marker Graphite
 
     version=$(hazelcastVersion)
     graphite-event "${benchDir}" "bench started" "${version}"

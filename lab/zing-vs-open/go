@@ -33,7 +33,7 @@ hz cluster -size M4C4 -id open -v 3.6.2 -type HZ -boxes jdkOpen.txt -user ec2-us
 
 
 #controls which tool is use to measure the benchmark  [Hdr | Metrics]
-hz type Hdr
+hz marker Hdr
 
 #controls the expected interval in milli sec,  at which the timeStep() method to be measured is called for each thread
 #a value of 1 means we expect to call the bench mark once every milli sec,  a value of 0 is a flat out full tilt throughput style benchmark 

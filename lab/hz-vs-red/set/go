@@ -3,7 +3,7 @@
 hz-ssh a.box 'sudo bash -c "echo never > /sys/kernel/mm/transparent_hugepage/enabled"' ec2-user
 
 hz driver Client
-hz type Metrics
+hz marker Metrics
 hz threads 64
 hz warmup 30
 hz bench 30
@@ -19,7 +19,7 @@ hz-ssh a.box 'killall -9 redis-server' ec2-user
 
 
 hz driver Client
-hz type Metrics
+hz marker Metrics
 hz threads 64
 hz warmup 30
 hz bench 30

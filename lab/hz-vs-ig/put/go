@@ -13,7 +13,7 @@ hz clientOps "${jvmProps} -Xms1G -Xmx1G"
 hz cluster -size M4C4 -id GG -v 1.6.0-SNAPSHOT -type GG -boxes b.box
 
 
-hz type Metrics
+hz marker Metrics
 hz driver Client,Member
 hz interval 1
 hz threads 8

@@ -15,7 +15,7 @@ user=${3:-ec2-user}
 
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
 
-prop="-Dhazelcast.aggregation.accumulation.parallel.evaluation=false"
+prop="-Dhazelcast.aggregation.accumulation.parallel.evaluation=true"
 
 hz memberOps "-Xms8G -Xmx8G ${hzProps} ${prop}"
 hz clientOps "-Xms400M -Xmx400M ${hzProps}"

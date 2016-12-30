@@ -14,7 +14,10 @@ size=${2:-"M4C4"}
 user=${3:-ec2-user}
 
 hzProps="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
-hz memberOps "-Xms8G -Xmx8G ${hzProps}"
+
+prop="hazelcast.aggregation.accumulation.parallel.evaluation=false"
+
+hz memberOps "-Xms8G -Xmx8G ${hzProps} ${prop}"
 hz clientOps "-Xms400M -Xmx400M ${hzProps}"
 hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 

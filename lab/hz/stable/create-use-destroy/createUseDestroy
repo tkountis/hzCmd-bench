@@ -1,100 +1,100 @@
 createUseDestroy_mapBak1HD@class=hz.map.CreateUseDestroy
-createUseDestroy_mapBak1HD@threads=2
+createUseDestroy_mapBak1HD@threads=1
 createUseDestroy_mapBak1HD@name=mapBak1HDCreateUseDestroy
 createUseDestroy_mapBak1HD@max=1
 createUseDestroy_mapBak1HD@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
 
 createUseDestroy_mapBak1@class=hz.map.CreateUseDestroy
-createUseDestroy_mapBak1@threads=2
+createUseDestroy_mapBak1@threads=1
 createUseDestroy_mapBak1@name=mapBak1createUseDestroy
 createUseDestroy_mapBak1@max=1
 createUseDestroy_mapBak1@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
 
 createUseDestroy_cacheBak1HD@class=hz.cache.CreateUseDestroy
-createUseDestroy_cacheBak1HD@threads=2
+createUseDestroy_cacheBak1HD@threads=1
 createUseDestroy_cacheBak1HD@name=cacheBak1HDCreateUseDestroy
 createUseDestroy_cacheBak1HD@max=1
 createUseDestroy_cacheBak1HD@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
 
 createUseDestroy_cacheBak1@class=hz.cache.CreateUseDestroy
-createUseDestroy_cacheBak1@threads=2
+createUseDestroy_cacheBak1@threads=1
 createUseDestroy_cacheBak1@name=cacheBak1createUseDestroy
 createUseDestroy_cacheBak1@max=1
 createUseDestroy_cacheBak1@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
 
 
 createUseDestroy_atomic@class=hz.atomic.CreateUseDestroy
-createUseDestroy_atomic@threads=2
+createUseDestroy_atomic@threads=1
 createUseDestroy_atomic@name=atomicCreateUseDestroy
 createUseDestroy_atomic@max=1
 createUseDestroy_atomic@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
 
 
 createUseDestroy_executor@class=hz.executor.regular.CreateUseDestroy
-createUseDestroy_executor@threads=2
+createUseDestroy_executor@threads=1
 createUseDestroy_executor@name=executorCreateUseDestroy
 createUseDestroy_executor@max=1
 createUseDestroy_executor@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
 
 
 createUseDestroy_id@class=hz.id.CreateUseDestroy
-createUseDestroy_id@threads=2
+createUseDestroy_id@threads=1
 createUseDestroy_id@name=idCreateUseDestroy
 createUseDestroy_id@max=1
 createUseDestroy_id@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
 
 
 createUseDestroy_latch@class=hz.latch.CreateUseDestroy
-createUseDestroy_latch@threads=2
+createUseDestroy_latch@threads=1
 createUseDestroy_latch@name=latchCreateUseDestroy
 createUseDestroy_latch@max=1
 createUseDestroy_latch@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
 
 
 createUseDestroy_list@class=hz.list.CreateUseDestroy
-createUseDestroy_list@threads=2
+createUseDestroy_list@threads=1
 createUseDestroy_list@name=listCreateUseDestroy
 createUseDestroy_list@max=1
 createUseDestroy_list@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
 
 
 createUseDestroy_lock@class=hz.lock.CreateUseDestroy
-createUseDestroy_lock@threads=2
+createUseDestroy_lock@threads=1
 createUseDestroy_lock@name=lockCreateUseDestroy
 createUseDestroy_lock@max=1
 createUseDestroy_lock@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
 
 
 createUseDestroy_queue@class=hz.queue.CreateUseDestroy
-createUseDestroy_queue@threads=2
-createUseDestroy_queue@name=qCreateUseDestroy
+createUseDestroy_queue@threads=1
+createUseDestroy_queue@name=queueCreateUseDestroy
 createUseDestroy_queue@max=1
 createUseDestroy_queue@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
 
 
 createUseDestroy_repmap@class=hz.repmap.CreateUseDestroy
-createUseDestroy_repmap@threads=2
+createUseDestroy_repmap@threads=1
 createUseDestroy_repmap@name=repmapCreateUseDestroy
 createUseDestroy_repmap@max=1
 createUseDestroy_repmap@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
 
 
 createUseDestroy_ring@class=hz.ring.CreateUseDestroy
-createUseDestroy_ring@threads=2
+createUseDestroy_ring@threads=1
 createUseDestroy_ring@name=ringCreateUseDestroy
 createUseDestroy_ring@max=1
 createUseDestroy_ring@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
 
 
 createUseDestroy_semaphore@class=hz.semaphore.CreateUseDestroy
-createUseDestroy_semaphore@threads=2
+createUseDestroy_semaphore@threads=1
 createUseDestroy_semaphore@name=semaphoreCreateUseDestroy
 createUseDestroy_semaphore@max=1
 createUseDestroy_semaphore@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
 
 
 createUseDestroy_set@class=hz.set.CreateUseDestroy
-createUseDestroy_set@threads=2
+createUseDestroy_set@threads=1
 createUseDestroy_set@name=setCreateUseDestroy
 createUseDestroy_set@max=1
 createUseDestroy_set@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
@@ -102,14 +102,14 @@ createUseDestroy_set@ignore=com.hazelcast.spi.exception.DistributedObjectDestroy
 
 createUseDestroy_reliableTopic@class=hz.topic.CreateUseDestroy
 createUseDestroy_reliableTopic@reliable=true
-createUseDestroy_reliableTopic@threads=2
+createUseDestroy_reliableTopic@threads=1
 createUseDestroy_reliableTopic@name=reliableTopicCreateUseDestroy
 createUseDestroy_reliableTopic@max=1
 createUseDestroy_reliableTopic@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException
 
 createUseDestroy_topic@class=hz.topic.CreateUseDestroy
 createUseDestroy_topic@reliable=false
-createUseDestroy_topic@threads=2
+createUseDestroy_topic@threads=1
 createUseDestroy_topic@name=topicCreateUseDestroy
 createUseDestroy_topic@max=1
 createUseDestroy_topic@ignore=com.hazelcast.spi.exception.DistributedObjectDestroyedException

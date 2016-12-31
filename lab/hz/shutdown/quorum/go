@@ -15,19 +15,20 @@ user=${3:-ec2-user}
 ops="-Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
 hz memberOps "-Xms2G -Xmx2G ${ops}"
 hz clientOps "-Xms400M -Xmx400M ${ops}"
-hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
+hz cluster -ee -size "M4" -v ${hzVersion} -boxes a.box -user ${user}
 
-hz run quorumTrue
 
 for i in {1..50}; do
-  n=$(hz rand -min 1 -max 5)
 
+  hz driver Member
+  hz run quorumTrue
+
+  n=$(hz rand -min 1 -max 5)
   hz driver Member${n}
   hz run shutdown
   hz driver "$(./setDrivers ${n})"
   hz run quorumFalse
+
   hz embeddedRestart Member${n}
-  hz driver Member
-  hz run quorumTrue
 
 done

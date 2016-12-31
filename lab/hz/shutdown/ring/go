@@ -20,19 +20,7 @@ hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 
 hz run read &
 hz run add &
-
-for j in {1..15}; do
- for i in {1..3}; do
-  hz driver Member${i}
-  hz run shutDown
-  hz check
- done
-
- for i in {1..3}; do
-  hz embeddedRestart Member${i}
- done
-done
-
+./go_shutdown
 hz stop
 wait
 hz run validate

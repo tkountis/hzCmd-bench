@@ -18,16 +18,7 @@ hz clientOps "-Xms400M -Xmx400M ${ops}"
 hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 
 hz run txn &
-sleep 10
-for i in {1..50}; do
-  sleep 5
-  n=$(( $(od -An -tu -N2 /dev/urandom) % 4 + 1))
-  hz driver Member${n}
-  hz run shutDown
-  hz embeddedRestart Member${n}
-  hz check
-done
-
+./go_shutdown
 hz stop
 wait
 hz run validate

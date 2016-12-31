@@ -18,17 +18,7 @@ hz clientOps "-Xms400M -Xmx400M ${ops}"
 hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 
 hz run atomic &
-sleep 10
-for i in {1..50}; do
-  sleep 5
-  member=$(hz randMember)
-  echo ${member}
-  hz driver ${member}
-  hz run shutDown
-  hz embeddedRestart ${member}
-  hz check
-done
-
+./go_shutdown
 hz stop
 wait
 hz run validate

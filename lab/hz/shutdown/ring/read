@@ -3,4 +3,4 @@ ring_read@driver=Client4
 ring_read@name=ring
 ring_read@count=1
 ring_read@threads=1
-ring_read@ignore=com.hazelcast.spi.exception.TargetDisconnectedException
+ring_read@ignore=com.hazelcast.spi.exception.TargetDisconnectedException:java.util.concurrent.ExecutionException:com.hazelcast.ringbuffer.StaleSequenceException

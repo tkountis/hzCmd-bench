@@ -21,6 +21,4 @@ hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 hz run read &
 hz run add &
 ./go_shutdown
-hz stop
-wait
-hz run validate
+

@@ -1,9 +1,0 @@
-validate_cacheBak1HD-ncHD@class=hz.cache.member.ValidateNotNull
-validate_cacheBak1HD-ncHD@driver=Member
-validate_cacheBak1HD-ncHD@keyDomain=50000
-validate_cacheBak1HD-ncHD@name=cacheBak1HD-ncHD
-
-validate_mapBak1HD-ncHD@class=hz.map.member.ValidateNotNull
-validate_mapBak1HD-ncHD@driver=Member
-validate_mapBak1HD-ncHD@keyDomain=50000
-validate_mapBak1HD-ncHD@name=mapBak1HD-ncHD

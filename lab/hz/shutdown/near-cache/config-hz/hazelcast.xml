@@ -34,7 +34,7 @@
         <in-memory-format>NATIVE</in-memory-format>
         <backup-count>0</backup-count>
         <statistics-enabled>false</statistics-enabled>
-        <eviction eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="70"/>
+        <eviction eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="85"/>
         <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
@@ -44,7 +44,7 @@
         <in-memory-format>NATIVE</in-memory-format>
         <backup-count>1</backup-count>
         <statistics-enabled>false</statistics-enabled>
-        <eviction eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="70"/>
+        <eviction eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="85"/>
        <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
@@ -55,7 +55,7 @@
         <backup-count>0</backup-count>
         <async-backup-count>1</async-backup-count>
         <statistics-enabled>false</statistics-enabled>
-        <eviction eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="70"/>
+        <eviction eviction-policy="LRU" max-size-policy="USED_NATIVE_MEMORY_PERCENTAGE" size="85"/>
        <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
@@ -155,16 +155,6 @@
        <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>
-
-        <near-cache name="mapBak1HD" >
-            <in-memory-format>NATIVE</in-memory-format>
-            <cache-local-entries>true</cache-local-entries>
-            <invalidate-on-change>true</invalidate-on-change>
-            <eviction eviction-policy="LFU" max-size-policy="ENTRY_COUNT" size="10000" ></eviction>
-            <max-idle-seconds>45</max-idle-seconds>
-            <time-to-live-seconds>61</time-to-live-seconds>
-        </near-cache>
-
     </map>
 
     <map name="mapAsync1HD*">

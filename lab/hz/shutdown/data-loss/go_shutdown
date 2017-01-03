@@ -9,10 +9,19 @@ for (( i=0; i<=${iterations}; i++ )) ; do
  for (( m=2; m<=${memberCount}; m++ )) ; do
   hz driver Member${m}
   hz run shutDown
+
+  until hz run clusterSafe; do
+   sleep 5
+  done
+
  done
 
  for (( m=2; m<=${memberCount}; m++ )) ; do
   hz embeddedRestart Member${m}
+ done
+
+ until hz run clusterSafe; do
+  sleep 5
  done
 
  hz driver Member1

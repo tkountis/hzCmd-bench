@@ -48,5 +48,3 @@ for benchMark in $(find . -name go) ; do
   fi
 
 done
-
-echo -e "\033[35m End\033[0m"

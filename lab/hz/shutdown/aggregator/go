@@ -22,7 +22,7 @@ hz run load
 hz run addIdx
 hz run validate
 hz run count &
-./go_shutdown
+hz-cluster-shutdown
 hz stop
 wait
 hz run validate

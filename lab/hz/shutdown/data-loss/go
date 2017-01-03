@@ -21,7 +21,7 @@ hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 hz run load
 hz run validate
 hz run get &
-./go_shutdown
+hz-cluster-shutdown
 hz stop
 wait
 hz run validate

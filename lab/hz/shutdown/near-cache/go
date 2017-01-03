@@ -29,5 +29,5 @@ hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 hz run load
 hz run validate
 hz run ops-lab &
-./go_shutdown
+hz-cluster-shutdown
 hz check

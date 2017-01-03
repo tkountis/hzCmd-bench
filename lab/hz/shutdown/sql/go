@@ -22,5 +22,5 @@ hz run load
 hz run addIdx
 hz run validate
 hz submit get
-./go_shutdown
+hz-cluster-shutdown
 hz run validate

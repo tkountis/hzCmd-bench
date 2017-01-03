@@ -19,4 +19,4 @@ hz clientOps "-Xms400M -Xmx400M ${hzProps}"
 hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 
 hz submit ops
-./go_shutdown
+hz-cluster-shutdown

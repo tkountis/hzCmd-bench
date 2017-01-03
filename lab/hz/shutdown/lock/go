@@ -18,7 +18,7 @@ hz clientOps "-Xms400M -Xmx400M ${ops}"
 hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 
 hz run lock &
-./go_shutdown
+hz-cluster-shutdown
 hz stop
 wait
 hz run validate

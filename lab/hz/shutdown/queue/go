@@ -20,7 +20,7 @@ hz cluster -ee -size ${size} -v ${hzVersion} -boxes a.box -user ${user}
 
 hz run offer &
 hz run poll &
-./go_shutdown
+hz-cluster-shutdown
 hz stop
 wait
 hz run validate

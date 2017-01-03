@@ -10,6 +10,7 @@ for (( i=0; i<=${iterations}; i++ )) ; do
   hz driver Member${m}
   hz run shutDown
 
+  hz driver Member1
   until hz run clusterSafe; do
    sleep 5
   done
@@ -20,6 +21,7 @@ for (( i=0; i<=${iterations}; i++ )) ; do
   hz embeddedRestart Member${m}
  done
 
+ hz driver Member"2"
  until hz run clusterSafe; do
   sleep 5
  done

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 iterations=${1:-25}
 sleep 30
 memberCount=$(hz memberCount)
@@ -10,10 +12,12 @@ for (( i=0; i<=${iterations}; i++ )) ; do
   hz driver Member${m}
   hz run shutDown
 
-  hz driver Member1
-  until hz run clusterSafe; do
-   sleep 5
-  done
+
+  sleep 60
+  #hz driver Member1
+  #until hz run clusterSafe; do
+   #sleep 5
+  #done
 
  done
 
@@ -21,13 +25,15 @@ for (( i=0; i<=${iterations}; i++ )) ; do
   hz embeddedRestart Member${m}
  done
 
- hz driver Member"2"
- until hz run clusterSafe; do
-  sleep 5
- done
+ #hz driver Member"2"
+ #until hz run clusterSafe; do
+ # sleep 5
+ #done
+ sleep 60
 
  hz driver Member1
  hz run shutDown
  hz embeddedRestart Member1
 
+ hz check
 done

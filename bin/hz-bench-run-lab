@@ -16,7 +16,7 @@ echo "10.212.1.108,10.212.40.108" >> a.box
 #echo "10.212.1.110,10.212.40.110" >> a.box
 
 
-for benchMark in $(find . -name go) ; do
+for benchMark in $(find . -name go | sort) ; do
   benchDir=$(dirname $benchMark)
   cp a.box ${benchDir}
   echo -n "${benchDir} " >> info.txt

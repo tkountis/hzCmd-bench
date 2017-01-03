@@ -2,18 +2,22 @@ count_mapBak1HDIdx@class=hz.map.aggregate.Count
 count_mapBak1HDIdx@threads=4
 count_mapBak1HDIdx@name=mapBak1HDIdx
 count_mapBak1HDIdx@count=100000
+count_mapBak1HDIdx@ignore=com.hazelcast.core.OperationTimeoutException
 
 count_mapBak1Idx@class=hz.map.aggregate.Count
 count_mapBak1Idx@threads=4
 count_mapBak1Idx@name=mapBak1Idx
 count_mapBak1Idx@count=100000
+count_mapBak1Idx@ignore=com.hazelcast.core.OperationTimeoutException
 
 count_mapBak1HD@class=hz.map.aggregate.Count
 count_mapBak1HD@threads=4
 count_mapBak1HD@name=mapBak1HD
 count_mapBak1HD@count=100000
+count_mapBak1HD@ignore=com.hazelcast.core.OperationTimeoutException
 
 count_mapBak1@class=hz.map.aggregate.Count
 count_mapBak1@threads=4
 count_mapBak1@name=mapBak1
 count_mapBak1@count=100000
+count_mapBak1@ignore=com.hazelcast.core.OperationTimeoutException

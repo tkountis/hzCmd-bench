@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 public class LeaseLock extends LockBench {
 
-    public long milliSeconds=100;
+    public long milliSeconds=50;
 
     public void timeStep() {
         ILock lock = getLock();

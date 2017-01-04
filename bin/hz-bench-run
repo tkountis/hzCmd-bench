@@ -21,7 +21,7 @@ trap "cleanup" INT TERM EXIT
 testDir=${1}
 boxCount=${2}
 type=${3:-c4.xlarge}
-ami=${4:-ami-08111162}
+ami=${4:-ami-9be6f38c}
 
 hz-bench-update
 

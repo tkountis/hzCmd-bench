@@ -1,5 +1,5 @@
-validate@class=hz.lock.validate.LeaseLockAssert
-validate@driver=Member1
+validate@class=hz.lock.validate.UnLockedAssert
+validate@driver=Member
 validate@count=500
 validate@name=lease-lock
 

@@ -1,4 +1,4 @@
-leaselock@class=hz.lock.validate.LeaseLock
+leaselock@class=hz.lock.LeaseLock
 leaselock@threads=12
 leaselock@count=500
 leaselock@name=lease-lock

@@ -1,5 +1,5 @@
 schedule_task@class=hz.executor.scheduled.Schedule
-schedule_task@executorCount=10
+schedule_task@executorCount=1
 schedule_task@scheduleCount=1
 schedule_task@delaySec=0
 schedule_task@repeating=true

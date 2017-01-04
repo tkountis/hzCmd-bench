@@ -2,3 +2,4 @@ leaselock@class=hz.lock.LeaseLock
 leaselock@threads=12
 leaselock@count=500
 leaselock@name=lease-lock
+leaselock@ignore=com.hazelcast.core.HazelcastInstanceNotActiveException

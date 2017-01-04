@@ -3,8 +3,6 @@ set -e
 cleanup() {
     exitCode=$?
 
-    hz-ssh a.box 'df -h' ec2-user
-
     hz download || true
     hz chart metrics
     exit ${exitCode}
@@ -12,6 +10,8 @@ cleanup() {
 trap "cleanup" INT TERM EXIT
 
 hzVersion=${1:-$(hazelcastVersion)}
+size=${2:-"M4"}
+user=${3:-ec2-user}
 
 ops="$ops -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
 ops="$ops -Dhazelcast.backpressure.enabled=true"
@@ -22,12 +22,10 @@ mOps="$mOps -Dhazelcast.hotrestart.free.native.memory.percentage=15"
 mOps="$mOps -Dhazelcast.connection.monitor.interval=1000 -Dhazelcast.connection.monitor.max.faults=30"
 
 hz memberOps "-Xms4G -Xmx4G ${ops} ${mOps}"
-hz cluster -size M4 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
+hz cluster -size ${size} -v ${hzVersion} -ee -boxes a.box -user ${user}
 
 hz run load
 hz run validate
-
-hz-ssh a.box 'df -h' ec2-user
 
 for i in {1..35} ; do
     hz run clusterShutdown
@@ -35,8 +33,6 @@ for i in {1..35} ; do
     hz check
 done
 hz run validate
-
-hz-ssh a.box 'df -h' ec2-user
 
 hz bounce -iterations 75 -iterationDelay 1 Member
 hz run validate

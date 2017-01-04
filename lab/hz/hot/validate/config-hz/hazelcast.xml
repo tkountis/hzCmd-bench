@@ -22,7 +22,7 @@
 
     <hot-restart-persistence enabled="true">
         <data-load-timeout-seconds>1700</data-load-timeout-seconds>
-        <base-dir>/home/ec2-user/hot-junk</base-dir>
+        <base-dir>hot-junk</base-dir>
     </hot-restart-persistence>
 
     <native-memory allocator-type="POOLED" enabled="true">

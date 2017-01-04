@@ -9,14 +9,16 @@ cleanup() {
 trap "cleanup" INT TERM EXIT
 
 hzVersion=${1:-$(hazelcastVersion)}
+size=${2:-"M4C40"}
+user=${3:-ec2-user}
 
 ops="$ops -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
 ops="$ops -Dhazelcast.backpressure.enabled=true"
 ops="$ops -ea"
-ops="$ops -XX:+PrintFlagsFinal -XX:+UseLargePages"
 
 mOps="$mOps -Dhazelcast.operation.backup.timeout.millis=120000"
 mOps="$mOps -Dhazelcast.operation.call.timeout.millis=600000"
+
 mOps="$mOps -Dhazelcast.hotrestart.gc.stuck.detect.threshold=10000"
 mOps="$mOps -Dhazelcast.hotrestart.free.native.memory.percentage=15"
 mOps="$mOps -Dhazelcast.hidensity.check.freememory=false"
@@ -25,8 +27,7 @@ mOps="$mOps -Dhazelcast.connection.monitor.interval=1000 -Dhazelcast.connection.
 
 hz memberOps "-Xms8G -Xmx8G ${ops} ${mOps}"
 hz clientOps "-Xms500M -Xmx500M ${ops}"
-hz cluster -size M4C40 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
-
+hz cluster -size ${size} -v ${hzVersion} -ee -boxes a.box -user ${user}
 
 hz bounce -iterations 24 -iterationDelay 222 Member &
 

@@ -9,6 +9,8 @@ cleanup() {
 trap "cleanup" INT TERM EXIT
 
 hzVersion=${1:-$(hazelcastVersion)}
+size=${2:-"M4C50"}
+user=${3:-ec2-user}
 
 ops="$ops -Dhazelcast.enterprise.license.key=${HAZELCAST_EE_KEY}"
 ops="$ops -Dhazelcast.backpressure.enabled=true"
@@ -22,7 +24,7 @@ cOps="$cOps -Dhazelcast.client.invocation.timeout.seconds=300"
 
 hz memberOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms2G -Xmx2G ${ops} ${mOps}"
 hz clientOps "-XX:+PrintFlagsFinal -XX:+UseLargePages -Xms500M -Xmx500M ${ops} ${cOps}"
-hz cluster -size M4C50 -id HZ -v ${hzVersion} -ee -boxes a.box -user ec2-user
+hz cluster -size ${size} -v ${hzVersion} -ee -boxes a.box -user ${user}
 
 hz bench 7000
 hz driver Client

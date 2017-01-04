@@ -10,6 +10,7 @@ public class Schedule extends ExecutorBench {
 
     public int scheduleCount=1;
     public int delaySec=0;
+    public boolean repeating=false;
 
     private Counter counter = new Counter();
 
@@ -21,6 +22,6 @@ public class Schedule extends ExecutorBench {
                 executor.schedule(counter, delaySec, TimeUnit.SECONDS);
             }
         }
-        setRunning(false);
+        setRunning(repeating);
     }
 }

@@ -145,6 +145,7 @@
     <map name="mapBak1*">
         <in-memory-format>BINARY</in-memory-format>
         <backup-count>1</backup-count>
+        <eviction-policy> NONE </eviction-policy>
         <hot-restart enabled="false">
             <fsync>false</fsync>
         </hot-restart>

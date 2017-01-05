@@ -30,7 +30,7 @@
         <max-idle-seconds>45</max-idle-seconds>
         <time-to-live-seconds>61</time-to-live-seconds>
         <local-update-policy>CACHE</local-update-policy>
-        <preloader enabled="true" file-name="nearCache.map" store-interval-seconds="1"></preloader>
+        <preloader enabled="true" filename="nearCache.map" store-interval-seconds="1"></preloader>
     </near-cache>
 
 

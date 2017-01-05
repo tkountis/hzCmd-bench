@@ -48,9 +48,9 @@ public class GetForUpdateSet extends TxnBench {
         try {
             for(int i=0; i<batchSize; i++){
                 int k = random.nextInt(keyDomain);
-                Object key = getKey(i);
-                int val = map.getForUpdate(k);
-                map.set(key, ++val);
+                Object obj_key = getKey(k);
+                int val = map.getForUpdate(obj_key);
+                map.set(obj_key, ++val);
                 keyBatch[i]=k;
             }
             context.commitTransaction();
